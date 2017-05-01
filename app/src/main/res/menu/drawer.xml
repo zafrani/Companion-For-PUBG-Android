@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/drawer_map"
+            android:title="Map"/>
+        <item
+            android:id="@+id/drawer_items"
+            android:title="Items"/>
+    </group>
+
+    <item android:title="About">
+        <menu>
+            <item
+                android:id="@+id/drawer_github"
+                android:title="Github"/>
+            <item
+                android:id="@+id/drawer_data"
+                android:title="Data"/>
+        </menu>
+    </item>
+
+</menu>
