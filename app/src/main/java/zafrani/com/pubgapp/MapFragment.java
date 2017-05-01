@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 
 
 public class MapFragment extends Fragment {
-    public static final String ARG_PAGE = "ARG_PAGE";
 
     public static MapFragment newInstance() {
         return new MapFragment();
