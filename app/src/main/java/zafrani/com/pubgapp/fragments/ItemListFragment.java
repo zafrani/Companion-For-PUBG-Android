@@ -19,9 +19,15 @@ public class ItemListFragment extends BaseFragment {
         return inflater.inflate(R.layout.fragment_item_list, container, false);
     }
 
+
     @StringRes
     @Override
     public int getTabTitle() {
         return R.string.item_list_tab_title;
+    }
+
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
     }
 }
