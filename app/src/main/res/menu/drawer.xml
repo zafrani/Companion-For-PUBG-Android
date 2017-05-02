@@ -4,6 +4,7 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/drawer_map"
+            android:icon="@drawable/ic_location_on_white_24dp"
             android:title="Map"/>
         <item
             android:id="@+id/drawer_items"
