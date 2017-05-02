@@ -27,8 +27,14 @@
 
             <android.support.design.widget.TabLayout
                 android:id="@+id/activity_drawer_tablayout"
+                style="@style/AppTheme.TabLayout"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                app:tabIndicatorColor="@android:color/white"
+                app:tabIndicatorHeight="2dp"
+                app:tabSelectedTextColor="@android:color/white"
+                app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+                app:tabTextColor="@android:color/white"/>
 
         </android.support.design.widget.AppBarLayout>
 
