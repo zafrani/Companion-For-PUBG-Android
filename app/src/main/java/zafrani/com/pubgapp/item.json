@@ -1,0 +1,991 @@
+{
+  "items":{
+    "categories":[
+      {
+        "name":"Weapon",
+        "types":[
+          {
+            "name":"Assault Rifle",
+            "items":[
+              {
+                "name":"AKM",
+                "magazine":"30",
+                "ammo":"7.62mm",
+                "range":"0",
+                "stability":"0",
+                "rate":"0",
+                "capacity":"500",
+                "damage":[
+                  {
+                    "base":"23",
+                    "chest0":"46",
+                    "chest1":"32",
+                    "chest2":"27",
+                    "chest3":"20",
+                    "head0":"114",
+                    "head1":"80",
+                    "head2":"68",
+                    "head3":"51"
+                  }
+                ]
+              },{
+                "name":"M16A4",
+                "magazine":"30",
+                "ammo":"5.56mm",
+                "range":"0",
+                "stability":"0",
+                "rate":"0",
+                "capacity":"500",
+                "damage":[
+                  {
+                    "base":"21",
+                    "chest0":"41",
+                    "chest1":"29",
+                    "chest2":"25",
+                    "chest3":"18",
+                    "head0":"103",
+                    "head1":"72",
+                    "head2":"62",
+                    "head3":"46"
+                  }
+                ]
+              },{
+                "name":"M416",
+                "magazine":"30",
+                "ammo":"5.56mm",
+                "range":"0",
+                "stability":"0",
+                "rate":"0",
+                "capacity":"500",
+                "damage":[
+                  {
+                    "base":"21",
+                    "chest0":"41",
+                    "chest1":"29",
+                    "chest2":"25",
+                    "chest3":"18",
+                    "head0":"103",
+                    "head1":"72",
+                    "head2":"62",
+                    "head3":"46"
+                  }
+                ]
+              },{
+                "name":"SCAR-L",
+                "magazine":"30",
+                "ammo":"5.56mm",
+                "range":"0",
+                "stability":"0",
+                "rate":"0",
+                "capacity":"500",
+                "damage":[
+                  {
+                    "base":"21",
+                    "chest0":"41",
+                    "chest1":"29",
+                    "chest2":"25",
+                    "chest3":"18",
+                    "head0":"103",
+                    "head1":"72",
+                    "head2":"62",
+                    "head3":"46"
+                  }
+                ]
+              }
+            ]
+          },{
+            "name":"SMG",
+            "items":[
+              {
+                "name":"UMP9",
+                "magazine":"30",
+                "ammo":"9mm",
+                "range":"0",
+                "stability":"0",
+                "rate":"0",
+                "capacity":"500",
+                "damage":[
+                  {
+                    "base":"17",
+                    "chest0":"33",
+                    "chest1":"23",
+                    "chest2":"20",
+                    "chest3":"15",
+                    "head0":"83",
+                    "head1":"58",
+                    "head2":"50",
+                    "head3":"37"
+                  }
+                ]
+              },{
+                "name":"Micro Uzi",
+                "magazine":"30",
+                "ammo":"9mm",
+                "range":"0",
+                "stability":"0",
+                "rate":"0",
+                "capacity":"500",
+                "damage":[
+                  {
+                    "base":"12",
+                    "chest0":"23",
+                    "chest1":"16",
+                    "chest2":"14",
+                    "chest3":"10",
+                    "head0":"58",
+                    "head1":"40",
+                    "head2":"35",
+                    "head3":"26"
+                  }
+                ]
+              },{
+                "name":"Vector",
+                "magazine":"13",
+                "ammo":"0.45 ACP",
+                "range":"0",
+                "stability":"0",
+                "rate":"0",
+                "capacity":"500",
+                "damage":[
+                  {
+                    "base":"18",
+                    "chest0":"36",
+                    "chest1":"25",
+                    "chest2":"22",
+                    "chest3":"16",
+                    "head0":"90",
+                    "head1":"63",
+                    "head2":"54",
+                    "head3":"41"
+                  }
+                ]
+              },{
+                "name":"Tommy Gun",
+                "magazine":"30",
+                "ammo":"0.45 ACP",
+                "range":"0",
+                "stability":"0",
+                "rate":"0",
+                "capacity":"500",
+                "damage":[
+                  {
+                    "base":"19",
+                    "chest0":"38",
+                    "chest1":"27",
+                    "chest2":"23",
+                    "chest3":"17",
+                    "head0":"95",
+                    "head1":"67",
+                    "head2":"57",
+                    "head3":"43"
+                  }
+                ]
+              }
+            ]
+          },{
+            "name":"LMG",
+            "items":[
+              {
+                "name":"M249",
+                "magazine":"100",
+                "ammo":"5.56mm",
+                "range":"0",
+                "stability":"0",
+                "rate":"0",
+                "capacity":"500",
+                "damage":[
+                  {
+                    "base":"22",
+                    "chest0":"44",
+                    "chest1":"31",
+                    "chest2":"26",
+                    "chest3":"20",
+                    "head0":"110",
+                    "head1":"77",
+                    "head2":"66",
+                    "head3":"50"
+                  }
+                ]
+              }
+            ]
+          },{
+            "name":"Shotgun",
+            "items":[
+              {
+                "name":"S686",
+                "magazine":"5",
+                "ammo":"12Gauge",
+                "range":"0",
+                "stability":"0",
+                "rate":"0",
+                "capacity":"500",
+                "damage":[
+                  {
+                    "base":"999",
+                    "chest0":"999",
+                    "chest1":"999",
+                    "chest2":"999",
+                    "chest3":"999",
+                    "head0":"999",
+                    "head1":"999",
+                    "head2":"999",
+                    "head3":"999"
+                  }
+                ]
+              },{
+                "name":"S12K",
+                "magazine":"5",
+                "ammo":"12Gauge",
+                "range":"0",
+                "stability":"0",
+                "rate":"0",
+                "capacity":"500",
+                "damage":[
+                  {
+                    "base":"999",
+                    "chest0":"999",
+                    "chest1":"999",
+                    "chest2":"999",
+                    "chest3":"999",
+                    "head0":"999",
+                    "head1":"999",
+                    "head2":"999",
+                    "head3":"999"
+                  }
+                ]
+              },{
+                "name":"S1897",
+                "magazine":"2",
+                "ammo":"12Gauge",
+                "range":"0",
+                "stability":"0",
+                "rate":"0",
+                "capacity":"500",
+                "damage":[
+                  {
+                    "base":"999",
+                    "chest0":"999",
+                    "chest1":"999",
+                    "chest2":"999",
+                    "chest3":"999",
+                    "head0":"999",
+                    "head1":"999",
+                    "head2":"999",
+                    "head3":"999"
+                  }
+                ]
+              }
+            ]
+          },{
+            "name":"Sniper Rifle",
+            "items":[
+              {
+                "name":"AWM",
+                "magazine":"5",
+                "ammo":".300 Magnum",
+                "range":"0",
+                "stability":"0",
+                "rate":"0",
+                "capacity":"500",
+                "damage":[
+                  {
+                    "base":"66",
+                    "chest0":"131",
+                    "chest1":"92",
+                    "chest2":"79",
+                    "chest3":"59",
+                    "head0":"328",
+                    "head1":"229",
+                    "head2":"197",
+                    "head3":"147"
+                  }
+                ]
+              },{
+                "name":"M24",
+                "magazine":"5",
+                "ammo":"7.62mm",
+                "range":"0",
+                "stability":"0",
+                "rate":"0",
+                "capacity":"500",
+                "damage":[
+                  {
+                    "base":"42",
+                    "chest0":"84",
+                    "chest1":"59",
+                    "chest2":"50",
+                    "chest3":"38",
+                    "head0":"210",
+                    "head1":"147",
+                    "head2":"126",
+                    "head3":"95"
+                  }
+                ]
+              },{
+                "name":"Kar 98",
+                "magazine":"5",
+                "ammo":"7.62mm",
+                "range":"0",
+                "stability":"0",
+                "rate":"0",
+                "capacity":"500",
+                "damage":[
+                  {
+                    "base":"36",
+                    "chest0":"72",
+                    "chest1":"50",
+                    "chest2":"43",
+                    "chest3":"32",
+                    "head0":"180",
+                    "head1":"126",
+                    "head2":"108",
+                    "head3":"81"
+                  }
+                ]
+              }
+            ]
+          },{
+            "name":"DMR",
+            "items":[
+              {
+                "name":"SKS",
+                "magazine":"5",
+                "ammo":"7.62mm",
+                "range":"0",
+                "stability":"0",
+                "rate":"0",
+                "capacity":"500",
+                "damage":[
+                  {
+                    "base":"28",
+                    "chest0":"55",
+                    "chest1":"39",
+                    "chest2":"33",
+                    "chest3":"25",
+                    "head0":"138",
+                    "head1":"96",
+                    "head2":"83",
+                    "head3":"62"
+                  }
+                ]
+              }
+            ]
+          },{
+            "name":"Pistol",
+            "items":[
+              {
+                "name":"P92",
+                "magazine":"15",
+                "ammo":"9mm",
+                "range":"0",
+                "stability":"0",
+                "rate":"0",
+                "capacity":"100",
+                "damage":[
+                  {
+                    "base":"15",
+                    "chest0":"29",
+                    "chest1":"20",
+                    "chest2":"17",
+                    "chest3":"13",
+                    "head0":"73",
+                    "head1":"51",
+                    "head2":"44",
+                    "head3":"33"
+                  }
+                ]
+              },{
+                "name":"P1911",
+                "magazine":"7",
+                "ammo":"0.45 ACP",
+                "range":"0",
+                "stability":"0",
+                "rate":"0",
+                "capacity":"100",
+                "damage":[
+                  {
+                    "base":"18",
+                    "chest0":"35",
+                    "chest1":"25",
+                    "chest2":"21",
+                    "chest3":"16",
+                    "head0":"88",
+                    "head1":"61",
+                    "head2":"53",
+                    "head3":"39"
+                  }
+                ]
+              },{
+                "name":"R1895",
+                "magazine":"5",
+                "ammo":"7.62mm",
+                "range":"0",
+                "stability":"0",
+                "rate":"0",
+                "capacity":"100",
+                "damage":[
+                  {
+                    "base":"23",
+                    "chest0":"46",
+                    "chest1":"32",
+                    "chest2":"28",
+                    "chest3":"21",
+                    "head0":"115",
+                    "head1":"81",
+                    "head2":"69",
+                    "head3":"52"
+                  }
+                ]
+              }
+            ]
+          },{
+            "name":"Melee",
+            "items":[
+              {
+                "name":"Pan",
+                "range":"0",
+                "rate":"0",
+                "capacity":"120",
+                "damage":[
+                  {
+                    "base":"0",
+                    "chest0":"0",
+                    "chest1":"0",
+                    "chest2":"0",
+                    "chest3":"0",
+                    "head0":"0",
+                    "head1":"0",
+                    "head2":"0",
+                    "head3":"0"
+                  }
+                ]
+              },{
+                "name":"Crowbar",
+                "range":"0",
+                "rate":"0",
+                "capacity":"120",
+                "damage":[
+                  {
+                    "base":"0",
+                    "chest0":"0",
+                    "chest1":"0",
+                    "chest2":"0",
+                    "chest3":"0",
+                    "head0":"0",
+                    "head1":"0",
+                    "head2":"0",
+                    "head3":"0"
+                  }
+                ]
+              },{
+                "name":"Sickle",
+                "range":"0",
+                "rate":"0",
+                "capacity":"120",
+                "damage":[
+                  {
+                    "base":"0",
+                    "chest0":"0",
+                    "chest1":"0",
+                    "chest2":"0",
+                    "chest3":"0",
+                    "head0":"0",
+                    "head1":"0",
+                    "head2":"0",
+                    "head3":"0"
+                  }
+                ]
+              },{
+                "name":"Machete",
+                "range":"0",
+                "rate":"0",
+                "capacity":"120",
+                "damage":[
+                  {
+                    "base":"0",
+                    "chest0":"0",
+                    "chest1":"0",
+                    "chest2":"0",
+                    "chest3":"0",
+                    "head0":"0",
+                    "head1":"0",
+                    "head2":"0",
+                    "head3":"0"
+                  }
+                ]
+              }
+            ]
+          },{
+            "name":"Grenade",
+            "items":[
+              {
+                "name":"Frag Grenade",
+                "range":"0",
+                "capacity":"12",
+                "damage":[
+                  {
+                    "base":"0"
+                  }
+                ]
+              },{
+                "name":"Smoke Grenade",
+                "range":"0",
+                "capacity":"16",
+                "damage":[
+                  {
+                    "base":"0"
+                  }
+                ]
+              },{
+                "name":"Stun Grenade",
+                "range":"0",
+                "capacity":"14",
+                "damage":[
+                  {
+                    "base":"0"
+                  }
+                ]
+              },{
+                "name":"Molotov Cocktail",
+                "range":"0",
+                "capacity":"18",
+                "damage":[
+                  {
+                    "base":"0"
+                  }
+                ]
+              }
+            ]
+          },{
+            "name":"Crossbow",
+            "items":[
+              {
+                "name":"Crossbow",
+                "magazine":"1",
+                "ammo":"Bolt",
+                "range":"0",
+                "stability":"0",
+                "rate":"0",
+                "capacity":"500",
+                "damage":[
+                  {
+                    "base":"53",
+                    "chest0":"105",
+                    "chest1":"74",
+                    "chest2":"63",
+                    "chest3":"47",
+                    "head0":"263",
+                    "head1":"184",
+                    "head2":"158",
+                    "head3":"118"
+                  }
+                ]
+              }
+            ]
+          }
+
+        ]
+      },
+      {
+        "name":"Ammunition",
+        "items":[
+          {
+            "name":".300 Magnum Ammo",
+            "capacity":"0"
+          },{
+            "name":".303 Ball Ammo",
+            "capacity":"0"
+          },{
+            "name":".44 Magnum Ammo",
+            "capacity":"0"
+          },{
+            "name":".45 ACP Ammo",
+            "capacity":"0.4"
+          },{
+            "name":"12 Gauge Ammo",
+            "capacity":"1.25"
+          },{
+            "name":"5.56mm Ammo",
+            "capacity":"0.5"
+          },{
+            "name":"7.62mm Ammo",
+            "capacity":"0.7"
+          },{
+            "name":"9mm Ammo",
+            "capacity":"0.375"
+          },{
+            "name":"Bolt",
+            "capacity":"0"
+          }
+        ]
+      },
+      {
+        "name":"Attachments",
+        "types": [
+          {
+            "name":"Muzzle",
+            "items": [
+              {
+                "name":"Choke for S1897",
+                "capacity":"500"
+              },{
+                "name":"Compensator for Automatic Rifle",
+                "capacity":"500"
+              },{
+                "name":"Compensator for Sniper Rifle",
+                "capacity":"500"
+              }, {
+                "name":"Flash Hider for Automatic Rifle",
+                "capacity":"500"
+              },{
+                "name":"Flash Hider for SMG",
+                "capacity":"500"
+              },{
+                "name":"Flash Hider for Sniper Rifle",
+                "capacity":"500"
+              },{
+                "name":"Suppressor for Automatic Rifle",
+                "capacity":"500"
+              }, {
+                "name":"Suppressor for Sniper Rifle",
+                "capacity":"500"
+              },{
+                "name":"Suppressor for Pistol",
+                "capacity":"500"
+              },{
+                "name":"Suppressor for SMG",
+                "capacity":"500"
+              }
+            ]
+          },{
+            "name":"Grip",
+            "items":[
+              {
+                "name":"Angled Foregrip",
+                "capacity":"500"
+              },{
+                "name":"Verticle Foregrip",
+                "capacity":"500"
+              } ,{
+                "name":"Foregrip for Crossbow",
+                "capacity":"500"
+              }
+            ]
+          },{
+            "name":"Stock",
+            "items":[
+              {
+                "name":"Cheek Pad for Sniper Rifle",
+                "capacity":"500"
+              },{
+                "name":"Composite Stock for Assault Rifle",
+                "capacity":"500"
+              },{
+                "name":"Stock for Micro Uzi",
+                "capacity":"500"
+              },{
+                "name":"Tactical Stock for M416",
+                "capacity":"500"
+              }
+            ]
+          },{
+            "name":"Magazines",
+            "items":[
+              {
+                "name":"Extended Mag Drum",
+                "capacity":"500"
+              },{
+                "name":"Extended Mag for Automatic Rifle",
+                "capacity":"500"
+              },{
+                "name":"Extended Mag for KRISS Vector",
+                "capacity":"500"
+              },{
+                "name":"Extended Mag for Pistol",
+                "capacity":"500"
+              },{
+                "name":"Extended Mag for SMG",
+                "capacity":"500"
+              },{
+                "name":"Extended Mag for Sniper Rifle",
+                "capacity":"500"
+              },{
+                "name":"Quickdraw Mag for Automatic Rifle",
+                "capacity":"500"
+              },{
+                "name":"Quickdraw Mag for Crossbow",
+                "capacity":"500"
+              },{
+                "name":"Quickdraw Mag for KRISS Vector",
+                "capacity":"500"
+              },{
+                "name":"Quickdraw Mag for Pistol",
+                "capacity":"500"
+              },{
+                "name":"Quickdraw Mag for SMG",
+                "capacity":"500"
+              },{
+                "name":"Quickdraw Mag for Sniper Rifle",
+                "capacity":"500"
+              },{
+                "name":"Extended Quickdraw Mag for Pistol",
+                "capacity":"500"
+              },{
+                "name":"Extended Quickdraw Mag for SMG",
+                "capacity":"500"
+              },{
+                "name":"Extended Quickdraw Mag for Automatic Rifle",
+                "capacity":"500"
+              },{
+                "name":"Extended Quickdraw Mag for Sniper Rifle",
+                "capacity":"500"
+              }
+            ]
+          },{
+            "name":"Bullet Loops",
+            "items":[
+              {
+                "name":"Bullet Loops for Kar98k",
+                "capacity":"500"
+              },{
+                "name":"Bullet Loops for S1897, S686",
+                "capacity":"500"
+              }
+            ]
+          },{
+            "name":"Sights",
+            "items":[
+              {
+                "name":"Red Dot Sight",
+                "capacity":"500"
+              },{
+                "name":"Holographic Sight",
+                "capacity":"500"
+              },{
+                "name":"2x Scope",
+                "capacity":"500"
+              },{
+                "name":"4x Scope",
+                "capacity":"500"
+              },{
+                "name":"8x Scope",
+                "capacity":"500"
+              },{
+                "name":"15x Scope",
+                "capacity":"500"
+              }
+
+
+            ]
+          }
+        ]
+      },{
+        "name":"Equipment",
+        "types":[
+          {
+            "name":"Backpack",
+            "items":[
+              {
+                "name":"Backpack (1)",
+                "bulk":"150",
+                "capacity":"0"
+              },{
+                "name":"Backpack (2)",
+                "bulk":"200",
+                "capacity":"0"
+              },{
+                "name":"Backpack (3)",
+                "bulk":"250",
+                "capacity":"0"
+              }
+            ]
+          },{
+            "name":"Glasses",
+            "items":[
+              {
+                "name":"Sunglass",
+                "capacity":"0"
+              },{
+                "name":"Glasses (Punk)",
+                "capacity":"0"
+              },{
+                "name":"Rimless Sunglasses",
+                "capacity":"0"
+              }
+            ]
+          },{
+            "name":"Gloves",
+            "items":[
+              {
+                "name":"Fingerless Gloves",
+                "capacity":"0"
+
+              }
+            ]
+          },{
+            "name":"Hats",
+            "items":[
+              {
+                "name":"Beanie Hat",
+                "capacity":"0"
+              }
+            ]
+          },{
+            "name":"Helmets",
+            "items":[
+              {
+                "name":"Motorcycle Helmet (1)",
+                "durability":"80",
+                "capacity":"0"
+              },{
+                "name":"Military Helmet (2)",
+                "durability":"150",
+                "capacity":"0"
+              },{
+                "name":"Military Helmet (3)",
+                "durability":"200",
+                "capacity":"0"
+              }
+            ]
+          },{
+            "name":"Jackets",
+            "items":[
+              {
+                "name":"Coat",
+                "capacity":"0"
+              },{
+                "name":"Padded Jacket",
+                "capacity":"0"
+              },{
+                "name":"Trench Coat",
+                "capacity":"0"
+              }
+            ]
+          },{
+            "name":"Masks",
+            "item":[
+              {
+                "name":"Ballistic Mask",
+                "capacity":"0"
+              },{
+                "name":"Gas MasK (Full)",
+                "capacity":"0"
+              },{
+                "name":"Gas Mask (Half)",
+                "capacity":"0"
+              }
+            ]
+          },{
+            "name":"One Piece Suit",
+            "items":[
+              {
+                "name":"Ghillie Suit",
+                "capacity":"0"
+              }
+            ]
+          },{
+            "name":"Pants",
+            "items":[
+              {
+                "name":"Combat Pants",
+                "bulk":"40",
+                "capacity":"0"
+              }
+            ]
+          },{
+            "name":"Shoes",
+            "items":[
+              {
+                "name":"Boots",
+                "capacity":"0"
+              },{
+                "name":"Hi-Top Trainers",
+                "capacity":"0"
+              },{
+                "name":"Working Boots",
+                "capacity":"0"
+              }
+            ]
+          },{
+            "name":"Shirts",
+            "items":[
+              {
+                "name":"Dirty Tank Top",
+                "capacity":"0"
+              },{
+                "name":"T-Shirt",
+                "capacity":"0"
+              },{
+                "name":"Long-Sleeved Shirt",
+                "capacity":"0"
+              },{
+                "name":"Shirt",
+                "capacity":"0"
+              }
+            ]
+          },{
+            "name":"Vests",
+            "items":[
+              {
+                "name":"Police Vest (1)",
+                "durability":"150",
+                "capacity":"0"
+              },{
+                "name":"Military Vest (2)",
+                "durability":"200",
+                "capacity":"0"
+              },{
+                "name":"Military Vest (3)",
+                "durability":"250",
+                "capacity":"0"
+              }
+            ]
+          }
+        ]
+      },{
+        "name":"Items",
+        "type":[
+          {
+            "name":"Medical",
+            "items":[
+              {
+                "name":"Med Kit",
+                "restore":"100",
+                "capacity":"20"
+              },{
+                "name":"Bandages",
+                "restore":"10",
+                "max":"75",
+                "capacity":"20"
+              },{
+                "name":"First Aid Kit",
+                "restore":"75",
+                "max":"75",
+                "capacity":"10"
+              },{
+                "name":"Painkillers",
+                "boost":"60",
+                "capacity":"20"
+              },{
+                "name":"Energy Drink",
+                "boost":"40",
+                "capacity":"20"
+              },{
+                "name":"Adrenaline Syringe",
+                "capacity":"20"
+              }
+            ]
+          },{
+            "name":"Miscellaneous",
+            "items":[
+              {
+                "name":"Gas Can",
+                "capacity":"20"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

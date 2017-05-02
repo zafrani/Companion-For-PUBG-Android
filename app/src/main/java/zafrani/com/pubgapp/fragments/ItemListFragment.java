@@ -7,7 +7,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
+
 import zafrani.com.pubgapp.R;
+import zafrani.com.pubgapp.models.BaseItem;
 
 public class ItemListFragment extends BaseFragment {
 
@@ -29,5 +32,17 @@ public class ItemListFragment extends BaseFragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+
     }
+
+
+
+    public ArrayList<BaseItem> generateItemList(){
+
+
+
+        return null;
+    }
+
 }
