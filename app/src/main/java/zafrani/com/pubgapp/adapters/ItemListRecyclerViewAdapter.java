@@ -11,12 +11,13 @@ import android.widget.TextView;
 import java.util.List;
 
 import zafrani.com.pubgapp.R;
+import zafrani.com.pubgapp.models.BaseItem;
 
 public class ItemListRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-    private List<Object> feedItemList;
+    private List<BaseItem> feedItemList;
     private Context mContext;
 
-    public ItemListRecyclerViewAdapter(Context context, List<Object> feedItemList) {
+    public ItemListRecyclerViewAdapter(Context context, List<BaseItem> feedItemList) {
         this.feedItemList = feedItemList;
         this.mContext = context;
     }

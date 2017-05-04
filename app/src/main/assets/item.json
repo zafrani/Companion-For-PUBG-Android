@@ -1,11 +1,11 @@
 {
-  "items":{
+  "item_list":{
     "categories":[
       {
-        "name":"Weapon",
+        "cat_name":"Weapon",
         "types":[
           {
-            "name":"Assault Rifle",
+            "type_name":"Assault Rifle",
             "items":[
               {
                 "name":"AKM",
@@ -94,7 +94,7 @@
               }
             ]
           },{
-            "name":"SMG",
+            "type_name":"SMG",
             "items":[
               {
                 "name":"UMP9",
@@ -183,7 +183,7 @@
               }
             ]
           },{
-            "name":"LMG",
+            "type_name":"LMG",
             "items":[
               {
                 "name":"M249",
@@ -209,7 +209,7 @@
               }
             ]
           },{
-            "name":"Shotgun",
+            "type_name":"Shotgun",
             "items":[
               {
                 "name":"S686",
@@ -277,7 +277,7 @@
               }
             ]
           },{
-            "name":"Sniper Rifle",
+            "type_name":"Sniper Rifle",
             "items":[
               {
                 "name":"AWM",
@@ -345,7 +345,7 @@
               }
             ]
           },{
-            "name":"DMR",
+            "type_name":"DMR",
             "items":[
               {
                 "name":"SKS",
@@ -371,7 +371,7 @@
               }
             ]
           },{
-            "name":"Pistol",
+            "type_name":"Pistol",
             "items":[
               {
                 "name":"P92",
@@ -439,7 +439,7 @@
               }
             ]
           },{
-            "name":"Melee",
+            "type_name":"Melee",
             "items":[
               {
                 "name":"Pan",
@@ -516,7 +516,7 @@
               }
             ]
           },{
-            "name":"Grenade",
+            "type_name":"Grenade",
             "items":[
               {
                 "name":"Frag Grenade",
@@ -557,7 +557,7 @@
               }
             ]
           },{
-            "name":"Crossbow",
+            "type_name":"Crossbow",
             "items":[
               {
                 "name":"Crossbow",
@@ -587,7 +587,7 @@
         ]
       },
       {
-        "name":"Ammunition",
+        "cat_name":"Ammunition",
         "items":[
           {
             "name":".300 Magnum Ammo",
@@ -620,10 +620,10 @@
         ]
       },
       {
-        "name":"Attachments",
+        "cat_name":"Attachments",
         "types": [
           {
-            "name":"Muzzle",
+            "type_name":"Muzzle",
             "items": [
               {
                 "name":"Choke for S1897",
@@ -658,7 +658,7 @@
               }
             ]
           },{
-            "name":"Grip",
+            "type_name":"Grip",
             "items":[
               {
                 "name":"Angled Foregrip",
@@ -672,7 +672,7 @@
               }
             ]
           },{
-            "name":"Stock",
+            "type_name":"Stock",
             "items":[
               {
                 "name":"Cheek Pad for Sniper Rifle",
@@ -689,7 +689,7 @@
               }
             ]
           },{
-            "name":"Magazines",
+            "type_name":"Magazines",
             "items":[
               {
                 "name":"Extended Mag Drum",
@@ -742,7 +742,7 @@
               }
             ]
           },{
-            "name":"Bullet Loops",
+            "type_name":"Bullet Loops",
             "items":[
               {
                 "name":"Bullet Loops for Kar98k",
@@ -753,7 +753,7 @@
               }
             ]
           },{
-            "name":"Sights",
+            "type_name":"Sights",
             "items":[
               {
                 "name":"Red Dot Sight",
@@ -780,10 +780,10 @@
           }
         ]
       },{
-        "name":"Equipment",
+        "cat_name":"Equipment",
         "types":[
           {
-            "name":"Backpack",
+            "type_name":"Backpack",
             "items":[
               {
                 "name":"Backpack (1)",
@@ -800,7 +800,7 @@
               }
             ]
           },{
-            "name":"Glasses",
+            "type_name":"Glasses",
             "items":[
               {
                 "name":"Sunglass",
@@ -814,7 +814,7 @@
               }
             ]
           },{
-            "name":"Gloves",
+            "type_name":"Gloves",
             "items":[
               {
                 "name":"Fingerless Gloves",
@@ -823,7 +823,7 @@
               }
             ]
           },{
-            "name":"Hats",
+            "type_name":"Hats",
             "items":[
               {
                 "name":"Beanie Hat",
@@ -831,7 +831,7 @@
               }
             ]
           },{
-            "name":"Helmets",
+            "type_name":"Helmets",
             "items":[
               {
                 "name":"Motorcycle Helmet (1)",
@@ -848,7 +848,7 @@
               }
             ]
           },{
-            "name":"Jackets",
+            "type_name":"Jackets",
             "items":[
               {
                 "name":"Coat",
@@ -862,7 +862,7 @@
               }
             ]
           },{
-            "name":"Masks",
+            "type_name":"Masks",
             "item":[
               {
                 "name":"Ballistic Mask",
@@ -876,7 +876,7 @@
               }
             ]
           },{
-            "name":"One Piece Suit",
+            "type_name":"One Piece Suit",
             "items":[
               {
                 "name":"Ghillie Suit",
@@ -884,7 +884,7 @@
               }
             ]
           },{
-            "name":"Pants",
+            "type_name":"Pants",
             "items":[
               {
                 "name":"Combat Pants",
@@ -893,7 +893,7 @@
               }
             ]
           },{
-            "name":"Shoes",
+            "type_name":"Shoes",
             "items":[
               {
                 "name":"Boots",
@@ -907,7 +907,7 @@
               }
             ]
           },{
-            "name":"Shirts",
+            "type_name":"Shirts",
             "items":[
               {
                 "name":"Dirty Tank Top",
@@ -924,7 +924,7 @@
               }
             ]
           },{
-            "name":"Vests",
+            "type_name":"Vests",
             "items":[
               {
                 "name":"Police Vest (1)",
@@ -943,10 +943,10 @@
           }
         ]
       },{
-        "name":"Items",
+        "cat_name":"Items",
         "type":[
           {
-            "name":"Medical",
+            "type_name":"Medical",
             "items":[
               {
                 "name":"Med Kit",
@@ -976,7 +976,7 @@
               }
             ]
           },{
-            "name":"Miscellaneous",
+            "type_name":"Miscellaneous",
             "items":[
               {
                 "name":"Gas Can",
@@ -986,6 +986,10 @@
           }
         ]
       }
+
+
+
+
     ]
   }
 }
