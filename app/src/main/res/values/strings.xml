@@ -1,6 +1,3 @@
 <resources>
     <string name="app_name">pubgapp</string>
-    <string name="map_tab_title">Maps</string>
-    <string name="item_tab_title">Item</string>
-    <string name="item_view_tab_title">View</string>
 </resources>
