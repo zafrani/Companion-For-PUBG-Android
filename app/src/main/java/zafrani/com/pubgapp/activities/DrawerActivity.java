@@ -1,5 +1,7 @@
 package zafrani.com.pubgapp.activities;
 
+import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -10,19 +12,23 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.widget.FrameLayout;
 
 import zafrani.com.pubgapp.R;
+import zafrani.com.pubgapp.fragments.ItemFragment;
+import zafrani.com.pubgapp.fragments.MapFragment;
 
 public abstract class DrawerActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     @Nullable
-    private DrawerLayout   drawerLayout;
+    private DrawerLayout drawerLayout = null;
     @Nullable
-    private NavigationView navigationView;
+    private NavigationView navigationView = null;
+    @Nullable
+    private FrameLayout contentLayout = null;
 
-
-    //region DrawerActivity
+    //region Activity
     @Override
     protected final void onCreate(@Nullable final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,10 +42,11 @@ public abstract class DrawerActivity extends AppCompatActivity
             actionBar.setHomeAsUpIndicator(R.drawable.ic_menu_white_24dp);
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
-
-        this.drawerLayout = (DrawerLayout) findViewById(R.id.activity_drawer_drawerlayout);
+        this.contentLayout = (FrameLayout) findViewById(R.id.activity_drawer_content);
         this.navigationView = (NavigationView) findViewById(R.id.activity_drawer_navigationview);
         this.navigationView.setNavigationItemSelectedListener(this);
+        this.drawerLayout = (DrawerLayout) findViewById(R.id.activity_drawer_drawerlayout);
+        mapSelected();
     }
 
     @Override
@@ -57,12 +64,9 @@ public abstract class DrawerActivity extends AppCompatActivity
 
     @Override
     protected void onDestroy() {
-        if (this.navigationView != null) {
-            this.navigationView.setNavigationItemSelectedListener(null);
-            this.navigationView = null;
-        }
-        this.drawerLayout = null;
         super.onDestroy();
+        this.navigationView = null;
+        this.drawerLayout = null;
     }
     //endregion
 
@@ -73,9 +77,50 @@ public abstract class DrawerActivity extends AppCompatActivity
             return false;
         }
         this.drawerLayout.closeDrawers();
+        switch (item.getItemId()) {
+            case R.id.drawer_map:
+                this.mapSelected();
+                break;
+            case R.id.drawer_items:
+                this.itemsSelected();
+                break;
+        }
         return true;
     }
+    //endregion
 
+
+    //region methods
+    private void mapSelected() {
+        if (this.contentLayout == null) {
+            return;
+        }
+        Fragment fragment = getFragmentManager().findFragmentByTag(MapFragment.TAG);
+        if (fragment == null) {
+            showFragment(new MapFragment());
+        } else {
+            showFragment(fragment);
+        }
+    }
+
+    private void itemsSelected() {
+        if (this.contentLayout == null) {
+            return;
+        }
+        Fragment fragment = getFragmentManager().findFragmentByTag(ItemFragment.TAG);
+        if (fragment == null) {
+            showFragment(new ItemFragment());
+        } else {
+            showFragment(fragment);
+        }
+    }
+
+    private void showFragment(@NonNull final Fragment fragment) {
+        final FragmentTransaction fragTransaction = getFragmentManager().beginTransaction();
+        fragTransaction.replace(R.id.activity_drawer_content, fragment);
+        fragTransaction.commit();
+        getFragmentManager().executePendingTransactions();
+    }
     //endregion
 
 }
