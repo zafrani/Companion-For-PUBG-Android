@@ -13,6 +13,6 @@
         android:id="@+id/recyclerview_item"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="0dp"/>
+        android:layout_margin="@dimen/recyclerview_margin"/>
 
 </LinearLayout>
