@@ -17,8 +17,13 @@ public class Items {
 
     @Override
     public String toString() {
-        return "Items{" +
-               "categories=" + categories.toString() +
-               '}';
+        return "Items contains: { " +
+                " x categories," +
+                " y types, " +
+                " z items }" ;
+    }
+
+    public List<Category> getCategories() {
+        return categories;
     }
 }
