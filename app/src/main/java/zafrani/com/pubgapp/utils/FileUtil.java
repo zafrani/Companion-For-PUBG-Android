@@ -3,7 +3,6 @@ package zafrani.com.pubgapp.utils;
 import android.app.Activity;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.util.Log;
 
 import com.google.gson.Gson;
 
@@ -27,11 +26,8 @@ public class FileUtil {
             final Gson gson = new Gson();
             final BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
 
-            return gson.fromJson(reader, Items.class);
-            /*
-            Items items = gson.fromJson(reader, Items.class);
-            return bindInfo(items);
-             */
+            return bindInfo(gson.fromJson(reader, Items.class));
+
         }
         return null;
     }
@@ -40,11 +36,8 @@ public class FileUtil {
 
     public static Items bindInfo(@NonNull final Items items) {
         for (Category category: items.getCategories()){
-            Log.e("BINDINGINFO", "Category: " +category);
 
             for (Type type: category.getTypes()){
-
-                Log.e("BINDINGINFO", "Type: " +type);
                 for (Item item: type.getItems()) {
                     item.setCategory(category.getName());
                     item.setType(type.getType_name());
