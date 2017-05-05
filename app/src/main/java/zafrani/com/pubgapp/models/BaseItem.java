@@ -2,29 +2,34 @@ package zafrani.com.pubgapp.models;
 
 import android.support.annotation.NonNull;
 
+import com.google.gson.annotations.SerializedName;
+
 
 public class BaseItem {
     @NonNull
-    private final String category;
+    @SerializedName("cat_name")
+    private final String cat_name;
     @NonNull
-    private final String type;
+    @SerializedName("type_name")
+    private final String type_name;
     @NonNull
+    @SerializedName("name")
     private final String name;
 
     public BaseItem(@NonNull String category, @NonNull String type, @NonNull String name) {
-        this.category = category;
-        this.type = type;
+        this.cat_name = category;
+        this.type_name = type;
         this.name = name;
     }
 
     @NonNull
     public String getCategory() {
-        return category;
+        return cat_name;
     }
 
     @NonNull
     public String getType() {
-        return type;
+        return type_name;
     }
 
     @NonNull
