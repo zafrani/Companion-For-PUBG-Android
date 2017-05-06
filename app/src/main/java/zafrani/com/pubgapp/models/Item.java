@@ -11,6 +11,6 @@ public class Item extends BaseItem{
 
     @Override
     public String toString() {
-        return getName();
+        return super.toString();
     }
 }
