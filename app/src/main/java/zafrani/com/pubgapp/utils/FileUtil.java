@@ -40,7 +40,7 @@ public class FileUtil {
             for (Type type: category.getTypes()){
                 for (Item item: type.getItems()) {
                     item.setCategory(category.getName());
-                    item.setType(type.getType_name());
+                    item.setType(type.getName());
                 }
             }
         }

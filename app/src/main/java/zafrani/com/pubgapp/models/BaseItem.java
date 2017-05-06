@@ -8,26 +8,28 @@ import com.google.gson.annotations.SerializedName;
 public class BaseItem {
     @NonNull
     @SerializedName("cat_name")
-    private String cat_name;
+    private String category;
     @NonNull
     @SerializedName("type_name")
-    private String type_name;
+    private String type;
     @NonNull
     @SerializedName("name")
     private final String name;
 
-    public BaseItem(@NonNull String category, @NonNull String type, @NonNull String name) {
-        this.cat_name = category;
-        this.type_name = type;
+    public BaseItem(@NonNull final String category,
+                    @NonNull final String type,
+                    @NonNull final String name) {
+        this.category = category;
+        this.type = type;
         this.name = name;
     }
 
     public void setCategory(@NonNull String cat_name) {
-        this.cat_name = cat_name;
+        this.category = cat_name;
     }
 
     public void setType(@NonNull String type_name) {
-        this.type_name = type_name;
+        this.type = type_name;
     }
 
     @NonNull
@@ -42,12 +44,12 @@ public class BaseItem {
 
     @NonNull
     public String getCategory() {
-        return cat_name;
+        return category;
     }
 
     @NonNull
     public String getType() {
-        return type_name;
+        return type;
     }
 
     @NonNull
