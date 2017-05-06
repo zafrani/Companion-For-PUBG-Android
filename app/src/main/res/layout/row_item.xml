@@ -7,24 +7,24 @@
     >
 
     <TextView
-        android:id="@+id/item_name"
+        android:id="@+id/row_item_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/item_name_size"
-        android:textStyle="bold"
+        style="@style/RowItemName"
+
         />
 
     <TextView
-        android:id="@+id/item_type"
+        android:id="@+id/row_item_type"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/item_type_size"
+        style="@style/RowItemType"
         />
 
     <TextView
-        android:id="@+id/item_category"
+        android:id="@+id/row_item_category"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/item_category_size"
+        style="@style/RowItemCategory"
         />
 </LinearLayout>
