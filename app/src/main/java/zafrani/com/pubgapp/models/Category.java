@@ -8,14 +8,13 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 public class Category {
+    @NonNull
     @SerializedName("cat_name")
     private final String name;
 
-
+    @NonNull
     @SerializedName("types")
     private final List<Type> types;
-
-
 
 
     public Category(@NonNull final String cat_name,
