@@ -21,6 +21,7 @@ import zafrani.com.pubgapp.models.Type;
 import zafrani.com.pubgapp.utils.FileUtil;
 
 public class ItemFragment extends BaseFragment {
+
     public static String TAG = ItemFragment.class.getSimpleName();
     private RecyclerView mRecyclerView;
     private ItemListAdapter mAdapter;
@@ -57,10 +58,6 @@ public class ItemFragment extends BaseFragment {
                         itemList.addAll(type.getItems());
 
                     }
-                } else if (category.getItems() != null) {
-                    Log.e(getClass()
-                            .getSimpleName(), "Items for Category " + category + ": " + (category.getItems() == null ? "null" :category.getItems().toString()));
-                    itemList.addAll(category.getItems());
                 }
             }
         } catch (IOException e) {

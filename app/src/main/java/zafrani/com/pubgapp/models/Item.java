@@ -9,8 +9,7 @@ public class Item extends BaseItem{
         super(category, type, name);
     }
 
-    @Override
-    public String toString() {
-        return getName();
-    }
+
+
+
 }
