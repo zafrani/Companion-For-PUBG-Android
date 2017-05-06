@@ -10,7 +10,9 @@ import android.view.ViewGroup;
 import java.io.IOException;
 
 import zafrani.com.pubgapp.R;
+import zafrani.com.pubgapp.models.Category;
 import zafrani.com.pubgapp.models.Items;
+import zafrani.com.pubgapp.models.Type;
 import zafrani.com.pubgapp.utils.FileUtil;
 
 public class ItemFragment extends BaseFragment {
@@ -32,10 +34,25 @@ public class ItemFragment extends BaseFragment {
         try {
             Items items = FileUtil.getItems(getActivity());
             Log.e(getClass()
-                          .getSimpleName(), "items: " + (items == null ? "null" : items.toString()));
+                          .getSimpleName(), "Items contents: " + (items == null ? "null" : items.toString()));
+            for (Category category: items.getCategories()) {
+                Log.e(getClass()
+                        .getSimpleName(), "Categories: " + (items.getCategories() == null ? "null" : category.toString()));
+                Log.e(getClass()
+                        .getSimpleName(), "Types for category " + category + ": " + (category.getTypes() == null ? "null" : category.getTypes().toString()));
+                if (category.getTypes() != null){
+                    for (Type type : category.getTypes()) {
+                        Log.e(getClass()
+                            .getSimpleName(), "Items for Type " + type + ": " + (type.getItems() == null ? "null" : type.getItems().toString()));
+                    }
+                }
+            }
         } catch (IOException e) {
             e.printStackTrace();
             Log.e(getClass().getSimpleName(), "Error: " + e.getLocalizedMessage());
         }
     }
+
+
+
 }

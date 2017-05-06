@@ -862,12 +862,12 @@
           ]
         },{
           "type_name":"Masks",
-          "item":[
+          "items":[
             {
               "name":"Ballistic Mask",
               "capacity":"0"
             },{
-              "name":"Gas MasK (Full)",
+              "name":"Gas Mask (Full)",
               "capacity":"0"
             },{
               "name":"Gas Mask (Half)",
@@ -943,7 +943,7 @@
       ]
     },{
       "cat_name":"Items",
-      "type":[
+      "types":[
         {
           "type_name":"Medical",
           "items":[

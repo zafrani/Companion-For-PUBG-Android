@@ -16,4 +16,29 @@ public class BaseItem {
         this.type = type;
         this.name = name;
     }
+
+    @NonNull
+    @Override
+    public String toString() {
+        return "BaseItem{" +
+                "category='" + category + '\'' +
+                ", type='" + type + '\'' +
+                ", name='" + name + '\'' +
+                '}';
+    }
+
+    @NonNull
+    public String getCategory() {
+        return category;
+    }
+
+    @NonNull
+    public String getType() {
+        return type;
+    }
+
+    @NonNull
+    public String getName() {
+        return name;
+    }
 }
