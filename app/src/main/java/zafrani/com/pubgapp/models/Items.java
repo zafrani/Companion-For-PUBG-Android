@@ -16,10 +16,13 @@ public class Items {
         this.categories = categories;
     }
 
+
     @NonNull
     @Override
     public String toString() {
-        return super.toString();
+        return "Items{" +
+                "categories=" + categories +
+                '}';
     }
 
     @NonNull

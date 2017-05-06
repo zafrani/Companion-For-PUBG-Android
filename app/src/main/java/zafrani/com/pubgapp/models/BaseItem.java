@@ -18,6 +18,16 @@ public class BaseItem {
     }
 
     @NonNull
+    @Override
+    public String toString() {
+        return "BaseItem{" +
+                "category='" + category + '\'' +
+                ", type='" + type + '\'' +
+                ", name='" + name + '\'' +
+                '}';
+    }
+
+    @NonNull
     public String getCategory() {
         return category;
     }

@@ -19,11 +19,13 @@ public class Type {
         this.name = type_name;
         this.items = items;
     }
-
     @NonNull
     @Override
     public String toString() {
-        return super.toString();
+        return "Type{" +
+                "name='" + name + '\'' +
+                ", items=" + items +
+                '}';
     }
 
     @NonNull

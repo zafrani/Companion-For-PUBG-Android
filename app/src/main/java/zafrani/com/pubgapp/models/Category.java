@@ -34,12 +34,12 @@ public class Category {
         return name;
     }
 
-
     @NonNull
     @Override
     public String toString() {
-        return super.toString();
+        return "Category{" +
+                "name='" + name + '\'' +
+                ", types=" + types +
+                '}';
     }
-
-
 }
