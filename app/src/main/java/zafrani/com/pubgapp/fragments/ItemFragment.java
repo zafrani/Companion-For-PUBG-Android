@@ -45,9 +45,6 @@ public class ItemFragment extends BaseFragment {
                         Log.e(getClass()
                             .getSimpleName(), "Items for Type " + type + ": " + (type.getItems() == null ? "null" : type.getItems().toString()));
                     }
-                } else if (category.getItems() != null) {
-                    Log.e(getClass()
-                            .getSimpleName(), "Items for Category " + category + ": " + (category.getItems() == null ? "null" :category.getItems().toString()));
                 }
             }
         } catch (IOException e) {

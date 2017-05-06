@@ -8,6 +8,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 public class Items {
+    @NonNull
     @SerializedName("categories")
     private final List<Category> categories;
 
@@ -15,14 +16,13 @@ public class Items {
         this.categories = categories;
     }
 
+    @NonNull
     @Override
     public String toString() {
-        return "Items contains: { " +
-                " x categories," +
-                " y types, " +
-                " z items }" ;
+        return super.toString();
     }
 
+    @NonNull
     public List<Category> getCategories() {
         return categories;
     }
