@@ -4,6 +4,7 @@ import android.support.annotation.NonNull;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class Type {
@@ -14,9 +15,9 @@ public class Type {
     @SerializedName("items")
     private final List<Item> items;
 
-    public Type(@NonNull final String type_name,
+    public Type(@NonNull final String name,
                 @NonNull final List<Item> items) {
-        this.name = type_name;
+        this.name = name;
         this.items = items;
     }
     @NonNull
@@ -24,12 +25,12 @@ public class Type {
     public String toString() {
         return "Type{" +
                 "name='" + name + '\'' +
-                ", items=" + items +
+                ", items=" + Arrays.toString(items.toArray()) +
                 '}';
     }
 
     @NonNull
-    public String getType_name() {
+    public String getName() {
         return name;
     }
 

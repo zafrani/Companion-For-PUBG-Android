@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class Items {
@@ -21,7 +22,7 @@ public class Items {
     @Override
     public String toString() {
         return "Items{" +
-                "categories=" + categories +
+                "categories=" + Arrays.toString(categories.toArray()) +
                 '}';
     }
 
