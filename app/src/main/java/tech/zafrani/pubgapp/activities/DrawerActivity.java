@@ -16,7 +16,7 @@ import android.widget.FrameLayout;
 
 import tech.zafrani.pubgapp.R;
 import tech.zafrani.pubgapp.fragments.ItemFragment;
-import tech.zafrani.pubgapp.fragments.MapFragment;
+import tech.zafrani.pubgapp.fragments.PUBGMapFragment;
 
 public abstract class DrawerActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -95,9 +95,9 @@ public abstract class DrawerActivity extends AppCompatActivity
         if (this.contentLayout == null) {
             return;
         }
-        Fragment fragment = getFragmentManager().findFragmentByTag(MapFragment.TAG);
+        Fragment fragment = getFragmentManager().findFragmentByTag(PUBGMapFragment.TAG);
         if (fragment == null) {
-            showFragment(new MapFragment());
+            showFragment(new PUBGMapFragment());
         } else {
             showFragment(fragment);
         }
