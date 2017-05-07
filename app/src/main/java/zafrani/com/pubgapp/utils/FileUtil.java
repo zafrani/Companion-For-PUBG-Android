@@ -35,10 +35,10 @@ public class FileUtil {
 
 
     public static Items bindInfo(@NonNull final Items items) {
-        for (Category category: items.getCategories()){
+        for (final Category category: items.getCategories()){
 
-            for (Type type: category.getTypes()){
-                for (Item item: type.getItems()) {
+            for (final Type type: category.getTypes()){
+                for (final Item item: type.getItems()) {
                     item.setCategory(category.getName());
                     item.setType(type.getName());
                 }
