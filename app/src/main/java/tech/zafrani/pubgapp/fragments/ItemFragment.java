@@ -20,7 +20,7 @@ public class ItemFragment extends BaseFragment {
     @Nullable
     @Override
     public View onCreateView(final LayoutInflater inflater,
-                             @Nullable final ViewGroup container,
+                             final ViewGroup container,
                              final Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_item, container, false);
 

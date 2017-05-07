@@ -30,6 +30,7 @@
         <item name="tabPaddingStart">12dp</item>
         <item name="tabPaddingEnd">12dp</item>
         <item name="tabBackground">@color/white</item>
+        <item name="android:state_selected"></item>
         <item name="tabTextAppearance">@style/TabTextAppearance</item>
         <item name="tabSelectedTextColor">#000000</item>
     </style>
