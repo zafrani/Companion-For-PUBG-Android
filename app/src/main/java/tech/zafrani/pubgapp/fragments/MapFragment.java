@@ -1,4 +1,4 @@
-package zafrani.com.pubgapp.fragments;
+package tech.zafrani.pubgapp.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -6,7 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import zafrani.com.pubgapp.R;
+import tech.zafrani.pubgapp.R;
+
 
 public class MapFragment extends BaseFragment {
 

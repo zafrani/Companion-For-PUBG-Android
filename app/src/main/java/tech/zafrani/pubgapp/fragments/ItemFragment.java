@@ -1,4 +1,4 @@
-package zafrani.com.pubgapp.fragments;
+package tech.zafrani.pubgapp.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -9,11 +9,11 @@ import android.view.ViewGroup;
 
 import java.io.IOException;
 
-import zafrani.com.pubgapp.R;
-import zafrani.com.pubgapp.models.Category;
-import zafrani.com.pubgapp.models.Items;
-import zafrani.com.pubgapp.models.Type;
-import zafrani.com.pubgapp.utils.FileUtil;
+import tech.zafrani.pubgapp.R;
+import tech.zafrani.pubgapp.models.Category;
+import tech.zafrani.pubgapp.models.Items;
+import tech.zafrani.pubgapp.models.Type;
+import tech.zafrani.pubgapp.utils.FileUtil;
 
 public class ItemFragment extends BaseFragment {
 

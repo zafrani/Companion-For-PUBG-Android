@@ -1,4 +1,4 @@
-package zafrani.com.pubgapp.utils;
+package tech.zafrani.pubgapp.utils;
 
 import android.app.Activity;
 import android.support.annotation.NonNull;
@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-import zafrani.com.pubgapp.models.Items;
+import tech.zafrani.pubgapp.models.Items;
 
 public class FileUtil {
 

@@ -1,10 +1,6 @@
-package zafrani.com.pubgapp.models;
+package tech.zafrani.pubgapp.models;
 
 import android.support.annotation.NonNull;
-
-/**
- * Created by stevenzafrani on 4/30/17.
- */
 
 public class Weapon extends BaseItem {
 

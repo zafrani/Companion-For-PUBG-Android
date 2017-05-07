@@ -1,4 +1,4 @@
-package zafrani.com.pubgapp.models;
+package tech.zafrani.pubgapp.models;
 
 
 import android.support.annotation.NonNull;
