@@ -30,4 +30,14 @@ public class Items {
     public List<Category> getCategories() {
         return categories;
     }
+
+    public Category getCategory(@NonNull final String name) {
+
+        for (Category category: categories) {
+            if (category.getName().equals(name)) {
+                return category;
+            }
+        }
+        return null;
+    }
 }
