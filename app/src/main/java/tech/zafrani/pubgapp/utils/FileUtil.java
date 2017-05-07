@@ -22,8 +22,11 @@ public class FileUtil {
         if (inputStream != null) {
             final Gson gson = new Gson();
             final BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
+
             return gson.fromJson(reader, Items.class);
+
         }
         return null;
     }
+
 }

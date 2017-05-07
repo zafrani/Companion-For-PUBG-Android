@@ -20,9 +20,11 @@ public class Category {
 
     public Category(@NonNull final String cat_name,
                     @NonNull final List<Type> types
-                    ) {
+                   ) {
         this.name = cat_name;
         this.types = types;
+        updateChildren();
+
     }
 
     @NonNull
@@ -39,8 +41,14 @@ public class Category {
     @Override
     public String toString() {
         return "Category{" +
-                "name='" + name + '\'' +
-                ", types=" + Arrays.toString(types.toArray()) +
-                '}';
+               "name='" + name + '\'' +
+               ", types=" + Arrays.toString(types.toArray()) +
+               '}';
+    }
+
+    private void updateChildren() {
+        for (final Type type : getTypes()) {
+            type.updateChildren(getName());
+        }
     }
 }

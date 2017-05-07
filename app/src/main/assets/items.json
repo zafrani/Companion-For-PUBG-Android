@@ -587,34 +587,39 @@
     },
     {
       "cat_name":"Ammunition",
-      "items":[
+      "types":[
         {
-          "name":".300 Magnum Ammo",
-          "capacity":"0"
-        },{
-          "name":".303 Ball Ammo",
-          "capacity":"0"
-        },{
-          "name":".44 Magnum Ammo",
-          "capacity":"0"
-        },{
-          "name":".45 ACP Ammo",
-          "capacity":"0.4"
-        },{
-          "name":"12 Gauge Ammo",
-          "capacity":"1.25"
-        },{
-          "name":"5.56mm Ammo",
-          "capacity":"0.5"
-        },{
-          "name":"7.62mm Ammo",
-          "capacity":"0.7"
-        },{
-          "name":"9mm Ammo",
-          "capacity":"0.375"
-        },{
-          "name":"Bolt",
-          "capacity":"0"
+          "type_name":"Default",
+          "items":[
+            {
+              "name":".300 Magnum Ammo",
+              "capacity":"0"
+            },{
+              "name":".303 Ball Ammo",
+              "capacity":"0"
+            },{
+              "name":".44 Magnum Ammo",
+              "capacity":"0"
+            },{
+              "name":".45 ACP Ammo",
+              "capacity":"0.4"
+            },{
+              "name":"12 Gauge Ammo",
+              "capacity":"1.25"
+            },{
+              "name":"5.56mm Ammo",
+              "capacity":"0.5"
+            },{
+              "name":"7.62mm Ammo",
+              "capacity":"0.7"
+            },{
+              "name":"9mm Ammo",
+              "capacity":"0.375"
+            },{
+              "name":"Bolt",
+              "capacity":"0"
+            }
+          ]
         }
       ]
     },
