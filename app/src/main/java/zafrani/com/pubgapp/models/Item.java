@@ -26,11 +26,11 @@ public class Item{
         this.name = name;
     }
 
-    public void setCategory(@NonNull String cat_name) {
+    public void setCategory(@NonNull final String cat_name) {
         this.category = cat_name;
     }
 
-    public void setType(@NonNull String type_name) {
+    public void setType(@NonNull final String type_name) {
         this.type = type_name;
     }
 
