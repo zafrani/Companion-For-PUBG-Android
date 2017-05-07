@@ -1,10 +1,13 @@
 package tech.zafrani.pubgapp.utils;
 
 import android.app.Activity;
+import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
 import com.google.gson.Gson;
+
+import org.apache.commons.io.IOUtils;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -27,6 +30,12 @@ public class FileUtil {
 
         }
         return null;
+    }
+
+    @Nullable
+    public static byte[] getBytesForFile(@NonNull final Context context,
+                                         @NonNull final String filename) throws IOException {
+        return IOUtils.toByteArray(context.getAssets().open(filename));
     }
 
 }

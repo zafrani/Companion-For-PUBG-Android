@@ -9,8 +9,10 @@ import android.view.ViewGroup;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.TileOverlayOptions;
 
 import tech.zafrani.pubgapp.R;
+import tech.zafrani.pubgapp.maps.PUBGTileProvider;
 
 
 public class PUBGMapFragment extends BaseFragment
@@ -41,8 +43,13 @@ public class PUBGMapFragment extends BaseFragment
     //region OnMapReadyCallback
     @Override
     public void onMapReady(final GoogleMap googleMap) {
+        final TileOverlayOptions overlayOptions = new TileOverlayOptions();
+        overlayOptions.tileProvider(new PUBGTileProvider(getActivity()));
         mMap = googleMap;
+        mMap.setMaxZoomPreference(5);
         mMap.setMapType(GoogleMap.MAP_TYPE_NONE);
+        mMap.addTileOverlay(overlayOptions);
+        mMap.getUiSettings().setZoomControlsEnabled(true);
     }
     //endregion
 }
