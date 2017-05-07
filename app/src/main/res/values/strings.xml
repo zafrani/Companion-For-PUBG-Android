@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">pubgapp</string>
+    <string name="title_activity_maps">Map</string>
+
+    <!--
+        You will need to provide a Google Maps API key to run this.
+
+        The way I run this is by creating a file called 'local-strings.xml'. The file is NEVER
+        added to Git. Inside of it I created a string resource called 'local_maps_api_key', it
+        contains the API key from https://console.developers.google.com/apis that will be used.
+     -->
+    <string name="maps_api_key">@string/local_maps_api_key</string>
 </resources>

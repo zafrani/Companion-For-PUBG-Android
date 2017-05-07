@@ -24,9 +24,11 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+    compile group: 'com.google.code.gson', name: 'gson', version: '2.7'
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support:support-v13:25.3.1'
     compile 'com.android.support:design:25.3.1'
-    compile group: 'com.google.code.gson', name: 'gson', version: '2.7'
+    compile group: 'commons-io', name: 'commons-io', version: '2.4'
+    compile 'com.google.android.gms:play-services-maps:10.2.4'
     testCompile 'junit:junit:4.12'
 }
