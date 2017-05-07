@@ -44,7 +44,7 @@ public class PUBGMapFragment extends BaseFragment
     @Override
     public void onMapReady(final GoogleMap googleMap) {
         final TileOverlayOptions overlayOptions = new TileOverlayOptions();
-        overlayOptions.tileProvider(new PUBGTileProvider(getActivity()));
+        overlayOptions.tileProvider(new PUBGTileProvider());
         mMap = googleMap;
         mMap.setMaxZoomPreference(5);
         mMap.setMapType(GoogleMap.MAP_TYPE_NONE);
