@@ -9,4 +9,9 @@
         android:textColor="@color/white"
         android:text="Item List"/>
 
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/fragment_item_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
 </LinearLayout>

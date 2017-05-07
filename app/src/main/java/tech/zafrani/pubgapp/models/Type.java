@@ -20,13 +20,14 @@ public class Type {
         this.name = name;
         this.items = items;
     }
+
     @NonNull
     @Override
     public String toString() {
         return "Type{" +
-                "name='" + name + '\'' +
-                ", items=" + Arrays.toString(items.toArray()) +
-                '}';
+               "name='" + name + '\'' +
+               ", items=" + Arrays.toString(items.toArray()) +
+               '}';
     }
 
     @NonNull
@@ -37,5 +38,12 @@ public class Type {
     @NonNull
     public List<Item> getItems() {
         return items;
+    }
+
+    void updateChildren(@NonNull final String categoryName) {
+        for (final Item item : getItems()) {
+            item.setCategory(categoryName);
+            item.setType(name);
+        }
     }
 }

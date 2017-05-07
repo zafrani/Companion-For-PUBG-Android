@@ -2,15 +2,21 @@ package tech.zafrani.pubgapp.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import tech.zafrani.pubgapp.R;
+import tech.zafrani.pubgapp.adapters.ItemListAdapter;
 import tech.zafrani.pubgapp.models.Category;
+import tech.zafrani.pubgapp.models.Item;
 import tech.zafrani.pubgapp.models.Items;
 import tech.zafrani.pubgapp.models.Type;
 import tech.zafrani.pubgapp.utils.FileUtil;
@@ -18,6 +24,9 @@ import tech.zafrani.pubgapp.utils.FileUtil;
 public class ItemFragment extends BaseFragment {
 
     public static String TAG = ItemFragment.class.getSimpleName();
+    private RecyclerView recyclerView;
+
+
 
     @Nullable
     @Override
@@ -31,19 +40,23 @@ public class ItemFragment extends BaseFragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        final List<Item> items = new ArrayList<>();
         try {
-            Items items = FileUtil.getItems(getActivity());
+            Items itemList = FileUtil.getItems(getActivity());
             Log.e(getClass()
-                          .getSimpleName(), "Items contents: " + (items == null ? "null" : items.toString()));
-            for (Category category: items.getCategories()) {
+                          .getSimpleName(), "Items contents: " + (itemList == null ? "null" : items.toString()));
+            for (final Category category: itemList.getCategories()) {
                 Log.e(getClass()
-                        .getSimpleName(), "Categories: " + (items.getCategories() == null ? "null" : category.toString()));
+                        .getSimpleName(), "Categories: " + (itemList.getCategories() == null ? "null" : category.toString()));
                 Log.e(getClass()
                         .getSimpleName(), "Types for category " + category + ": " + (category.getTypes() == null ? "null" : category.getTypes().toString()));
                 if (category.getTypes() != null){
-                    for (Type type : category.getTypes()) {
+                    for (final Type type : category.getTypes()) {
                         Log.e(getClass()
                             .getSimpleName(), "Items for Type " + type + ": " + (type.getItems() == null ? "null" : type.getItems().toString()));
+                        items.addAll(type.getItems());
+
                     }
                 }
             }
@@ -51,8 +64,12 @@ public class ItemFragment extends BaseFragment {
             e.printStackTrace();
             Log.e(getClass().getSimpleName(), "Error: " + e.getLocalizedMessage());
         }
-    }
 
+        recyclerView = (RecyclerView) view.findViewById(R.id.fragment_item_recyclerview);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        final ItemListAdapter adapter =  new ItemListAdapter(items);
+        recyclerView.setAdapter(adapter);
+    }
 
 
 }
