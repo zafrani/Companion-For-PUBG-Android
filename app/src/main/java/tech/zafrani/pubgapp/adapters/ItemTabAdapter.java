@@ -32,7 +32,7 @@ public class ItemTabAdapter extends FragmentPagerAdapter {
     @NonNull
     @Override
     public Fragment getItem(@NonNull final int position) {
-        return ItemTabFragment.newInstance(position + 1);
+        return ItemTabFragment.newInstance(tabTitles[position]);
     }
 
     @NonNull
