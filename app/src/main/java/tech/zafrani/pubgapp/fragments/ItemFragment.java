@@ -2,36 +2,25 @@ package tech.zafrani.pubgapp.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.widget.LinearLayoutManager;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-
 import tech.zafrani.pubgapp.R;
-import tech.zafrani.pubgapp.adapters.ItemListAdapter;
-import tech.zafrani.pubgapp.models.Category;
-import tech.zafrani.pubgapp.models.Item;
-import tech.zafrani.pubgapp.models.Items;
-import tech.zafrani.pubgapp.models.Type;
-import tech.zafrani.pubgapp.utils.FileUtil;
+import tech.zafrani.pubgapp.adapters.ItemTabAdapter;
 
 public class ItemFragment extends BaseFragment {
 
     public static String TAG = ItemFragment.class.getSimpleName();
     private RecyclerView recyclerView;
 
-
-
     @Nullable
     @Override
     public View onCreateView(final LayoutInflater inflater,
-                             @Nullable final ViewGroup container,
+                             final ViewGroup container,
                              final Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_item, container, false);
 
@@ -41,6 +30,7 @@ public class ItemFragment extends BaseFragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        /*
         final List<Item> items = new ArrayList<>();
         try {
             Items itemList = FileUtil.getItems(getActivity());
@@ -64,11 +54,21 @@ public class ItemFragment extends BaseFragment {
             e.printStackTrace();
             Log.e(getClass().getSimpleName(), "Error: " + e.getLocalizedMessage());
         }
+        */
 
+
+        final ViewPager viewPager = (ViewPager) view.findViewById(R.id.viewpager);
+        viewPager.setAdapter(new ItemTabAdapter(getFragmentManager()));
+        final TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tablayout);
+        tabLayout.setupWithViewPager(viewPager);
+
+
+        /*
         recyclerView = (RecyclerView) view.findViewById(R.id.fragment_item_recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         final ItemListAdapter adapter =  new ItemListAdapter(items);
         recyclerView.setAdapter(adapter);
+        */
     }
 
 
