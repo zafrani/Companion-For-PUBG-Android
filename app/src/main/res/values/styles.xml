@@ -22,19 +22,20 @@
         <item name="android:textColor">@color/colorAccent</item>
     </style>
 
-    <style name="RowItemName">
+
+    <style name="RowItem">
+        <item name="android:color">@color/white</item>
+    </style>
+    <style name="RowItem.Name">
         <item name="android:textSize">@dimen/item_name_size</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:color">@color/white</item>
     </style>
-    <style name="RowItemCategory">
+    <style name="RowItem.Category">
         <item name="android:textSize">@dimen/item_category_size</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:color">@color/white</item>
+        <item name="android:textStyle">normal</item>
     </style>
-    <style name="RowItemType">
+    <style name="RowItem.Type">
         <item name="android:textSize">@dimen/item_type_size</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:color">@color/white</item>
+        <item name="android:textStyle">normal</item>
     </style>
 </resources>

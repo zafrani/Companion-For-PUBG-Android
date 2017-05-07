@@ -41,7 +41,6 @@ public class ItemFragment extends BaseFragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        ItemListAdapter adapter;
         final List<Item> items = new ArrayList<>();
         try {
             Items itemList = FileUtil.getItems(getActivity());
@@ -68,7 +67,7 @@ public class ItemFragment extends BaseFragment {
 
         recyclerView = (RecyclerView) view.findViewById(R.id.fragment_item_recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        adapter = new ItemListAdapter(getActivity(),items);
+        final ItemListAdapter adapter =  new ItemListAdapter(items);
         recyclerView.setAdapter(adapter);
     }
 

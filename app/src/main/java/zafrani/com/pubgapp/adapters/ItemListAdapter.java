@@ -1,6 +1,5 @@
 package zafrani.com.pubgapp.adapters;
 
-import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -15,12 +14,11 @@ import zafrani.com.pubgapp.viewholders.ItemViewHolder;
 
 
 public class ItemListAdapter extends RecyclerView.Adapter<ItemViewHolder> {
-    private final Context context;
+
     @NonNull
     private final List<Item> itemList;
 
-    public ItemListAdapter(@NonNull final Context context, @NonNull final List<Item> itemList) {
-        this.context = context;
+    public ItemListAdapter(@NonNull final List<Item> itemList) {
         this.itemList = itemList;
 
     }
