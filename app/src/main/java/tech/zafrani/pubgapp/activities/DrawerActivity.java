@@ -1,4 +1,4 @@
-package zafrani.com.pubgapp.activities;
+package tech.zafrani.pubgapp.activities;
 
 import android.app.Fragment;
 import android.app.FragmentTransaction;
@@ -14,9 +14,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 
-import zafrani.com.pubgapp.R;
-import zafrani.com.pubgapp.fragments.ItemFragment;
-import zafrani.com.pubgapp.fragments.MapFragment;
+import tech.zafrani.pubgapp.R;
+import tech.zafrani.pubgapp.fragments.ItemFragment;
+import tech.zafrani.pubgapp.fragments.MapFragment;
 
 public abstract class DrawerActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {

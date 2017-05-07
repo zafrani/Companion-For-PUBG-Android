@@ -1,4 +1,4 @@
-package zafrani.com.pubgapp.fragments;
+package tech.zafrani.pubgapp.fragments;
 
 
 import android.app.Fragment;

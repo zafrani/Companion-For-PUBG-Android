@@ -1,4 +1,4 @@
-package zafrani.com.pubgapp.adapters;
+package tech.zafrani.pubgapp.adapters;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -8,9 +8,9 @@ import android.view.ViewGroup;
 
 import java.util.List;
 
-import zafrani.com.pubgapp.R;
-import zafrani.com.pubgapp.models.Item;
-import zafrani.com.pubgapp.viewholders.ItemViewHolder;
+import tech.zafrani.pubgapp.R;
+import tech.zafrani.pubgapp.adapters.viewholders.ItemViewHolder;
+import tech.zafrani.pubgapp.models.Item;
 
 
 public class ItemListAdapter extends RecyclerView.Adapter<ItemViewHolder> {

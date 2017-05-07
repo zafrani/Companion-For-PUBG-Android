@@ -1,4 +1,4 @@
-package zafrani.com.pubgapp;
+package tech.zafrani.pubgapp;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

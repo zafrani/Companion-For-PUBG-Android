@@ -4,7 +4,7 @@ android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
     defaultConfig {
-        applicationId "zafrani.com.pubgapp"
+        applicationId "tech.zafrani.pubgapp"
         minSdkVersion 18
         targetSdkVersion 25
         versionCode 1

@@ -1,11 +1,11 @@
-package zafrani.com.pubgapp.viewholders;
+package tech.zafrani.pubgapp.adapters.viewholders;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
-import zafrani.com.pubgapp.R;
+import tech.zafrani.pubgapp.R;
 
 
 public class ItemViewHolder  extends RecyclerView.ViewHolder{
