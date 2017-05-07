@@ -36,24 +36,25 @@ public class ItemTabFragment extends BaseFragment{
         return fragment;
     }
 
-    @NonNull
+
     @Override
     public void onCreate(@NonNull final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         page = getArguments().getString(ARG_PAGE);
     }
 
-    @NonNull
+
     @Override
-    public View onCreateView(@NonNull final LayoutInflater inflater,
-                             @NonNull final ViewGroup container,
-                             @NonNull final Bundle savedInstanceState) {
+    public View onCreateView(final LayoutInflater inflater,
+                             final ViewGroup container,
+                             final Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_itemtab, container, false);
         return view;
     }
 
     @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull final View view,
+                              @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         final List<Item> items = new ArrayList<>();
         try {
