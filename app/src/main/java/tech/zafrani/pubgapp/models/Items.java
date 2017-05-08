@@ -33,7 +33,7 @@ public class Items {
 
     public Category getCategory(@NonNull final String name) {
 
-        for (Category category: categories) {
+        for (final Category category: categories) {
             if (category.getName().equals(name)) {
                 return category;
             }

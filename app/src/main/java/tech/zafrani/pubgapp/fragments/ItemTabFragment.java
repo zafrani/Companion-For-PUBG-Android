@@ -30,7 +30,7 @@ public class ItemTabFragment extends BaseFragment{
         return fragment;
     }
 
-    public ItemTabFragment(Category category) {
+    public ItemTabFragment(@NonNull final Category category) {
         this.category = category;
     }
 
@@ -59,7 +59,7 @@ public class ItemTabFragment extends BaseFragment{
                     .getSimpleName(), "Items for Type " + type + ": " + (type.getItems() == null ? "null" : type.getItems().toString()));
             items.addAll(type.getItems());
         }
-        recyclerView = (RecyclerView) view.findViewById(R.id.fragment_item_recyclerview);
+        recyclerView = (RecyclerView) view.findViewById(R.id.fragment_itemtab_recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         final ItemListAdapter adapter =  new ItemListAdapter(items);
         recyclerView.setAdapter(adapter);

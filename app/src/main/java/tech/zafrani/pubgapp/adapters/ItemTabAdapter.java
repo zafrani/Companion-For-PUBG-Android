@@ -17,7 +17,8 @@ public class ItemTabAdapter extends FragmentPagerAdapter {
 
 
 
-    public ItemTabAdapter(@NonNull final FragmentManager fm, List<Category> categories) {
+    public ItemTabAdapter(@NonNull final FragmentManager fm,
+                          @NonNull final List<Category> categories) {
         super(fm);
         PAGE_COUNT = categories.size();
         this.categories = categories;
