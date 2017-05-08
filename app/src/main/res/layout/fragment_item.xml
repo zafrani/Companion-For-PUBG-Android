@@ -10,11 +10,31 @@
         android:layout_height="wrap_content"
         style="@style/TabLayout"/>
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:text="Item List"/>
+        style="@style/TabViews.Layout">
+        <ImageButton
+            android:id="@+id/button_linear"
+            android:contentDescription="@string/item_view_linear_description"
+            android:src="@drawable/ic_view_stream_black_36dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TabViews.Button"
+            />
+        <ImageButton
+            android:id="@+id/button_grid"
+            android:contentDescription="@string/item_view_grid_description"
+            android:src="@drawable/ic_view_comfy_black_36dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TabViews.Button"
+            />
+
+
+    </LinearLayout>
+
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewpager"

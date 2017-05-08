@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">pubgapp</string>
     <string name="title_activity_maps">Map</string>
+    <string name="item_view">View: </string>
+
+    <string name="item_view_linear_description">Linear item display.</string>
+    <string name="item_view_grid_description">Grid item display.</string>
 
     <!--
         You will need to provide a Google Maps API key to run this.
