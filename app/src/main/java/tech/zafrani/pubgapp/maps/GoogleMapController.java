@@ -31,7 +31,7 @@ public class GoogleMapController {
         this.googleMap.setMaxZoomPreference(5);
         this.googleMap.setMapType(GoogleMap.MAP_TYPE_NONE);
         this.googleMap.addTileOverlay(overlayOptions);
-        this.googleMap.getUiSettings().setZoomControlsEnabled(true);
+        this.googleMap.getUiSettings().setMapToolbarEnabled(false);
         this.googleMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
             @Override
             public void onMapClick(final LatLng latLng) {
@@ -56,5 +56,9 @@ public class GoogleMapController {
             this.vehicleMarkers.clear();
 
         }
+    }
+
+    public boolean isShowingVehicles() {
+        return showVehicles;
     }
 }

@@ -1,11 +1,12 @@
 package tech.zafrani.pubgapp.fragments;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
+import android.widget.ImageView;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
@@ -18,9 +19,9 @@ import tech.zafrani.pubgapp.maps.GoogleMapController;
 public class PUBGMapFragment extends BaseFragment
         implements OnMapReadyCallback {
 
-    public static String TAG = PUBGMapFragment.class.getSimpleName();
-    private LinearLayout vehicleToggle;
+    public static final String TAG = PUBGMapFragment.class.getSimpleName();
     private final GoogleMapController mapController = new GoogleMapController();
+    private ImageView vehicleIcon;
 
     //region BaseFragment
     @Nullable
@@ -35,8 +36,8 @@ public class PUBGMapFragment extends BaseFragment
     public void onViewCreated(final View view,
                               @Nullable final Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        this.vehicleToggle = (LinearLayout) view.findViewById(R.id.fragment_map_vehicle_toggle);
-        this.vehicleToggle.setOnClickListener(new View.OnClickListener() {
+        this.vehicleIcon = (ImageView) view.findViewById(R.id.fragment_map_vehicle_icon);
+        this.vehicleIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 toggleVehicles();
@@ -44,6 +45,15 @@ public class PUBGMapFragment extends BaseFragment
         });
         final MapFragment mapFragment = (MapFragment) getChildFragmentManager().findFragmentById(R.id.map_fragment_map);
         mapFragment.getMapAsync(this);
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        if (this.vehicleIcon != null) {
+            this.vehicleIcon.setOnClickListener(null);
+        }
+        this.mapController.setGoogleMap(null);
     }
     //endregion
 
@@ -58,6 +68,17 @@ public class PUBGMapFragment extends BaseFragment
     //region methods
     private void toggleVehicles() {
         this.mapController.toggleVehicles();
+        updateUi();
     }
+
+    private void updateUi() {
+        if (this.mapController.isShowingVehicles()) {
+            vehicleIcon.setColorFilter(Color.argb(255, 246, 191, 34)); // White Tint
+        } else {
+            vehicleIcon.setColorFilter(Color.argb(255, 255, 255, 255)); // White Tint
+        }
+
+    }
+
     //endregion
 }
