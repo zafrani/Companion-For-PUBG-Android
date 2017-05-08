@@ -3,96 +3,109 @@
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
     android:layout_marginBottom="8dp"
     >
     <ImageView
         android:id="@+id/row_item_icon"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:src="@mipmap/ic_launcher"
-        android:layout_weight="0.20"/>
+        android:layout_weight="0.2"/>
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="0.20">
+        android:layout_weight="0.8">
         <TextView
             android:id="@+id/row_item_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/RowItem.Name"
             />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.20">
 
-        <TextView
-            android:id="@+id/row_item_type"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/RowItem.Type"
-            />
 
-        <TextView
-            android:id="@+id/row_item_category"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/RowItem.Category"
-            />
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.20"
-        >
-        <TextView
-            android:id="@+id/row_item_ammo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/RowItem.Info"
-            />
-        <TextView
-            android:id="@+id/row_item_magazine"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/RowItem.Info"
-            />
-        <TextView
-            android:id="@+id/row_item_capacity"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/RowItem.Info"
-            />
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.20">
-        <TextView
-            android:id="@+id/row_item_damage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/RowItem.Info"
-            />
+                <TextView
+                    android:id="@+id/row_item_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/RowItem.Type"
+                    />
 
-        <TextView
-            android:id="@+id/row_item_range"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/RowItem.Info"
-            />
+                <TextView
+                    android:id="@+id/row_item_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/RowItem.Category"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.20"
+                >
+                <TextView
+                    android:id="@+id/row_item_ammo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/RowItem.Info"
+                    />
+                <TextView
+                    android:id="@+id/row_item_magazine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/RowItem.Info"
+                    />
+                <TextView
+                    android:id="@+id/row_item_capacity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/RowItem.Info"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.20">
+                <TextView
+                    android:id="@+id/row_item_damage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/RowItem.Info"
+                    />
 
-        <TextView
-            android:id="@+id/row_item_stability"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/RowItem.Info"
-            />
-        <TextView
-            android:id="@+id/row_item_rate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/RowItem.Info"
-            />
+                <TextView
+                    android:id="@+id/row_item_range"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/RowItem.Info"
+                    />
 
+                <TextView
+                    android:id="@+id/row_item_stability"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/RowItem.Info"
+                    />
+                <TextView
+                    android:id="@+id/row_item_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/RowItem.Info"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>
