@@ -2,8 +2,11 @@ package tech.zafrani.pubgapp.models;
 
 
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 
 import com.google.gson.annotations.SerializedName;
+
+import java.util.HashMap;
 
 public class Item{
 
@@ -17,33 +20,34 @@ public class Item{
     @NonNull
     @SerializedName("name")
     private final String name;
-    @NonNull
+    @Nullable
     @SerializedName("ammo")
     private final String ammo;
     @SerializedName("magazine")
-    private final float magazine;
+    private final Float magazine;
     @SerializedName("capacity")
-    private final float capacity;
+    private final Float capacity;
+    @Nullable
     @SerializedName("damage")
-    private final Damage damage;
+    private final HashMap<String, String> damage;
     @SerializedName("stability")
-    private final float stability;
+    private final Float stability;
     @SerializedName("rate")
-    private final float rate;
+    private final Float rate;
     @SerializedName("range")
-    private final float range;
+    private final Float range;
 
 
     public Item(@NonNull final String category,
                 @NonNull final String type,
                 @NonNull final String name,
-                @NonNull final String ammo,
-                final float magazine,
-                final float capacity,
-                final Damage damage,
-                final float range,
-                final float stability,
-                final float rate) {
+                @Nullable final String ammo,
+                @Nullable final Float magazine,
+                @Nullable final Float capacity,
+                @Nullable final HashMap<String, String> damage,
+                @Nullable final Float range,
+                @Nullable final Float stability,
+                @Nullable final Float rate) {
         this.category = category;
         this.type = type;
         this.name = name;
@@ -95,32 +99,33 @@ public class Item{
         return name;
     }
 
-    @NonNull
+    @Nullable
     public String getAmmo() {
         return ammo;
     }
-
-    public float getMagazine() {
+    @Nullable
+    public Float getMagazine() {
         return magazine;
     }
-
-    public float getCapacity() {
+    @Nullable
+    public Float getCapacity() {
         return capacity;
     }
-
-    public float getStability() {
+    @Nullable
+    public Float getStability() {
         return stability;
     }
-
-    public float getRate() {
+    @Nullable
+    public Float getRate() {
         return rate;
     }
-
-    public float getRange() {
+    @Nullable
+    public Float getRange() {
         return range;
     }
 
-    public Damage getDamage() {
+    @Nullable
+    public HashMap<String, String> getDamage() {
         return damage;
     }
 }

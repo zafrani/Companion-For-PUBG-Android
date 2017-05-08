@@ -7,11 +7,11 @@
     <string name="item_view_grid_description">Grid item display.</string>
 
     <string name="row_item_ammo">Ammo: %1$s</string>
-    <string name="row_item_magazine">Magazine: %1$s</string>
-    <string name="row_item_capacity">Capacity: %1$s</string>
-    <string name="row_item_range">Range: %1$s</string>
-    <string name="row_item_stability">Stability: %1$s</string>
-    <string name="row_item_rate">Rate: %1$s</string>
+    <string name="row_item_magazine">Magazine: %1$.0f</string>
+    <string name="row_item_capacity">Capacity: %1$.0f</string>
+    <string name="row_item_range">Range: %1$f</string>
+    <string name="row_item_stability">Stability: %1$.0f</string>
+    <string name="row_item_rate">Rate: %1$.0f</string>
     <string name="row_item_damage">Damage: %1$s</string>
 
     <!--

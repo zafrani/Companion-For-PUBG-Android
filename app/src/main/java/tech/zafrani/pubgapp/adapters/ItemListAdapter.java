@@ -36,12 +36,12 @@ public class ItemListAdapter extends RecyclerView.Adapter<ItemViewHolder> {
         holder.setItemType(item.getType());
         holder.setItemCategory(item.getCategory());
         holder.setItemAmmo(item.getAmmo());
-        holder.setItemMagazine(Float.toString(item.getMagazine()));
-        holder.setItemCapacity(Float.toString(item.getCapacity()));
-        holder.setItemDamage(Float.toString(item.getDamage().getBody0()));
-        holder.setItemRange(Float.toString(item.getRange()));
-        holder.setItemRate(Float.toString(item.getRate()));
-        holder.setItemStability(Float.toString(item.getStability()));
+        holder.setItemMagazine(item.getMagazine());
+        holder.setItemCapacity(item.getCapacity());
+        holder.setItemDamage(item.getDamage());
+        holder.setItemRange(item.getRange());
+        holder.setItemRate(item.getRate());
+        holder.setItemStability(item.getStability());
 
     }
 

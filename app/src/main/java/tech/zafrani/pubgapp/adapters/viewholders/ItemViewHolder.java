@@ -2,9 +2,12 @@ package tech.zafrani.pubgapp.adapters.viewholders;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
+
+import java.util.HashMap;
 
 import tech.zafrani.pubgapp.R;
 
@@ -52,26 +55,58 @@ public class ItemViewHolder  extends RecyclerView.ViewHolder{
         this.categoryTextView.setText(itemCategory);
     }
 
-    public void setItemAmmo(@NonNull final String itemAmmo) {
-        this.ammoTextView.setText(context.getString(R.string.row_item_ammo, itemAmmo));
+    public void setItemAmmo(@Nullable final String itemAmmo) {
+        if (itemAmmo != null) {
+            this.ammoTextView.setText(context.getString(R.string.row_item_ammo, itemAmmo));
+        } else {
+            this.ammoTextView.setText("");
+        }
     }
-    public void setItemMagazine(@NonNull final String itemMagazine) {
-        this.magazineTextView.setText(context.getString(R.string.row_item_magazine, itemMagazine));
+    public void setItemMagazine(final Float itemMagazine) {
+        if (itemMagazine != null) {
+            this.magazineTextView.setText(context.getString(R.string.row_item_magazine, itemMagazine));
+        }else {
+            this.magazineTextView.setText("");
+        }
     }
-    public void setItemCapacity(@NonNull final String itemCapacity) {
-        this.capacityTextView.setText(context.getString(R.string.row_item_capacity, itemCapacity));
+    public void setItemCapacity(final Float itemCapacity) {
+        if (itemCapacity != null) {
+            this.capacityTextView.setText(context.getString(R.string.row_item_capacity, itemCapacity));
+        }else {
+            this.capacityTextView.setText("");
+        }
     }
-    public void setItemDamage(@NonNull final String itemDamage) {
-        this.damageTextView.setText(context.getString(R.string.row_item_damage, itemDamage));
+    public void setItemDamage(@Nullable final HashMap<String,String> itemDamage) {
+        if (itemDamage!= null) {
+            if(itemDamage.containsKey("chest0")){
+                this.damageTextView.setText(context.getString(R.string.row_item_damage, itemDamage.get("chest0")));
+            } else {
+                this.damageTextView.setText(context.getString(R.string.row_item_damage, itemDamage.get("base")));
+            }
+        }else {
+            this.damageTextView.setText("");
+        }
     }
-    public void setItemStability(@NonNull final String itemStability) {
-        this.stabilityTextView.setText(context.getString(R.string.row_item_stability, itemStability));
+    public void setItemStability(final Float itemStability) {
+        if (itemStability!= null) {
+            this.stabilityTextView.setText(context.getString(R.string.row_item_stability, itemStability));
+        }else {
+            this.stabilityTextView.setText("");
+        }
     }
-    public void setItemRange(@NonNull final String itemRange) {
-        this.rangeTextView.setText(context.getString(R.string.row_item_range, itemRange));
+    public void setItemRange(final Float itemRange) {
+        if (itemRange!= null) {
+            this.rangeTextView.setText(context.getString(R.string.row_item_range, itemRange));
+        }else {
+            this.rangeTextView.setText("");
+        }
     }
-    public void setItemRate(@NonNull final String itemRate) {
-        this.rateTextView.setText(context.getString(R.string.row_item_rate, itemRate));
+    public void setItemRate(final Float itemRate) {
+        if (itemRate != null) {
+            this.rateTextView.setText(context.getString(R.string.row_item_rate, itemRate));
+        }else {
+            this.rateTextView.setText("");
+        }
     }
 
 }
