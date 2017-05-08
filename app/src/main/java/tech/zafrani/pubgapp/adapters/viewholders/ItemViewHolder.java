@@ -16,6 +16,7 @@ public class ItemViewHolder  extends RecyclerView.ViewHolder{
     private TextView ammoTextView;
     private TextView magazineTextView;
     private TextView capacityTextView;
+    private TextView damageTextView;
     private TextView rangeTextView;
     private TextView stabilityTextView;
     private TextView rateTextView;
@@ -30,6 +31,7 @@ public class ItemViewHolder  extends RecyclerView.ViewHolder{
         this.ammoTextView= (TextView) itemView.findViewById(R.id.row_item_ammo);
         this.magazineTextView= (TextView) itemView.findViewById(R.id.row_item_magazine);
         this.capacityTextView= (TextView) itemView.findViewById(R.id.row_item_capacity);
+        this.damageTextView= (TextView) itemView.findViewById(R.id.row_item_damage);
         this.rangeTextView= (TextView) itemView.findViewById(R.id.row_item_range);
         this.stabilityTextView = (TextView) itemView.findViewById(R.id.row_item_stability);
         this.rateTextView= (TextView) itemView.findViewById(R.id.row_item_rate);
@@ -59,4 +61,17 @@ public class ItemViewHolder  extends RecyclerView.ViewHolder{
     public void setItemCapacity(@NonNull final String itemCapacity) {
         this.capacityTextView.setText(context.getString(R.string.row_item_capacity, itemCapacity));
     }
+    public void setItemDamage(@NonNull final String itemDamage) {
+        this.damageTextView.setText(context.getString(R.string.row_item_damage, itemDamage));
+    }
+    public void setItemStability(@NonNull final String itemStability) {
+        this.stabilityTextView.setText(context.getString(R.string.row_item_stability, itemStability));
+    }
+    public void setItemRange(@NonNull final String itemRange) {
+        this.rangeTextView.setText(context.getString(R.string.row_item_range, itemRange));
+    }
+    public void setItemRate(@NonNull final String itemRate) {
+        this.rateTextView.setText(context.getString(R.string.row_item_rate, itemRate));
+    }
+
 }

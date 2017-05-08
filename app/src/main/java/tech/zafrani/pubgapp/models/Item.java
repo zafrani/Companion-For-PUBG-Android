@@ -20,11 +20,12 @@ public class Item{
     @NonNull
     @SerializedName("ammo")
     private final String ammo;
-
     @SerializedName("magazine")
     private final float magazine;
     @SerializedName("capacity")
     private final float capacity;
+    @SerializedName("damage")
+    private final Damage damage;
     @SerializedName("stability")
     private final float stability;
     @SerializedName("rate")
@@ -39,6 +40,7 @@ public class Item{
                 @NonNull final String ammo,
                 final float magazine,
                 final float capacity,
+                final Damage damage,
                 final float range,
                 final float stability,
                 final float rate) {
@@ -48,6 +50,7 @@ public class Item{
         this.ammo = ammo;
         this.magazine = magazine;
         this.capacity = capacity;
+        this.damage=damage;
         this.range=range;
         this.stability = stability;
         this.rate =rate;
@@ -115,5 +118,9 @@ public class Item{
 
     public float getRange() {
         return range;
+    }
+
+    public Damage getDamage() {
+        return damage;
     }
 }

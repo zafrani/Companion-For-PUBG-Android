@@ -14,7 +14,7 @@
               "stability":"0",
               "rate":"0",
               "capacity":"500",
-              "damage":[
+              "damage": [
                 {
                   "base":"23",
                   "chest0":"46",

@@ -71,27 +71,27 @@
             android:id="@+id/row_item_damage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/RowItem.Name"
+            style="@style/RowItem.Info"
             />
 
         <TextView
             android:id="@+id/row_item_range"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/RowItem.Type"
+            style="@style/RowItem.Info"
             />
 
         <TextView
             android:id="@+id/row_item_stability"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/RowItem.Category"
+            style="@style/RowItem.Info"
             />
         <TextView
             android:id="@+id/row_item_rate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/RowItem.Category"
+            style="@style/RowItem.Info"
             />
 
     </LinearLayout>
