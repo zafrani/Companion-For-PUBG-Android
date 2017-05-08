@@ -46,7 +46,7 @@ public class Category {
                '}';
     }
 
-    private void updateChildren() {
+    public void updateChildren() {
         for (final Type type : getTypes()) {
             type.updateChildren(getName());
         }

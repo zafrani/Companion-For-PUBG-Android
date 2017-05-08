@@ -1,5 +1,6 @@
 package tech.zafrani.pubgapp.adapters.viewholders;
 
+import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -18,10 +19,11 @@ public class ItemViewHolder  extends RecyclerView.ViewHolder{
     private TextView rangeTextView;
     private TextView stabilityTextView;
     private TextView rateTextView;
+    private Context context;
 
-
-    public ItemViewHolder(@NonNull final View itemView) {
+    public ItemViewHolder(@NonNull final View itemView, @NonNull final Context context) {
         super(itemView);
+        this.context = context;
         this.nameTextView = (TextView) itemView.findViewById(R.id.row_item_name);
         this.typeTextView= (TextView) itemView.findViewById(R.id.row_item_type);
         this.categoryTextView = (TextView) itemView.findViewById(R.id.row_item_category);
@@ -49,12 +51,12 @@ public class ItemViewHolder  extends RecyclerView.ViewHolder{
     }
 
     public void setItemAmmo(@NonNull final String itemAmmo) {
-        this.ammoTextView.setText(itemAmmo);
+        this.ammoTextView.setText(context.getString(R.string.row_item_ammo, itemAmmo));
     }
     public void setItemMagazine(@NonNull final String itemMagazine) {
-        this.magazineTextView.setText(itemMagazine);
+        this.magazineTextView.setText(context.getString(R.string.row_item_magazine, itemMagazine));
     }
     public void setItemCapacity(@NonNull final String itemCapacity) {
-        this.capacityTextView.setText(itemCapacity);
+        this.capacityTextView.setText(context.getString(R.string.row_item_capacity, itemCapacity));
     }
 }

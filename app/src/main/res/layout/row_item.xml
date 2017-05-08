@@ -5,11 +5,17 @@
     android:layout_height="wrap_content"
     android:layout_marginBottom="8dp"
     >
+    <ImageView
+        android:id="@+id/row_item_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher"
+        android:layout_weight="0.20"/>
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="0.25">
+        android:layout_weight="0.20">
         <TextView
             android:id="@+id/row_item_name"
             android:layout_width="wrap_content"
@@ -35,7 +41,7 @@
         android:orientation="vertical"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="0.25"
+        android:layout_weight="0.20"
         >
         <TextView
             android:id="@+id/row_item_ammo"
@@ -60,7 +66,7 @@
         android:orientation="vertical"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="0.25">
+        android:layout_weight="0.20">
         <TextView
             android:id="@+id/row_item_damage"
             android:layout_width="wrap_content"
