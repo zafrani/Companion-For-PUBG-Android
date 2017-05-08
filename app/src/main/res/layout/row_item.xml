@@ -41,13 +41,19 @@
             android:id="@+id/row_item_ammo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/RowItem.Name"
+            style="@style/RowItem.Info"
             />
         <TextView
             android:id="@+id/row_item_magazine"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/RowItem.Type"
+            style="@style/RowItem.Info"
+            />
+        <TextView
+            android:id="@+id/row_item_capacity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/RowItem.Info"
             />
     </LinearLayout>
     <LinearLayout
@@ -81,11 +87,6 @@
             android:layout_height="wrap_content"
             style="@style/RowItem.Category"
             />
-        <TextView
-            android:id="@+id/row_item_capacity"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/RowItem.Category"
-            />
+
     </LinearLayout>
 </LinearLayout>
