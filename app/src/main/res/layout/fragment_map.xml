@@ -1,14 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
     <fragment
+        android:id="@+id/map_fragment_map"
+        android:name="com.google.android.gms.maps.MapFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/map_fragment_map"
-        tools:context=".activities.MainActivity"
-        android:name="com.google.android.gms.maps.MapFragment" />
+        android:layout_above="@+id/fragment_map_icons"
+        tools:context=".activities.MainActivity"/>
 
-</LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fragment_map_icons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/fragment_map_vehicle_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/small_margin"
+            android:src="@drawable/ic_drive_eta_white_24dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/small_margin"
+            android:src="@drawable/ic_directions_boat_white_24dp"/>
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,25 +1,27 @@
 package tech.zafrani.pubgapp.fragments;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.model.TileOverlayOptions;
 
 import tech.zafrani.pubgapp.R;
-import tech.zafrani.pubgapp.maps.PUBGTileProvider;
+import tech.zafrani.pubgapp.maps.GoogleMapController;
 
 
 public class PUBGMapFragment extends BaseFragment
         implements OnMapReadyCallback {
 
-    public static String TAG = PUBGMapFragment.class.getSimpleName();
-    private GoogleMap mMap;
+    public static final String TAG = PUBGMapFragment.class.getSimpleName();
+    private final GoogleMapController mapController = new GoogleMapController();
+    private ImageView vehicleIcon;
 
     //region BaseFragment
     @Nullable
@@ -34,22 +36,49 @@ public class PUBGMapFragment extends BaseFragment
     public void onViewCreated(final View view,
                               @Nullable final Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
+        this.vehicleIcon = (ImageView) view.findViewById(R.id.fragment_map_vehicle_icon);
+        this.vehicleIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                toggleVehicles();
+            }
+        });
         final MapFragment mapFragment = (MapFragment) getChildFragmentManager().findFragmentById(R.id.map_fragment_map);
         mapFragment.getMapAsync(this);
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        if (this.vehicleIcon != null) {
+            this.vehicleIcon.setOnClickListener(null);
+        }
+        this.mapController.setGoogleMap(null);
     }
     //endregion
 
     //region OnMapReadyCallback
     @Override
     public void onMapReady(final GoogleMap googleMap) {
-        final TileOverlayOptions overlayOptions = new TileOverlayOptions();
-        overlayOptions.tileProvider(new PUBGTileProvider(getActivity()));
-        mMap = googleMap;
-        mMap.setMaxZoomPreference(5);
-        mMap.setMapType(GoogleMap.MAP_TYPE_NONE);
-        mMap.addTileOverlay(overlayOptions);
-        mMap.getUiSettings().setZoomControlsEnabled(true);
+        this.mapController.setGoogleMap(googleMap);
+
     }
+    //endregion
+
+    //region methods
+    private void toggleVehicles() {
+        this.mapController.toggleVehicles();
+        updateUi();
+    }
+
+    private void updateUi() {
+        if (this.mapController.isShowingVehicles()) {
+            vehicleIcon.setColorFilter(Color.argb(255, 246, 191, 34)); // White Tint
+        } else {
+            vehicleIcon.setColorFilter(Color.argb(255, 255, 255, 255)); // White Tint
+        }
+
+    }
+
     //endregion
 }
