@@ -59,21 +59,21 @@ public class ItemViewHolder  extends RecyclerView.ViewHolder{
         if (itemAmmo != null) {
             this.ammoTextView.setText(context.getString(R.string.row_item_ammo, itemAmmo));
         } else {
-            this.ammoTextView.setText("");
+            this.ammoTextView.setText(" - ");
         }
     }
     public void setItemMagazine(final Float itemMagazine) {
         if (itemMagazine != null) {
             this.magazineTextView.setText(context.getString(R.string.row_item_magazine, itemMagazine));
         }else {
-            this.magazineTextView.setText("");
+            this.magazineTextView.setText(" - ");
         }
     }
     public void setItemCapacity(final Float itemCapacity) {
         if (itemCapacity != null) {
             this.capacityTextView.setText(context.getString(R.string.row_item_capacity, itemCapacity));
         }else {
-            this.capacityTextView.setText("");
+            this.capacityTextView.setText(" - ");
         }
     }
     public void setItemDamage(@Nullable final HashMap<String,String> itemDamage) {
@@ -84,28 +84,28 @@ public class ItemViewHolder  extends RecyclerView.ViewHolder{
                 this.damageTextView.setText(context.getString(R.string.row_item_damage, itemDamage.get("base")));
             }
         }else {
-            this.damageTextView.setText("");
+            this.damageTextView.setText(" - ");
         }
     }
     public void setItemStability(final Float itemStability) {
         if (itemStability!= null) {
             this.stabilityTextView.setText(context.getString(R.string.row_item_stability, itemStability));
         }else {
-            this.stabilityTextView.setText("");
+            this.stabilityTextView.setText(" - ");
         }
     }
     public void setItemRange(final Float itemRange) {
         if (itemRange!= null) {
             this.rangeTextView.setText(context.getString(R.string.row_item_range, itemRange));
         }else {
-            this.rangeTextView.setText("");
+            this.rangeTextView.setText(" - ");
         }
     }
     public void setItemRate(final Float itemRate) {
         if (itemRate != null) {
             this.rateTextView.setText(context.getString(R.string.row_item_rate, itemRate));
         }else {
-            this.rateTextView.setText("");
+            this.rateTextView.setText(" - ");
         }
     }
 

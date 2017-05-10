@@ -11,6 +11,7 @@
         style="@style/TabLayout"/>
 
     <LinearLayout
+        android:clickable="true"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,16 +20,16 @@
             android:id="@+id/button_linear"
             android:contentDescription="@string/item_view_linear_description"
             android:src="@drawable/ic_view_stream_black_36dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             style="@style/TabViews.Button"
             />
         <ImageButton
             android:id="@+id/button_grid"
             android:contentDescription="@string/item_view_grid_description"
             android:src="@drawable/ic_view_comfy_black_36dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             style="@style/TabViews.Button"
             />
 
