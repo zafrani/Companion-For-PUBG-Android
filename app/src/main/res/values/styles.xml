@@ -39,25 +39,6 @@
         <item name="textAllCaps">true</item>
     </style>
 
-    <style name="TabViews">
-        <item name="android:layout_gravity">center_horizontal</item>
-        <item name="android:gravity">center_horizontal</item>
-    </style>
-    <style name="TabViews.Layout">
-        <item name="android:padding">5dp</item>
-        <item name="android:background">@color/white</item>
-        <item name="android:layout_gravity">center_horizontal</item>
-        <item name="android:gravity">center_horizontal</item>
-    </style>
-    <style name="TabViews.Text">
-        <item name="android:textColor">#000000</item>
-    </style>
-    <style name="TabViews.Button">
-        <item name="android:layout_marginLeft">5dp</item>
-        <item name="background">@drawable/item_view_selector</item>
-    </style>
-
-
     <style name="RowItem">
         <item name="android:color">@color/white</item>
     </style>
