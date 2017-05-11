@@ -18,7 +18,7 @@ public class Items {
     }
 
 
-    @NonNull
+
     @Override
     public String toString() {
         return "Items{" +
@@ -29,5 +29,15 @@ public class Items {
     @NonNull
     public List<Category> getCategories() {
         return categories;
+    }
+
+    public Category getCategory(@NonNull final String name) {
+
+        for (final Category category: categories) {
+            if (category.getName().equals(name)) {
+                return category;
+            }
+        }
+        return null;
     }
 }
