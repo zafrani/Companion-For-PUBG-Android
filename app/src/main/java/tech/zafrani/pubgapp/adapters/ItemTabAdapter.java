@@ -12,7 +12,6 @@ import tech.zafrani.pubgapp.fragments.ItemTabFragment;
 import tech.zafrani.pubgapp.models.Category;
 
 public class ItemTabAdapter extends FragmentPagerAdapter {
-    private int PAGE_COUNT;
     private List<Category> categories;
 
 
@@ -20,7 +19,6 @@ public class ItemTabAdapter extends FragmentPagerAdapter {
     public ItemTabAdapter(@NonNull final FragmentManager fm,
                           @NonNull final List<Category> categories) {
         super(fm);
-        PAGE_COUNT = categories.size();
         this.categories = categories;
 
     }
@@ -28,7 +26,7 @@ public class ItemTabAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return PAGE_COUNT;
+        return categories.size();
     }
 
     @NonNull

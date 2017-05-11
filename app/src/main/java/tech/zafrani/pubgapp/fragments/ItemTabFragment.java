@@ -20,23 +20,28 @@ import tech.zafrani.pubgapp.models.Category;
 import tech.zafrani.pubgapp.models.Item;
 import tech.zafrani.pubgapp.models.Type;
 
-public class ItemTabFragment extends BaseFragment{
+public class ItemTabFragment extends BaseFragment {
+    private static final String ARG_CATEGORY = ItemTabFragment.class.getSimpleName() + ".ARG_CATEGORY";
     private RecyclerView recyclerView;
     private Category category;
 
     public static ItemTabFragment newInstance(@NonNull final Category category) {
         final Bundle args = new Bundle();
-        final ItemTabFragment fragment = new ItemTabFragment(category);
-        return fragment;
-    }
+        final ItemTabFragment fragment = new ItemTabFragment();
 
-    public ItemTabFragment(@NonNull final Category category) {
-        this.category = category;
+        args.putSerializable(ARG_CATEGORY, category);
+        fragment.setArguments(args);
+
+        return fragment;
     }
 
     @Override
     public void onCreate(@Nullable final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Bundle args = getArguments();
+        if (args != null && args.containsKey(ARG_CATEGORY)) {
+            this.category = (Category) args.get(ARG_CATEGORY);
+        }
 
     }
 
@@ -45,8 +50,7 @@ public class ItemTabFragment extends BaseFragment{
     public View onCreateView(final LayoutInflater inflater,
                              final ViewGroup container,
                              final Bundle savedInstanceState) {
-        final View view = inflater.inflate(R.layout.fragment_itemtab, container, false);
-        return view;
+        return inflater.inflate(R.layout.fragment_itemtab, container, false);
     }
 
     @Override
@@ -61,7 +65,7 @@ public class ItemTabFragment extends BaseFragment{
         }
         recyclerView = (RecyclerView) view.findViewById(R.id.fragment_itemtab_recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        final ItemListAdapter adapter =  new ItemListAdapter(items);
+        final ItemListAdapter adapter = new ItemListAdapter(items);
         recyclerView.setAdapter(adapter);
     }
 }
