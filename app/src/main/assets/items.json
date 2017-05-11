@@ -8,7 +8,7 @@
           "items":[
             {
               "name":"AKM",
-              "image_url":"",
+              "image_url":"Icon_weapon_AKM.png",
               "magazine":"30",
               "ammo":"7.62mm",
               "range":"0",
@@ -30,6 +30,7 @@
 
             },{
               "name":"M16A4",
+              "image_url":"Icon_weapon_M16A4.png",
               "magazine":"30",
               "ammo":"5.56mm",
               "range":"0",
@@ -51,6 +52,7 @@
 
             },{
               "name":"M416",
+              "image_url":"Icon_weapon_M416.png",
               "magazine":"30",
               "ammo":"5.56mm",
               "range":"0",
@@ -72,6 +74,7 @@
 
             },{
               "name":"SCAR-L",
+              "image_url":"Icon_weapon_SCAR-L.png",
               "magazine":"30",
               "ammo":"5.56mm",
               "range":"0",
@@ -98,6 +101,7 @@
           "items":[
             {
               "name":"UMP9",
+              "image_url":"Icon_weapon_UMP.png",
               "magazine":"30",
               "ammo":"9mm",
               "range":"0",
@@ -119,6 +123,7 @@
 
             },{
               "name":"Micro Uzi",
+              "image_url":"Icon_weapon_UZI.png",
               "magazine":"30",
               "ammo":"9mm",
               "range":"0",
@@ -140,6 +145,7 @@
 
             },{
               "name":"Vector",
+              "image_url":"Icon_weapon_Vector.png",
               "magazine":"13",
               "ammo":"0.45 ACP",
               "range":"0",
@@ -161,6 +167,7 @@
 
             },{
               "name":"Tommy Gun",
+              "image_url":"Icon_weapon_TommyGun.png",
               "magazine":"30",
               "ammo":"0.45 ACP",
               "range":"0",
@@ -187,6 +194,7 @@
           "items":[
             {
               "name":"M249",
+              "image_url":"Icon_weapon_M249.png",
               "magazine":"100",
               "ammo":"5.56mm",
               "range":"0",
@@ -213,6 +221,7 @@
           "items":[
             {
               "name":"S686",
+              "image_url":"Icon_weapon_S686.png",
               "magazine":"5",
               "ammo":"12Gauge",
               "range":"0",
@@ -234,6 +243,7 @@
 
             },{
               "name":"S12K",
+              "image_url":"Icon_weapon_S12K.png",
               "magazine":"5",
               "ammo":"12Gauge",
               "range":"0",
@@ -255,6 +265,7 @@
 
             },{
               "name":"S1897",
+              "image_url":"Icon_weapon_S1897.png",
               "magazine":"2",
               "ammo":"12Gauge",
               "range":"0",
@@ -281,6 +292,7 @@
           "items":[
             {
               "name":"AWM",
+              "image_url":"Icon_weapon_AWM.png",
               "magazine":"5",
               "ammo":".300 Magnum",
               "range":"0",
@@ -302,6 +314,7 @@
 
             },{
               "name":"M24",
+              "image_url":"Icon_weapon_M24.png",
               "magazine":"5",
               "ammo":"7.62mm",
               "range":"0",
@@ -323,6 +336,7 @@
 
             },{
               "name":"Kar 98",
+              "image_url":"Icon_weapon_Kar98k.png",
               "magazine":"5",
               "ammo":"7.62mm",
               "range":"0",
@@ -349,6 +363,7 @@
           "items":[
             {
               "name":"SKS",
+              "image_url":"Icon_weapon_SKS.png",
               "magazine":"5",
               "ammo":"7.62mm",
               "range":"0",
@@ -375,6 +390,7 @@
           "items":[
             {
               "name":"P92",
+              "image_url":"Icon_weapon_P92.png",
               "magazine":"15",
               "ammo":"9mm",
               "range":"0",
@@ -396,6 +412,7 @@
 
             },{
               "name":"P1911",
+              "image_url":"Icon_weapon_P1911.png",
               "magazine":"7",
               "ammo":"0.45 ACP",
               "range":"0",
@@ -417,6 +434,7 @@
 
             },{
               "name":"R1895",
+              "image_url":"Icon_weapon_R1895.png",
               "magazine":"5",
               "ammo":"7.62mm",
               "range":"0",
@@ -443,6 +461,7 @@
           "items":[
             {
               "name":"Pan",
+              "image_url":"Icon_weapon_Pan.png",
               "range":"0",
               "rate":"0",
               "capacity":"120",
@@ -461,6 +480,7 @@
 
             },{
               "name":"Crowbar",
+              "image_url":"Icon_weapon_Crowbar.png",
               "range":"0",
               "rate":"0",
               "capacity":"120",
@@ -479,6 +499,7 @@
 
             },{
               "name":"Sickle",
+              "image_url":"Icon_weapon_Sickle.png",
               "range":"0",
               "rate":"0",
               "capacity":"120",
@@ -497,6 +518,7 @@
 
             },{
               "name":"Machete",
+              "image_url":"Icon_weapon_Machete.png",
               "range":"0",
               "rate":"0",
               "capacity":"120",
@@ -520,6 +542,7 @@
           "items":[
             {
               "name":"Frag Grenade",
+              "image_url":"Icon_weapon_FragGrenade.png",
               "range":"0",
               "capacity":"12",
               "damage":
@@ -529,6 +552,7 @@
 
             },{
               "name":"Smoke Grenade",
+              "image_url":"Icon_weapon_SmokeGrenade.png",
               "range":"0",
               "capacity":"16",
               "damage":
@@ -538,6 +562,7 @@
 
             },{
               "name":"Stun Grenade",
+              "image_url":"Icon_weapon_StunGrenade.png",
               "range":"0",
               "capacity":"14",
               "damage":
@@ -547,6 +572,7 @@
 
             },{
               "name":"Molotov Cocktail",
+              "image_url":"Icon_weapon_Molotov.png",
               "range":"0",
               "capacity":"18",
               "damage":
@@ -561,6 +587,7 @@
           "items":[
             {
               "name":"Crossbow",
+              "image_url":"Icon_weapon_Crossbow.png",
               "magazine":"1",
               "ammo":"Bolt",
               "range":"0",
@@ -641,33 +668,43 @@
           "items": [
             {
               "name":"Choke for S1897",
+              "image_url":"Icon_attach_Choke.png",
               "capacity":"500"
             },{
               "name":"Compensator for Automatic Rifle",
+              "image_url":"Icon_attach_CompensatorAR.png",
               "capacity":"500"
             },{
               "name":"Compensator for Sniper Rifle",
+              "image_url":"Icon_attach_CompensatorSniperRifle.png",
               "capacity":"500"
             }, {
               "name":"Flash Hider for Automatic Rifle",
+              "image_url":"Icon_attach_FlashHiderAR.png",
               "capacity":"500"
             },{
               "name":"Flash Hider for SMG",
+              "image_url":"Icon_attach_FlashHiderSMG.png",
               "capacity":"500"
             },{
               "name":"Flash Hider for Sniper Rifle",
+              "image_url":"Icon_attach_FlashHiderSniperRifle.png",
               "capacity":"500"
             },{
               "name":"Suppressor for Automatic Rifle",
+              "image_url":"Icon_attach_SuppressorAR.png",
               "capacity":"500"
             }, {
               "name":"Suppressor for Sniper Rifle",
+              "image_url":"Icon_attach_SuppressorSniperRifle.png",
               "capacity":"500"
             },{
               "name":"Suppressor for Pistol",
+              "image_url":"Icon_attach_SuppressorPistol.png",
               "capacity":"500"
             },{
               "name":"Suppressor for SMG",
+              "image_url":"Icon_attach_SuppressorSMG.png",
               "capacity":"500"
             }
           ]
@@ -676,12 +713,15 @@
           "items":[
             {
               "name":"Angled Foregrip",
+              "image_url":"Icon_attach_AngledForeGrip.png",
               "capacity":"500"
             },{
               "name":"Verticle Foregrip",
+              "image_url":"Icon_attach_VerticalForegrip.png",
               "capacity":"500"
             } ,{
               "name":"Foregrip for Crossbow",
+              "image_url":"Icon_attach_ForegripCrossbow.png",
               "capacity":"500"
             }
           ]
@@ -690,15 +730,19 @@
           "items":[
             {
               "name":"Cheek Pad for Sniper Rifle",
+              "image_url":"Icon_attach_CheekPadSniperRifle.png",
               "capacity":"500"
             },{
               "name":"Composite Stock for Assault Rifle",
+              "image_url":"Icon_attach_CompositeAR.png",
               "capacity":"500"
             },{
               "name":"Stock for Micro Uzi",
+              "image_url":"Icon_attach_StockUzi.png",
               "capacity":"500"
             },{
               "name":"Tactical Stock for M416",
+              "image_url":"",
               "capacity":"500"
             }
           ]
@@ -707,51 +751,67 @@
           "items":[
             {
               "name":"Extended Mag Drum",
+              "image_url":"Icon_attach_ExtendedDrumMag.png",
               "capacity":"500"
             },{
               "name":"Extended Mag for Automatic Rifle",
+              "image_url":"Icon_attach_ExtendedMagAR.png",
               "capacity":"500"
             },{
               "name":"Extended Mag for KRISS Vector",
+              "image_url":"Icon_attach_ExtendedMagVector.png",
               "capacity":"500"
             },{
               "name":"Extended Mag for Pistol",
+              "image_url":"Icon_attach_ExtendedMagPistol.png",
               "capacity":"500"
             },{
               "name":"Extended Mag for SMG",
+              "image_url":"Icon_attach_ExtendedMagSMG.png",
               "capacity":"500"
             },{
               "name":"Extended Mag for Sniper Rifle",
+              "image_url":"Icon_attach_ExtendedMagSniperRifle.png",
               "capacity":"500"
             },{
               "name":"Quickdraw Mag for Automatic Rifle",
+              "image_url":"Icon_attach_QuickDrawAR.png",
               "capacity":"500"
             },{
               "name":"Quickdraw Mag for Crossbow",
+              "image_url":"Icon_attach_QuickDrawCrossbow.png",
               "capacity":"500"
             },{
               "name":"Quickdraw Mag for KRISS Vector",
+              "image_url":"Icon_attach_QuickDrawVector.png",
               "capacity":"500"
             },{
               "name":"Quickdraw Mag for Pistol",
+              "image_url":"Icon_attach_QuickDrawPistol.png",
               "capacity":"500"
             },{
               "name":"Quickdraw Mag for SMG",
+              "image_url":"Icon_attach_QuickDrawSMG.png",
               "capacity":"500"
             },{
               "name":"Quickdraw Mag for Sniper Rifle",
+              "image_url":"Icon_attach_QuickDrawSniperRife.png",
               "capacity":"500"
             },{
               "name":"Extended Quickdraw Mag for Pistol",
+              "image_url":"Icon_attach_ExtendedQuickPistol.png",
               "capacity":"500"
             },{
               "name":"Extended Quickdraw Mag for SMG",
+              "image_url":"Icon_attach_ExtendedQuickSMG.png",
               "capacity":"500"
             },{
               "name":"Extended Quickdraw Mag for Automatic Rifle",
+              "image_url":"Icon_attach_ExtendedQuickAR.png",
               "capacity":"500"
             },{
               "name":"Extended Quickdraw Mag for Sniper Rifle",
+              "image_url":"Icon_attach_ExtendedQuickSniperRifle.png",
               "capacity":"500"
             }
           ]
@@ -760,9 +820,11 @@
           "items":[
             {
               "name":"Bullet Loops for Kar98k",
+              "image_url":"Icon_attach_SniperRifleBulletLoops.png",
               "capacity":"500"
             },{
               "name":"Bullet Loops for S1897, S686",
+              "image_url":"Icon_attach_ShotgunBulletLoops.png",
               "capacity":"500"
             }
           ]
@@ -771,21 +833,27 @@
           "items":[
             {
               "name":"Red Dot Sight",
+              "image_url":"Icon_attach_RedDot.png",
               "capacity":"500"
             },{
               "name":"Holographic Sight",
+              "image_url":"Icon_attach_Holo.png",
               "capacity":"500"
             },{
               "name":"2x Scope",
+              "image_url":"",
               "capacity":"500"
             },{
               "name":"4x Scope",
+              "image_url":"",
               "capacity":"500"
             },{
               "name":"8x Scope",
+              "image_url":"",
               "capacity":"500"
             },{
               "name":"15x Scope",
+              "image_url":"",
               "capacity":"500"
             }
 

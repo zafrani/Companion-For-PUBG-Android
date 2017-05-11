@@ -5,7 +5,10 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.HashMap;
 
@@ -23,6 +26,7 @@ public class ItemViewHolder  extends RecyclerView.ViewHolder{
     private TextView rangeTextView;
     private TextView stabilityTextView;
     private TextView rateTextView;
+    private ImageView imageImageView;
     private Context context;
 
     public ItemViewHolder(@NonNull final View itemView, @NonNull final Context context) {
@@ -38,6 +42,7 @@ public class ItemViewHolder  extends RecyclerView.ViewHolder{
         this.rangeTextView= (TextView) itemView.findViewById(R.id.row_item_range);
         this.stabilityTextView = (TextView) itemView.findViewById(R.id.row_item_stability);
         this.rateTextView= (TextView) itemView.findViewById(R.id.row_item_rate);
+        this.imageImageView= (ImageView) itemView.findViewById(R.id.row_item_icon);
 
 
     }
@@ -106,6 +111,14 @@ public class ItemViewHolder  extends RecyclerView.ViewHolder{
             this.rateTextView.setText(context.getString(R.string.row_item_rate, itemRate));
         }else {
             this.rateTextView.setText(" - ");
+        }
+    }
+    public void setItemIcon(final String itemImage, String category) {
+        if (itemImage != null) {
+            Picasso.with(context).load("https://github.com/Zsteven44/PUBG-Companion-Images/blob/master/images/" + category+ "/" + itemImage +"?raw=true").into(imageImageView);
+        }else {
+            Picasso.with(context).load(R.mipmap.ic_launcher).into(imageImageView);
+
         }
     }
 

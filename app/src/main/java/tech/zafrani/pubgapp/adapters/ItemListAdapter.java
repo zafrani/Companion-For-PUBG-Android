@@ -42,6 +42,7 @@ public class ItemListAdapter extends RecyclerView.Adapter<ItemViewHolder> {
         holder.setItemRange(item.getRange());
         holder.setItemRate(item.getRate());
         holder.setItemStability(item.getStability());
+        holder.setItemIcon(item.getImageUrl(), item.getCategory());
 
     }
 
