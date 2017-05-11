@@ -22,22 +22,28 @@ import tech.zafrani.pubgapp.models.Category;
 import tech.zafrani.pubgapp.models.Item;
 import tech.zafrani.pubgapp.models.Type;
 
-public class ItemTabFragment extends BaseFragment{
+public class ItemTabFragment extends BaseFragment {
+    private static final String ARG_CATEGORY = ItemTabFragment.class.getSimpleName() + ".ARG_CATEGORY";
     private RecyclerView recyclerView;
     private Category category;
 
     public static ItemTabFragment newInstance(@NonNull final Category category) {
-        final ItemTabFragment fragment = new ItemTabFragment(category);
-        return fragment;
-    }
+        final Bundle args = new Bundle();
+        final ItemTabFragment fragment = new ItemTabFragment();
 
-    public ItemTabFragment(@NonNull final Category category) {
-        this.category = category;
+        args.putSerializable(ARG_CATEGORY, category);
+        fragment.setArguments(args);
+
+        return fragment;
     }
 
     @Override
     public void onCreate(@Nullable final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Bundle args = getArguments();
+        if (args != null && args.containsKey(ARG_CATEGORY)) {
+            this.category = (Category) args.get(ARG_CATEGORY);
+        }
 
     }
 

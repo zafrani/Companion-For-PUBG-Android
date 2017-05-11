@@ -2,6 +2,7 @@
 <resources>
     <dimen name="nav_header_height">192dp</dimen>
     <dimen name="standard_margin">16dp</dimen>
+    <dimen name="small_margin">8dp</dimen>
     <dimen name="recyclerview_margin">24dp</dimen>
 
 
@@ -11,4 +12,5 @@
     <dimen name="item_category_size">7dp</dimen>
     <dimen name="item_type_size">7dp</dimen>
     <dimen name="item_info_size">7dp</dimen>
+    <dimen name="map_text_size">4pt</dimen>
 </resources>

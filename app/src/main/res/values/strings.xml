@@ -22,4 +22,5 @@
         contains the API key from https://console.developers.google.com/apis that will be used.
      -->
     <string name="maps_api_key">@string/local_maps_api_key</string>
+    <string name="vehicles">Vehicles</string>
 </resources>
