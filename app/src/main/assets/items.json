@@ -8,6 +8,7 @@
           "items":[
             {
               "name":"AKM",
+              "image_url":"",
               "magazine":"30",
               "ammo":"7.62mm",
               "range":"0",

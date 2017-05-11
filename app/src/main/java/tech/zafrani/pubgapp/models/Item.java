@@ -36,6 +36,8 @@ public class Item{
     private final Float rate;
     @SerializedName("range")
     private final Float range;
+    @SerializedName("image_url")
+    private final String imageUrl;
 
 
     public Item(@NonNull final String category,
@@ -47,7 +49,8 @@ public class Item{
                 @Nullable final HashMap<String, String> damage,
                 @Nullable final Float range,
                 @Nullable final Float stability,
-                @Nullable final Float rate) {
+                @Nullable final Float rate,
+                @Nullable final String imageUrl) {
         this.category = category;
         this.type = type;
         this.name = name;
@@ -58,6 +61,7 @@ public class Item{
         this.range=range;
         this.stability = stability;
         this.rate =rate;
+        this.imageUrl = imageUrl;
 
     }
 
@@ -78,9 +82,11 @@ public class Item{
                 ", ammo='" + ammo + '\'' +
                 ", magazine=" + magazine +
                 ", capacity=" + capacity +
+                ", damage=" + damage +
                 ", stability=" + stability +
                 ", rate=" + rate +
                 ", range=" + range +
+                ", imageUrl='" + imageUrl + '\'' +
                 '}';
     }
 
@@ -122,6 +128,9 @@ public class Item{
     @Nullable
     public Float getRange() {
         return range;
+    }
+    public String getImageUrl() {
+        return imageUrl;
     }
 
     @Nullable
