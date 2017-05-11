@@ -14,7 +14,7 @@
               "stability":"0",
               "rate":"0",
               "capacity":"500",
-              "damage":[
+              "damage":
                 {
                   "base":"23",
                   "chest0":"46",
@@ -26,7 +26,7 @@
                   "head2":"68",
                   "head3":"51"
                 }
-              ]
+
             },{
               "name":"M16A4",
               "magazine":"30",
@@ -35,7 +35,7 @@
               "stability":"0",
               "rate":"0",
               "capacity":"500",
-              "damage":[
+              "damage":
                 {
                   "base":"21",
                   "chest0":"41",
@@ -47,7 +47,7 @@
                   "head2":"62",
                   "head3":"46"
                 }
-              ]
+
             },{
               "name":"M416",
               "magazine":"30",
@@ -56,7 +56,7 @@
               "stability":"0",
               "rate":"0",
               "capacity":"500",
-              "damage":[
+              "damage":
                 {
                   "base":"21",
                   "chest0":"41",
@@ -68,7 +68,7 @@
                   "head2":"62",
                   "head3":"46"
                 }
-              ]
+
             },{
               "name":"SCAR-L",
               "magazine":"30",
@@ -77,7 +77,7 @@
               "stability":"0",
               "rate":"0",
               "capacity":"500",
-              "damage":[
+              "damage":
                 {
                   "base":"21",
                   "chest0":"41",
@@ -89,7 +89,7 @@
                   "head2":"62",
                   "head3":"46"
                 }
-              ]
+
             }
           ]
         },{
@@ -103,7 +103,7 @@
               "stability":"0",
               "rate":"0",
               "capacity":"500",
-              "damage":[
+              "damage":
                 {
                   "base":"17",
                   "chest0":"33",
@@ -115,7 +115,7 @@
                   "head2":"50",
                   "head3":"37"
                 }
-              ]
+
             },{
               "name":"Micro Uzi",
               "magazine":"30",
@@ -124,7 +124,7 @@
               "stability":"0",
               "rate":"0",
               "capacity":"500",
-              "damage":[
+              "damage":
                 {
                   "base":"12",
                   "chest0":"23",
@@ -136,7 +136,7 @@
                   "head2":"35",
                   "head3":"26"
                 }
-              ]
+
             },{
               "name":"Vector",
               "magazine":"13",
@@ -145,7 +145,7 @@
               "stability":"0",
               "rate":"0",
               "capacity":"500",
-              "damage":[
+              "damage":
                 {
                   "base":"18",
                   "chest0":"36",
@@ -157,7 +157,7 @@
                   "head2":"54",
                   "head3":"41"
                 }
-              ]
+
             },{
               "name":"Tommy Gun",
               "magazine":"30",
@@ -166,7 +166,7 @@
               "stability":"0",
               "rate":"0",
               "capacity":"500",
-              "damage":[
+              "damage":
                 {
                   "base":"19",
                   "chest0":"38",
@@ -178,7 +178,7 @@
                   "head2":"57",
                   "head3":"43"
                 }
-              ]
+
             }
           ]
         },{
@@ -192,7 +192,7 @@
               "stability":"0",
               "rate":"0",
               "capacity":"500",
-              "damage":[
+              "damage":
                 {
                   "base":"22",
                   "chest0":"44",
@@ -204,7 +204,7 @@
                   "head2":"66",
                   "head3":"50"
                 }
-              ]
+
             }
           ]
         },{
@@ -218,7 +218,7 @@
               "stability":"0",
               "rate":"0",
               "capacity":"500",
-              "damage":[
+              "damage":
                 {
                   "base":"999",
                   "chest0":"999",
@@ -230,7 +230,7 @@
                   "head2":"999",
                   "head3":"999"
                 }
-              ]
+
             },{
               "name":"S12K",
               "magazine":"5",
@@ -239,7 +239,7 @@
               "stability":"0",
               "rate":"0",
               "capacity":"500",
-              "damage":[
+              "damage":
                 {
                   "base":"999",
                   "chest0":"999",
@@ -251,7 +251,7 @@
                   "head2":"999",
                   "head3":"999"
                 }
-              ]
+
             },{
               "name":"S1897",
               "magazine":"2",
@@ -260,7 +260,7 @@
               "stability":"0",
               "rate":"0",
               "capacity":"500",
-              "damage":[
+              "damage":
                 {
                   "base":"999",
                   "chest0":"999",
@@ -272,7 +272,7 @@
                   "head2":"999",
                   "head3":"999"
                 }
-              ]
+
             }
           ]
         },{
@@ -286,7 +286,7 @@
               "stability":"0",
               "rate":"0",
               "capacity":"500",
-              "damage":[
+              "damage":
                 {
                   "base":"66",
                   "chest0":"131",
@@ -298,7 +298,7 @@
                   "head2":"197",
                   "head3":"147"
                 }
-              ]
+
             },{
               "name":"M24",
               "magazine":"5",
@@ -307,7 +307,7 @@
               "stability":"0",
               "rate":"0",
               "capacity":"500",
-              "damage":[
+              "damage":
                 {
                   "base":"42",
                   "chest0":"84",
@@ -319,7 +319,7 @@
                   "head2":"126",
                   "head3":"95"
                 }
-              ]
+
             },{
               "name":"Kar 98",
               "magazine":"5",
@@ -328,7 +328,7 @@
               "stability":"0",
               "rate":"0",
               "capacity":"500",
-              "damage":[
+              "damage":
                 {
                   "base":"36",
                   "chest0":"72",
@@ -340,7 +340,7 @@
                   "head2":"108",
                   "head3":"81"
                 }
-              ]
+
             }
           ]
         },{
@@ -354,7 +354,7 @@
               "stability":"0",
               "rate":"0",
               "capacity":"500",
-              "damage":[
+              "damage":
                 {
                   "base":"28",
                   "chest0":"55",
@@ -366,7 +366,7 @@
                   "head2":"83",
                   "head3":"62"
                 }
-              ]
+
             }
           ]
         },{
@@ -380,7 +380,7 @@
               "stability":"0",
               "rate":"0",
               "capacity":"100",
-              "damage":[
+              "damage":
                 {
                   "base":"15",
                   "chest0":"29",
@@ -392,7 +392,7 @@
                   "head2":"44",
                   "head3":"33"
                 }
-              ]
+
             },{
               "name":"P1911",
               "magazine":"7",
@@ -401,7 +401,7 @@
               "stability":"0",
               "rate":"0",
               "capacity":"100",
-              "damage":[
+              "damage":
                 {
                   "base":"18",
                   "chest0":"35",
@@ -413,7 +413,7 @@
                   "head2":"53",
                   "head3":"39"
                 }
-              ]
+
             },{
               "name":"R1895",
               "magazine":"5",
@@ -422,7 +422,7 @@
               "stability":"0",
               "rate":"0",
               "capacity":"100",
-              "damage":[
+              "damage":
                 {
                   "base":"23",
                   "chest0":"46",
@@ -434,7 +434,7 @@
                   "head2":"69",
                   "head3":"52"
                 }
-              ]
+
             }
           ]
         },{
@@ -445,7 +445,7 @@
               "range":"0",
               "rate":"0",
               "capacity":"120",
-              "damage":[
+              "damage":
                 {
                   "base":"0",
                   "chest0":"0",
@@ -457,13 +457,13 @@
                   "head2":"0",
                   "head3":"0"
                 }
-              ]
+
             },{
               "name":"Crowbar",
               "range":"0",
               "rate":"0",
               "capacity":"120",
-              "damage":[
+              "damage":
                 {
                   "base":"0",
                   "chest0":"0",
@@ -475,13 +475,13 @@
                   "head2":"0",
                   "head3":"0"
                 }
-              ]
+
             },{
               "name":"Sickle",
               "range":"0",
               "rate":"0",
               "capacity":"120",
-              "damage":[
+              "damage":
                 {
                   "base":"0",
                   "chest0":"0",
@@ -493,13 +493,13 @@
                   "head2":"0",
                   "head3":"0"
                 }
-              ]
+
             },{
               "name":"Machete",
               "range":"0",
               "rate":"0",
               "capacity":"120",
-              "damage":[
+              "damage":
                 {
                   "base":"0",
                   "chest0":"0",
@@ -511,7 +511,7 @@
                   "head2":"0",
                   "head3":"0"
                 }
-              ]
+
             }
           ]
         },{
@@ -521,38 +521,38 @@
               "name":"Frag Grenade",
               "range":"0",
               "capacity":"12",
-              "damage":[
+              "damage":
                 {
                   "base":"0"
                 }
-              ]
+
             },{
               "name":"Smoke Grenade",
               "range":"0",
               "capacity":"16",
-              "damage":[
+              "damage":
                 {
                   "base":"0"
                 }
-              ]
+
             },{
               "name":"Stun Grenade",
               "range":"0",
               "capacity":"14",
-              "damage":[
+              "damage":
                 {
                   "base":"0"
                 }
-              ]
+
             },{
               "name":"Molotov Cocktail",
               "range":"0",
               "capacity":"18",
-              "damage":[
+              "damage":
                 {
                   "base":"0"
                 }
-              ]
+
             }
           ]
         },{
@@ -566,7 +566,7 @@
               "stability":"0",
               "rate":"0",
               "capacity":"500",
-              "damage":[
+              "damage":
                 {
                   "base":"53",
                   "chest0":"105",
@@ -578,7 +578,7 @@
                   "head2":"158",
                   "head3":"118"
                 }
-              ]
+
             }
           ]
         }

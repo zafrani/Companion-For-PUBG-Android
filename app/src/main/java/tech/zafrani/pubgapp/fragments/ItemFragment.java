@@ -50,6 +50,8 @@ public class ItemFragment extends BaseFragment {
         final TabLayout tabLayout = (TabLayout) view.findViewById(R.id.fragment_item_tablayout);
         tabLayout.setupWithViewPager(viewPager);
 
+
+
     }
 
 

@@ -47,7 +47,7 @@ public class Category implements Serializable{
                '}';
     }
 
-    private void updateChildren() {
+    public void updateChildren() {
         for (final Type type : getTypes()) {
             type.updateChildren(getName());
         }
