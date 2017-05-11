@@ -672,7 +672,7 @@
               "capacity":"500"
             },{
               "name":"Compensator for Automatic Rifle",
-              "image_url":"Icon_attach_CompensatorAR.png",
+              "image_url":"Icon_attach_CompensatorSMG.png",
               "capacity":"500"
             },{
               "name":"Compensator for Sniper Rifle",
@@ -795,11 +795,11 @@
               "capacity":"500"
             },{
               "name":"Quickdraw Mag for Sniper Rifle",
-              "image_url":"Icon_attach_QuickDrawSniperRife.png",
+              "image_url":"Icon_attach_QuickDrawSniperRifle.png",
               "capacity":"500"
             },{
               "name":"Extended Quickdraw Mag for Pistol",
-              "image_url":"Icon_attach_ExtendedQuickPistol.png",
+              "image_url":"Icon_attach_ExtendedQuickPistoll.png",
               "capacity":"500"
             },{
               "name":"Extended Quickdraw Mag for SMG",
