@@ -11,6 +11,7 @@ import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
 import com.google.android.gms.maps.model.TileOverlayOptions;
 
+import tech.zafrani.pubgapp.maps.actions.BoatAction;
 import tech.zafrani.pubgapp.maps.actions.DistanceAction;
 import tech.zafrani.pubgapp.maps.actions.VehicleAction;
 
@@ -21,6 +22,9 @@ public class GoogleMapControllerImpl
 
     @NonNull
     private final VehicleAction vehicleAction;
+
+    @NonNull
+    private final BoatAction boatAction;
 
     @NonNull
     private final DistanceAction distanceAction;
@@ -35,6 +39,7 @@ public class GoogleMapControllerImpl
         this.context = context;
         this.googleMap = googleMap;
         this.vehicleAction = new VehicleAction(this);
+        this.boatAction = new BoatAction(this);
         this.distanceAction = new DistanceAction(this);
         setUpMap();
     }
@@ -84,6 +89,7 @@ public class GoogleMapControllerImpl
     public void release() {
         this.vehicleAction.release();
         this.distanceAction.release();
+        this.boatAction.release();
     }
 
     /**
@@ -91,6 +97,13 @@ public class GoogleMapControllerImpl
      */
     public void toggleVehicles() {
         this.vehicleAction.toggle();
+    }
+
+    /**
+     * Will trigger {@link BoatAction}.
+     */
+    public void toggleBoats() {
+        this.boatAction.toggle();
     }
 
 
@@ -106,6 +119,13 @@ public class GoogleMapControllerImpl
      */
     public boolean isShowingVehicles() {
         return this.vehicleAction.shouldShow();
+    }
+
+    /**
+     * @return true if currently using {@link BoatAction}.
+     */
+    public boolean isShowingBoats() {
+        return this.boatAction.shouldShow();
     }
 
 

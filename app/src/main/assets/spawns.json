@@ -150,5 +150,142 @@
       "latitude": -68.33224917195454,
       "longitude": 86.37842539697886
     }
+  ],
+  "boats": [
+    {
+      "name": "Zharki 1",
+      "latitude": 78.25096320022439,
+      "longitude": -122.75040473788977
+    },
+    {
+      "name": "Severny 1",
+      "latitude": 78.62096111571016,
+      "longitude": -21.65367756038904
+    },
+    {
+      "name": "Stalber 1",
+      "latitude": 78.16200896547177,
+      "longitude": 121.93181399255992
+    },
+    {
+      "name": "Stalber 2",
+      "latitude": 72.62207773180388,
+      "longitude": 118.99323809891939
+    },
+    {
+      "name": "Stalber 3",
+      "latitude": 65.07224666706364,
+      "longitude": 124.48854926973583
+    },
+    {
+      "name": "Lipovka 1",
+      "latitude": 43.93406996343784,
+      "longitude": 131.24252054840326
+    },
+    {
+      "name": "Lipovka 2",
+      "latitude": 29.5293952363105,
+      "longitude": 139.43838771432638
+    },
+    {
+      "name": "Mylta Power 1",
+      "latitude": -32.60180976420537,
+      "longitude": 140.4821515828371
+    },
+    {
+      "name": "Mylta 1",
+      "latitude": -40.95198161838908,
+      "longitude": 73.97400598973037
+    },
+    {
+      "name": "Misc 1",
+      "latitude": -35.52103748161071,
+      "longitude": 34.368454702198505
+    },
+    {
+      "name": "Misc 2",
+      "latitude": -38.28993633485872,
+      "longitude": 18.659221194684505
+    },
+    {
+      "name": "Misc 3",
+      "latitude": -57.120839110781375,
+      "longitude": -30.0586611405015
+    },
+    {
+      "name": "Misc 4",
+      "latitude": -60.2932842403055,
+      "longitude": -55.201140604913235
+    },
+    {
+      "name": "Primorsk 1",
+      "latitude": -68.70287759307979,
+      "longitude": -98.00160348415373
+    },
+    {
+      "name": "Primorsk 2",
+      "latitude": -69.86612917342725,
+      "longitude": -118.26589442789553
+    },
+    {
+      "name": "Misc 5",
+      "latitude": -33.289553241550834,
+      "longitude": -156.91856179386377
+    },
+    {
+      "name": "Georgopol 1",
+      "latitude": 51.81269812939521,
+      "longitude": -60.93427017331124
+    },
+    {
+      "name": "Misc 6",
+      "latitude": 54.64158082927795,
+      "longitude": 24.04790047556162
+    },
+    {
+      "name": "Misc 7",
+      "latitude": 60.95834348033908,
+      "longitude": 35.35583384335041
+    },
+    {
+      "name": "Misc 8",
+      "latitude": -68.7915325562098,
+      "longitude": -45.40691625326872
+    },
+    {
+      "name": "Misc 9",
+      "latitude": -58.921414064812396,
+      "longitude": -21.430968716740608
+    },
+    {
+      "name": "Misc 10",
+      "latitude": -53.61644860007981,
+      "longitude": -2.0160472020506863
+    },
+    {
+      "name": "Misc 11",
+      "latitude": -50.950515055822294,
+      "longitude": 24.499142915010456
+    },
+    {
+      "name": "Novorepnoye 1",
+      "latitude": -66.22931137737318,
+      "longitude": 99.92533542215823
+    },
+    {
+      "name": "Novorepnoye 2",
+      "latitude": -71.7868382713236,
+      "longitude": 97.78718333691359
+    },
+    {
+      "name": "Misc 11",
+      "latitude": -79.19184098027287,
+      "longitude": 52.6985839381814
+    },
+    {
+      "name": "Misc 12",
+      "latitude": -81.32380132629655,
+      "longitude": 29.914684183895588
+    }
   ]
 }

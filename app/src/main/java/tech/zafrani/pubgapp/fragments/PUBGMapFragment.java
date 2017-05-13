@@ -3,6 +3,7 @@ package tech.zafrani.pubgapp.fragments;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import android.widget.ImageView;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.LatLng;
 
 import tech.zafrani.pubgapp.R;
 import tech.zafrani.pubgapp.maps.GoogleMapControllerImpl;
@@ -23,6 +25,7 @@ public class PUBGMapFragment extends BaseFragment
     @Nullable
     private GoogleMapControllerImpl mapController = null;
     private ImageView vehicleIcon;
+    private ImageView boatIcon;
     private ImageView runDistanceIcon;
 
     //region BaseFragment
@@ -39,6 +42,7 @@ public class PUBGMapFragment extends BaseFragment
                               @Nullable final Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         this.vehicleIcon = (ImageView) view.findViewById(R.id.fragment_map_vehicle_icon);
+        this.boatIcon = (ImageView) view.findViewById(R.id.fragment_map_boat_icon);
         this.runDistanceIcon = (ImageView) view.findViewById(R.id.fragment_map_distance_icon);
 
         final MapFragment mapFragment = (MapFragment) getChildFragmentManager().findFragmentById(R.id.map_fragment_map);
@@ -48,6 +52,12 @@ public class PUBGMapFragment extends BaseFragment
             @Override
             public void onClick(View view) {
                 toggleVehicles();
+            }
+        });
+        this.boatIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                toggleBoats();
             }
         });
         this.runDistanceIcon.setOnClickListener(new View.OnClickListener() {
@@ -79,6 +89,12 @@ public class PUBGMapFragment extends BaseFragment
     public void onMapReady(final GoogleMap googleMap) {
         if (googleMap != null) {
             this.mapController = new GoogleMapControllerImpl(getActivity(), googleMap);
+            googleMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
+                @Override
+                public void onMapClick(LatLng latLng) {
+                    Log.e(TAG, "\"latitude\":" + latLng.latitude + ", \"longitude\":" + latLng.longitude);
+                }
+            });
         }
 
     }
@@ -90,6 +106,14 @@ public class PUBGMapFragment extends BaseFragment
             return;
         }
         this.mapController.toggleVehicles();
+        updateUi();
+    }
+
+    private void toggleBoats() {
+        if (this.mapController == null) {
+            return;
+        }
+        this.mapController.toggleBoats();
         updateUi();
     }
 
@@ -109,6 +133,11 @@ public class PUBGMapFragment extends BaseFragment
             vehicleIcon.setColorFilter(ContextCompat.getColor(getActivity(), R.color.colorAccent));
         } else {
             vehicleIcon.setColorFilter(ContextCompat.getColor(getActivity(), R.color.white));
+        }
+        if (this.mapController.isShowingBoats()) {
+            boatIcon.setColorFilter(ContextCompat.getColor(getActivity(), R.color.colorAccent));
+        } else {
+            boatIcon.setColorFilter(ContextCompat.getColor(getActivity(), R.color.white));
         }
         if (this.mapController.isShowingDistance()) {
             runDistanceIcon.setColorFilter(ContextCompat.getColor(getActivity(), R.color.colorAccent));
