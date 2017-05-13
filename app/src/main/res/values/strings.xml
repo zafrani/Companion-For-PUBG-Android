@@ -37,4 +37,6 @@
      -->
     <string name="maps_api_key">@string/local_maps_api_key</string>
     <string name="vehicles">Vehicles</string>
+    <string name="distance_action_label_snippet">Estimated sprinting unarmed on a flat surface</string>
+    <string name="distance_action_label_title_failed">Failed to calculate</string>
 </resources>
