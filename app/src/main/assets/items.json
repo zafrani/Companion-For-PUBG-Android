@@ -1054,35 +1054,41 @@
         }
       ]
     },{
-      "cat_name":"Items",
+      "cat_name":"Consumables",
       "types":[
         {
           "type_name":"Medical",
           "items":[
             {
               "name":"Med Kit",
+              "image_url":"Icon_heal_MedKit",
               "restore":"100",
               "capacity":"20"
             },{
               "name":"Bandages",
+              "image_url":"Icon_heal_Bandage",
               "restore":"10",
               "max":"75",
               "capacity":"20"
             },{
               "name":"First Aid Kit",
+              "image_url":"Icon_heal_FirstAidKit",
               "restore":"75",
               "max":"75",
               "capacity":"10"
             },{
               "name":"Painkillers",
+              "image_url":"Icon_boost_PainKiller",
               "boost":"60",
               "capacity":"20"
             },{
               "name":"Energy Drink",
+              "image_url":"Icon_boost_EnergyDrink",
               "boost":"40",
               "capacity":"20"
             },{
               "name":"Adrenaline Syringe",
+              "image_url":"Icon_boost_AdrenalineSyringe",
               "capacity":"20"
             }
           ]
@@ -1091,6 +1097,7 @@
           "items":[
             {
               "name":"Gas Can",
+              "image_url":"Icon_item_JerryCan",
               "capacity":"20"
             }
           ]

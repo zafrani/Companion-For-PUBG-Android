@@ -16,6 +16,8 @@ import tech.zafrani.pubgapp.R;
 
 
 public class ItemViewHolder  extends RecyclerView.ViewHolder{
+    private final String IMAGE_URL_BASE= "https://github.com/Zsteven44/PUBG-Companion-Images/blob/master/images/";
+    private final String ARG_RAW = "?raw=true";
     private TextView nameTextView;
     private TextView typeTextView;
     private TextView categoryTextView;
@@ -115,7 +117,7 @@ public class ItemViewHolder  extends RecyclerView.ViewHolder{
     }
     public void setItemIcon(final String itemImage, String category) {
         if (itemImage != null) {
-            Picasso.with(context).load("https://github.com/Zsteven44/PUBG-Companion-Images/blob/master/images/" + category+ "/" + itemImage +"?raw=true").into(imageImageView);
+            Picasso.with(context).load(IMAGE_URL_BASE + category+ "/" + itemImage + ARG_RAW).into(imageImageView);
         }else {
             Picasso.with(context).load(R.mipmap.ic_launcher).into(imageImageView);
 
