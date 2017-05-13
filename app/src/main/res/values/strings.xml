@@ -13,7 +13,9 @@
     <string name="row_item_stability">Stability: %1$.0f</string>
     <string name="row_item_rate">Rate: %1$.0f</string>
     <string name="row_item_reload">Reload: %1$.0f</string>
+    <string name="row_item_protection">Protection: %1$.0f</string>
     <string name="row_item_damage">Damage: %1$s</string>
+
 
     <!--
         You will need to provide a Google Maps API key to run this.

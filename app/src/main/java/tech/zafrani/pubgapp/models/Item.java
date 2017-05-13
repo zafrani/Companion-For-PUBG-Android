@@ -39,6 +39,8 @@ public class Item{
     private final Float range;
     @SerializedName("reload")
     private final Float reload;
+    @SerializedName("protection")
+    private final Float protection;
     @SerializedName("boost")
     private final Float boost;
     @SerializedName("heal")
@@ -58,6 +60,7 @@ public class Item{
                 @Nullable final Float stability,
                 @Nullable final Float rate,
                 @Nullable final Float reload,
+                @Nullable final Float protection,
                 @Nullable final Float boost,
                 @Nullable final Float heal,
                 @Nullable final String imageUrl) {
@@ -72,7 +75,7 @@ public class Item{
         this.stability = stability;
         this.rate =rate;
         this.reload = reload;
-
+        this.protection = protection;
         this.boost = boost;
         this.heal = heal;
         this.imageUrl = imageUrl;
@@ -148,7 +151,10 @@ public class Item{
     public Float getReload() {
         return reload;
     }
-
+    @Nullable
+    public Float getProtection() {
+        return protection;
+    }
     @Nullable
     public Float getBoost() {
         return boost;
