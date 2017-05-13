@@ -18,18 +18,19 @@ import tech.zafrani.pubgapp.R;
 public class ItemViewHolder  extends RecyclerView.ViewHolder{
     private final String IMAGE_URL_BASE= "https://github.com/Zsteven44/PUBG-Companion-Images/blob/master/images/";
     private final String ARG_RAW = "?raw=true";
-    private TextView nameTextView;
-    private TextView typeTextView;
-    private TextView categoryTextView;
-    private TextView ammoTextView;
-    private TextView magazineTextView;
-    private TextView capacityTextView;
-    private TextView damageTextView;
-    private TextView rangeTextView;
-    private TextView stabilityTextView;
-    private TextView rateTextView;
-    private ImageView imageImageView;
-    private Context context;
+    private final static String EMPTY_FIELD = " - ";
+    private final TextView nameTextView;
+    private final TextView typeTextView;
+    private final TextView categoryTextView;
+    private final TextView ammoTextView;
+    private final TextView magazineTextView;
+    private final TextView capacityTextView;
+    private final TextView damageTextView;
+    private final TextView rangeTextView;
+    private final TextView stabilityTextView;
+    private final TextView rateTextView;
+    private final ImageView imageImageView;
+    private final Context context;
 
     public ItemViewHolder(@NonNull final View itemView, @NonNull final Context context) {
         super(itemView);
@@ -66,21 +67,21 @@ public class ItemViewHolder  extends RecyclerView.ViewHolder{
         if (itemAmmo != null) {
             this.ammoTextView.setText(context.getString(R.string.row_item_ammo, itemAmmo));
         } else {
-            this.ammoTextView.setText(" - ");
+            this.ammoTextView.setText(EMPTY_FIELD);
         }
     }
-    public void setItemMagazine(final Float itemMagazine) {
+    public void setItemMagazine(@Nullable final Float itemMagazine) {
         if (itemMagazine != null) {
             this.magazineTextView.setText(context.getString(R.string.row_item_magazine, itemMagazine));
         }else {
-            this.magazineTextView.setText(" - ");
+            this.magazineTextView.setText(EMPTY_FIELD);
         }
     }
-    public void setItemCapacity(final Float itemCapacity) {
+    public void setItemCapacity(@Nullable final Float itemCapacity) {
         if (itemCapacity != null) {
             this.capacityTextView.setText(context.getString(R.string.row_item_capacity, itemCapacity));
         }else {
-            this.capacityTextView.setText(" - ");
+            this.capacityTextView.setText(EMPTY_FIELD);
         }
     }
     public void setItemDamage(@Nullable final HashMap<String,String> itemDamage) {
@@ -91,28 +92,28 @@ public class ItemViewHolder  extends RecyclerView.ViewHolder{
                 this.damageTextView.setText(context.getString(R.string.row_item_damage, itemDamage.get("base")));
             }
         }else {
-            this.damageTextView.setText(" - ");
+            this.damageTextView.setText(EMPTY_FIELD);
         }
     }
-    public void setItemStability(final Float itemStability) {
+    public void setItemStability(@Nullable final Float itemStability) {
         if (itemStability!= null) {
             this.stabilityTextView.setText(context.getString(R.string.row_item_stability, itemStability));
         }else {
-            this.stabilityTextView.setText(" - ");
+            this.stabilityTextView.setText(EMPTY_FIELD);
         }
     }
-    public void setItemRange(final Float itemRange) {
+    public void setItemRange(@Nullable final Float itemRange) {
         if (itemRange!= null) {
             this.rangeTextView.setText(context.getString(R.string.row_item_range, itemRange));
         }else {
-            this.rangeTextView.setText(" - ");
+            this.rangeTextView.setText(EMPTY_FIELD);
         }
     }
-    public void setItemRate(final Float itemRate) {
+    public void setItemRate(@Nullable final Float itemRate) {
         if (itemRate != null) {
             this.rateTextView.setText(context.getString(R.string.row_item_rate, itemRate));
         }else {
-            this.rateTextView.setText(" - ");
+            this.rateTextView.setText(EMPTY_FIELD);
         }
     }
     public void setItemIcon(final String itemImage, String category) {
