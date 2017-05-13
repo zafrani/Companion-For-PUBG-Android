@@ -3,7 +3,6 @@ package tech.zafrani.pubgapp.fragments;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +11,6 @@ import android.widget.ImageView;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.model.LatLng;
 
 import tech.zafrani.pubgapp.R;
 import tech.zafrani.pubgapp.maps.GoogleMapControllerImpl;
@@ -89,12 +87,6 @@ public class PUBGMapFragment extends BaseFragment
     public void onMapReady(final GoogleMap googleMap) {
         if (googleMap != null) {
             this.mapController = new GoogleMapControllerImpl(getActivity(), googleMap);
-            googleMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
-                @Override
-                public void onMapClick(LatLng latLng) {
-                    Log.e(TAG, "\"latitude\":" + latLng.latitude + ", \"longitude\":" + latLng.longitude);
-                }
-            });
         }
 
     }
