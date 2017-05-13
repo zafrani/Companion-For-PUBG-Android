@@ -1,91 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="8dp"
-    android:layout_marginBottom="8dp"
     >
-    <ImageView
-        android:id="@+id/row_item_icon"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/ic_launcher"
-        android:layout_weight="0.2"/>
     <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="0dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.8">
-        <TextView
-            android:id="@+id/row_item_name"
-            android:layout_width="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        >
+        <ImageView
+            android:id="@+id/row_item_icon"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            style="@style/RowItem.Name"
-            />
+            android:src="@mipmap/ic_launcher"
+            android:layout_weight="0.2"/>
         <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8">
+            <TextView
+                android:id="@+id/row_item_name"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.20">
-
-
-                <TextView
-                    android:id="@+id/row_item_type"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/RowItem.Type"
-                    />
-
-                <TextView
-                    android:id="@+id/row_item_category"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/RowItem.Category"
-                    />
-            </LinearLayout>
+                style="@style/RowItem.Name"
+                />
             <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.20"
-                >
-                <TextView
-                    android:id="@+id/row_item_seats"
-                    android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    style="@style/RowItem.Info"
-                    />
-            </LinearLayout>
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.20">
-                <TextView
-                    android:id="@+id/row_item_health"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/RowItem.Info"
-                    />
-                <TextView
-                    android:id="@+id/row_item_max_speed"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/RowItem.Info"
-                    />
-                <TextView
-                    android:id="@+id/row_item_acceleration"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/RowItem.Info"
-                    />
+                    android:layout_weight="0.20">
 
+
+                    <TextView
+                        android:id="@+id/row_item_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/RowItem.Type"
+                        />
+
+                    <TextView
+                        android:id="@+id/row_item_category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/RowItem.Category"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.20"
+                    >
+                    <TextView
+                        android:id="@+id/row_item_seats"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/RowItem.Info"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.20">
+                    <TextView
+                        android:id="@+id/row_item_health"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/RowItem.Info"
+                        />
+                    <TextView
+                        android:id="@+id/row_item_max_speed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/RowItem.Info"
+                        />
+                    <TextView
+                        android:id="@+id/row_item_acceleration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/RowItem.Info"
+                        />
+
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
+
+    <View
+    android:layout_height="1dp"
+    android:layout_width="match_parent"
+    android:background="@color/colorDivider">
+
+    </View>
 </LinearLayout>
