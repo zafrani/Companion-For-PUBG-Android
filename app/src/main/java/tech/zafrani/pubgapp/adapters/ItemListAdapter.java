@@ -97,6 +97,7 @@ public class ItemListAdapter extends RecyclerView.Adapter<ItemViewHolder> {
                 view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_item_weapon, parent, false);
                 return new WeaponsViewHolder(view, parent.getContext());
         }
+
     }
 
     @Override

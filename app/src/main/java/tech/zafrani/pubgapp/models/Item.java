@@ -6,9 +6,10 @@ import android.support.annotation.Nullable;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 import java.util.HashMap;
 
-public class Item{
+public class Item implements Serializable {
 
 
     @NonNull

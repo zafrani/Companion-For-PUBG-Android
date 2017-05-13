@@ -23,6 +23,7 @@ public class ConsumablesViewHolder extends ItemViewHolder{
     private final TextView boostTextView;
     private final TextView activateTimeTextView;
     private final TextView maxStackTextView;
+    private final TextView capacityTextView;
     private final ImageView imageImageView;
     private final Context context;
 
@@ -37,6 +38,7 @@ public class ConsumablesViewHolder extends ItemViewHolder{
         this.boostTextView= (TextView) itemView.findViewById(R.id.row_item_boost);
         this.activateTimeTextView= (TextView) itemView.findViewById(R.id.row_item_activate_time);
         this.maxStackTextView= (TextView) itemView.findViewById(R.id.row_item_max_stack);
+        this.capacityTextView= (TextView) itemView.findViewById(R.id.row_item_capacity);
         this.imageImageView= (ImageView) itemView.findViewById(R.id.row_item_icon);
 
 
@@ -86,6 +88,13 @@ public class ConsumablesViewHolder extends ItemViewHolder{
             this.maxStackTextView.setText(context.getString(R.string.row_item_max_stack, itemMaxStack));
         }else {
             this.maxStackTextView.setText(EMPTY_FIELD);
+        }
+    }
+    private void setItemCapacity(@Nullable final Float itemCapacity) {
+        if (itemCapacity != null) {
+            this.capacityTextView.setText(context.getString(R.string.row_item_capacity, itemCapacity));
+        }else {
+            this.capacityTextView.setText(EMPTY_FIELD);
         }
     }
     private void setItemIcon(final String itemImage, String category) {
