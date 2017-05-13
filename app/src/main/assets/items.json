@@ -14,6 +14,7 @@
               "range":"0",
               "stability":"0",
               "rate":"0",
+              "reload":"0",
               "capacity":"500",
               "damage":
                 {
@@ -36,6 +37,7 @@
               "range":"0",
               "stability":"0",
               "rate":"0",
+              "reload":"0",
               "capacity":"500",
               "damage":
                 {
@@ -56,6 +58,7 @@
               "magazine":"30",
               "ammo":"5.56mm",
               "range":"0",
+              "reload":"0",
               "stability":"0",
               "rate":"0",
               "capacity":"500",
@@ -80,6 +83,7 @@
               "range":"0",
               "stability":"0",
               "rate":"0",
+              "reload":"0",
               "capacity":"500",
               "damage":
                 {
@@ -107,6 +111,7 @@
               "range":"0",
               "stability":"0",
               "rate":"0",
+              "reload":"0",
               "capacity":"500",
               "damage":
                 {
@@ -129,6 +134,7 @@
               "range":"0",
               "stability":"0",
               "rate":"0",
+              "reload":"0",
               "capacity":"500",
               "damage":
                 {
@@ -151,6 +157,7 @@
               "range":"0",
               "stability":"0",
               "rate":"0",
+              "reload":"0",
               "capacity":"500",
               "damage":
                 {
@@ -172,6 +179,7 @@
               "range":"0",
               "stability":"0",
               "rate":"0",
+              "reload":"0",
               "capacity":"500",
               "damage":
                 {
@@ -199,6 +207,7 @@
               "range":"0",
               "stability":"0",
               "rate":"0",
+              "reload":"0",
               "capacity":"500",
               "damage":
                 {
@@ -226,6 +235,7 @@
               "range":"0",
               "stability":"0",
               "rate":"0",
+              "reload":"0",
               "capacity":"500",
               "damage":
                 {
@@ -248,6 +258,7 @@
               "range":"0",
               "stability":"0",
               "rate":"0",
+              "reload":"0",
               "capacity":"500",
               "damage":
                 {
@@ -270,6 +281,7 @@
               "range":"0",
               "stability":"0",
               "rate":"0",
+              "reload":"0",
               "capacity":"500",
               "damage":
                 {
@@ -297,6 +309,7 @@
               "range":"0",
               "stability":"0",
               "rate":"0",
+              "reload":"0",
               "capacity":"500",
               "damage":
                 {
@@ -319,6 +332,7 @@
               "range":"0",
               "stability":"0",
               "rate":"0",
+              "reload":"0",
               "capacity":"500",
               "damage":
                 {
@@ -341,6 +355,7 @@
               "range":"0",
               "stability":"0",
               "rate":"0",
+              "reload":"0",
               "capacity":"500",
               "damage":
                 {
@@ -368,6 +383,7 @@
               "range":"0",
               "stability":"0",
               "rate":"0",
+              "reload":"0",
               "capacity":"500",
               "damage":
                 {
@@ -395,6 +411,7 @@
               "range":"0",
               "stability":"0",
               "rate":"0",
+              "reload":"0",
               "capacity":"100",
               "damage":
                 {
@@ -417,6 +434,7 @@
               "range":"0",
               "stability":"0",
               "rate":"0",
+              "reload":"0",
               "capacity":"100",
               "damage":
                 {
@@ -439,6 +457,7 @@
               "range":"0",
               "stability":"0",
               "rate":"0",
+              "reload":"0",
               "capacity":"100",
               "damage":
                 {
@@ -590,6 +609,7 @@
               "magazine":"1",
               "ammo":"Bolt",
               "range":"0",
+              "reload":"0",
               "stability":"0",
               "rate":"0",
               "capacity":"500",
@@ -623,14 +643,6 @@
               "image_url":"Icon_ammo_300Magnum.png",
               "capacity":"0"
             },{
-              "name":".303 Ball Ammo",
-              "image_url":"",
-              "capacity":"0"
-            },{
-              "name":".44 Magnum Ammo",
-              "image_url":"",
-              "capacity":"0"
-            },{
               "name":".45 ACP Ammo",
               "image_url":"Icon_ammo_45ACP.png",
               "capacity":"0.4"
@@ -652,7 +664,7 @@
               "capacity":"0.375"
             },{
               "name":"Bolt",
-              "image_url":"",
+              "image_url":"Icon_ammo_bolt.png",
               "capacity":"0"
             }
           ]

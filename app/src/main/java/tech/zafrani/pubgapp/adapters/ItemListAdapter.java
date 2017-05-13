@@ -10,6 +10,7 @@ import java.util.List;
 
 import tech.zafrani.pubgapp.R;
 import tech.zafrani.pubgapp.adapters.viewholders.AmmunitionViewHolder;
+import tech.zafrani.pubgapp.adapters.viewholders.AttachmentsViewHolder;
 import tech.zafrani.pubgapp.adapters.viewholders.ItemViewHolder;
 import tech.zafrani.pubgapp.adapters.viewholders.WeaponsViewHolder;
 import tech.zafrani.pubgapp.models.Item;
@@ -78,8 +79,8 @@ public class ItemListAdapter extends RecyclerView.Adapter<ItemViewHolder> {
                 view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_item_ammunition, parent, false);
                 return new AmmunitionViewHolder(view, parent.getContext());
             case (VAL_ATTACHMENTS):
-                view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_item_weapon, parent, false);
-                return new WeaponsViewHolder(view, parent.getContext());
+                view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_item_attachment, parent, false);
+                return new AttachmentsViewHolder(view, parent.getContext());
             case (VAL_EQUIPMENT):
                 view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_item_weapon, parent, false);
                 return new WeaponsViewHolder(view, parent.getContext());

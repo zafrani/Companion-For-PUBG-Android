@@ -19,6 +19,8 @@ public class Item{
     @NonNull
     @SerializedName("name")
     private final String name;
+
+
     @Nullable
     @SerializedName("ammo")
     private final String ammo;
@@ -35,9 +37,15 @@ public class Item{
     private final Float rate;
     @SerializedName("range")
     private final Float range;
+    @SerializedName("reload")
+    private final Float reload;
+    @SerializedName("boost")
+    private final Float boost;
+    @SerializedName("heal")
+    private final Float heal;
+
     @SerializedName("image_url")
     private final String imageUrl;
-
 
     public Item(@NonNull final String category,
                 @NonNull final String type,
@@ -49,6 +57,9 @@ public class Item{
                 @Nullable final Float range,
                 @Nullable final Float stability,
                 @Nullable final Float rate,
+                @Nullable final Float reload,
+                @Nullable final Float boost,
+                @Nullable final Float heal,
                 @Nullable final String imageUrl) {
         this.category = category;
         this.type = type;
@@ -60,6 +71,10 @@ public class Item{
         this.range=range;
         this.stability = stability;
         this.rate =rate;
+        this.reload = reload;
+
+        this.boost = boost;
+        this.heal = heal;
         this.imageUrl = imageUrl;
 
     }
@@ -71,7 +86,6 @@ public class Item{
     public void setType(@NonNull final String type_name) {
         this.type = type_name;
     }
-
 
 
     @Override
@@ -130,6 +144,20 @@ public class Item{
     public Float getRange() {
         return range;
     }
+    @Nullable
+    public Float getReload() {
+        return reload;
+    }
+
+    @Nullable
+    public Float getBoost() {
+        return boost;
+    }
+    @Nullable
+    public Float getHeal() {
+        return heal;
+    }
+
     public String getImageUrl() {
         return imageUrl;
     }
