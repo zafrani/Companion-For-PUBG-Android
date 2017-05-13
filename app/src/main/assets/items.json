@@ -164,7 +164,6 @@
                   "head2":"54",
                   "head3":"41"
                 }
-
             },{
               "name":"Tommy Gun",
               "image_url":"Icon_weapon_TommyGun.png",
@@ -888,7 +887,7 @@
           "type_name":"Glasses",
           "items":[
             {
-              "name":"Sunglass",
+              "name":"Sunglasses",
               "image_url":"Icon_equipment_Sunglasses.png",
               "capacity":"0"
             },{

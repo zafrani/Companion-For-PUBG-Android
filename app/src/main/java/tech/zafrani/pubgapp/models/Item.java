@@ -10,7 +10,6 @@ import java.util.HashMap;
 
 public class Item{
 
-
     @NonNull
     @SerializedName("cat_name")
     private String category;
@@ -72,6 +71,8 @@ public class Item{
     public void setType(@NonNull final String type_name) {
         this.type = type_name;
     }
+
+
 
     @Override
     public String toString() {
