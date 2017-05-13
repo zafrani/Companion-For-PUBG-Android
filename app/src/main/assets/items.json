@@ -1061,34 +1061,34 @@
           "items":[
             {
               "name":"Med Kit",
-              "image_url":"Icon_heal_MedKit",
+              "image_url":"Icon_heal_MedKit.png",
               "restore":"100",
               "capacity":"20"
             },{
               "name":"Bandages",
-              "image_url":"Icon_heal_Bandage",
+              "image_url":"Icon_heal_Bandage.jpg",
               "restore":"10",
               "max":"75",
-              "capacity":"20"
+              "capacity":"2"
             },{
               "name":"First Aid Kit",
-              "image_url":"Icon_heal_FirstAidKit",
+              "image_url":"Icon_heal_FirstAidKit.png",
               "restore":"75",
               "max":"75",
               "capacity":"10"
             },{
               "name":"Painkillers",
-              "image_url":"Icon_boost_PainKiller",
+              "image_url":"Icon_boost_PainKiller.png",
               "boost":"60",
               "capacity":"20"
             },{
               "name":"Energy Drink",
-              "image_url":"Icon_boost_EnergyDrink",
+              "image_url":"Icon_boost_EnergyDrink.png",
               "boost":"40",
               "capacity":"20"
             },{
               "name":"Adrenaline Syringe",
-              "image_url":"Icon_boost_AdrenalineSyringe",
+              "image_url":"Icon_boost_AdrenalineSyringe.png",
               "capacity":"20"
             }
           ]
@@ -1097,7 +1097,7 @@
           "items":[
             {
               "name":"Gas Can",
-              "image_url":"Icon_item_JerryCan",
+              "image_url":"Icon_item_JerryCan.png",
               "capacity":"20"
             }
           ]
