@@ -23,19 +23,25 @@ public class Item{
     @Nullable
     @SerializedName("ammo")
     private final String ammo;
+    @Nullable
     @SerializedName("magazine")
     private final Float magazine;
+    @Nullable
     @SerializedName("capacity")
     private final Float capacity;
     @Nullable
     @SerializedName("damage")
     private final HashMap<String, String> damage;
+    @Nullable
     @SerializedName("stability")
     private final Float stability;
+    @Nullable
     @SerializedName("rate")
     private final Float rate;
+    @Nullable
     @SerializedName("range")
     private final Float range;
+    @Nullable
     @SerializedName("image_url")
     private final String imageUrl;
 
@@ -129,6 +135,7 @@ public class Item{
     public Float getRange() {
         return range;
     }
+    @Nullable
     public String getImageUrl() {
         return imageUrl;
     }

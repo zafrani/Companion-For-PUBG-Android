@@ -16,8 +16,8 @@ import tech.zafrani.pubgapp.R;
 
 
 public class ItemViewHolder  extends RecyclerView.ViewHolder{
-    private final String IMAGE_URL_BASE= "https://github.com/Zsteven44/PUBG-Companion-Images/blob/master/images/";
-    private final String ARG_RAW = "?raw=true";
+    private final static String IMAGE_URL_BASE= "https://github.com/Zsteven44/PUBG-Companion-Images/blob/master/images/";
+    private final static String ARG_RAW = "?raw=true";
     private final static String EMPTY_FIELD = " - ";
     private final TextView nameTextView;
     private final TextView typeTextView;

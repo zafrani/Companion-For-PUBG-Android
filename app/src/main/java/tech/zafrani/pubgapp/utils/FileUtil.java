@@ -34,6 +34,7 @@ public class FileUtil {
         return null;
     }
 
+    @NonNull
     public static Items bindItems(@NonNull final Items items) {
         final List<Category> categories = items.getCategories();
         for (final Category category: categories){
