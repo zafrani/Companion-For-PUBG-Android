@@ -51,6 +51,16 @@ public class Item{
     private final Float activate_time;
     @SerializedName("max_stack")
     private final Float max_stack;
+    @SerializedName("health")
+    private final Float health;
+    @SerializedName("max_speed")
+    private final Float max_speed;
+    @SerializedName("acceleration")
+    private final Float acceleration;
+    @SerializedName("seats")
+    private final Float seats;
+
+
     @SerializedName("image_url")
     private final String imageUrl;
 
@@ -71,6 +81,10 @@ public class Item{
                 @Nullable final Float max_heal,
                 @Nullable final Float activate_time,
                 @Nullable final Float max_stack,
+                @Nullable final Float health,
+                @Nullable final Float max_speed,
+                @Nullable final Float acceleration,
+                @Nullable final Float seats,
                 @Nullable final String imageUrl) {
         this.category = category;
         this.type = type;
@@ -89,6 +103,10 @@ public class Item{
         this.max_heal = max_heal;
         this.activate_time = activate_time;
         this.max_stack = max_stack;
+        this.health = health;
+        this.max_speed = max_speed;
+        this.acceleration= acceleration;
+        this.seats = seats;
         this.imageUrl = imageUrl;
 
     }
@@ -185,6 +203,22 @@ public class Item{
     @Nullable
     public Float getMax_Stack() {
         return max_stack;
+    }
+    @Nullable
+    public Float getHealth() {
+        return health;
+    }
+    @Nullable
+    public Float getMax_Speed() {
+        return max_speed;
+    }
+    @Nullable
+    public Float getAcceleration() {
+        return acceleration;
+    }
+    @Nullable
+    public Float getSeats() {
+        return seats;
     }
 
     public String getImageUrl() {

@@ -21,6 +21,11 @@
     <string name="row_item_activate_time">Activate Time: %1$.1f</string>
     <string name="row_item_max_stack">Max Stack: %1$.0f</string>
 
+    <string name="row_item_max_speed">Max Speed: %1$.0f</string>
+    <string name="row_item_acceleration">Acceleration: %1$.0f</string>
+    <string name="row_item_seats">Seats: %1$.0f</string>
+    <string name="row_item_health">Health: %1$.0f</string>
+
 
 
     <!--

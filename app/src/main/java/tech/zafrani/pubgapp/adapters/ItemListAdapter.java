@@ -14,6 +14,7 @@ import tech.zafrani.pubgapp.adapters.viewholders.AttachmentsViewHolder;
 import tech.zafrani.pubgapp.adapters.viewholders.ConsumablesViewHolder;
 import tech.zafrani.pubgapp.adapters.viewholders.EquipmentViewHolder;
 import tech.zafrani.pubgapp.adapters.viewholders.ItemViewHolder;
+import tech.zafrani.pubgapp.adapters.viewholders.VehicleViewHolder;
 import tech.zafrani.pubgapp.adapters.viewholders.WeaponsViewHolder;
 import tech.zafrani.pubgapp.models.Item;
 
@@ -90,8 +91,8 @@ public class ItemListAdapter extends RecyclerView.Adapter<ItemViewHolder> {
                 view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_item_consumables, parent, false);
                 return new ConsumablesViewHolder(view, parent.getContext());
             case (VAL_VEHICLES):
-                view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_item_weapon, parent, false);
-                return new WeaponsViewHolder(view, parent.getContext());
+                view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_item_vehicles, parent, false);
+                return new VehicleViewHolder(view, parent.getContext());
             default:
                 view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_item_weapon, parent, false);
                 return new WeaponsViewHolder(view, parent.getContext());
