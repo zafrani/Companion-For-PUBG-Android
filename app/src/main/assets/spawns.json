@@ -1,0 +1,154 @@
+{
+  "vehicles": [
+    {
+      "name": "Severny 1",
+      "latitude": 78.183611681524,
+      "longitude": -14.614663571119308
+    },
+    {
+      "name": "Severny 2",
+      "latitude": 73.51106840836503,
+      "longitude": -5.882944352924824
+    },
+    {
+      "name": "Georgopol 1",
+      "latitude": 56.66359177649097,
+      "longitude": -78.59948515892029
+    },
+    {
+      "name": "Georgopol 2",
+      "latitude": 50.05515580502576,
+      "longitude": -70.89715953916311
+    },
+    {
+      "name": "Georgopol 3",
+      "latitude": 48.06734020213008,
+      "longitude": -103.76147434115411
+    },
+    {
+      "name": "Yasanaya 1",
+      "latitude": 59.945959537891014,
+      "longitude": 49.24012888222933
+    },
+    {
+      "name": "Yasanaya 2",
+      "latitude": 55.27393461135915,
+      "longitude": 70.24197835475206
+    },
+    {
+      "name": "Rozhok 1",
+      "latitude": 45.343680398953104,
+      "longitude": -21.188010200858116
+    },
+    {
+      "name": "Rozhok 2",
+      "latitude": 41.41244725094085,
+      "longitude": 1.4575683698058128
+    },
+    {
+      "name": "Rozhok 3",
+      "latitude": 42.614819308944085,
+      "longitude": 15.412480272352697
+    },
+    {
+      "name": "Misc 1",
+      "latitude": 44.81763638323715,
+      "longitude": 28.406276553869247
+    },
+    {
+      "name": "Misc 2",
+      "latitude": 37.00942909819311,
+      "longitude": 25.107682161033154
+    },
+    {
+      "name": "Misc 3",
+      "latitude": 41.99561315741432,
+      "longitude": 94.0226811915636
+    },
+    {
+      "name": "Misc 4",
+      "latitude": 27.276129399599185,
+      "longitude": -106.87684334814548
+    },
+    {
+      "name": "Misc 5",
+      "latitude": -44.94305956685766,
+      "longitude": -95.12894589453936
+    },
+    {
+      "name": "Misc 6",
+      "latitude": -52.961147014772536,
+      "longitude": -48.29399205744266
+    },
+    {
+      "name": "Misc 7",
+      "latitude": -74.97661890515865,
+      "longitude": 62.894282676279545
+    },
+    {
+      "name": "Lipovka 1",
+      "latitude": 34.136109352408106,
+      "longitude": 131.53882954269648
+    },
+    {
+      "name": "Mylta Power 1",
+      "latitude": -21.623334569180876,
+      "longitude": 131.6633702069521
+    },
+    {
+      "name": "Mylta 1",
+      "latitude": -34.704395856355724,
+      "longitude": 96.33343275636435
+    },
+    {
+      "name": "Mylta 2",
+      "latitude": -30.846247877330054,
+      "longitude": 85.1611340045929
+    },
+    {
+      "name": "Mylta 3",
+      "latitude": -33.477984187462546,
+      "longitude": 76.30360141396523
+    },
+    {
+      "name": "Pochinki 1",
+      "latitude": -6.886127830651658,
+      "longitude": -10.4705423489213
+    },
+    {
+      "name": "Pochinki 2",
+      "latitude": 1.4644537135664353,
+      "longitude": -23.954761773347858
+    },
+    {
+      "name": "Primorsk 1",
+      "latitude": -62.99695068825048,
+      "longitude": -119.39895071089268
+    },
+    {
+      "name": "Primorsk 2",
+      "latitude": -65.65903443438837,
+      "longitude": -102.55383655428885
+    },
+    {
+      "name": "Novorepnoye 1",
+      "latitude": -68.0417538606912,
+      "longitude": 71.22479137033224
+    },
+    {
+      "name": "Novorepnoye 2",
+      "latitude": -64.54250856135114,
+      "longitude": 74.1952208429575
+    },
+    {
+      "name": "Novorepnoye 3",
+      "latitude": -64.94184894732359,
+      "longitude": 84.30066727101804
+    },
+    {
+      "name": "Novorepnoye 4",
+      "latitude": -68.33224917195454,
+      "longitude": 86.37842539697886
+    }
+  ]
+}
