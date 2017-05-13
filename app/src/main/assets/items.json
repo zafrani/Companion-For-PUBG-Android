@@ -1103,6 +1103,40 @@
           ]
         }
       ]
+    },{
+      "cat_name":"Vehicles",
+      "types":[
+        {
+          "type_name":"Default",
+          "items":[
+            {
+              "name":"Motorcycle (No sidecar)",
+              "image_url":"",
+              "capacity":"0"
+            },{
+              "name":"Motorcycle (w/ sidecar)",
+              "image_url":"",
+              "capacity":"0"
+            },{
+              "name":"Buggy",
+              "image_url":"",
+              "capacity":"0"
+            },{
+              "name":"Dacia",
+              "image_url":"",
+              "capacity":"0"
+            },{
+              "name":"UAZ",
+              "image_url":"",
+              "capacity":"0"
+            },{
+              "name":"Speed Boat",
+              "image_url":"",
+              "capacity":"0"
+            }
+          ]
+        }
+      ]
     }
 
 
