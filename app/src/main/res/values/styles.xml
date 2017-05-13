@@ -30,8 +30,8 @@
         <item name="tabMaxWidth">0dp</item>
         <item name="tabIndicatorColor">#0099FF</item>
         <item name="tabIndicatorHeight">2dp</item>
-        <item name="tabPaddingStart">12dp</item>
-        <item name="tabPaddingEnd">12dp</item>
+        <item name="tabPaddingStart">5dp</item>
+        <item name="tabPaddingEnd">5dp</item>
         <item name="tabBackground">@color/white</item>
         <item name="tabTextAppearance">@style/TabTextAppearance</item>
         <item name="tabSelectedTextColor">#000000</item>
@@ -47,18 +47,22 @@
         <item name="android:color">@color/white</item>
     </style>
 
+
     <style name="RowItem.Name">
         <item name="android:textSize">@dimen/item_name_size</item>
         <item name="android:textStyle">bold</item>
     </style>
-
     <style name="RowItem.Category">
         <item name="android:textSize">@dimen/item_category_size</item>
         <item name="android:textStyle">normal</item>
     </style>
-
     <style name="RowItem.Type">
         <item name="android:textSize">@dimen/item_type_size</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="RowItem.Info">
+        <item name="android:textSize">@dimen/item_info_size</item>
         <item name="android:textStyle">normal</item>
     </style>
 </resources>

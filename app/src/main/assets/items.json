@@ -8,13 +8,14 @@
           "items":[
             {
               "name":"AKM",
+              "image_url":"Icon_weapon_AKM.png",
               "magazine":"30",
               "ammo":"7.62mm",
               "range":"0",
               "stability":"0",
               "rate":"0",
               "capacity":"500",
-              "damage":[
+              "damage":
                 {
                   "base":"23",
                   "chest0":"46",
@@ -26,16 +27,17 @@
                   "head2":"68",
                   "head3":"51"
                 }
-              ]
+
             },{
               "name":"M16A4",
+              "image_url":"Icon_weapon_M16A4.png",
               "magazine":"30",
               "ammo":"5.56mm",
               "range":"0",
               "stability":"0",
               "rate":"0",
               "capacity":"500",
-              "damage":[
+              "damage":
                 {
                   "base":"21",
                   "chest0":"41",
@@ -47,16 +49,17 @@
                   "head2":"62",
                   "head3":"46"
                 }
-              ]
+
             },{
               "name":"M416",
+              "image_url":"Icon_weapon_M416.png",
               "magazine":"30",
               "ammo":"5.56mm",
               "range":"0",
               "stability":"0",
               "rate":"0",
               "capacity":"500",
-              "damage":[
+              "damage":
                 {
                   "base":"21",
                   "chest0":"41",
@@ -68,16 +71,17 @@
                   "head2":"62",
                   "head3":"46"
                 }
-              ]
+
             },{
               "name":"SCAR-L",
+              "image_url":"Icon_weapon_SCAR-L.png",
               "magazine":"30",
               "ammo":"5.56mm",
               "range":"0",
               "stability":"0",
               "rate":"0",
               "capacity":"500",
-              "damage":[
+              "damage":
                 {
                   "base":"21",
                   "chest0":"41",
@@ -89,7 +93,7 @@
                   "head2":"62",
                   "head3":"46"
                 }
-              ]
+
             }
           ]
         },{
@@ -97,13 +101,14 @@
           "items":[
             {
               "name":"UMP9",
+              "image_url":"Icon_weapon_UMP.png",
               "magazine":"30",
               "ammo":"9mm",
               "range":"0",
               "stability":"0",
               "rate":"0",
               "capacity":"500",
-              "damage":[
+              "damage":
                 {
                   "base":"17",
                   "chest0":"33",
@@ -115,16 +120,17 @@
                   "head2":"50",
                   "head3":"37"
                 }
-              ]
+
             },{
               "name":"Micro Uzi",
+              "image_url":"Icon_weapon_UZI.png",
               "magazine":"30",
               "ammo":"9mm",
               "range":"0",
               "stability":"0",
               "rate":"0",
               "capacity":"500",
-              "damage":[
+              "damage":
                 {
                   "base":"12",
                   "chest0":"23",
@@ -136,16 +142,17 @@
                   "head2":"35",
                   "head3":"26"
                 }
-              ]
+
             },{
               "name":"Vector",
+              "image_url":"Icon_weapon_Vector.png",
               "magazine":"13",
               "ammo":"0.45 ACP",
               "range":"0",
               "stability":"0",
               "rate":"0",
               "capacity":"500",
-              "damage":[
+              "damage":
                 {
                   "base":"18",
                   "chest0":"36",
@@ -157,16 +164,17 @@
                   "head2":"54",
                   "head3":"41"
                 }
-              ]
+
             },{
               "name":"Tommy Gun",
+              "image_url":"Icon_weapon_TommyGun.png",
               "magazine":"30",
               "ammo":"0.45 ACP",
               "range":"0",
               "stability":"0",
               "rate":"0",
               "capacity":"500",
-              "damage":[
+              "damage":
                 {
                   "base":"19",
                   "chest0":"38",
@@ -178,7 +186,7 @@
                   "head2":"57",
                   "head3":"43"
                 }
-              ]
+
             }
           ]
         },{
@@ -186,13 +194,14 @@
           "items":[
             {
               "name":"M249",
+              "image_url":"Icon_weapon_M249.png",
               "magazine":"100",
               "ammo":"5.56mm",
               "range":"0",
               "stability":"0",
               "rate":"0",
               "capacity":"500",
-              "damage":[
+              "damage":
                 {
                   "base":"22",
                   "chest0":"44",
@@ -204,7 +213,7 @@
                   "head2":"66",
                   "head3":"50"
                 }
-              ]
+
             }
           ]
         },{
@@ -212,13 +221,14 @@
           "items":[
             {
               "name":"S686",
+              "image_url":"Icon_weapon_S686.png",
               "magazine":"5",
               "ammo":"12Gauge",
               "range":"0",
               "stability":"0",
               "rate":"0",
               "capacity":"500",
-              "damage":[
+              "damage":
                 {
                   "base":"999",
                   "chest0":"999",
@@ -230,16 +240,17 @@
                   "head2":"999",
                   "head3":"999"
                 }
-              ]
+
             },{
               "name":"S12K",
+              "image_url":"Icon_weapon_S12K.png",
               "magazine":"5",
               "ammo":"12Gauge",
               "range":"0",
               "stability":"0",
               "rate":"0",
               "capacity":"500",
-              "damage":[
+              "damage":
                 {
                   "base":"999",
                   "chest0":"999",
@@ -251,16 +262,17 @@
                   "head2":"999",
                   "head3":"999"
                 }
-              ]
+
             },{
               "name":"S1897",
+              "image_url":"Icon_weapon_S1897.png",
               "magazine":"2",
               "ammo":"12Gauge",
               "range":"0",
               "stability":"0",
               "rate":"0",
               "capacity":"500",
-              "damage":[
+              "damage":
                 {
                   "base":"999",
                   "chest0":"999",
@@ -272,7 +284,7 @@
                   "head2":"999",
                   "head3":"999"
                 }
-              ]
+
             }
           ]
         },{
@@ -280,13 +292,14 @@
           "items":[
             {
               "name":"AWM",
+              "image_url":"Icon_weapon_AWM.png",
               "magazine":"5",
               "ammo":".300 Magnum",
               "range":"0",
               "stability":"0",
               "rate":"0",
               "capacity":"500",
-              "damage":[
+              "damage":
                 {
                   "base":"66",
                   "chest0":"131",
@@ -298,16 +311,17 @@
                   "head2":"197",
                   "head3":"147"
                 }
-              ]
+
             },{
               "name":"M24",
+              "image_url":"Icon_weapon_M24.png",
               "magazine":"5",
               "ammo":"7.62mm",
               "range":"0",
               "stability":"0",
               "rate":"0",
               "capacity":"500",
-              "damage":[
+              "damage":
                 {
                   "base":"42",
                   "chest0":"84",
@@ -319,16 +333,17 @@
                   "head2":"126",
                   "head3":"95"
                 }
-              ]
+
             },{
               "name":"Kar 98",
+              "image_url":"Icon_weapon_Kar98k.png",
               "magazine":"5",
               "ammo":"7.62mm",
               "range":"0",
               "stability":"0",
               "rate":"0",
               "capacity":"500",
-              "damage":[
+              "damage":
                 {
                   "base":"36",
                   "chest0":"72",
@@ -340,7 +355,7 @@
                   "head2":"108",
                   "head3":"81"
                 }
-              ]
+
             }
           ]
         },{
@@ -348,13 +363,14 @@
           "items":[
             {
               "name":"SKS",
+              "image_url":"Icon_weapon_SKS.png",
               "magazine":"5",
               "ammo":"7.62mm",
               "range":"0",
               "stability":"0",
               "rate":"0",
               "capacity":"500",
-              "damage":[
+              "damage":
                 {
                   "base":"28",
                   "chest0":"55",
@@ -366,7 +382,7 @@
                   "head2":"83",
                   "head3":"62"
                 }
-              ]
+
             }
           ]
         },{
@@ -374,13 +390,14 @@
           "items":[
             {
               "name":"P92",
+              "image_url":"Icon_weapon_P92.png",
               "magazine":"15",
               "ammo":"9mm",
               "range":"0",
               "stability":"0",
               "rate":"0",
               "capacity":"100",
-              "damage":[
+              "damage":
                 {
                   "base":"15",
                   "chest0":"29",
@@ -392,16 +409,17 @@
                   "head2":"44",
                   "head3":"33"
                 }
-              ]
+
             },{
               "name":"P1911",
+              "image_url":"Icon_weapon_P1911.png",
               "magazine":"7",
               "ammo":"0.45 ACP",
               "range":"0",
               "stability":"0",
               "rate":"0",
               "capacity":"100",
-              "damage":[
+              "damage":
                 {
                   "base":"18",
                   "chest0":"35",
@@ -413,16 +431,17 @@
                   "head2":"53",
                   "head3":"39"
                 }
-              ]
+
             },{
               "name":"R1895",
+              "image_url":"Icon_weapon_R1895.png",
               "magazine":"5",
               "ammo":"7.62mm",
               "range":"0",
               "stability":"0",
               "rate":"0",
               "capacity":"100",
-              "damage":[
+              "damage":
                 {
                   "base":"23",
                   "chest0":"46",
@@ -434,7 +453,7 @@
                   "head2":"69",
                   "head3":"52"
                 }
-              ]
+
             }
           ]
         },{
@@ -442,10 +461,11 @@
           "items":[
             {
               "name":"Pan",
+              "image_url":"Icon_weapon_Pan.png",
               "range":"0",
               "rate":"0",
               "capacity":"120",
-              "damage":[
+              "damage":
                 {
                   "base":"0",
                   "chest0":"0",
@@ -457,13 +477,14 @@
                   "head2":"0",
                   "head3":"0"
                 }
-              ]
+
             },{
               "name":"Crowbar",
+              "image_url":"Icon_weapon_Crowbar.png",
               "range":"0",
               "rate":"0",
               "capacity":"120",
-              "damage":[
+              "damage":
                 {
                   "base":"0",
                   "chest0":"0",
@@ -475,13 +496,14 @@
                   "head2":"0",
                   "head3":"0"
                 }
-              ]
+
             },{
               "name":"Sickle",
+              "image_url":"Icon_weapon_Sickle.png",
               "range":"0",
               "rate":"0",
               "capacity":"120",
-              "damage":[
+              "damage":
                 {
                   "base":"0",
                   "chest0":"0",
@@ -493,13 +515,14 @@
                   "head2":"0",
                   "head3":"0"
                 }
-              ]
+
             },{
               "name":"Machete",
+              "image_url":"Icon_weapon_Machete.png",
               "range":"0",
               "rate":"0",
               "capacity":"120",
-              "damage":[
+              "damage":
                 {
                   "base":"0",
                   "chest0":"0",
@@ -511,7 +534,7 @@
                   "head2":"0",
                   "head3":"0"
                 }
-              ]
+
             }
           ]
         },{
@@ -519,40 +542,44 @@
           "items":[
             {
               "name":"Frag Grenade",
+              "image_url":"Icon_weapon_FragGrenade.png",
               "range":"0",
               "capacity":"12",
-              "damage":[
+              "damage":
                 {
                   "base":"0"
                 }
-              ]
+
             },{
               "name":"Smoke Grenade",
+              "image_url":"Icon_weapon_SmokeGrenade.png",
               "range":"0",
               "capacity":"16",
-              "damage":[
+              "damage":
                 {
                   "base":"0"
                 }
-              ]
+
             },{
               "name":"Stun Grenade",
+              "image_url":"Icon_weapon_StunGrenade.png",
               "range":"0",
               "capacity":"14",
-              "damage":[
+              "damage":
                 {
                   "base":"0"
                 }
-              ]
+
             },{
               "name":"Molotov Cocktail",
+              "image_url":"Icon_weapon_Molotov.png",
               "range":"0",
               "capacity":"18",
-              "damage":[
+              "damage":
                 {
                   "base":"0"
                 }
-              ]
+
             }
           ]
         },{
@@ -560,13 +587,14 @@
           "items":[
             {
               "name":"Crossbow",
+              "image_url":"Icon_weapon_Crossbow.png",
               "magazine":"1",
               "ammo":"Bolt",
               "range":"0",
               "stability":"0",
               "rate":"0",
               "capacity":"500",
-              "damage":[
+              "damage":
                 {
                   "base":"53",
                   "chest0":"105",
@@ -578,7 +606,7 @@
                   "head2":"158",
                   "head3":"118"
                 }
-              ]
+
             }
           ]
         }
@@ -593,30 +621,39 @@
           "items":[
             {
               "name":".300 Magnum Ammo",
+              "image_url":"Icon_ammo_300Magnum.png",
               "capacity":"0"
             },{
               "name":".303 Ball Ammo",
+              "image_url":"",
               "capacity":"0"
             },{
               "name":".44 Magnum Ammo",
+              "image_url":"",
               "capacity":"0"
             },{
               "name":".45 ACP Ammo",
+              "image_url":"Icon_ammo_45ACP.png",
               "capacity":"0.4"
             },{
               "name":"12 Gauge Ammo",
+              "image_url":"Icon_ammo_12Guage.png",
               "capacity":"1.25"
             },{
               "name":"5.56mm Ammo",
+              "image_url":"Icon_ammo_556mm.png",
               "capacity":"0.5"
             },{
               "name":"7.62mm Ammo",
+              "image_url":"Icon_ammo_762mm.png",
               "capacity":"0.7"
             },{
               "name":"9mm Ammo",
+              "image_url":"Icon_ammo_9mm.png",
               "capacity":"0.375"
             },{
               "name":"Bolt",
+              "image_url":"",
               "capacity":"0"
             }
           ]
@@ -631,33 +668,43 @@
           "items": [
             {
               "name":"Choke for S1897",
+              "image_url":"Icon_attach_Choke.png",
               "capacity":"500"
             },{
               "name":"Compensator for Automatic Rifle",
+              "image_url":"Icon_attach_CompensatorSMG.png",
               "capacity":"500"
             },{
               "name":"Compensator for Sniper Rifle",
+              "image_url":"Icon_attach_CompensatorSniperRifle.png",
               "capacity":"500"
             }, {
               "name":"Flash Hider for Automatic Rifle",
+              "image_url":"Icon_attach_FlashHiderAR.png",
               "capacity":"500"
             },{
               "name":"Flash Hider for SMG",
+              "image_url":"Icon_attach_FlashHiderSMG.png",
               "capacity":"500"
             },{
               "name":"Flash Hider for Sniper Rifle",
+              "image_url":"Icon_attach_FlashHiderSniperRifle.png",
               "capacity":"500"
             },{
               "name":"Suppressor for Automatic Rifle",
+              "image_url":"Icon_attach_SuppressorAR.png",
               "capacity":"500"
             }, {
               "name":"Suppressor for Sniper Rifle",
+              "image_url":"Icon_attach_SuppressorSniperRifle.png",
               "capacity":"500"
             },{
               "name":"Suppressor for Pistol",
+              "image_url":"Icon_attach_SuppressorPistol.png",
               "capacity":"500"
             },{
               "name":"Suppressor for SMG",
+              "image_url":"Icon_attach_SuppressorSMG.png",
               "capacity":"500"
             }
           ]
@@ -666,12 +713,15 @@
           "items":[
             {
               "name":"Angled Foregrip",
+              "image_url":"Icon_attach_AngledForeGrip.png",
               "capacity":"500"
             },{
               "name":"Verticle Foregrip",
+              "image_url":"Icon_attach_VerticalForegrip.png",
               "capacity":"500"
             } ,{
               "name":"Foregrip for Crossbow",
+              "image_url":"Icon_attach_ForegripCrossbow.png",
               "capacity":"500"
             }
           ]
@@ -680,15 +730,19 @@
           "items":[
             {
               "name":"Cheek Pad for Sniper Rifle",
+              "image_url":"Icon_attach_CheekPadSniperRifle.png",
               "capacity":"500"
             },{
               "name":"Composite Stock for Assault Rifle",
+              "image_url":"Icon_attach_CompositeAR.png",
               "capacity":"500"
             },{
               "name":"Stock for Micro Uzi",
+              "image_url":"Icon_attach_StockUzi.png",
               "capacity":"500"
             },{
               "name":"Tactical Stock for M416",
+              "image_url":"",
               "capacity":"500"
             }
           ]
@@ -697,51 +751,67 @@
           "items":[
             {
               "name":"Extended Mag Drum",
+              "image_url":"Icon_attach_ExtendedDrumMag.png",
               "capacity":"500"
             },{
               "name":"Extended Mag for Automatic Rifle",
+              "image_url":"Icon_attach_ExtendedMagAR.png",
               "capacity":"500"
             },{
               "name":"Extended Mag for KRISS Vector",
+              "image_url":"Icon_attach_ExtendedMagVector.png",
               "capacity":"500"
             },{
               "name":"Extended Mag for Pistol",
+              "image_url":"Icon_attach_ExtendedMagPistol.png",
               "capacity":"500"
             },{
               "name":"Extended Mag for SMG",
+              "image_url":"Icon_attach_ExtendedMagSMG.png",
               "capacity":"500"
             },{
               "name":"Extended Mag for Sniper Rifle",
+              "image_url":"Icon_attach_ExtendedMagSniperRifle.png",
               "capacity":"500"
             },{
               "name":"Quickdraw Mag for Automatic Rifle",
+              "image_url":"Icon_attach_QuickDrawAR.png",
               "capacity":"500"
             },{
               "name":"Quickdraw Mag for Crossbow",
+              "image_url":"Icon_attach_QuickDrawCrossbow.png",
               "capacity":"500"
             },{
               "name":"Quickdraw Mag for KRISS Vector",
+              "image_url":"Icon_attach_QuickDrawVector.png",
               "capacity":"500"
             },{
               "name":"Quickdraw Mag for Pistol",
+              "image_url":"Icon_attach_QuickDrawPistol.png",
               "capacity":"500"
             },{
               "name":"Quickdraw Mag for SMG",
+              "image_url":"Icon_attach_QuickDrawSMG.png",
               "capacity":"500"
             },{
               "name":"Quickdraw Mag for Sniper Rifle",
+              "image_url":"Icon_attach_QuickDrawSniperRifle.png",
               "capacity":"500"
             },{
               "name":"Extended Quickdraw Mag for Pistol",
+              "image_url":"Icon_attach_ExtendedQuickPistoll.png",
               "capacity":"500"
             },{
               "name":"Extended Quickdraw Mag for SMG",
+              "image_url":"Icon_attach_ExtendedQuickSMG.png",
               "capacity":"500"
             },{
               "name":"Extended Quickdraw Mag for Automatic Rifle",
+              "image_url":"Icon_attach_ExtendedQuickAR.png",
               "capacity":"500"
             },{
               "name":"Extended Quickdraw Mag for Sniper Rifle",
+              "image_url":"Icon_attach_ExtendedQuickSniperRifle.png",
               "capacity":"500"
             }
           ]
@@ -750,9 +820,11 @@
           "items":[
             {
               "name":"Bullet Loops for Kar98k",
+              "image_url":"Icon_attach_SniperRifleBulletLoops.png",
               "capacity":"500"
             },{
               "name":"Bullet Loops for S1897, S686",
+              "image_url":"Icon_attach_ShotgunBulletLoops.png",
               "capacity":"500"
             }
           ]
@@ -761,21 +833,27 @@
           "items":[
             {
               "name":"Red Dot Sight",
+              "image_url":"Icon_attach_RedDot.png",
               "capacity":"500"
             },{
               "name":"Holographic Sight",
+              "image_url":"Icon_attach_Holo.png",
               "capacity":"500"
             },{
               "name":"2x Scope",
+              "image_url":"",
               "capacity":"500"
             },{
               "name":"4x Scope",
+              "image_url":"",
               "capacity":"500"
             },{
               "name":"8x Scope",
+              "image_url":"",
               "capacity":"500"
             },{
               "name":"15x Scope",
+              "image_url":"",
               "capacity":"500"
             }
 
@@ -791,14 +869,17 @@
           "items":[
             {
               "name":"Backpack (1)",
+              "image_url":"Icon_equipment_Backpack_1.png",
               "bulk":"150",
               "capacity":"0"
             },{
               "name":"Backpack (2)",
+              "image_url":"Icon_equipment_Backpack_2.png",
               "bulk":"200",
               "capacity":"0"
             },{
               "name":"Backpack (3)",
+              "image_url":"Icon_equipment_Backpack_3.png",
               "bulk":"250",
               "capacity":"0"
             }
@@ -808,12 +889,15 @@
           "items":[
             {
               "name":"Sunglass",
+              "image_url":"Icon_equipment_Sunglasses.png",
               "capacity":"0"
             },{
               "name":"Glasses (Punk)",
+              "image_url":"Icon_equipment_GlassesPunk.png",
               "capacity":"0"
             },{
               "name":"Rimless Sunglasses",
+              "image_url":"Icon_equipment_RimlessSunglasses.png",
               "capacity":"0"
             }
           ]
@@ -822,6 +906,7 @@
           "items":[
             {
               "name":"Fingerless Gloves",
+              "image_url":"Icon_equipment_gloves_1.png",
               "capacity":"0"
 
             }
@@ -831,6 +916,11 @@
           "items":[
             {
               "name":"Beanie Hat",
+              "image_url":"Icon_equipment_Beanie.png",
+              "capacity":"0"
+            },{
+              "name":"Ball Cap",
+              "image_url":"Icon_equipment_CapRed.png",
               "capacity":"0"
             }
           ]
@@ -839,14 +929,17 @@
           "items":[
             {
               "name":"Motorcycle Helmet (1)",
+              "image_url":"Icon_equipment_MotorcycleHelmet1A.png",
               "durability":"80",
               "capacity":"0"
             },{
               "name":"Military Helmet (2)",
+              "image_url":"Icon_equipment_MilitaryHelmet2A.png",
               "durability":"150",
               "capacity":"0"
             },{
               "name":"Military Helmet (3)",
+              "image_url":"Icon_equipment_Helmet3.png",
               "durability":"200",
               "capacity":"0"
             }
@@ -855,13 +948,12 @@
           "type_name":"Jackets",
           "items":[
             {
-              "name":"Coat",
-              "capacity":"0"
-            },{
               "name":"Padded Jacket",
+              "image_url":"Icon_equipment_JacketA.png",
               "capacity":"0"
             },{
               "name":"Trench Coat",
+              "image_url":"Icon_equipment_trench.png",
               "capacity":"0"
             }
           ]
@@ -870,12 +962,15 @@
           "items":[
             {
               "name":"Ballistic Mask",
+              "image_url":"",
               "capacity":"0"
             },{
               "name":"Gas Mask (Full)",
+              "image_url":"Icon_equipment_GasMaskFull.png",
               "capacity":"0"
             },{
               "name":"Gas Mask (Half)",
+              "image_url":"Icon_equipment_GasMaskHalf.png",
               "capacity":"0"
             }
           ]
@@ -884,6 +979,7 @@
           "items":[
             {
               "name":"Ghillie Suit",
+              "image_url":"Icon_equipment_Ghillie.png",
               "capacity":"0"
             }
           ]
@@ -892,6 +988,7 @@
           "items":[
             {
               "name":"Combat Pants",
+              "image_url":"Icon_equipment_PantsA.png",
               "bulk":"40",
               "capacity":"0"
             }
@@ -901,12 +998,15 @@
           "items":[
             {
               "name":"Boots",
+              "image_url":"Icon_equipment_ShoesA.png",
               "capacity":"0"
             },{
               "name":"Hi-Top Trainers",
+              "image_url":"Icon_equipment_ShoesB.png",
               "capacity":"0"
             },{
               "name":"Working Boots",
+              "image_url":"",
               "capacity":"0"
             }
           ]
@@ -915,15 +1015,19 @@
           "items":[
             {
               "name":"Dirty Tank Top",
+              "image_url":"Icon_equipment_ShirtTankTopA.png",
               "capacity":"0"
             },{
               "name":"T-Shirt",
+              "image_url":"",
               "capacity":"0"
             },{
               "name":"Long-Sleeved Shirt",
+              "image_url":"Icon_equipment_LongSleeveShirtA.png",
               "capacity":"0"
             },{
               "name":"Shirt",
+              "image_url":"Icon_equipment_ShirtA.png",
               "capacity":"0"
             }
           ]
@@ -932,14 +1036,17 @@
           "items":[
             {
               "name":"Police Vest (1)",
+              "image_url":"Icon_equipment_Armor_1.png",
               "durability":"150",
               "capacity":"0"
             },{
               "name":"Military Vest (2)",
+              "image_url":"Icon_equipment_Armor_2.png",
               "durability":"200",
               "capacity":"0"
             },{
               "name":"Military Vest (3)",
+              "image_url":"Icon_equipment_Armor_3.png",
               "durability":"250",
               "capacity":"0"
             }
@@ -947,35 +1054,41 @@
         }
       ]
     },{
-      "cat_name":"Items",
+      "cat_name":"Consumables",
       "types":[
         {
           "type_name":"Medical",
           "items":[
             {
               "name":"Med Kit",
+              "image_url":"Icon_heal_MedKit.png",
               "restore":"100",
               "capacity":"20"
             },{
               "name":"Bandages",
+              "image_url":"Icon_heal_Bandage.jpg",
               "restore":"10",
               "max":"75",
-              "capacity":"20"
+              "capacity":"2"
             },{
               "name":"First Aid Kit",
+              "image_url":"Icon_heal_FirstAidKit.png",
               "restore":"75",
               "max":"75",
               "capacity":"10"
             },{
               "name":"Painkillers",
+              "image_url":"Icon_boost_PainKiller.png",
               "boost":"60",
               "capacity":"20"
             },{
               "name":"Energy Drink",
+              "image_url":"Icon_boost_EnergyDrink.png",
               "boost":"40",
               "capacity":"20"
             },{
               "name":"Adrenaline Syringe",
+              "image_url":"Icon_boost_AdrenalineSyringe.png",
               "capacity":"20"
             }
           ]
@@ -984,7 +1097,42 @@
           "items":[
             {
               "name":"Gas Can",
+              "image_url":"Icon_item_JerryCan.png",
               "capacity":"20"
+            }
+          ]
+        }
+      ]
+    },{
+      "cat_name":"Vehicles",
+      "types":[
+        {
+          "type_name":"Default",
+          "items":[
+            {
+              "name":"Motorcycle (No sidecar)",
+              "image_url":"",
+              "capacity":"0"
+            },{
+              "name":"Motorcycle (w/ sidecar)",
+              "image_url":"",
+              "capacity":"0"
+            },{
+              "name":"Buggy",
+              "image_url":"",
+              "capacity":"0"
+            },{
+              "name":"Dacia",
+              "image_url":"",
+              "capacity":"0"
+            },{
+              "name":"UAZ",
+              "image_url":"",
+              "capacity":"0"
+            },{
+              "name":"Speed Boat",
+              "image_url":"",
+              "capacity":"0"
             }
           ]
         }

@@ -26,7 +26,7 @@ public class ItemListAdapter extends RecyclerView.Adapter<ItemViewHolder> {
     @Override
     public ItemViewHolder onCreateViewHolder(@NonNull final ViewGroup parent, @NonNull final int viewType) {
         final View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_item, parent, false);
-        return new ItemViewHolder(view);
+        return new ItemViewHolder(view, parent.getContext());
     }
 
     @Override
@@ -35,6 +35,14 @@ public class ItemListAdapter extends RecyclerView.Adapter<ItemViewHolder> {
         holder.setItemName(item.getName());
         holder.setItemType(item.getType());
         holder.setItemCategory(item.getCategory());
+        holder.setItemAmmo(item.getAmmo());
+        holder.setItemMagazine(item.getMagazine());
+        holder.setItemCapacity(item.getCapacity());
+        holder.setItemDamage(item.getDamage());
+        holder.setItemRange(item.getRange());
+        holder.setItemRate(item.getRate());
+        holder.setItemStability(item.getStability());
+        holder.setItemIcon(item.getImageUrl(), item.getCategory());
 
     }
 

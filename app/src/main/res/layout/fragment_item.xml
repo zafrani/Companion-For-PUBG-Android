@@ -10,11 +10,8 @@
         android:layout_height="wrap_content"
         style="@style/TabLayout"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:text="Item List"/>
+
+
 
     <android.support.v4.view.ViewPager
         android:id="@+id/fragment_item_viewpager"
