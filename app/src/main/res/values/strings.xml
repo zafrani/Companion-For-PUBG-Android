@@ -15,6 +15,12 @@
     <string name="row_item_reload">Reload: %1$.0f</string>
     <string name="row_item_protection">Protection: %1$.0f</string>
     <string name="row_item_damage">Damage: %1$s</string>
+    <string name="row_item_boost">Boost: %1$.0f</string>
+    <string name="row_item_heal">Heal: %1$.0f</string>
+    <string name="row_item_max_heal">Max Heal: %1$.0f</string>
+    <string name="row_item_activate_time">Activate Time: %1$.1f</string>
+    <string name="row_item_max_stack">Max Stack: %1$.0f</string>
+
 
 
     <!--

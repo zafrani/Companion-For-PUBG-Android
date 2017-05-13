@@ -45,7 +45,12 @@ public class Item{
     private final Float boost;
     @SerializedName("heal")
     private final Float heal;
-
+    @SerializedName("max_heal")
+    private final Float max_heal;
+    @SerializedName("activate_time")
+    private final Float activate_time;
+    @SerializedName("max_stack")
+    private final Float max_stack;
     @SerializedName("image_url")
     private final String imageUrl;
 
@@ -63,6 +68,9 @@ public class Item{
                 @Nullable final Float protection,
                 @Nullable final Float boost,
                 @Nullable final Float heal,
+                @Nullable final Float max_heal,
+                @Nullable final Float activate_time,
+                @Nullable final Float max_stack,
                 @Nullable final String imageUrl) {
         this.category = category;
         this.type = type;
@@ -78,6 +86,9 @@ public class Item{
         this.protection = protection;
         this.boost = boost;
         this.heal = heal;
+        this.max_heal = max_heal;
+        this.activate_time = activate_time;
+        this.max_stack = max_stack;
         this.imageUrl = imageUrl;
 
     }
@@ -162,6 +173,18 @@ public class Item{
     @Nullable
     public Float getHeal() {
         return heal;
+    }
+    @Nullable
+    public Float getMax_Heal() {
+        return max_heal;
+    }
+    @Nullable
+    public Float getActivate_Time() {
+        return activate_time;
+    }
+    @Nullable
+    public Float getMax_Stack() {
+        return max_stack;
     }
 
     public String getImageUrl() {
