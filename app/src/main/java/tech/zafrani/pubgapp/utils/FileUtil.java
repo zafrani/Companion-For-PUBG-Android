@@ -1,6 +1,5 @@
 package tech.zafrani.pubgapp.utils;
 
-import android.app.Activity;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -15,18 +14,32 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 import tech.zafrani.pubgapp.models.Items;
+import tech.zafrani.pubgapp.models.spawns.Spawns;
 
 public class FileUtil {
 
     @Nullable
-    public static Items getItems(@NonNull final Activity activity) throws IOException {
-        final InputStream inputStream = activity.getAssets().open("items.json");
+    public static Items getItems(@NonNull final Context context) throws IOException {
+        final InputStream inputStream = context.getAssets().open("items.json");
 
         if (inputStream != null) {
             final Gson gson = new Gson();
             final BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
 
             return gson.fromJson(reader, Items.class);
+
+        }
+        return null;
+    }
+    @Nullable
+    public static Spawns getSpawns(@NonNull final Context context) throws IOException {
+        final InputStream inputStream = context.getAssets().open("spawns.json");
+
+        if (inputStream != null) {
+            final Gson gson = new Gson();
+            final BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
+
+            return gson.fromJson(reader, Spawns.class);
 
         }
         return null;
