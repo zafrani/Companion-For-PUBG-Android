@@ -1,4 +1,4 @@
-package tech.zafrani.pubgapp.maps;
+package tech.zafrani.pubgapp.maps.markers;
 
 import com.google.android.gms.maps.model.LatLng;
 
@@ -7,9 +7,9 @@ import java.util.List;
 
 public class VehicleMarkers {
 
-    private static final List<LatLng> vehicleSpawns = new ArrayList<>();
 
-    static {
+    public static List<LatLng> getVehicleSpawns() {
+        final List<LatLng> vehicleSpawns = new ArrayList<>();
         vehicleSpawns.add(new LatLng(78.183611681524, -14.614663571119308));// Severny 1
         vehicleSpawns.add(new LatLng(73.51106840836503, -5.882944352924824));// Severny 2
         vehicleSpawns.add(new LatLng(56.66359177649097, -78.59948515892029));// Georgopol 1
@@ -40,9 +40,6 @@ public class VehicleMarkers {
         vehicleSpawns.add(new LatLng(-64.54250856135114, 74.1952208429575));// Novorepnoye 2
         vehicleSpawns.add(new LatLng(-64.94184894732359, 84.30066727101804));// Novorepnoye 3
         vehicleSpawns.add(new LatLng(-68.33224917195454, 86.37842539697886));// Novorepnoye 4
-    }
-
-    public static List<LatLng> getVehicleSpawns() {
         return vehicleSpawns;
 
     }
