@@ -8,10 +8,12 @@ import com.google.gson.annotations.SerializedName;
 import java.util.Arrays;
 import java.util.List;
 
+
 public class Items {
     @NonNull
     @SerializedName("categories")
     private final List<Category> categories;
+
 
     public Items(@NonNull final List<Category> categories) {
         this.categories = categories;

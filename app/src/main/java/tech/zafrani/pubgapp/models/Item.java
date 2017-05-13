@@ -10,6 +10,7 @@ import java.util.HashMap;
 
 public class Item{
 
+
     @NonNull
     @SerializedName("cat_name")
     private String category;
@@ -19,50 +20,66 @@ public class Item{
     @NonNull
     @SerializedName("name")
     private final String name;
-
-
     @Nullable
     @SerializedName("ammo")
     private final String ammo;
+    @Nullable
     @SerializedName("magazine")
     private final Float magazine;
+    @Nullable
     @SerializedName("capacity")
     private final Float capacity;
     @Nullable
     @SerializedName("damage")
     private final HashMap<String, String> damage;
+    @Nullable
     @SerializedName("stability")
     private final Float stability;
+    @Nullable
     @SerializedName("rate")
     private final Float rate;
+    @Nullable
     @SerializedName("range")
     private final Float range;
+    @Nullable
     @SerializedName("reload")
     private final Float reload;
+    @Nullable
     @SerializedName("protection")
     private final Float protection;
+    @Nullable
     @SerializedName("boost")
     private final Float boost;
+    @Nullable
     @SerializedName("heal")
     private final Float heal;
+    @Nullable
     @SerializedName("max_heal")
     private final Float max_heal;
+    @Nullable
     @SerializedName("activate_time")
     private final Float activate_time;
+    @Nullable
     @SerializedName("max_stack")
     private final Float max_stack;
+    @Nullable
     @SerializedName("health")
     private final Float health;
+    @Nullable
     @SerializedName("max_speed")
     private final Float max_speed;
+    @Nullable
     @SerializedName("acceleration")
     private final Float acceleration;
+    @Nullable
     @SerializedName("seats")
     private final Float seats;
 
 
+    @Nullable
     @SerializedName("image_url")
     private final String imageUrl;
+
 
     public Item(@NonNull final String category,
                 @NonNull final String type,
@@ -118,7 +135,6 @@ public class Item{
     public void setType(@NonNull final String type_name) {
         this.type = type_name;
     }
-
 
     @Override
     public String toString() {

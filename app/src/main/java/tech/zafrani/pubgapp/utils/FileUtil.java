@@ -34,9 +34,10 @@ public class FileUtil {
         return null;
     }
 
-    public static Items bindItems(@NonNull Items items) {
-        List<Category> categories = items.getCategories();
-        for (Category category: categories){
+    @NonNull
+    public static Items bindItems(@NonNull final Items items) {
+        final List<Category> categories = items.getCategories();
+        for (final Category category: categories){
             category.updateChildren();
         }
         return items;
