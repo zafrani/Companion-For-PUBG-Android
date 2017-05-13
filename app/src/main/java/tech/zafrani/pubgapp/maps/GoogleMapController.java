@@ -1,64 +1,49 @@
 package tech.zafrani.pubgapp.maps;
 
+
+import android.content.Context;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.util.Log;
 
 import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.gms.maps.model.TileOverlayOptions;
+import com.google.android.gms.maps.model.Polyline;
+import com.google.android.gms.maps.model.PolylineOptions;
 
-import java.util.ArrayList;
-import java.util.List;
+/**
+ * Helper for managing all of the interactions with a {@link GoogleMap}.
+ */
+public interface GoogleMapController {
 
-public class GoogleMapController {
-    private GoogleMap googleMap = null;
-    private boolean showVehicles = false;
-    private final List<Marker> vehicleMarkers = new ArrayList<>();
+    /**
+     * Will forward to {@link GoogleMap#addMarker(MarkerOptions)}
+     *
+     * @param markerOptions should contain information for marking.
+     * @return the marker created.
+     */
+    @NonNull
+    Marker addMarker(@NonNull MarkerOptions markerOptions);
 
-    public void setGoogleMap(@Nullable final GoogleMap googleMap) {
-        this.googleMap = googleMap;
-        setUpMap();
-    }
+    /**
+     * Will forward to {@link GoogleMap#addPolyline(PolylineOptions)}
+     *
+     * @param polylineOptions should contain information for drawing.
+     * @return the polyline created.
+     */
+    @NonNull
+    Polyline addPolyline(@NonNull PolylineOptions polylineOptions);
 
-    private void setUpMap() {
-        if (this.googleMap == null) {
-            return;
-        }
-        final TileOverlayOptions overlayOptions = new TileOverlayOptions();
-        overlayOptions.tileProvider(new PUBGTileProvider());
-        this.googleMap.setMaxZoomPreference(5);
-        this.googleMap.setMapType(GoogleMap.MAP_TYPE_NONE);
-        this.googleMap.addTileOverlay(overlayOptions);
-        this.googleMap.getUiSettings().setMapToolbarEnabled(false);
-        this.googleMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
-            @Override
-            public void onMapClick(final LatLng latLng) {
-                Log.e(getClass().getSimpleName(), "LatLng: " + latLng.latitude + ", " + latLng.longitude);
-            }
-        });
-    }
+    /**
+     * Set a listener for the {@link GoogleMap}
+     *
+     * @param clickListener null to remove.
+     */
+    void setOnMapClickListener(@Nullable GoogleMap.OnMapClickListener clickListener);
 
-    public void toggleVehicles() {
-        this.showVehicles = !this.showVehicles;
-        final List<LatLng> vehicleSpawns = VehicleMarkers.getVehicleSpawns();
-        if (this.showVehicles) {
-            for (final LatLng latLng : vehicleSpawns) {
-                final MarkerOptions markerOptions = new MarkerOptions();
-                markerOptions.position(latLng);
-                this.vehicleMarkers.add(this.googleMap.addMarker(markerOptions));
-            }
-        } else {
-            for (final Marker marker : this.vehicleMarkers) {
-                marker.remove();
-            }
-            this.vehicleMarkers.clear();
-
-        }
-    }
-
-    public boolean isShowingVehicles() {
-        return showVehicles;
-    }
+    /**
+     * @return Android context.
+     */
+    @NonNull
+    Context getContext();
 }
