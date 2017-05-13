@@ -1076,6 +1076,7 @@
               "activate_time":"0",
               "heal":"100",
               "max_heal":"100",
+              "boost":"0",
               "max_stack":"0",
               "capacity":"20"
             },{
@@ -1084,6 +1085,7 @@
               "activate_time":"0",
               "heal":"10",
               "max_heal":"75",
+              "boost":"0",
               "max_stack":"0",
               "capacity":"2"
             },{
@@ -1092,6 +1094,7 @@
               "activate_time":"0",
               "heal":"75",
               "max_heal":"75",
+              "boost":"0",
               "max_stack":"0",
               "capacity":"10"
             },{
@@ -1099,7 +1102,7 @@
               "image_url":"Icon_boost_PainKiller.png",
               "activate_time":"0",
               "boost":"60",
-
+              "heal":"0",
               "max_heal":"100",
               "max_stack":"0",
               "capacity":"20"
@@ -1108,7 +1111,7 @@
               "image_url":"Icon_boost_EnergyDrink.png",
               "activate_time":"0",
               "boost":"40",
-
+              "heal":"0",
               "max_heal":"100",
               "max_stack":"0",
               "capacity":"20"
@@ -1116,7 +1119,6 @@
               "name":"Adrenaline Syringe",
               "image_url":"Icon_boost_AdrenalineSyringe.png",
               "activate_time":"0",
-
               "max_stack":"0",
               "capacity":"20"
             }
