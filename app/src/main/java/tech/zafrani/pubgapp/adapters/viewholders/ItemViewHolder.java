@@ -12,6 +12,6 @@ public class ItemViewHolder extends RecyclerView.ViewHolder {
         super(itemView);
     }
 
-    public void bind(Item item){};
+    public void bind(final Item item){};
 
 }

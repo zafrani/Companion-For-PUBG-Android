@@ -1073,33 +1073,51 @@
             {
               "name":"Med Kit",
               "image_url":"Icon_heal_MedKit.png",
-              "restore":"100",
+              "activate_time":"0",
+              "heal":"100",
+              "max_heal":"100",
+              "max_stack":"0",
               "capacity":"20"
             },{
               "name":"Bandages",
               "image_url":"Icon_heal_Bandage.jpg",
-              "restore":"10",
-              "max":"75",
+              "activate_time":"0",
+              "heal":"10",
+              "max_heal":"75",
+              "max_stack":"0",
               "capacity":"2"
             },{
               "name":"First Aid Kit",
               "image_url":"Icon_heal_FirstAidKit.png",
-              "restore":"75",
-              "max":"75",
+              "activate_time":"0",
+              "heal":"75",
+              "max_heal":"75",
+              "max_stack":"0",
               "capacity":"10"
             },{
               "name":"Painkillers",
               "image_url":"Icon_boost_PainKiller.png",
+              "activate_time":"0",
               "boost":"60",
+
+              "max_heal":"100",
+              "max_stack":"0",
               "capacity":"20"
             },{
               "name":"Energy Drink",
               "image_url":"Icon_boost_EnergyDrink.png",
+              "activate_time":"0",
               "boost":"40",
+
+              "max_heal":"100",
+              "max_stack":"0",
               "capacity":"20"
             },{
               "name":"Adrenaline Syringe",
               "image_url":"Icon_boost_AdrenalineSyringe.png",
+              "activate_time":"0",
+
+              "max_stack":"0",
               "capacity":"20"
             }
           ]
@@ -1109,6 +1127,7 @@
             {
               "name":"Gas Can",
               "image_url":"Icon_item_JerryCan.png",
+              "activate_time":"0",
               "capacity":"20"
             }
           ]
@@ -1123,26 +1142,50 @@
             {
               "name":"Motorcycle (No sidecar)",
               "image_url":"",
+              "health":"0",
+              "max_speed":"0",
+              "acceleration":"0",
+              "seats":"1",
               "capacity":"0"
             },{
               "name":"Motorcycle (w/ sidecar)",
               "image_url":"",
+              "health":"0",
+              "max_speed":"0",
+              "acceleration":"0",
+              "seats":"3",
               "capacity":"0"
             },{
               "name":"Buggy",
               "image_url":"",
+              "health":"0",
+              "max_speed":"0",
+              "acceleration":"0",
+              "seats":"2",
               "capacity":"0"
             },{
               "name":"Dacia",
               "image_url":"",
+              "health":"0",
+              "max_speed":"0",
+              "acceleration":"0",
+              "seats":"4",
               "capacity":"0"
             },{
               "name":"UAZ",
               "image_url":"",
+              "health":"0",
+              "max_speed":"0",
+              "acceleration":"0",
+              "seats":"5",
               "capacity":"0"
             },{
               "name":"Speed Boat",
               "image_url":"",
+              "health":"0",
+              "max_speed":"0",
+              "acceleration":"0",
+              "seats":"6",
               "capacity":"0"
             }
           ]

@@ -66,7 +66,7 @@ public class EquipmentViewHolder extends ItemViewHolder {
         }
     }
 
-    private void setItemIcon(final String itemImage, String category) {
+    private void setItemIcon(final String itemImage,@NonNull final String category) {
         if (itemImage != null) {
             Picasso.with(context).load(IMAGE_URL_BASE + category+ "/" + itemImage + ARG_RAW).into(imageImageView);
         }else {
@@ -76,7 +76,7 @@ public class EquipmentViewHolder extends ItemViewHolder {
     }
 
     @Override
-    public void bind(Item item) {
+    public void bind(@NonNull final Item item) {
         setItemName(item.getName());
         setItemType(item.getType());
         setItemCategory(item.getCategory());
