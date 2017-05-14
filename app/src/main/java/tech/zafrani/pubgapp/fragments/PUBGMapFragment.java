@@ -23,6 +23,7 @@ public class PUBGMapFragment extends BaseFragment
     @Nullable
     private GoogleMapControllerImpl mapController = null;
     private ImageView vehicleIcon;
+    private ImageView boatIcon;
     private ImageView runDistanceIcon;
 
     //region BaseFragment
@@ -39,6 +40,7 @@ public class PUBGMapFragment extends BaseFragment
                               @Nullable final Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         this.vehicleIcon = (ImageView) view.findViewById(R.id.fragment_map_vehicle_icon);
+        this.boatIcon = (ImageView) view.findViewById(R.id.fragment_map_boat_icon);
         this.runDistanceIcon = (ImageView) view.findViewById(R.id.fragment_map_distance_icon);
 
         final MapFragment mapFragment = (MapFragment) getChildFragmentManager().findFragmentById(R.id.map_fragment_map);
@@ -48,6 +50,12 @@ public class PUBGMapFragment extends BaseFragment
             @Override
             public void onClick(View view) {
                 toggleVehicles();
+            }
+        });
+        this.boatIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                toggleBoats();
             }
         });
         this.runDistanceIcon.setOnClickListener(new View.OnClickListener() {
@@ -93,6 +101,14 @@ public class PUBGMapFragment extends BaseFragment
         updateUi();
     }
 
+    private void toggleBoats() {
+        if (this.mapController == null) {
+            return;
+        }
+        this.mapController.toggleBoats();
+        updateUi();
+    }
+
     private void toggleRunDistance() {
         if (this.mapController == null) {
             return;
@@ -109,6 +125,11 @@ public class PUBGMapFragment extends BaseFragment
             vehicleIcon.setColorFilter(ContextCompat.getColor(getActivity(), R.color.colorAccent));
         } else {
             vehicleIcon.setColorFilter(ContextCompat.getColor(getActivity(), R.color.white));
+        }
+        if (this.mapController.isShowingBoats()) {
+            boatIcon.setColorFilter(ContextCompat.getColor(getActivity(), R.color.colorAccent));
+        } else {
+            boatIcon.setColorFilter(ContextCompat.getColor(getActivity(), R.color.white));
         }
         if (this.mapController.isShowingDistance()) {
             runDistanceIcon.setColorFilter(ContextCompat.getColor(getActivity(), R.color.colorAccent));
