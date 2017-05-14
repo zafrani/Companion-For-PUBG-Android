@@ -40,7 +40,6 @@ public class AttachmentsViewHolder extends ItemViewHolder {
         this.reloadTextView= (TextView) itemView.findViewById(R.id.row_item_reload);
         this.imageImageView= (ImageView) itemView.findViewById(R.id.row_item_icon);
 
-
     }
 
     private void setItemName(@NonNull final String itemName) {
@@ -56,15 +55,15 @@ public class AttachmentsViewHolder extends ItemViewHolder {
     }
 
 
-    private void setItemMagazine(@Nullable final Float itemMagazine) {
-        if (itemMagazine != null) {
+    private void setItemMagazine(final float itemMagazine) {
+        if (itemMagazine >-1) {
             this.magazineTextView.setText(itemView.getContext().getString(R.string.row_item_magazine, itemMagazine));
         }else {
             this.magazineTextView.setText(EMPTY_FIELD);
         }
     }
-    private void setItemCapacity(@Nullable final Float itemCapacity) {
-        if (itemCapacity != null) {
+    private void setItemCapacity( final float itemCapacity) {
+        if (itemCapacity > -1) {
             this.capacityTextView.setText(itemView.getContext().getString(R.string.row_item_capacity, itemCapacity));
         }else {
             this.capacityTextView.setText(EMPTY_FIELD);
@@ -77,29 +76,29 @@ public class AttachmentsViewHolder extends ItemViewHolder {
             this.damageTextView.setText(EMPTY_FIELD);
         }
     }
-    private void setItemStability(@Nullable final Float itemStability) {
-        if (itemStability!= null) {
+    private void setItemStability(final float itemStability) {
+        if (itemStability > -1) {
             this.stabilityTextView.setText(itemView.getContext().getString(R.string.row_item_stability, itemStability));
         }else {
             this.stabilityTextView.setText(EMPTY_FIELD);
         }
     }
-    private void setItemRange(@Nullable final Float itemRange) {
-        if (itemRange!= null) {
+    private void setItemRange(final float itemRange) {
+        if (itemRange> -1) {
             this.rangeTextView.setText(itemView.getContext().getString(R.string.row_item_range, itemRange));
         }else {
             this.rangeTextView.setText(EMPTY_FIELD);
         }
     }
-    private void setItemRate(@Nullable final Float itemRate) {
-        if (itemRate != null) {
+    private void setItemRate(final float itemRate) {
+        if (itemRate > -1) {
             this.rateTextView.setText(itemView.getContext().getString(R.string.row_item_rate, itemRate));
         }else {
             this.rateTextView.setText(EMPTY_FIELD);
         }
     }
-    private void setItemReload(@Nullable final Float itemReload) {
-        if (itemReload != null) {
+    private void setItemReload(final float itemReload) {
+        if (itemReload > -1) {
             this.reloadTextView.setText(itemView.getContext().getString(R.string.row_item_reload, itemReload));
         }else {
             this.reloadTextView.setText(EMPTY_FIELD);

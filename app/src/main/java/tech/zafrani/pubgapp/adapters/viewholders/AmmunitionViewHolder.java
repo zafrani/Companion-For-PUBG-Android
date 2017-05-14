@@ -41,8 +41,8 @@ public class AmmunitionViewHolder extends ItemViewHolder {
     private void setItemCategory(@NonNull final String itemCategory) {
         this.categoryTextView.setText(itemCategory);
     }
-    private void setItemCapacity(@Nullable final Float itemCapacity) {
-        if (itemCapacity != null) {
+    private void setItemCapacity(@Nullable final float itemCapacity) {
+        if (itemCapacity > -1) {
             this.capacityTextView.setText(itemView.getContext().getString(R.string.row_item_capacity, itemCapacity));
         }else {
             this.capacityTextView.setText(EMPTY_FIELD);

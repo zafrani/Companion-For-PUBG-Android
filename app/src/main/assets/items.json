@@ -9,24 +9,24 @@
             {
               "name":"AKM",
               "image_url":"Icon_weapon_AKM.png",
-              "magazine":"30",
+              "magazine":30,
               "ammo":"7.62mm",
-              "range":"0",
-              "stability":"0",
-              "rate":"0",
-              "reload":"0",
-              "capacity":"500",
+              "range":0,
+              "stability":0,
+              "rate":0,
+              "reload":0,
+              "capacity":500,
               "damage":
                 {
-                  "base":"23",
-                  "chest0":"46",
-                  "chest1":"32",
-                  "chest2":"27",
-                  "chest3":"20",
-                  "head0":"114",
-                  "head1":"80",
-                  "head2":"68",
-                  "head3":"51"
+                  "base":23,
+                  "chest0":46,
+                  "chest1":32,
+                  "chest2":27,
+                  "chest3":20,
+                  "head0":114,
+                  "head1":80,
+                  "head2":68,
+                  "head3":51
                 }
 
             },{

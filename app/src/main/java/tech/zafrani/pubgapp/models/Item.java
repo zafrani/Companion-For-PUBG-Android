@@ -20,63 +20,46 @@ public class Item implements Serializable {
     @NonNull
     @SerializedName("name")
     private final String name;
-    @Nullable
+
     @SerializedName("ammo")
     private final String ammo;
-    @Nullable
     @SerializedName("magazine")
-    private final Float magazine;
-    @Nullable
+    private final float magazine;
     @SerializedName("capacity")
-    private final Float capacity;
-    @Nullable
+    private final float capacity;
+
     @SerializedName("damage")
     private final Damage damage;
-    @Nullable
     @SerializedName("stability")
-    private final Float stability;
-    @Nullable
+    private final float stability;
     @SerializedName("rate")
-    private final Float rate;
-    @Nullable
+    private final float rate;
     @SerializedName("range")
-    private final Float range;
-    @Nullable
+    private final float range;
     @SerializedName("reload")
-    private final Float reload;
-    @Nullable
+    private final float reload;
     @SerializedName("protection")
-    private final Float protection;
-    @Nullable
+    private final float protection;
     @SerializedName("boost")
-    private final Float boost;
-    @Nullable
+    private final float boost;
     @SerializedName("heal")
-    private final Float heal;
-    @Nullable
+    private final float heal;
     @SerializedName("max_heal")
-    private final Float max_heal;
-    @Nullable
+    private final float max_heal;
     @SerializedName("activate_time")
-    private final Float activate_time;
-    @Nullable
+    private final float activate_time;
     @SerializedName("max_stack")
-    private final Float max_stack;
-    @Nullable
+    private final float max_stack;
     @SerializedName("health")
-    private final Float health;
-    @Nullable
+    private final float health;
     @SerializedName("max_speed")
-    private final Float max_speed;
-    @Nullable
+    private final float max_speed;
     @SerializedName("acceleration")
-    private final Float acceleration;
-    @Nullable
+    private final float acceleration;
     @SerializedName("seats")
-    private final Float seats;
+    private final float seats;
 
 
-    @Nullable
     @SerializedName("image_url")
     private final String imageUrl;
 
@@ -85,24 +68,24 @@ public class Item implements Serializable {
                 @NonNull final String type,
                 @NonNull final String name,
                 @Nullable final String ammo,
-                @Nullable final Float magazine,
-                @Nullable final Float capacity,
-                @Nullable final Damage damage,
-                @Nullable final Float range,
-                @Nullable final Float stability,
-                @Nullable final Float rate,
-                @Nullable final Float reload,
-                @Nullable final Float protection,
-                @Nullable final Float boost,
-                @Nullable final Float heal,
-                @Nullable final Float max_heal,
-                @Nullable final Float activate_time,
-                @Nullable final Float max_stack,
-                @Nullable final Float health,
-                @Nullable final Float max_speed,
-                @Nullable final Float acceleration,
-                @Nullable final Float seats,
-                @Nullable final String imageUrl) {
+                 final float magazine,
+                 final float capacity,
+                 @Nullable final Damage damage,
+                 final float range,
+                 final float stability,
+                 final float rate,
+                 final float reload,
+                 final float protection,
+                 final float boost,
+                 final float heal,
+                 final float max_heal,
+                 final float activate_time,
+                 final float max_stack,
+                 final float health,
+                 final float max_speed,
+                 final float acceleration,
+                 final float seats,
+                 final String imageUrl) {
         this.category = category;
         this.type = type;
         this.name = name;
@@ -172,71 +155,71 @@ public class Item implements Serializable {
     public String getAmmo() {
         return ammo;
     }
-    @Nullable
-    public Float getMagazine() {
+
+    public float getMagazine() {
         return magazine;
     }
-    @Nullable
-    public Float getCapacity() {
+
+    public float getCapacity() {
         return capacity;
     }
-    @Nullable
-    public Float getStability() {
+
+    public float getStability() {
         return stability;
     }
-    @Nullable
-    public Float getRate() {
+
+    public float getRate() {
         return rate;
     }
-    @Nullable
-    public Float getRange() {
+
+    public float getRange() {
         return range;
     }
-    @Nullable
-    public Float getReload() {
+
+    public float getReload() {
         return reload;
     }
-    @Nullable
-    public Float getProtection() {
+
+    public float getProtection() {
         return protection;
     }
-    @Nullable
-    public Float getBoost() {
+
+    public float getBoost() {
         return boost;
     }
-    @Nullable
-    public Float getHeal() {
+
+    public float getHeal() {
         return heal;
     }
-    @Nullable
-    public Float getMax_Heal() {
+
+    public float getMax_Heal() {
         return max_heal;
     }
-    @Nullable
-    public Float getActivate_Time() {
+
+    public float getActivate_Time() {
         return activate_time;
     }
-    @Nullable
-    public Float getMax_Stack() {
+
+    public float getMax_Stack() {
         return max_stack;
     }
-    @Nullable
-    public Float getHealth() {
+
+    public float getHealth() {
         return health;
     }
-    @Nullable
-    public Float getMax_Speed() {
+
+    public float getMax_Speed() {
         return max_speed;
     }
-    @Nullable
-    public Float getAcceleration() {
+
+    public float getAcceleration() {
         return acceleration;
     }
-    @Nullable
-    public Float getSeats() {
+
+    public float getSeats() {
         return seats;
     }
-
+    @Nullable
     public String getImageUrl() {
         return imageUrl;
     }
