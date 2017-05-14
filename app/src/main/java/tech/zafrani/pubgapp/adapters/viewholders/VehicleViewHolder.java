@@ -49,29 +49,29 @@ public class VehicleViewHolder extends ItemViewHolder {
         this.categoryTextView.setText(itemCategory);
     }
 
-    private void setItemMaxSpeed(@Nullable final Float itemMaxSpeed) {
-        if (itemMaxSpeed!= null) {
+    private void setItemMaxSpeed(@Nullable final float itemMaxSpeed) {
+        if (itemMaxSpeed!= -1) {
             this.maxSpeedTextView.setText(itemView.getContext().getString(R.string.row_item_max_speed, itemMaxSpeed));
         } else {
             this.maxSpeedTextView.setText(EMPTY_FIELD);
         }
     }
-    private void setItemAcceleration(@Nullable final Float itemAcceleration) {
-        if (itemAcceleration != null) {
+    private void setItemAcceleration(@Nullable final float itemAcceleration) {
+        if (itemAcceleration != -1) {
             this.accelerationTextView.setText(itemView.getContext().getString(R.string.row_item_acceleration, itemAcceleration));
         }else {
             this.accelerationTextView.setText(EMPTY_FIELD);
         }
     }
-    private void setItemHealth(@Nullable final Float itemHealth) {
-        if (itemHealth!= null) {
+    private void setItemHealth(@Nullable final float itemHealth) {
+        if (itemHealth!= -1) {
             this.healthTextView.setText(itemView.getContext().getString(R.string.row_item_health, itemHealth));
         }else {
             this.healthTextView.setText(EMPTY_FIELD);
         }
     }
-    private void setItemSeats(@Nullable final Float itemSeats) {
-        if (itemSeats != null) {
+    private void setItemSeats(@Nullable final float itemSeats) {
+        if (itemSeats != -1) {
             this.seatsTextView.setText(itemView.getContext().getString(R.string.row_item_seats, itemSeats));
         }else {
             this.seatsTextView.setText(EMPTY_FIELD);

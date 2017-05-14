@@ -45,15 +45,15 @@ public class EquipmentViewHolder extends ItemViewHolder {
         this.categoryTextView.setText(itemCategory);
     }
 
-    private void setItemCapacity(@Nullable final Float itemCapacity) {
-        if (itemCapacity != null) {
+    private void setItemCapacity(@Nullable final float itemCapacity) {
+        if (itemCapacity != -1) {
             this.capacityTextView.setText(itemView.getContext().getString(R.string.row_item_capacity, itemCapacity));
         }else {
             this.capacityTextView.setText(EMPTY_FIELD);
         }
     }
-    private void setItemProtection(@Nullable final Float itemProtection) {
-        if (itemProtection!= null) {
+    private void setItemProtection(@Nullable final float itemProtection) {
+        if (itemProtection!= -1) {
             this.protectionTextView.setText(itemView.getContext().getString(R.string.row_item_protection, itemProtection));
         }else {
             this.protectionTextView.setText(EMPTY_FIELD);
