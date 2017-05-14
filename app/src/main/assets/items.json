@@ -9,23 +9,24 @@
             {
               "name":"AKM",
               "image_url":"Icon_weapon_AKM.png",
-              "magazine":"30",
+              "magazine":30,
               "ammo":"7.62mm",
-              "range":"0",
-              "stability":"0",
-              "rate":"0",
-              "capacity":"500",
+              "range":0,
+              "stability":0,
+              "rate":0,
+              "reload":0,
+              "capacity":500,
               "damage":
                 {
-                  "base":"23",
-                  "chest0":"46",
-                  "chest1":"32",
-                  "chest2":"27",
-                  "chest3":"20",
-                  "head0":"114",
-                  "head1":"80",
-                  "head2":"68",
-                  "head3":"51"
+                  "base":23,
+                  "chest0":46,
+                  "chest1":32,
+                  "chest2":27,
+                  "chest3":20,
+                  "head0":114,
+                  "head1":80,
+                  "head2":68,
+                  "head3":51
                 }
 
             },{
@@ -36,6 +37,7 @@
               "range":"0",
               "stability":"0",
               "rate":"0",
+              "reload":"0",
               "capacity":"500",
               "damage":
                 {
@@ -56,6 +58,7 @@
               "magazine":"30",
               "ammo":"5.56mm",
               "range":"0",
+              "reload":"0",
               "stability":"0",
               "rate":"0",
               "capacity":"500",
@@ -80,6 +83,7 @@
               "range":"0",
               "stability":"0",
               "rate":"0",
+              "reload":"0",
               "capacity":"500",
               "damage":
                 {
@@ -107,6 +111,7 @@
               "range":"0",
               "stability":"0",
               "rate":"0",
+              "reload":"0",
               "capacity":"500",
               "damage":
                 {
@@ -129,6 +134,7 @@
               "range":"0",
               "stability":"0",
               "rate":"0",
+              "reload":"0",
               "capacity":"500",
               "damage":
                 {
@@ -151,6 +157,7 @@
               "range":"0",
               "stability":"0",
               "rate":"0",
+              "reload":"0",
               "capacity":"500",
               "damage":
                 {
@@ -164,7 +171,6 @@
                   "head2":"54",
                   "head3":"41"
                 }
-
             },{
               "name":"Tommy Gun",
               "image_url":"Icon_weapon_TommyGun.png",
@@ -173,6 +179,7 @@
               "range":"0",
               "stability":"0",
               "rate":"0",
+              "reload":"0",
               "capacity":"500",
               "damage":
                 {
@@ -200,6 +207,7 @@
               "range":"0",
               "stability":"0",
               "rate":"0",
+              "reload":"0",
               "capacity":"500",
               "damage":
                 {
@@ -227,6 +235,7 @@
               "range":"0",
               "stability":"0",
               "rate":"0",
+              "reload":"0",
               "capacity":"500",
               "damage":
                 {
@@ -249,6 +258,7 @@
               "range":"0",
               "stability":"0",
               "rate":"0",
+              "reload":"0",
               "capacity":"500",
               "damage":
                 {
@@ -271,6 +281,7 @@
               "range":"0",
               "stability":"0",
               "rate":"0",
+              "reload":"0",
               "capacity":"500",
               "damage":
                 {
@@ -298,6 +309,7 @@
               "range":"0",
               "stability":"0",
               "rate":"0",
+              "reload":"0",
               "capacity":"500",
               "damage":
                 {
@@ -320,6 +332,7 @@
               "range":"0",
               "stability":"0",
               "rate":"0",
+              "reload":"0",
               "capacity":"500",
               "damage":
                 {
@@ -342,6 +355,7 @@
               "range":"0",
               "stability":"0",
               "rate":"0",
+              "reload":"0",
               "capacity":"500",
               "damage":
                 {
@@ -369,6 +383,7 @@
               "range":"0",
               "stability":"0",
               "rate":"0",
+              "reload":"0",
               "capacity":"500",
               "damage":
                 {
@@ -396,6 +411,7 @@
               "range":"0",
               "stability":"0",
               "rate":"0",
+              "reload":"0",
               "capacity":"100",
               "damage":
                 {
@@ -418,6 +434,7 @@
               "range":"0",
               "stability":"0",
               "rate":"0",
+              "reload":"0",
               "capacity":"100",
               "damage":
                 {
@@ -440,6 +457,7 @@
               "range":"0",
               "stability":"0",
               "rate":"0",
+              "reload":"0",
               "capacity":"100",
               "damage":
                 {
@@ -591,6 +609,7 @@
               "magazine":"1",
               "ammo":"Bolt",
               "range":"0",
+              "reload":"0",
               "stability":"0",
               "rate":"0",
               "capacity":"500",
@@ -624,14 +643,6 @@
               "image_url":"Icon_ammo_300Magnum.png",
               "capacity":"0"
             },{
-              "name":".303 Ball Ammo",
-              "image_url":"",
-              "capacity":"0"
-            },{
-              "name":".44 Magnum Ammo",
-              "image_url":"",
-              "capacity":"0"
-            },{
               "name":".45 ACP Ammo",
               "image_url":"Icon_ammo_45ACP.png",
               "capacity":"0.4"
@@ -653,7 +664,7 @@
               "capacity":"0.375"
             },{
               "name":"Bolt",
-              "image_url":"",
+              "image_url":"Icon_ammo_bolt.png",
               "capacity":"0"
             }
           ]
@@ -888,7 +899,7 @@
           "type_name":"Glasses",
           "items":[
             {
-              "name":"Sunglass",
+              "name":"Sunglasses",
               "image_url":"Icon_equipment_Sunglasses.png",
               "capacity":"0"
             },{
@@ -1062,33 +1073,53 @@
             {
               "name":"Med Kit",
               "image_url":"Icon_heal_MedKit.png",
-              "restore":"100",
+              "activate_time":"0",
+              "heal":"100",
+              "max_heal":"100",
+              "boost":"0",
+              "max_stack":"0",
               "capacity":"20"
             },{
               "name":"Bandages",
               "image_url":"Icon_heal_Bandage.jpg",
-              "restore":"10",
-              "max":"75",
+              "activate_time":"0",
+              "heal":"10",
+              "max_heal":"75",
+              "boost":"0",
+              "max_stack":"0",
               "capacity":"2"
             },{
               "name":"First Aid Kit",
               "image_url":"Icon_heal_FirstAidKit.png",
-              "restore":"75",
-              "max":"75",
+              "activate_time":"0",
+              "heal":"75",
+              "max_heal":"75",
+              "boost":"0",
+              "max_stack":"0",
               "capacity":"10"
             },{
               "name":"Painkillers",
               "image_url":"Icon_boost_PainKiller.png",
+              "activate_time":"0",
               "boost":"60",
+              "heal":"0",
+              "max_heal":"100",
+              "max_stack":"0",
               "capacity":"20"
             },{
               "name":"Energy Drink",
               "image_url":"Icon_boost_EnergyDrink.png",
+              "activate_time":"0",
               "boost":"40",
+              "heal":"0",
+              "max_heal":"100",
+              "max_stack":"0",
               "capacity":"20"
             },{
               "name":"Adrenaline Syringe",
               "image_url":"Icon_boost_AdrenalineSyringe.png",
+              "activate_time":"0",
+              "max_stack":"0",
               "capacity":"20"
             }
           ]
@@ -1098,6 +1129,7 @@
             {
               "name":"Gas Can",
               "image_url":"Icon_item_JerryCan.png",
+              "activate_time":"0",
               "capacity":"20"
             }
           ]
@@ -1112,34 +1144,56 @@
             {
               "name":"Motorcycle (No sidecar)",
               "image_url":"",
+              "health":"0",
+              "max_speed":"0",
+              "acceleration":"0",
+              "seats":"1",
               "capacity":"0"
             },{
               "name":"Motorcycle (w/ sidecar)",
               "image_url":"",
+              "health":"0",
+              "max_speed":"0",
+              "acceleration":"0",
+              "seats":"3",
               "capacity":"0"
             },{
               "name":"Buggy",
               "image_url":"",
+              "health":"0",
+              "max_speed":"0",
+              "acceleration":"0",
+              "seats":"2",
               "capacity":"0"
             },{
               "name":"Dacia",
               "image_url":"",
+              "health":"0",
+              "max_speed":"0",
+              "acceleration":"0",
+              "seats":"4",
               "capacity":"0"
             },{
               "name":"UAZ",
               "image_url":"",
+              "health":"0",
+              "max_speed":"0",
+              "acceleration":"0",
+              "seats":"5",
               "capacity":"0"
             },{
               "name":"Speed Boat",
               "image_url":"",
+              "health":"0",
+              "max_speed":"0",
+              "acceleration":"0",
+              "seats":"6",
               "capacity":"0"
             }
           ]
         }
       ]
     }
-
-
 
 
   ]

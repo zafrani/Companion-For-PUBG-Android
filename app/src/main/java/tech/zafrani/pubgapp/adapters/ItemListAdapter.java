@@ -9,11 +9,29 @@ import android.view.ViewGroup;
 import java.util.List;
 
 import tech.zafrani.pubgapp.R;
+import tech.zafrani.pubgapp.adapters.viewholders.AmmunitionViewHolder;
+import tech.zafrani.pubgapp.adapters.viewholders.AttachmentsViewHolder;
+import tech.zafrani.pubgapp.adapters.viewholders.ConsumablesViewHolder;
+import tech.zafrani.pubgapp.adapters.viewholders.EquipmentViewHolder;
 import tech.zafrani.pubgapp.adapters.viewholders.ItemViewHolder;
+import tech.zafrani.pubgapp.adapters.viewholders.VehicleViewHolder;
+import tech.zafrani.pubgapp.adapters.viewholders.WeaponsViewHolder;
 import tech.zafrani.pubgapp.models.Item;
 
 
 public class ItemListAdapter extends RecyclerView.Adapter<ItemViewHolder> {
+    private static final String WEAPONS = "Weapons";
+    private static final String AMMUNITION = "Ammunition";
+    private static final String ATTACHMENTS = "Attachments";
+    private static final String EQUIPMENT = "Equipment";
+    private static final String CONSUMABLES = "Consumables";
+    private static final String VEHICLES = "Vehicles";
+    private static final int ID_WEAPONS = 0;
+    private static final int ID_AMMUNITION = 1;
+    private static final int ID_ATTACHMENTS = 2;
+    private static final int ID_EQUIPMENT = 3;
+    private static final int ID_CONSUMABLES = 4;
+    private static final int ID_VEHICLES = 5;
 
     @NonNull
     private final List<Item> itemList;
@@ -24,26 +42,68 @@ public class ItemListAdapter extends RecyclerView.Adapter<ItemViewHolder> {
     }
 
     @Override
-    public ItemViewHolder onCreateViewHolder(@NonNull final ViewGroup parent, @NonNull final int viewType) {
-        final View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_item, parent, false);
-        return new ItemViewHolder(view, parent.getContext());
+    public int getItemViewType(int position) {
+        String category = itemList.get(position).getCategory();
+        int itemViewType = 0;
+        switch(category){
+            case WEAPONS:
+                itemViewType = ID_WEAPONS;
+                break;
+            case AMMUNITION:
+                itemViewType = ID_AMMUNITION;
+                break;
+            case ATTACHMENTS:
+                itemViewType = ID_ATTACHMENTS;
+                break;
+            case EQUIPMENT:
+                itemViewType = ID_EQUIPMENT;
+                break;
+            case CONSUMABLES:
+                itemViewType = ID_CONSUMABLES;
+                break;
+            case VEHICLES:
+                itemViewType = ID_VEHICLES;
+                break;
+            default:
+                itemViewType =0;
+                break;
+        }
+        return itemViewType;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull final ItemViewHolder holder, @NonNull final int position) {
-        final Item item = itemList.get(position);
-        holder.setItemName(item.getName());
-        holder.setItemType(item.getType());
-        holder.setItemCategory(item.getCategory());
-        holder.setItemAmmo(item.getAmmo());
-        holder.setItemMagazine(item.getMagazine());
-        holder.setItemCapacity(item.getCapacity());
-        holder.setItemDamage(item.getDamage());
-        holder.setItemRange(item.getRange());
-        holder.setItemRate(item.getRate());
-        holder.setItemStability(item.getStability());
-        holder.setItemIcon(item.getImageUrl(), item.getCategory());
+    public ItemViewHolder onCreateViewHolder(@NonNull final ViewGroup parent, @NonNull final int viewType) {
+        View view;
+        switch (viewType) {
+            case (ID_WEAPONS):
+                view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_item_weapon, parent, false);
+                return new WeaponsViewHolder(view);
+            case (ID_AMMUNITION):
+                view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_item_ammunition, parent, false);
+                return new AmmunitionViewHolder(view);
+            case (ID_ATTACHMENTS):
+                view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_item_attachment, parent, false);
+                return new AttachmentsViewHolder(view);
+            case (ID_EQUIPMENT):
+                view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_item_equipment, parent, false);
+                return new EquipmentViewHolder(view);
+            case (ID_CONSUMABLES):
+                view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_item_consumables, parent, false);
+                return new ConsumablesViewHolder(view);
+            case (ID_VEHICLES):
+                view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_item_vehicles, parent, false);
+                return new VehicleViewHolder(view);
+            default:
+                view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_item_weapon, parent, false);
+                return new WeaponsViewHolder(view);
+        }
 
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull final ItemViewHolder viewHolder, final int position) {
+        final Item item = itemList.get(position);
+        viewHolder.bind(item);
     }
 
     @Override

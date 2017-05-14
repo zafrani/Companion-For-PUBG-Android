@@ -6,9 +6,9 @@ import android.support.annotation.Nullable;
 
 import com.google.gson.annotations.SerializedName;
 
-import java.util.HashMap;
+import java.io.Serializable;
 
-public class Item{
+public class Item implements Serializable {
 
 
     @NonNull
@@ -20,28 +20,46 @@ public class Item{
     @NonNull
     @SerializedName("name")
     private final String name;
-    @Nullable
+
     @SerializedName("ammo")
     private final String ammo;
-    @Nullable
     @SerializedName("magazine")
-    private final Float magazine;
-    @Nullable
+    private final float magazine;
     @SerializedName("capacity")
-    private final Float capacity;
-    @Nullable
+    private final float capacity;
+
     @SerializedName("damage")
-    private final HashMap<String, String> damage;
-    @Nullable
+    private final Damage damage;
     @SerializedName("stability")
-    private final Float stability;
-    @Nullable
+    private final float stability;
     @SerializedName("rate")
-    private final Float rate;
-    @Nullable
+    private final float rate;
     @SerializedName("range")
-    private final Float range;
-    @Nullable
+    private final float range;
+    @SerializedName("reload")
+    private final float reload;
+    @SerializedName("protection")
+    private final float protection;
+    @SerializedName("boost")
+    private final float boost;
+    @SerializedName("heal")
+    private final float heal;
+    @SerializedName("max_heal")
+    private final float max_heal;
+    @SerializedName("activate_time")
+    private final float activate_time;
+    @SerializedName("max_stack")
+    private final float max_stack;
+    @SerializedName("health")
+    private final float health;
+    @SerializedName("max_speed")
+    private final float max_speed;
+    @SerializedName("acceleration")
+    private final float acceleration;
+    @SerializedName("seats")
+    private final float seats;
+
+
     @SerializedName("image_url")
     private final String imageUrl;
 
@@ -50,13 +68,24 @@ public class Item{
                 @NonNull final String type,
                 @NonNull final String name,
                 @Nullable final String ammo,
-                @Nullable final Float magazine,
-                @Nullable final Float capacity,
-                @Nullable final HashMap<String, String> damage,
-                @Nullable final Float range,
-                @Nullable final Float stability,
-                @Nullable final Float rate,
-                @Nullable final String imageUrl) {
+                 final float magazine,
+                 final float capacity,
+                 @Nullable final Damage damage,
+                 final float range,
+                 final float stability,
+                 final float rate,
+                 final float reload,
+                 final float protection,
+                 final float boost,
+                 final float heal,
+                 final float max_heal,
+                 final float activate_time,
+                 final float max_stack,
+                 final float health,
+                 final float max_speed,
+                 final float acceleration,
+                 final float seats,
+                 final String imageUrl) {
         this.category = category;
         this.type = type;
         this.name = name;
@@ -67,6 +96,17 @@ public class Item{
         this.range=range;
         this.stability = stability;
         this.rate =rate;
+        this.reload = reload;
+        this.protection = protection;
+        this.boost = boost;
+        this.heal = heal;
+        this.max_heal = max_heal;
+        this.activate_time = activate_time;
+        this.max_stack = max_stack;
+        this.health = health;
+        this.max_speed = max_speed;
+        this.acceleration= acceleration;
+        this.seats = seats;
         this.imageUrl = imageUrl;
 
     }
@@ -115,25 +155,69 @@ public class Item{
     public String getAmmo() {
         return ammo;
     }
-    @Nullable
-    public Float getMagazine() {
+
+    public float getMagazine() {
         return magazine;
     }
-    @Nullable
-    public Float getCapacity() {
+
+    public float getCapacity() {
         return capacity;
     }
-    @Nullable
-    public Float getStability() {
+
+    public float getStability() {
         return stability;
     }
-    @Nullable
-    public Float getRate() {
+
+    public float getRate() {
         return rate;
     }
-    @Nullable
-    public Float getRange() {
+
+    public float getRange() {
         return range;
+    }
+
+    public float getReload() {
+        return reload;
+    }
+
+    public float getProtection() {
+        return protection;
+    }
+
+    public float getBoost() {
+        return boost;
+    }
+
+    public float getHeal() {
+        return heal;
+    }
+
+    public float getMax_Heal() {
+        return max_heal;
+    }
+
+    public float getActivate_Time() {
+        return activate_time;
+    }
+
+    public float getMax_Stack() {
+        return max_stack;
+    }
+
+    public float getHealth() {
+        return health;
+    }
+
+    public float getMax_Speed() {
+        return max_speed;
+    }
+
+    public float getAcceleration() {
+        return acceleration;
+    }
+
+    public float getSeats() {
+        return seats;
     }
     @Nullable
     public String getImageUrl() {
@@ -141,7 +225,7 @@ public class Item{
     }
 
     @Nullable
-    public HashMap<String, String> getDamage() {
+    public Damage getDamage() {
         return damage;
     }
 }
