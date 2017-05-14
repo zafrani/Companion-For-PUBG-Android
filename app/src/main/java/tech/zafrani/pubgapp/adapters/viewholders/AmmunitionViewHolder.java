@@ -11,6 +11,7 @@ import com.squareup.picasso.Picasso;
 
 import tech.zafrani.pubgapp.R;
 import tech.zafrani.pubgapp.models.Item;
+import tech.zafrani.pubgapp.utils.Constants;
 
 public class AmmunitionViewHolder extends ItemViewHolder {
 
@@ -50,7 +51,7 @@ public class AmmunitionViewHolder extends ItemViewHolder {
     }
     private void setItemIcon(final String itemImage,@NonNull final String category) {
         if (itemImage != null) {
-            Picasso.with(itemView.getContext()).load(IMAGE_URL_BASE + category+ "/" + itemImage + ARG_RAW).into(imageImageView);
+            Picasso.with(itemView.getContext()).load(Constants.ITEM_IMAGE_URL + category + "/" + itemImage + ARG_RAW).into(imageImageView);
         }else {
             Picasso.with(itemView.getContext()).load(R.mipmap.ic_launcher).into(imageImageView);
 
