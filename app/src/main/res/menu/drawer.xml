@@ -15,6 +15,7 @@
         <menu>
             <item
                 android:id="@+id/drawer_github"
+                android:icon="@drawable/ic_github_cat"
                 android:title="Github"/>
             <item
                 android:id="@+id/drawer_data"
