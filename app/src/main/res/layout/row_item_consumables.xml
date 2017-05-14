@@ -8,8 +8,8 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginBottom="@dimen/small_margin"
         >
         <ImageView
             android:id="@+id/row_item_icon"
@@ -110,7 +110,7 @@
     <View
     android:layout_height="1dp"
     android:layout_width="match_parent"
-    android:background="@color/colorDivider">
+    android:background="@color/divider">
 
     </View>
 </LinearLayout>

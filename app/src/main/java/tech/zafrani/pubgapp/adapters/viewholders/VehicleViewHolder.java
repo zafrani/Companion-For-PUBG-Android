@@ -1,7 +1,6 @@
 package tech.zafrani.pubgapp.adapters.viewholders;
 
 
-import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.View;
@@ -23,12 +22,9 @@ public class VehicleViewHolder extends ItemViewHolder {
     private final TextView healthTextView;
     private final TextView seatsTextView;
     private final ImageView imageImageView;
-    private final Context context;
 
-    public VehicleViewHolder(@NonNull final View itemView,
-                             @NonNull final Context context) {
+    public VehicleViewHolder(@NonNull final View itemView) {
         super(itemView);
-        this.context = context;
         this.nameTextView = (TextView) itemView.findViewById(R.id.row_item_name);
         this.typeTextView= (TextView) itemView.findViewById(R.id.row_item_type);
         this.categoryTextView = (TextView) itemView.findViewById(R.id.row_item_category);
@@ -55,37 +51,37 @@ public class VehicleViewHolder extends ItemViewHolder {
 
     private void setItemMaxSpeed(@Nullable final Float itemMaxSpeed) {
         if (itemMaxSpeed!= null) {
-            this.maxSpeedTextView.setText(context.getString(R.string.row_item_max_speed, itemMaxSpeed));
+            this.maxSpeedTextView.setText(itemView.getContext().getString(R.string.row_item_max_speed, itemMaxSpeed));
         } else {
             this.maxSpeedTextView.setText(EMPTY_FIELD);
         }
     }
     private void setItemAcceleration(@Nullable final Float itemAcceleration) {
         if (itemAcceleration != null) {
-            this.accelerationTextView.setText(context.getString(R.string.row_item_acceleration, itemAcceleration));
+            this.accelerationTextView.setText(itemView.getContext().getString(R.string.row_item_acceleration, itemAcceleration));
         }else {
             this.accelerationTextView.setText(EMPTY_FIELD);
         }
     }
     private void setItemHealth(@Nullable final Float itemHealth) {
         if (itemHealth!= null) {
-            this.healthTextView.setText(context.getString(R.string.row_item_health, itemHealth));
+            this.healthTextView.setText(itemView.getContext().getString(R.string.row_item_health, itemHealth));
         }else {
             this.healthTextView.setText(EMPTY_FIELD);
         }
     }
     private void setItemSeats(@Nullable final Float itemSeats) {
         if (itemSeats != null) {
-            this.seatsTextView.setText(context.getString(R.string.row_item_seats, itemSeats));
+            this.seatsTextView.setText(itemView.getContext().getString(R.string.row_item_seats, itemSeats));
         }else {
             this.seatsTextView.setText(EMPTY_FIELD);
         }
     }
     private void setItemIcon(final String itemImage,@NonNull final String category) {
         if (itemImage != null) {
-            Picasso.with(context).load(IMAGE_URL_BASE + category+ "/" + itemImage + ARG_RAW).into(imageImageView);
+            Picasso.with(itemView.getContext()).load(IMAGE_URL_BASE + category+ "/" + itemImage + ARG_RAW).into(imageImageView);
         }else {
-            Picasso.with(context).load(R.mipmap.ic_launcher).into(imageImageView);
+            Picasso.with(itemView.getContext()).load(R.mipmap.ic_launcher).into(imageImageView);
 
         }
     }

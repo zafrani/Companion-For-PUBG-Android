@@ -7,7 +7,6 @@ import android.support.annotation.Nullable;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
-import java.util.HashMap;
 
 public class Item implements Serializable {
 
@@ -32,7 +31,7 @@ public class Item implements Serializable {
     private final Float capacity;
     @Nullable
     @SerializedName("damage")
-    private final HashMap<String, String> damage;
+    private final Damage damage;
     @Nullable
     @SerializedName("stability")
     private final Float stability;
@@ -88,7 +87,7 @@ public class Item implements Serializable {
                 @Nullable final String ammo,
                 @Nullable final Float magazine,
                 @Nullable final Float capacity,
-                @Nullable final HashMap<String, String> damage,
+                @Nullable final Damage damage,
                 @Nullable final Float range,
                 @Nullable final Float stability,
                 @Nullable final Float rate,
@@ -243,7 +242,7 @@ public class Item implements Serializable {
     }
 
     @Nullable
-    public HashMap<String, String> getDamage() {
+    public Damage getDamage() {
         return damage;
     }
 }

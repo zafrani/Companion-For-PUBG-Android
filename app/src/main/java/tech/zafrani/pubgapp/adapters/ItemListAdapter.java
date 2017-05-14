@@ -20,18 +20,18 @@ import tech.zafrani.pubgapp.models.Item;
 
 
 public class ItemListAdapter extends RecyclerView.Adapter<ItemViewHolder> {
-    private static final String ARG_WEAPONS = "Weapons";
-    private static final String ARG_AMMUNITION = "Ammunition";
-    private static final String ARG_ATTACHMENTS = "Attachments";
-    private static final String ARG_EQUIPMENT = "Equipment";
-    private static final String ARG_CONSUMABLES = "Consumables";
-    private static final String ARG_VEHICLES = "Vehicles";
-    private static final int VAL_WEAPONS = 0;
-    private static final int VAL_AMMUNITION = 1;
-    private static final int VAL_ATTACHMENTS = 2;
-    private static final int VAL_EQUIPMENT = 3;
-    private static final int VAL_CONSUMABLES = 4;
-    private static final int VAL_VEHICLES = 5;
+    private static final String WEAPONS = "Weapons";
+    private static final String AMMUNITION = "Ammunition";
+    private static final String ATTACHMENTS = "Attachments";
+    private static final String EQUIPMENT = "Equipment";
+    private static final String CONSUMABLES = "Consumables";
+    private static final String VEHICLES = "Vehicles";
+    private static final int ID_WEAPONS = 0;
+    private static final int ID_AMMUNITION = 1;
+    private static final int ID_ATTACHMENTS = 2;
+    private static final int ID_EQUIPMENT = 3;
+    private static final int ID_CONSUMABLES = 4;
+    private static final int ID_VEHICLES = 5;
 
     @NonNull
     private final List<Item> itemList;
@@ -46,23 +46,23 @@ public class ItemListAdapter extends RecyclerView.Adapter<ItemViewHolder> {
         String category = itemList.get(position).getCategory();
         int itemViewType = 0;
         switch(category){
-            case ARG_WEAPONS:
-                itemViewType = VAL_WEAPONS;
+            case WEAPONS:
+                itemViewType = ID_WEAPONS;
                 break;
-            case ARG_AMMUNITION:
-                itemViewType = VAL_AMMUNITION;
+            case AMMUNITION:
+                itemViewType = ID_AMMUNITION;
                 break;
-            case ARG_ATTACHMENTS:
-                itemViewType = VAL_ATTACHMENTS;
+            case ATTACHMENTS:
+                itemViewType = ID_ATTACHMENTS;
                 break;
-            case ARG_EQUIPMENT:
-                itemViewType = VAL_EQUIPMENT;
+            case EQUIPMENT:
+                itemViewType = ID_EQUIPMENT;
                 break;
-            case ARG_CONSUMABLES:
-                itemViewType = VAL_CONSUMABLES;
+            case CONSUMABLES:
+                itemViewType = ID_CONSUMABLES;
                 break;
-            case ARG_VEHICLES:
-                itemViewType = VAL_VEHICLES;
+            case VEHICLES:
+                itemViewType = ID_VEHICLES;
                 break;
             default:
                 itemViewType =0;
@@ -75,27 +75,27 @@ public class ItemListAdapter extends RecyclerView.Adapter<ItemViewHolder> {
     public ItemViewHolder onCreateViewHolder(@NonNull final ViewGroup parent, @NonNull final int viewType) {
         View view;
         switch (viewType) {
-            case (VAL_WEAPONS):
+            case (ID_WEAPONS):
                 view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_item_weapon, parent, false);
-                return new WeaponsViewHolder(view, parent.getContext());
-            case (VAL_AMMUNITION):
+                return new WeaponsViewHolder(view);
+            case (ID_AMMUNITION):
                 view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_item_ammunition, parent, false);
-                return new AmmunitionViewHolder(view, parent.getContext());
-            case (VAL_ATTACHMENTS):
+                return new AmmunitionViewHolder(view);
+            case (ID_ATTACHMENTS):
                 view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_item_attachment, parent, false);
-                return new AttachmentsViewHolder(view, parent.getContext());
-            case (VAL_EQUIPMENT):
+                return new AttachmentsViewHolder(view);
+            case (ID_EQUIPMENT):
                 view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_item_equipment, parent, false);
-                return new EquipmentViewHolder(view, parent.getContext());
-            case (VAL_CONSUMABLES):
+                return new EquipmentViewHolder(view);
+            case (ID_CONSUMABLES):
                 view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_item_consumables, parent, false);
-                return new ConsumablesViewHolder(view, parent.getContext());
-            case (VAL_VEHICLES):
+                return new ConsumablesViewHolder(view);
+            case (ID_VEHICLES):
                 view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_item_vehicles, parent, false);
-                return new VehicleViewHolder(view, parent.getContext());
+                return new VehicleViewHolder(view);
             default:
                 view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_item_weapon, parent, false);
-                return new WeaponsViewHolder(view, parent.getContext());
+                return new WeaponsViewHolder(view);
         }
 
     }

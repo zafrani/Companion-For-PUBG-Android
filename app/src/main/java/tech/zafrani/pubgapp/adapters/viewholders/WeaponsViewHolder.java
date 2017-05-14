@@ -1,6 +1,5 @@
 package tech.zafrani.pubgapp.adapters.viewholders;
 
-import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.View;
@@ -9,9 +8,8 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
-import java.util.HashMap;
-
 import tech.zafrani.pubgapp.R;
+import tech.zafrani.pubgapp.models.Damage;
 import tech.zafrani.pubgapp.models.Item;
 
 
@@ -29,11 +27,9 @@ public class WeaponsViewHolder extends ItemViewHolder{
     private final TextView rateTextView;
     private final TextView reloadTextView;
     private final ImageView imageImageView;
-    private final Context context;
 
-    public WeaponsViewHolder(@NonNull final View itemView, @NonNull final Context context) {
+    public WeaponsViewHolder(@NonNull final View itemView) {
         super(itemView);
-        this.context = context;
         this.nameTextView = (TextView) itemView.findViewById(R.id.row_item_name);
         this.typeTextView= (TextView) itemView.findViewById(R.id.row_item_type);
         this.categoryTextView = (TextView) itemView.findViewById(R.id.row_item_category);
@@ -64,69 +60,65 @@ public class WeaponsViewHolder extends ItemViewHolder{
 
     private void setItemAmmo(@Nullable final String itemAmmo) {
         if (itemAmmo != null) {
-            this.ammoTextView.setText(context.getString(R.string.row_item_ammo, itemAmmo));
+            this.ammoTextView.setText(itemView.getContext().getString(R.string.row_item_ammo, itemAmmo));
         } else {
             this.ammoTextView.setText(EMPTY_FIELD);
         }
     }
     private void setItemMagazine(@Nullable final Float itemMagazine) {
         if (itemMagazine != null) {
-            this.magazineTextView.setText(context.getString(R.string.row_item_magazine, itemMagazine));
+            this.magazineTextView.setText(itemView.getContext().getString(R.string.row_item_magazine, itemMagazine));
         }else {
             this.magazineTextView.setText(EMPTY_FIELD);
         }
     }
     private void setItemCapacity(@Nullable final Float itemCapacity) {
         if (itemCapacity != null) {
-            this.capacityTextView.setText(context.getString(R.string.row_item_capacity, itemCapacity));
+            this.capacityTextView.setText(itemView.getContext().getString(R.string.row_item_capacity, itemCapacity));
         }else {
             this.capacityTextView.setText(EMPTY_FIELD);
         }
     }
-    private void setItemDamage(@Nullable final HashMap<String,String> itemDamage) {
-        if (itemDamage!= null) {
-            if(itemDamage.containsKey("chest0")){
-                this.damageTextView.setText(context.getString(R.string.row_item_damage, itemDamage.get("chest0")));
-            } else {
-                this.damageTextView.setText(context.getString(R.string.row_item_damage, itemDamage.get("base")));
-            }
+    private void setItemDamage(@Nullable final Damage itemDamage) {
+        if (itemDamage!= null && itemDamage.getChest0() > -1) {
+            this.damageTextView.setText(itemView.getContext().getString(R.string.row_item_damage, itemDamage.getChest0()));
         }else {
             this.damageTextView.setText(EMPTY_FIELD);
         }
     }
     private void setItemStability(@Nullable final Float itemStability) {
         if (itemStability!= null) {
-            this.stabilityTextView.setText(context.getString(R.string.row_item_stability, itemStability));
+            this.stabilityTextView.setText(itemView.getContext().getString(R.string.row_item_stability, itemStability));
         }else {
             this.stabilityTextView.setText(EMPTY_FIELD);
         }
     }
     private void setItemRange(@Nullable final Float itemRange) {
         if (itemRange!= null) {
-            this.rangeTextView.setText(context.getString(R.string.row_item_range, itemRange));
+            this.rangeTextView.setText(itemView.getContext().getString(R.string.row_item_range, itemRange));
         }else {
             this.rangeTextView.setText(EMPTY_FIELD);
         }
     }
     private void setItemRate(@Nullable final Float itemRate) {
         if (itemRate != null) {
-            this.rateTextView.setText(context.getString(R.string.row_item_rate, itemRate));
+            this.rateTextView.setText(itemView.getContext().getString(R.string.row_item_rate, itemRate));
         }else {
             this.rateTextView.setText(EMPTY_FIELD);
         }
     }
     private void setItemReload(@Nullable final Float itemReload) {
         if (itemReload != null) {
-            this.reloadTextView.setText(context.getString(R.string.row_item_reload, itemReload));
+            this.reloadTextView.setText(itemView.getContext().getString(R.string.row_item_reload, itemReload));
         }else {
             this.reloadTextView.setText(EMPTY_FIELD);
         }
     }
     private void setItemIcon(final String itemImage,@NonNull final String category) {
         if (itemImage != null) {
-            Picasso.with(context).load(IMAGE_URL_BASE + category+ "/" + itemImage + ARG_RAW).into(imageImageView);
+            Picasso.with(itemView.getContext()).load(IMAGE_URL_BASE + category+ "/" + itemImage + ARG_RAW).into(imageImageView);
         }else {
-            Picasso.with(context).load(R.mipmap.ic_launcher).into(imageImageView);
+            Picasso.with(itemView.getContext()).load(R.mipmap.ic_launcher).into(imageImageView);
 
         }
     }

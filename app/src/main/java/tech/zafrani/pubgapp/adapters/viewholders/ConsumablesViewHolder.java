@@ -1,7 +1,6 @@
 package tech.zafrani.pubgapp.adapters.viewholders;
 
 
-import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.View;
@@ -25,11 +24,9 @@ public class ConsumablesViewHolder extends ItemViewHolder{
     private final TextView maxStackTextView;
     private final TextView capacityTextView;
     private final ImageView imageImageView;
-    private final Context context;
 
-    public ConsumablesViewHolder(@NonNull final View itemView, @NonNull final Context context) {
+    public ConsumablesViewHolder(@NonNull final View itemView) {
         super(itemView);
-        this.context = context;
         this.nameTextView = (TextView) itemView.findViewById(R.id.row_item_name);
         this.typeTextView= (TextView) itemView.findViewById(R.id.row_item_type);
         this.categoryTextView = (TextView) itemView.findViewById(R.id.row_item_category);
@@ -58,50 +55,50 @@ public class ConsumablesViewHolder extends ItemViewHolder{
 
     private void setItemHeal(@Nullable final Float itemHeal) {
         if (itemHeal!= null) {
-            this.healTextView.setText(context.getString(R.string.row_item_heal, itemHeal));
+            this.healTextView.setText(itemView.getContext().getString(R.string.row_item_heal, itemHeal));
         }else {
             this.healTextView.setText(EMPTY_FIELD);
         }
     }
     private void setItemMaxHeal(@Nullable final Float itemMaxHeal) {
         if (itemMaxHeal!= null) {
-            this.maxHealTextView.setText(context.getString(R.string.row_item_max_heal, itemMaxHeal));
+            this.maxHealTextView.setText(itemView.getContext().getString(R.string.row_item_max_heal, itemMaxHeal));
         }else {
             this.maxHealTextView.setText(EMPTY_FIELD);
         }
     }
     private void setItemBoost(@Nullable final Float itemBoost) {
         if (itemBoost!= null) {
-            this.boostTextView.setText(context.getString(R.string.row_item_boost, itemBoost));
+            this.boostTextView.setText(itemView.getContext().getString(R.string.row_item_boost, itemBoost));
         }else {
             this.boostTextView.setText(EMPTY_FIELD);
         }
     }
     private void setItemActivateTime(@Nullable final Float itemActivateTime) {
         if (itemActivateTime!= null) {
-            this.activateTimeTextView.setText(context.getString(R.string.row_item_activate_time, itemActivateTime));
+            this.activateTimeTextView.setText(itemView.getContext().getString(R.string.row_item_activate_time, itemActivateTime));
         }else {
             this.activateTimeTextView.setText(EMPTY_FIELD);
         }
     }private void setItemMaxStack(@Nullable final Float itemMaxStack) {
         if (itemMaxStack != null) {
-            this.maxStackTextView.setText(context.getString(R.string.row_item_max_stack, itemMaxStack));
+            this.maxStackTextView.setText(itemView.getContext().getString(R.string.row_item_max_stack, itemMaxStack));
         }else {
             this.maxStackTextView.setText(EMPTY_FIELD);
         }
     }
     private void setItemCapacity(@Nullable final Float itemCapacity) {
         if (itemCapacity != null) {
-            this.capacityTextView.setText(context.getString(R.string.row_item_capacity, itemCapacity));
+            this.capacityTextView.setText(itemView.getContext().getString(R.string.row_item_capacity, itemCapacity));
         }else {
             this.capacityTextView.setText(EMPTY_FIELD);
         }
     }
     private void setItemIcon(final String itemImage, String category) {
         if (itemImage != null) {
-            Picasso.with(context).load(IMAGE_URL_BASE + category+ "/" + itemImage + ARG_RAW).into(imageImageView);
+            Picasso.with(itemView.getContext()).load(IMAGE_URL_BASE + category+ "/" + itemImage + ARG_RAW).into(imageImageView);
         }else {
-            Picasso.with(context).load(R.mipmap.ic_launcher).into(imageImageView);
+            Picasso.with(itemView.getContext()).load(R.mipmap.ic_launcher).into(imageImageView);
 
         }
     }

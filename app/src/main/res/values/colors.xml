@@ -4,6 +4,6 @@
     <color name="colorPrimaryDark">#1a1a1a</color>
     <color name="colorAccent">#e4af15</color>
     <color name="white">#FFF</color>
-    <color name="colorDivider">#aaaaaa</color>
+    <color name="divider">#aaaaaa</color>
 
 </resources>
