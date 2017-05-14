@@ -3,7 +3,9 @@ package tech.zafrani.pubgapp.models;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Damage {
+import java.io.Serializable;
+
+public class Damage implements Serializable {
     @SerializedName("base")
     private final float base;
     @SerializedName("chest0")

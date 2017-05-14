@@ -5,11 +5,12 @@ import android.support.annotation.NonNull;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 import java.util.Arrays;
 import java.util.List;
 
 
-public class Items {
+public class Items implements Serializable {
     @NonNull
     @SerializedName("categories")
     private final List<Category> categories;

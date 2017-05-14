@@ -61,7 +61,6 @@ public class AmmunitionViewHolder extends ItemViewHolder {
 
     @Override
     public void bind(@NonNull final Item item) {
-
         setItemName(item.getName());
         setItemType(item.getType());
         setItemCategory(item.getCategory());

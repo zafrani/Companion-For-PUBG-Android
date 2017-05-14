@@ -4,10 +4,11 @@ import android.support.annotation.NonNull;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 import java.util.Arrays;
 import java.util.List;
 
-public class Type {
+public class Type implements Serializable {
     @NonNull
     @SerializedName("type_name")
     private final String name;
