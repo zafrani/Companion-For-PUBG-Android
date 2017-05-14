@@ -9,7 +9,6 @@ import tech.zafrani.pubgapp.models.Item;
 
 
 public class ItemViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
-    public final static String IMAGE_URL_BASE= "https://github.com/Zsteven44/PUBG-Companion-Images/blob/master/images/";
     public final static String ARG_RAW = "?raw=true";
     public final static String EMPTY_FIELD = " - ";
     public final static String ARG_ITEM = ItemViewHolder.class.getSimpleName() + ".ARG_ITEM";
