@@ -46,6 +46,7 @@ public abstract class DrawerActivity extends AppCompatActivity
         this.navigationView = (NavigationView) findViewById(R.id.activity_drawer_navigationview);
         this.navigationView.setNavigationItemSelectedListener(this);
         this.drawerLayout = (DrawerLayout) findViewById(R.id.activity_drawer_drawerlayout);
+        this.navigationView.setCheckedItem(R.id.drawer_map);
         mapSelected();
     }
 
@@ -95,7 +96,7 @@ public abstract class DrawerActivity extends AppCompatActivity
         if (this.contentLayout == null) {
             return;
         }
-        Fragment fragment = getFragmentManager().findFragmentByTag(PUBGMapFragment.TAG);
+        final Fragment fragment = getFragmentManager().findFragmentByTag(PUBGMapFragment.TAG);
         if (fragment == null) {
             showFragment(new PUBGMapFragment());
         } else {
@@ -107,7 +108,7 @@ public abstract class DrawerActivity extends AppCompatActivity
         if (this.contentLayout == null) {
             return;
         }
-        Fragment fragment = getFragmentManager().findFragmentByTag(ItemFragment.TAG);
+        final Fragment fragment = getFragmentManager().findFragmentByTag(ItemFragment.TAG);
         if (fragment == null) {
             showFragment(new ItemFragment());
         } else {
