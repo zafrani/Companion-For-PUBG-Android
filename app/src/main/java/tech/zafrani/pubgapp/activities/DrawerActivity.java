@@ -2,6 +2,8 @@ package tech.zafrani.pubgapp.activities;
 
 import android.app.Fragment;
 import android.app.FragmentTransaction;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -17,6 +19,7 @@ import android.widget.FrameLayout;
 import tech.zafrani.pubgapp.R;
 import tech.zafrani.pubgapp.fragments.ItemFragment;
 import tech.zafrani.pubgapp.fragments.PUBGMapFragment;
+import tech.zafrani.pubgapp.utils.Constants;
 
 public abstract class DrawerActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -79,10 +82,19 @@ public abstract class DrawerActivity extends AppCompatActivity
         this.drawerLayout.closeDrawers();
         switch (item.getItemId()) {
             case R.id.drawer_map:
-                this.mapSelected();
+                mapSelected();
                 break;
             case R.id.drawer_items:
-                this.itemsSelected();
+                itemsSelected();
+                break;
+            case R.id.drawer_github:
+                githubSelected();
+                break;
+            case R.id.drawer_image_data:
+                imageDataSelected();
+                break;
+            case R.id.drawer_contact_us:
+                contactUsSelected();
                 break;
         }
         return true;
@@ -113,6 +125,22 @@ public abstract class DrawerActivity extends AppCompatActivity
         } else {
             showFragment(fragment);
         }
+    }
+
+    private void githubSelected() {
+        final Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(Constants.GITHUB_APP_URL));
+        startActivity(browserIntent);
+    }
+
+    private void imageDataSelected() {
+        final Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(Constants.GITHUB_IMAGE_URL));
+        startActivity(browserIntent);
+    }
+
+    private void contactUsSelected() {
+        final Intent emailIntent = new Intent(Intent.ACTION_SENDTO,
+                                              Uri.fromParts("mailto", Constants.CONTACT_US_EMAIL, null));
+        startActivity(Intent.createChooser(emailIntent, getString(R.string.label_send_email)));
     }
 
     private void showFragment(@NonNull final Fragment fragment) {

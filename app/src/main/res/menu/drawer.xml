@@ -23,9 +23,13 @@
                 android:icon="@drawable/ic_github_cat"
                 android:title="@string/label_github"/>
             <item
-                android:id="@+id/drawer_data"
-                android:title="@string/label_data"/>
+                android:id="@+id/drawer_image_data"
+                android:title="@string/label_image_data"
+                android:icon="@drawable/ic_photo_library_white_24dp"/>
+            <item
+                android:id="@+id/drawer_contact_us"
+                android:title="@string/label_contact_us"
+                android:icon="@drawable/ic_email_white_24dp"/>
         </menu>
     </item>
-
 </menu>
