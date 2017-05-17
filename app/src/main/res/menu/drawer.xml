@@ -7,23 +7,23 @@
                 <item
                     android:id="@+id/drawer_map"
                     android:icon="@drawable/ic_location_on_white_24dp"
-                    android:title="Map"/>
+                    android:title="@string/label_map"/>
                 <item
                     android:id="@+id/drawer_items"
-                    android:title="Items"/>
+                    android:title="@string/label_items"/>
             </group>
         </menu>
     </item>
 
-    <item android:title="About">
+    <item android:title="@string/label_about">
         <menu>
             <item
                 android:id="@+id/drawer_github"
                 android:icon="@drawable/ic_github_cat"
-                android:title="Github"/>
+                android:title="@string/label_github"/>
             <item
                 android:id="@+id/drawer_data"
-                android:title="Data"/>
+                android:title="@string/label_data"/>
         </menu>
     </item>
 

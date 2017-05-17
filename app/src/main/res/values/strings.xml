@@ -1,6 +1,11 @@
 <resources>
-    <string name="app_name">pubgapp</string>
-    <string name="title_activity_maps">Map</string>
+    <string name="app_name">PUBG Companion</string>
+    <string name="label_map">Map</string>
+    <string name="label_items">Items</string>
+    <string name="label_about">About</string>
+    <string name="label_github">Github</string>
+    <string name="label_data">Data</string>
+
     <string name="item_view">View: </string>
 
     <string name="item_view_linear_description">Linear item display.</string>
@@ -27,10 +32,8 @@
     <string name="row_item_health">Health: %1$.0f</string>
 
 
-
     <!--
-        You will need to provide a Google Maps API key to run this.
-
+        You will need to provide a Google Maps API key to run this
         The way I run this is by creating a file called 'local-strings.xml'. The file is NEVER
         added to Git. Inside of it I created a string resource called 'local_maps_api_key', it
         contains the API key from https://console.developers.google.com/apis that will be used.
