@@ -57,49 +57,49 @@ public class AttachmentsViewHolder extends ItemViewHolder {
 
 
     private void setItemMagazine(final float itemMagazine) {
-        if (itemMagazine >-1) {
+        if (itemMagazine !=  -1) {
             this.magazineTextView.setText(itemView.getContext().getString(R.string.row_item_magazine, itemMagazine));
         }else {
             this.magazineTextView.setText(EMPTY_FIELD);
         }
     }
     private void setItemCapacity( final float itemCapacity) {
-        if (itemCapacity > -1) {
+        if (itemCapacity !=  -1) {
             this.capacityTextView.setText(itemView.getContext().getString(R.string.row_item_capacity, itemCapacity));
         }else {
             this.capacityTextView.setText(EMPTY_FIELD);
         }
     }
     private void setItemDamage(@Nullable final Damage itemDamage) {
-        if (itemDamage!= null && itemDamage.getChest0() > -1) {
+        if (itemDamage!= null && itemDamage.getChest0() !=  -1) {
             this.damageTextView.setText(itemView.getContext().getString(R.string.row_item_damage, itemDamage.getChest0()));
         }else {
             this.damageTextView.setText(EMPTY_FIELD);
         }
     }
     private void setItemStability(final float itemStability) {
-        if (itemStability > -1) {
+        if (itemStability !=  -1) {
             this.stabilityTextView.setText(itemView.getContext().getString(R.string.row_item_stability, itemStability));
         }else {
             this.stabilityTextView.setText(EMPTY_FIELD);
         }
     }
     private void setItemRange(final float itemRange) {
-        if (itemRange> -1) {
+        if (itemRange!=  -1) {
             this.rangeTextView.setText(itemView.getContext().getString(R.string.row_item_range, itemRange));
         }else {
             this.rangeTextView.setText(EMPTY_FIELD);
         }
     }
     private void setItemRate(final float itemRate) {
-        if (itemRate > -1) {
+        if (itemRate !=  -1) {
             this.rateTextView.setText(itemView.getContext().getString(R.string.row_item_rate, itemRate));
         }else {
             this.rateTextView.setText(EMPTY_FIELD);
         }
     }
     private void setItemReload(final float itemReload) {
-        if (itemReload > -1) {
+        if (itemReload !=  -1) {
             this.reloadTextView.setText(itemView.getContext().getString(R.string.row_item_reload, itemReload));
         }else {
             this.reloadTextView.setText(EMPTY_FIELD);

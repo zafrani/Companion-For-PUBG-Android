@@ -46,7 +46,7 @@ public class ItemFragment extends BaseFragment {
             Log.e(getClass().getSimpleName(), "Error: " + e.getLocalizedMessage());
         }
         final ViewPager viewPager = (ViewPager) view.findViewById(R.id.fragment_item_viewpager);
-        viewPager.setAdapter(new ItemTabAdapter(getFragmentManager(), categories));
+        viewPager.setAdapter(new ItemTabAdapter(getChildFragmentManager(), categories));
         final TabLayout tabLayout = (TabLayout) view.findViewById(R.id.fragment_item_tablayout);
         tabLayout.setupWithViewPager(viewPager);
 
