@@ -8,7 +8,7 @@ vehicles and news.
 
 ### How to contribute
 Submit pull requests here. Help us review pull requests and most importantly help keep our data 
-and images up to date. 
+and images up to date. See the Projects tab above for tasks we need help with.
 
 Data json files can be found here: https://github.com/ZafraniTechLLC/PUBG-Companion/tree/master/app/src/main/assets
 
