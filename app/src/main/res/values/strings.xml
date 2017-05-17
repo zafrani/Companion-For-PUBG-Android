@@ -16,9 +16,11 @@
     <string name="label_items">Items</string>
     <string name="label_about">About</string>
     <string name="label_github">Github</string>
-    <string name="label_data">Data</string>
-    <string name="item_view">View: </string>
+    <string name="label_image_data">Image Data</string>
+    <string name="label_contact_us">Contact Us</string>
+    <string name="label_send_email">Send Email</string>
 
+    <string name="item_view">View: </string>
     <string name="item_view_linear_description">Linear item display.</string>
     <string name="item_view_grid_description">Grid item display.</string>
 
