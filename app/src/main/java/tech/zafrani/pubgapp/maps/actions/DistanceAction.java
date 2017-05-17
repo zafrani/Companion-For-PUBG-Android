@@ -1,5 +1,6 @@
 package tech.zafrani.pubgapp.maps.actions;
 
+import android.support.annotation.DrawableRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
@@ -65,6 +66,12 @@ public class DistanceAction extends Action
         }
     }
 
+    @DrawableRes
+    @Override
+    protected int getMarkerIconRes() {
+        return R.drawable.ic_directions_run_white_24dp;
+    }
+
     @Override
     public void release() {
         releaseDestination();
@@ -122,7 +129,7 @@ public class DistanceAction extends Action
      */
     @NonNull
     private Marker addMarker(@NonNull final LatLng latLng) {
-        final MarkerOptions options = new MarkerOptions();
+        final MarkerOptions options = createMarkerOptions();
         options.position(latLng);
         return this.mapController.addMarker(options);
     }
