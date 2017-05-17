@@ -10,6 +10,7 @@
                     android:title="Map"/>
                 <item
                     android:id="@+id/drawer_items"
+                    android:icon="@drawable/ic_backpack"
                     android:title="Items"/>
             </group>
         </menu>
