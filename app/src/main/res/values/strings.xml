@@ -1,4 +1,16 @@
 <resources>
+    <!--
+        You will need to provide a Google Maps API key to run this.
+
+        The way I run this is by creating a file called 'local-strings.xml'. The file is NEVER
+        added to Git. Inside of it I created a string resource called 'local_maps_api_key', it
+        contains the API key from
+
+        https://console.developers.google.com/apis/api/maps_android_backend/overview.
+
+        See README for detailed explanation.
+     -->
+    <string name="maps_api_key">@string/local_maps_api_key</string>
     <string name="app_name">pubgapp</string>
     <string name="title_activity_maps">Map</string>
     <string name="item_view">View: </string>
@@ -25,17 +37,6 @@
     <string name="row_item_acceleration">Acceleration: %1$.1f</string>
     <string name="row_item_seats">Seats: %1$.0f</string>
     <string name="row_item_health">Health: %1$.0f</string>
-
-
-
-    <!--
-        You will need to provide a Google Maps API key to run this.
-
-        The way I run this is by creating a file called 'local-strings.xml'. The file is NEVER
-        added to Git. Inside of it I created a string resource called 'local_maps_api_key', it
-        contains the API key from https://console.developers.google.com/apis that will be used.
-     -->
-    <string name="maps_api_key">@string/local_maps_api_key</string>
     <string name="vehicles">Vehicles</string>
     <string name="distance_action_label_snippet">Estimated sprinting unarmed on a flat surface</string>
     <string name="distance_action_label_title_failed">Failed to calculate</string>
