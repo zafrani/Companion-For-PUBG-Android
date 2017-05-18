@@ -1,5 +1,6 @@
 package tech.zafrani.pubgapp.adapters.viewholders;
 
+import android.content.Context;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -10,6 +11,7 @@ import java.io.Serializable;
 
 public abstract class BaseViewHolder<Model extends Serializable> extends RecyclerView.ViewHolder {
     private final Listener<Model> listener;
+
 
     public BaseViewHolder(@NonNull final View itemView,
                           @NonNull final Listener<Model> listener) {
@@ -25,9 +27,6 @@ public abstract class BaseViewHolder<Model extends Serializable> extends Recycle
     protected Model get(final int position) {
         return this.listener.get(position);
     }
-
-    @LayoutRes
-    protected abstract int getLayoutRes();
 
     public interface Listener<Model extends Serializable> {
 
