@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="nav_header_height">192dp</dimen>
-    <dimen name="standard_margin">16dp</dimen>
-    <dimen name="small_margin">8dp</dimen>
+    <dimen name="large_margin">16dp</dimen>
+    <dimen name="regular_margin">8dp</dimen>
     <dimen name="recyclerview_margin">24dp</dimen>
+    <dimen name="item_default_image_size">48dp</dimen>
     <dimen name="item_name_size">10dp</dimen>
     <dimen name="item_category_size">7dp</dimen>
     <dimen name="item_type_size">7dp</dimen>
