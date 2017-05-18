@@ -46,6 +46,6 @@ public class VehicleAction extends Action {
     @DrawableRes
     @Override
     protected int getMarkerIconRes() {
-        return R.drawable.ic_drive_eta_white_24dp;
+        return R.drawable.marker_car;
     }
 }

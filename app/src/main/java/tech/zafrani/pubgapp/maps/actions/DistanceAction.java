@@ -69,7 +69,7 @@ public class DistanceAction extends Action
     @DrawableRes
     @Override
     protected int getMarkerIconRes() {
-        return R.drawable.ic_directions_run_white_24dp;
+        return R.drawable.marker_run;
     }
 
     @Override
