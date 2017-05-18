@@ -3,7 +3,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/standard_margin"
+                android:layout_marginBottom="@dimen/large_margin"
                 android:background="?attr/colorPrimaryDark"
                 android:gravity="bottom"
                 android:orientation="vertical"
