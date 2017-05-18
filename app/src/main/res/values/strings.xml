@@ -19,6 +19,7 @@
     <string name="label_image_data">Image Data</string>
     <string name="label_contact_us">Contact Us</string>
     <string name="label_send_email">Send Email</string>
+    <string name="toast_how_to_use_distance">Tap two locations on the map. Tap a third time to restart.</string>
 
     <string name="item_view">View: </string>
     <string name="item_view_linear_description">Linear item display.</string>
