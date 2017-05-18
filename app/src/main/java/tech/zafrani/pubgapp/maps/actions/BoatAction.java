@@ -47,7 +47,7 @@ public class BoatAction extends Action {
     @DrawableRes
     @Override
     protected int getMarkerIconRes() {
-        return R.drawable.ic_directions_boat_white_24dp;
+        return R.drawable.marker_boat;
     }
 
 }
