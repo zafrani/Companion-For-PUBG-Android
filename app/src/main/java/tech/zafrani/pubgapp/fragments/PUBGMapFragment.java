@@ -1,5 +1,7 @@
 package tech.zafrani.pubgapp.fragments;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
@@ -7,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
@@ -20,11 +23,20 @@ public class PUBGMapFragment extends BaseFragment
         implements OnMapReadyCallback {
 
     public static final String TAG = PUBGMapFragment.class.getSimpleName();
+
+    private static final String PREF_TIMES_SHOWN = "PREF_TIMES_SHOWN";
+
     @Nullable
     private GoogleMapControllerImpl mapController = null;
+
     private ImageView vehicleIcon;
+
     private ImageView boatIcon;
+
     private ImageView runDistanceIcon;
+
+    @Nullable
+    private SharedPreferences sharedPreferences = null;
 
     //region BaseFragment
     @Nullable
@@ -39,6 +51,7 @@ public class PUBGMapFragment extends BaseFragment
     public void onViewCreated(final View view,
                               @Nullable final Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        this.sharedPreferences = getActivity().getSharedPreferences("temp", Context.MODE_PRIVATE); //todo not this.
         this.vehicleIcon = (ImageView) view.findViewById(R.id.fragment_map_vehicle_icon);
         this.boatIcon = (ImageView) view.findViewById(R.id.fragment_map_boat_icon);
         this.runDistanceIcon = (ImageView) view.findViewById(R.id.fragment_map_distance_icon);
@@ -79,6 +92,7 @@ public class PUBGMapFragment extends BaseFragment
             this.mapController.release();
             this.mapController = null;
         }
+        this.sharedPreferences = null;
     }
     //endregion
 
@@ -93,6 +107,18 @@ public class PUBGMapFragment extends BaseFragment
     //endregion
 
     //region methods
+
+    private void showToastIfNeeded() {
+        if (this.sharedPreferences == null) {
+            return;
+        }
+        final int timesShown = this.sharedPreferences.getInt(PREF_TIMES_SHOWN, 0);
+        if (timesShown <= 5) {
+            Toast.makeText(getActivity(), R.string.toast_how_to_use_distance, Toast.LENGTH_LONG).show();
+            this.sharedPreferences.edit().putInt(PREF_TIMES_SHOWN, timesShown + 1).apply();
+        }
+    }
+
     private void toggleVehicles() {
         if (this.mapController == null) {
             return;
@@ -132,6 +158,7 @@ public class PUBGMapFragment extends BaseFragment
             boatIcon.setColorFilter(ContextCompat.getColor(getActivity(), R.color.white));
         }
         if (this.mapController.isShowingDistance()) {
+            showToastIfNeeded(); //todo make a tutorial and remove
             runDistanceIcon.setColorFilter(ContextCompat.getColor(getActivity(), R.color.colorAccent));
         } else {
             runDistanceIcon.setColorFilter(ContextCompat.getColor(getActivity(), R.color.white));
