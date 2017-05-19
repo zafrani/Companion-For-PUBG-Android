@@ -82,7 +82,7 @@ public class WeaponsViewHolder extends ItemViewHolder{
     }
     private void setItemDamage(@Nullable final Damage itemDamage) {
         if (itemDamage!= null && itemDamage.getChest0() > -1) {
-            this.damageTextView.setText(itemView.getContext().getString(R.string.row_item_damage, itemDamage.getChest0()));
+            this.damageTextView.setText(itemView.getContext().getString(R.string.label_weapon_damage, itemDamage.getChest0()));
         }else {
             this.damageTextView.setText(EMPTY_FIELD);
         }

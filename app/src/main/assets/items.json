@@ -1,640 +1,610 @@
 {
-  "categories":[
+  "categories":
     {
-      "cat_name":"Weapons",
-      "types":[
-        {
-          "type_name":"Assault Rifle",
-          "items":[
-            {
-              "name":"AKM",
-              "image_url":"Icon_weapon_AKM.png",
-              "magazine":30,
-              "ammo":"7.62mm",
-              "range":0,
-              "stability":0,
-              "rate":0,
-              "reload":0,
-              "capacity":500,
-              "damage":
+      "weapon_category":{
+        "types":[
               {
-                "base":23,
-                "chest0":46,
-                "chest1":32,
-                "chest2":27,
-                "chest3":20,
-                "head0":114,
-                "head1":80,
-                "head2":68,
-                "head3":51
-              }
-
-            },{
-              "name":"M16A4",
-              "image_url":"Icon_weapon_M16A4.png",
-              "magazine":30,
-              "ammo":"5.56mm",
-              "range":0,
-              "stability":0,
-              "rate":0,
-              "reload":0,
-              "capacity":500,
-              "damage":
+                "id": 0,
+                "items": [
+                  {
+                    "name": "AKM",
+                    "image_url": "Icon_weapon_AKM.png",
+                    "magazine": 30,
+                    "ammo": "7.62mm",
+                    "range": 0,
+                    "stability": 0,
+                    "rate": 0,
+                    "reload": 0,
+                    "capacity": 500,
+                    "damage": {
+                      "base": 23,
+                      "chest0": 46,
+                      "chest1": 32,
+                      "chest2": 27,
+                      "chest3": 20,
+                      "head0": 114,
+                      "head1": 80,
+                      "head2": 68,
+                      "head3": 51
+                    }
+                  },
+                  {
+                    "name": "M16A4",
+                    "image_url": "Icon_weapon_M16A4.png",
+                    "magazine": 30,
+                    "ammo": "5.56mm",
+                    "range": 0,
+                    "stability": 0,
+                    "rate": 0,
+                    "reload": 0,
+                    "capacity": 500,
+                    "damage": {
+                      "base": 21,
+                      "chest0": 41,
+                      "chest1": 29,
+                      "chest2": 25,
+                      "chest3": 18,
+                      "head0": 103,
+                      "head1": 72,
+                      "head2": 62,
+                      "head3": 46
+                    }
+                  },
+                  {
+                    "name": "M416",
+                    "image_url": "Icon_weapon_M416.png",
+                    "magazine": 30,
+                    "ammo": "5.56mm",
+                    "range": 0,
+                    "reload": 0,
+                    "stability": 0,
+                    "rate": 0,
+                    "capacity": 500,
+                    "damage": {
+                      "base": 21,
+                      "chest0": 41,
+                      "chest1": 29,
+                      "chest2": 25,
+                      "chest3": 18,
+                      "head0": 103,
+                      "head1": 72,
+                      "head2": 62,
+                      "head3": 46
+                    }
+                  },
+                  {
+                    "name": "SCAR-L",
+                    "image_url": "Icon_weapon_SCAR-L.png",
+                    "magazine": 30,
+                    "ammo": "5.56mm",
+                    "range": 0,
+                    "stability": 0,
+                    "rate": 0,
+                    "reload": 0,
+                    "capacity": 500,
+                    "damage": {
+                      "base": 21,
+                      "chest0": 41,
+                      "chest1": 29,
+                      "chest2": 25,
+                      "chest3": 18,
+                      "head0": 103,
+                      "head1": 72,
+                      "head2": 62,
+                      "head3": 46
+                    }
+                  }
+                ]
+              },
               {
-                "base":21,
-                "chest0":41,
-                "chest1":29,
-                "chest2":25,
-                "chest3":18,
-                "head0":103,
-                "head1":72,
-                "head2":62,
-                "head3":46
-              }
-
-            },{
-              "name":"M416",
-              "image_url":"Icon_weapon_M416.png",
-              "magazine":30,
-              "ammo":"5.56mm",
-              "range":0,
-              "reload":0,
-              "stability":0,
-              "rate":0,
-              "capacity":500,
-              "damage":
+                "id": 1,
+                "items": [
+                  {
+                    "name": "UMP9",
+                    "image_url": "Icon_weapon_UMP.png",
+                    "magazine": 30,
+                    "ammo": "9mm",
+                    "range": 0,
+                    "stability": 0,
+                    "rate": 0,
+                    "reload": 0,
+                    "capacity": 500,
+                    "damage": {
+                      "base": "17",
+                      "chest0": "33",
+                      "chest1": "23",
+                      "chest2": "20",
+                      "chest3": "15",
+                      "head0": "83",
+                      "head1": "58",
+                      "head2": "50",
+                      "head3": "37"
+                    }
+                  },
+                  {
+                    "name": "Micro Uzi",
+                    "image_url": "Icon_weapon_UZI.png",
+                    "magazine": 30,
+                    "ammo": "9mm",
+                    "range": 0,
+                    "stability": 0,
+                    "rate": 0,
+                    "reload": 0,
+                    "capacity": 500,
+                    "damage": {
+                      "base": 12,
+                      "chest0": 23,
+                      "chest1": 16,
+                      "chest2": 14,
+                      "chest3": 10,
+                      "head0": 58,
+                      "head1": 40,
+                      "head2": 35,
+                      "head3": 26
+                    }
+                  },
+                  {
+                    "name": "Vector",
+                    "image_url": "Icon_weapon_Vector.png",
+                    "magazine": 13,
+                    "ammo": "0.45 ACP",
+                    "range": 0,
+                    "stability": 0,
+                    "rate": 0,
+                    "reload": 0,
+                    "capacity": 500,
+                    "damage": {
+                      "base": 18,
+                      "chest0": 36,
+                      "chest1": 25,
+                      "chest2": 22,
+                      "chest3": 16,
+                      "head0": 90,
+                      "head1": 63,
+                      "head2": 54,
+                      "head3": 41
+                    }
+                  },
+                  {
+                    "name": "Tommy Gun",
+                    "image_url": "Icon_weapon_TommyGun.png",
+                    "magazine": 30,
+                    "ammo": "0.45 ACP",
+                    "range": 0,
+                    "stability": 0,
+                    "rate": 0,
+                    "reload": 0,
+                    "capacity": 500,
+                    "damage": {
+                      "base": 19,
+                      "chest0": 38,
+                      "chest1": 27,
+                      "chest2": 23,
+                      "chest3": 17,
+                      "head0": 95,
+                      "head1": 67,
+                      "head2": 57,
+                      "head3": 43
+                    }
+                  }
+                ]
+              },
               {
-                "base":21,
-                "chest0":41,
-                "chest1":29,
-                "chest2":25,
-                "chest3":18,
-                "head0":103,
-                "head1":72,
-                "head2":62,
-                "head3":46
-              }
-
-            },{
-              "name":"SCAR-L",
-              "image_url":"Icon_weapon_SCAR-L.png",
-              "magazine":30,
-              "ammo":"5.56mm",
-              "range":0,
-              "stability":0,
-              "rate":0,
-              "reload":0,
-              "capacity":500,
-              "damage":
+                "id": 2,
+                "items": [
+                  {
+                    "name": "M249",
+                    "image_url": "Icon_weapon_M249.png",
+                    "magazine": 100,
+                    "ammo": "5.56mm",
+                    "range": 0,
+                    "stability": 0,
+                    "rate": 0,
+                    "reload": 0,
+                    "capacity": 500,
+                    "damage": {
+                      "base": 22,
+                      "chest0": 44,
+                      "chest1": 31,
+                      "chest2": 26,
+                      "chest3": 20,
+                      "head0": 110,
+                      "head1": 77,
+                      "head2": 66,
+                      "head3": 50
+                    }
+                  }
+                ]
+              },
               {
-                "base":21,
-                "chest0":41,
-                "chest1":29,
-                "chest2":25,
-                "chest3":18,
-                "head0":103,
-                "head1":72,
-                "head2":62,
-                "head3":46
-              }
-
-            }
-          ]
-        },{
-          "type_name":"SMG",
-          "items":[
-            {
-              "name":"UMP9",
-              "image_url":"Icon_weapon_UMP.png",
-              "magazine":30,
-              "ammo":"9mm",
-              "range":0,
-              "stability":0,
-              "rate":0,
-              "reload":0,
-              "capacity":500,
-              "damage":
+                "id": 3,
+                "items": [
+                  {
+                    "name": "S686",
+                    "image_url": "Icon_weapon_S686.png",
+                    "magazine": 5,
+                    "ammo": "12Gauge",
+                    "range": 0,
+                    "stability": 0,
+                    "rate": 0,
+                    "reload": 0,
+                    "capacity": 500,
+                    "damage": {
+                      "base": 999,
+                      "chest0": 999,
+                      "chest1": 999,
+                      "chest2": 999,
+                      "chest3": 999,
+                      "head0": 999,
+                      "head1": 999,
+                      "head2": 999,
+                      "head3": 999
+                    }
+                  },
+                  {
+                    "name": "S12K",
+                    "image_url": "Icon_weapon_S12K.png",
+                    "magazine": 5,
+                    "ammo": "12Gauge",
+                    "range": 0,
+                    "stability": 0,
+                    "rate": 0,
+                    "reload": 0,
+                    "capacity": 500,
+                    "damage": {
+                      "base": 999,
+                      "chest0": 999,
+                      "chest1": 999,
+                      "chest2": 999,
+                      "chest3": 999,
+                      "head0": 999,
+                      "head1": 999,
+                      "head2": 999,
+                      "head3": 999
+                    }
+                  },
+                  {
+                    "name": "S1897",
+                    "image_url": "Icon_weapon_S1897.png",
+                    "magazine": 2,
+                    "ammo": "12Gauge",
+                    "range": 0,
+                    "stability": 0,
+                    "rate": 0,
+                    "reload": 0,
+                    "capacity": 500,
+                    "damage": {
+                      "base": 999,
+                      "chest0": 999,
+                      "chest1": 999,
+                      "chest2": 999,
+                      "chest3": 999,
+                      "head0": 999,
+                      "head1": 999,
+                      "head2": 999,
+                      "head3": 999
+                    }
+                  }
+                ]
+              },
               {
-                "base":"17",
-                "chest0":"33",
-                "chest1":"23",
-                "chest2":"20",
-                "chest3":"15",
-                "head0":"83",
-                "head1":"58",
-                "head2":"50",
-                "head3":"37"
-              }
-
-            },{
-              "name":"Micro Uzi",
-              "image_url":"Icon_weapon_UZI.png",
-              "magazine":30,
-              "ammo":"9mm",
-              "range":0,
-              "stability":0,
-              "rate":0,
-              "reload":0,
-              "capacity":500,
-              "damage":
+                "id": 4,
+                "items": [
+                  {
+                    "name": "AWM",
+                    "image_url": "Icon_weapon_AWM.png",
+                    "magazine": 5,
+                    "ammo": ".300 Magnum",
+                    "range": 0,
+                    "stability": 0,
+                    "rate": 0,
+                    "reload": 0,
+                    "capacity": 500,
+                    "damage": {
+                      "base": 66,
+                      "chest0": 131,
+                      "chest1": 92,
+                      "chest2": 79,
+                      "chest3": 59,
+                      "head0": 328,
+                      "head1": 229,
+                      "head2": 197,
+                      "head3": 147
+                    }
+                  },
+                  {
+                    "name": "M24",
+                    "image_url": "Icon_weapon_M24.png",
+                    "magazine": 5,
+                    "ammo": "7.62mm",
+                    "range": 0,
+                    "stability": 0,
+                    "rate": 0,
+                    "reload": 0,
+                    "capacity": 500,
+                    "damage": {
+                      "base": 42,
+                      "chest0": 84,
+                      "chest1": 59,
+                      "chest2": 50,
+                      "chest3": 38,
+                      "head0": 210,
+                      "head1": 147,
+                      "head2": 126,
+                      "head3": 95
+                    }
+                  },
+                  {
+                    "name": "Kar 98",
+                    "image_url": "Icon_weapon_Kar98k.png",
+                    "magazine": 5,
+                    "ammo": "7.62mm",
+                    "range": 0,
+                    "stability": 0,
+                    "rate": 0,
+                    "reload": 0,
+                    "capacity": 500,
+                    "damage": {
+                      "base": 36,
+                      "chest0": 72,
+                      "chest1": 50,
+                      "chest2": 43,
+                      "chest3": 32,
+                      "head0": 180,
+                      "head1": 126,
+                      "head2": 108,
+                      "head3": 81
+                    }
+                  }
+                ]
+              },
               {
-                "base":12,
-                "chest0":23,
-                "chest1":16,
-                "chest2":14,
-                "chest3":10,
-                "head0":58,
-                "head1":40,
-                "head2":35,
-                "head3":26
-              }
-
-            },{
-              "name":"Vector",
-              "image_url":"Icon_weapon_Vector.png",
-              "magazine":13,
-              "ammo":"0.45 ACP",
-              "range":0,
-              "stability":0,
-              "rate":0,
-              "reload":0,
-              "capacity":500,
-              "damage":
+                "id": 5,
+                "items": [
+                  {
+                    "name": "SKS",
+                    "image_url": "Icon_weapon_SKS.png",
+                    "magazine": 5,
+                    "ammo": "7.62mm",
+                    "range": 0,
+                    "stability": 0,
+                    "rate": 0,
+                    "reload": 0,
+                    "capacity": 500,
+                    "damage": {
+                      "base": 28,
+                      "chest0": 55,
+                      "chest1": 39,
+                      "chest2": 33,
+                      "chest3": 25,
+                      "head0": 138,
+                      "head1": 96,
+                      "head2": 83,
+                      "head3": 62
+                    }
+                  }
+                ]
+              },
               {
-                "base":18,
-                "chest0":36,
-                "chest1":25,
-                "chest2":22,
-                "chest3":16,
-                "head0":90,
-                "head1":63,
-                "head2":54,
-                "head3":41
-              }
-            },{
-              "name":"Tommy Gun",
-              "image_url":"Icon_weapon_TommyGun.png",
-              "magazine":30,
-              "ammo":"0.45 ACP",
-              "range":0,
-              "stability":0,
-              "rate":0,
-              "reload":0,
-              "capacity":500,
-              "damage":
+                "id": 6,
+                "items": [
+                  {
+                    "name": "P92",
+                    "image_url": "Icon_weapon_P92.png",
+                    "magazine": 15,
+                    "ammo": "9mm",
+                    "range": 0,
+                    "stability": 0,
+                    "rate": 0,
+                    "reload": 0,
+                    "capacity": 100,
+                    "damage": {
+                      "base": 15,
+                      "chest0": 29,
+                      "chest1": 20,
+                      "chest2": 17,
+                      "chest3": 13,
+                      "head0": 73,
+                      "head1": 51,
+                      "head2": 44,
+                      "head3": 33
+                    }
+                  },
+                  {
+                    "name": "P1911",
+                    "image_url": "Icon_weapon_P1911.png",
+                    "magazine": 7,
+                    "ammo": "0.45 ACP",
+                    "range": 0,
+                    "stability": 0,
+                    "rate": 0,
+                    "reload": 0,
+                    "capacity": 100,
+                    "damage": {
+                      "base": 18,
+                      "chest0": 35,
+                      "chest1": 25,
+                      "chest2": 21,
+                      "chest3": 16,
+                      "head0": 88,
+                      "head1": 61,
+                      "head2": 53,
+                      "head3": 39
+                    }
+                  },
+                  {
+                    "name": "R1895",
+                    "image_url": "Icon_weapon_R1895.png",
+                    "magazine": 5,
+                    "ammo": "7.62mm",
+                    "range": 0,
+                    "stability": 0,
+                    "rate": 0,
+                    "reload": 0,
+                    "capacity": 100,
+                    "damage": {
+                      "base": 23,
+                      "chest0": 46,
+                      "chest1": 32,
+                      "chest2": 28,
+                      "chest3": 21,
+                      "head0": 115,
+                      "head1": 81,
+                      "head2": 69,
+                      "head3": 52
+                    }
+                  }
+                ]
+              },
               {
-                "base":19,
-                "chest0":38,
-                "chest1":27,
-                "chest2":23,
-                "chest3":17,
-                "head0":95,
-                "head1":67,
-                "head2":57,
-                "head3":43
-              }
-
-            }
-          ]
-        },{
-          "type_name":"LMG",
-          "items":[
-            {
-              "name":"M249",
-              "image_url":"Icon_weapon_M249.png",
-              "magazine":100,
-              "ammo":"5.56mm",
-              "range":0,
-              "stability":0,
-              "rate":0,
-              "reload":0,
-              "capacity":500,
-              "damage":
+                "id": 7,
+                "items": [
+                  {
+                    "name": "Pan",
+                    "image_url": "Icon_weapon_Pan.png",
+                    "range": 0,
+                    "rate": 0,
+                    "capacity": 120,
+                    "damage": {
+                      "base": 0,
+                      "chest0": 0,
+                      "chest1": 0,
+                      "chest2": 0,
+                      "chest3": 0,
+                      "head0": 0,
+                      "head1": 0,
+                      "head2": 0,
+                      "head3": 0
+                    }
+                  },
+                  {
+                    "name": "Crowbar",
+                    "image_url": "Icon_weapon_Crowbar.png",
+                    "range": 0,
+                    "rate": 0,
+                    "capacity": 120,
+                    "damage": {
+                      "base": 0,
+                      "chest0": 0,
+                      "chest1": 0,
+                      "chest2": 0,
+                      "chest3": 0,
+                      "head0": 0,
+                      "head1": 0,
+                      "head2": 0,
+                      "head3": 0
+                    }
+                  },
+                  {
+                    "name": "Sickle",
+                    "image_url": "Icon_weapon_Sickle.png",
+                    "range": 0,
+                    "rate": 0,
+                    "capacity": 120,
+                    "damage": {
+                      "base": 0,
+                      "chest0": 0,
+                      "chest1": 0,
+                      "chest2": 0,
+                      "chest3": 0,
+                      "head0": 0,
+                      "head1": 0,
+                      "head2": 0,
+                      "head3": 0
+                    }
+                  },
+                  {
+                    "name": "Machete",
+                    "image_url": "Icon_weapon_Machete.png",
+                    "range": 0,
+                    "rate": 0,
+                    "capacity": 120,
+                    "damage": {
+                      "base": 0,
+                      "chest0": 0,
+                      "chest1": 0,
+                      "chest2": 0,
+                      "chest3": 0,
+                      "head0": 0,
+                      "head1": 0,
+                      "head2": 0,
+                      "head3": 0
+                    }
+                  }
+                ]
+              },
               {
-                "base":22,
-                "chest0":44,
-                "chest1":31,
-                "chest2":26,
-                "chest3":20,
-                "head0":110,
-                "head1":77,
-                "head2":66,
-                "head3":50
-              }
-
-            }
-          ]
-        },{
-          "type_name":"Shotgun",
-          "items":[
-            {
-              "name":"S686",
-              "image_url":"Icon_weapon_S686.png",
-              "magazine":5,
-              "ammo":"12Gauge",
-              "range":0,
-              "stability":0,
-              "rate":0,
-              "reload":0,
-              "capacity":500,
-              "damage":
+                "id": 8,
+                "items": [
+                  {
+                    "name": "Frag Grenade",
+                    "image_url": "Icon_weapon_FragGrenade.png",
+                    "range": 0,
+                    "capacity": 12,
+                    "damage": {
+                      "base": 0
+                    }
+                  },
+                  {
+                    "name": "Smoke Grenade",
+                    "image_url": "Icon_weapon_SmokeGrenade.png",
+                    "range": 0,
+                    "capacity": 16,
+                    "damage": {
+                      "base": 0
+                    }
+                  },
+                  {
+                    "name": "Stun Grenade",
+                    "image_url": "Icon_weapon_StunGrenade.png",
+                    "range": 0,
+                    "capacity": 14,
+                    "damage": {
+                      "base": 0
+                    }
+                  },
+                  {
+                    "name": "Molotov Cocktail",
+                    "image_url": "Icon_weapon_Molotov.png",
+                    "range": 0,
+                    "capacity": 18,
+                    "damage": {
+                      "base": 0
+                    }
+                  }
+                ]
+              },
               {
-                "base":999,
-                "chest0":999,
-                "chest1":999,
-                "chest2":999,
-                "chest3":999,
-                "head0":999,
-                "head1":999,
-                "head2":999,
-                "head3":999
+                "id": 9,
+                "items":[
+                  {
+                    "name":"Crossbow",
+                    "image_url":"Icon_weapon_Crossbow.png",
+                    "magazine":1,
+                    "ammo":"Bolt",
+                    "range":0,
+                    "reload":0,
+                    "stability":0,
+                    "rate":0,
+                    "capacity":500,
+                    "damage":
+                    {
+                      "base":53,
+                      "chest0":105,
+                      "chest1":74,
+                      "chest2":63,
+                      "chest3":47,
+                      "head0":263,
+                      "head1":184,
+                      "head2":158,
+                      "head3":118
+                    }
+
+                  }
+                ]
               }
-
-            },{
-              "name":"S12K",
-              "image_url":"Icon_weapon_S12K.png",
-              "magazine":5,
-              "ammo":"12Gauge",
-              "range":0,
-              "stability":0,
-              "rate":0,
-              "reload":0,
-              "capacity":500,
-              "damage":
-              {
-                "base":999,
-                "chest0":999,
-                "chest1":999,
-                "chest2":999,
-                "chest3":999,
-                "head0":999,
-                "head1":999,
-                "head2":999,
-                "head3":999
-              }
-
-            },{
-              "name":"S1897",
-              "image_url":"Icon_weapon_S1897.png",
-              "magazine":2,
-              "ammo":"12Gauge",
-              "range":0,
-              "stability":0,
-              "rate":0,
-              "reload":0,
-              "capacity":500,
-              "damage":
-              {
-                "base":999,
-                "chest0":999,
-                "chest1":999,
-                "chest2":999,
-                "chest3":999,
-                "head0":999,
-                "head1":999,
-                "head2":999,
-                "head3":999
-              }
-
-            }
-          ]
-        },{
-          "type_name":"Sniper Rifle",
-          "items":[
-            {
-              "name":"AWM",
-              "image_url":"Icon_weapon_AWM.png",
-              "magazine":5,
-              "ammo":".300 Magnum",
-              "range":0,
-              "stability":0,
-              "rate":0,
-              "reload":0,
-              "capacity":500,
-              "damage":
-              {
-                "base":66,
-                "chest0":131,
-                "chest1":92,
-                "chest2":79,
-                "chest3":59,
-                "head0":328,
-                "head1":229,
-                "head2":197,
-                "head3":147
-              }
-
-            },{
-              "name":"M24",
-              "image_url":"Icon_weapon_M24.png",
-              "magazine":5,
-              "ammo":"7.62mm",
-              "range":0,
-              "stability":0,
-              "rate":0,
-              "reload":0,
-              "capacity":500,
-              "damage":
-              {
-                "base":42,
-                "chest0":84,
-                "chest1":59,
-                "chest2":50,
-                "chest3":38,
-                "head0":210,
-                "head1":147,
-                "head2":126,
-                "head3":95
-              }
-
-            },{
-              "name":"Kar 98",
-              "image_url":"Icon_weapon_Kar98k.png",
-              "magazine":5,
-              "ammo":"7.62mm",
-              "range":0,
-              "stability":0,
-              "rate":0,
-              "reload":0,
-              "capacity":500,
-              "damage":
-              {
-                "base":36,
-                "chest0":72,
-                "chest1":50,
-                "chest2":43,
-                "chest3":32,
-                "head0":180,
-                "head1":126,
-                "head2":108,
-                "head3":81
-              }
-
-            }
-          ]
-        },{
-          "type_name":"DMR",
-          "items":[
-            {
-              "name":"SKS",
-              "image_url":"Icon_weapon_SKS.png",
-              "magazine":5,
-              "ammo":"7.62mm",
-              "range":0,
-              "stability":0,
-              "rate":0,
-              "reload":0,
-              "capacity":500,
-              "damage":
-              {
-                "base":28,
-                "chest0":55,
-                "chest1":39,
-                "chest2":33,
-                "chest3":25,
-                "head0":138,
-                "head1":96,
-                "head2":83,
-                "head3":62
-              }
-
-            }
-          ]
-        },{
-          "type_name":"Pistol",
-          "items":[
-            {
-              "name":"P92",
-              "image_url":"Icon_weapon_P92.png",
-              "magazine":15,
-              "ammo":"9mm",
-              "range":0,
-              "stability":0,
-              "rate":0,
-              "reload":0,
-              "capacity":100,
-              "damage":
-              {
-                "base":15,
-                "chest0":29,
-                "chest1":20,
-                "chest2":17,
-                "chest3":13,
-                "head0":73,
-                "head1":51,
-                "head2":44,
-                "head3":33
-              }
-
-            },{
-              "name":"P1911",
-              "image_url":"Icon_weapon_P1911.png",
-              "magazine":7,
-              "ammo":"0.45 ACP",
-              "range":0,
-              "stability":0,
-              "rate":0,
-              "reload":0,
-              "capacity":100,
-              "damage":
-              {
-                "base":18,
-                "chest0":35,
-                "chest1":25,
-                "chest2":21,
-                "chest3":16,
-                "head0":88,
-                "head1":61,
-                "head2":53,
-                "head3":39
-              }
-
-            },{
-              "name":"R1895",
-              "image_url":"Icon_weapon_R1895.png",
-              "magazine":5,
-              "ammo":"7.62mm",
-              "range":0,
-              "stability":0,
-              "rate":0,
-              "reload":0,
-              "capacity":100,
-              "damage":
-              {
-                "base":23,
-                "chest0":46,
-                "chest1":32,
-                "chest2":28,
-                "chest3":21,
-                "head0":115,
-                "head1":81,
-                "head2":69,
-                "head3":52
-              }
-
-            }
-          ]
-        },{
-          "type_name":"Melee",
-          "items":[
-            {
-              "name":"Pan",
-              "image_url":"Icon_weapon_Pan.png",
-              "range":0,
-              "rate":0,
-              "capacity":120,
-              "damage":
-              {
-                "base":0,
-                "chest0":0,
-                "chest1":0,
-                "chest2":0,
-                "chest3":0,
-                "head0":0,
-                "head1":0,
-                "head2":0,
-                "head3":0
-              }
-
-            },{
-              "name":"Crowbar",
-              "image_url":"Icon_weapon_Crowbar.png",
-              "range":0,
-              "rate":0,
-              "capacity":120,
-              "damage":
-              {
-                "base":0,
-                "chest0":0,
-                "chest1":0,
-                "chest2":0,
-                "chest3":0,
-                "head0":0,
-                "head1":0,
-                "head2":0,
-                "head3":0
-              }
-
-            },{
-              "name":"Sickle",
-              "image_url":"Icon_weapon_Sickle.png",
-              "range":0,
-              "rate":0,
-              "capacity":120,
-              "damage":
-              {
-                "base":0,
-                "chest0":0,
-                "chest1":0,
-                "chest2":0,
-                "chest3":0,
-                "head0":0,
-                "head1":0,
-                "head2":0,
-                "head3":0
-              }
-
-            },{
-              "name":"Machete",
-              "image_url":"Icon_weapon_Machete.png",
-              "range":0,
-              "rate":0,
-              "capacity":120,
-              "damage":
-              {
-                "base":0,
-                "chest0":0,
-                "chest1":0,
-                "chest2":0,
-                "chest3":0,
-                "head0":0,
-                "head1":0,
-                "head2":0,
-                "head3":0
-              }
-
-            }
-          ]
-        },{
-          "type_name":"Grenade",
-          "items":[
-            {
-              "name":"Frag Grenade",
-              "image_url":"Icon_weapon_FragGrenade.png",
-              "range":0,
-              "capacity":12,
-              "damage":
-              {
-                "base":0
-              }
-
-            },{
-              "name":"Smoke Grenade",
-              "image_url":"Icon_weapon_SmokeGrenade.png",
-              "range":0,
-              "capacity":16,
-              "damage":
-              {
-                "base":0
-              }
-
-            },{
-              "name":"Stun Grenade",
-              "image_url":"Icon_weapon_StunGrenade.png",
-              "range":0,
-              "capacity":14,
-              "damage":
-              {
-                "base":0
-              }
-
-            },{
-              "name":"Molotov Cocktail",
-              "image_url":"Icon_weapon_Molotov.png",
-              "range":0,
-              "capacity":18,
-              "damage":
-              {
-                "base":0
-              }
-
-            }
-          ]
-        },{
-          "type_name":"Crossbow",
-          "items":[
-            {
-              "name":"Crossbow",
-              "image_url":"Icon_weapon_Crossbow.png",
-              "magazine":1,
-              "ammo":"Bolt",
-              "range":0,
-              "reload":0,
-              "stability":0,
-              "rate":0,
-              "capacity":500,
-              "damage":
-              {
-                "base":53,
-                "chest0":105,
-                "chest1":74,
-                "chest2":63,
-                "chest3":47,
-                "head0":263,
-                "head1":184,
-                "head2":158,
-                "head3":118
-              }
-
-            }
-          ]
-        }
-
-      ]
-    },
-    {
-      "cat_name":"Ammunition",
-      "types":[
+            ]},
+      "ammo":[
         {
           "type_name":"Default",
           "items":[
@@ -669,11 +639,8 @@
             }
           ]
         }
-      ]
-    },
-    {
-      "cat_name":"Attachments",
-      "types": [
+      ],
+      "attachments": [
         {
           "type_name":"Muzzle",
           "items": [
@@ -871,10 +838,8 @@
 
           ]
         }
-      ]
-    },{
-      "cat_name":"Equipment",
-      "types":[
+      ],
+      "equipment":[
         {
           "type_name":"Backpack",
           "items":[
@@ -1063,10 +1028,8 @@
             }
           ]
         }
-      ]
-    },{
-      "cat_name":"Consumables",
-      "types":[
+      ],
+      "consumables":[
         {
           "type_name":"Medical",
           "items":[
@@ -1134,10 +1097,8 @@
             }
           ]
         }
-      ]
-    },{
-      "cat_name":"Vehicles",
-      "types":[
+      ],
+      "vehicles":[
         {
           "type_name":"Default",
           "items":[
@@ -1196,7 +1157,7 @@
     }
 
 
-  ]
+
 }
 
 

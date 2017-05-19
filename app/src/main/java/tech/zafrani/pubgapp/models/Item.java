@@ -121,7 +121,7 @@ public class Item implements Serializable {
 
     @Override
     public String toString() {
-        return "Item{" +
+        return "Type{" +
                 "category='" + category + '\'' +
                 ", type='" + type + '\'' +
                 ", name='" + name + '\'' +
@@ -219,6 +219,7 @@ public class Item implements Serializable {
     public float getSeats() {
         return seats;
     }
+
     @Nullable
     public String getImageUrl() {
         return imageUrl;

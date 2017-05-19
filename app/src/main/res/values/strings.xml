@@ -20,6 +20,33 @@
     <string name="label_contact_us">Contact Us</string>
     <string name="label_send_email">Send Email</string>
 
+    <string name="category_weapons">Weapons</string>
+    <string name="category_ammunition">Ammunition</string>
+    <string name="category_attachments">Attachments</string>
+    <string name="category_equipment">Equipment</string>
+    <string name="category_consumables">Consumables</string>
+    <string name="category_vehicles">Vehicles</string>
+
+    <string name="weapon_type_assault">Assault Rifle</string>
+    <string name="weapon_type_smg">SMG</string>
+    <string name="weapon_type_lmg">LMG</string>
+    <string name="weapon_type_shotgun">Shotgun</string>
+    <string name="weapon_type_sniper">Sniper Rifle</string>
+    <string name="weapon_type_dmr">DMR</string>
+    <string name="weapon_type_pistol">Pistol</string>
+    <string name="weapon_type_melee">Melee</string>
+    <string name="weapon_type_grenade">Grenade</string>
+    <string name="weapon_type_crossbow">Crossbow</string>
+
+    <string name="weapon_item_AKM">AKM</string>
+    <string name="weapon_item_M16A4">M16A4</string>
+    <string name="weapon_item_M416">M416</string>
+    <string name="weapon_item_SCAR_L">SCAR-L</string>
+
+
+    <string name="label_weapon_damage">Damage: %1$.0f</string>
+
+
     <string name="item_view">View: </string>
     <string name="item_view_linear_description">Linear item display.</string>
     <string name="item_view_grid_description">Grid item display.</string>
@@ -32,7 +59,6 @@
     <string name="row_item_rate">Rate: %1$.0f</string>
     <string name="row_item_reload">Reload: %1$.1f</string>
     <string name="row_item_protection">Protection: %1$.0f</string>
-    <string name="row_item_damage">Damage: %1$.0f</string>
     <string name="row_item_boost">Boost: %1$.0f</string>
     <string name="row_item_heal">Heal: %1$.0f</string>
     <string name="row_item_max_heal">Max Heal: %1$.0f</string>

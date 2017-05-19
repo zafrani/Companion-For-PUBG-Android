@@ -6,17 +6,17 @@
               android:padding="@dimen/regular_margin">
 
     <RelativeLayout
-        android:id="@+id/viewholder_item_image_content"
+        android:id="@+id/viewholder_weapon_image_content"
         android:layout_width="@dimen/item_default_image_size"
         android:layout_height="@dimen/item_default_image_size">
 
         <ImageView
-            android:id="@+id/viewholder_item_image"
+            android:id="@+id/viewholder_weapon_item_image"
             android:layout_width="@dimen/item_default_image_size"
             android:layout_height="@dimen/item_default_image_size"/>
 
         <ProgressBar
-            android:id="@+id/viewholder_item_progress"
+            android:id="@+id/viewholder_weapon_item_image_progress"
             style="?android:attr/progressBarStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -25,7 +25,7 @@
 
 
     <LinearLayout
-        android:id="@+id/viewholder_item_name_content"
+        android:id="@+id/viewholder_weapon_name_content"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -33,7 +33,7 @@
         android:paddingStart="@dimen/regular_margin">
 
         <TextView
-            android:id="@+id/viewholder_item_name"
+            android:id="@+id/viewholder_weapon_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="AKM"
@@ -41,7 +41,7 @@
             android:textSize="4pt"/>
 
         <TextView
-            android:id="@+id/viewholder_item_type"
+            android:id="@+id/viewholder_weapon_type"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Assault Rifle"
@@ -49,21 +49,37 @@
             android:textSize="3pt"/>
 
         <TextView
-            android:id="@+id/viewholder_item_ammo"
+            android:id="@+id/viewholder_weapon_ammo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Ammo: 7.62mm"
             android:textColor="@color/white"
             android:textSize="3pt"/>
+
+        <RelativeLayout
+            android:layout_width="@dimen/item_default_small_image_size"
+            android:layout_height="@dimen/item_default_small_image_size">
+        <ImageView
+            android:id="@+id/viewholder_weapon_ammo_image"
+            android:layout_width="@dimen/item_default_small_image_size"
+            android:layout_height="@dimen/item_default_small_image_size"/>
+            <ProgressBar
+                android:id="@+id/viewholder_weapon_ammo_image_progress"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/viewholder_item_stats_content"
+        android:id="@+id/viewholder_weapon_stats_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/viewholder_weapon_damage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:maxLines="1"
@@ -81,6 +97,7 @@
 
 
         <TextView
+            android:id="@+id/viewholder_weapon_range"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:maxLines="1"
@@ -97,6 +114,7 @@
             android:progress="50"/>
 
         <TextView
+            android:id="@+id/viewholder_weapon_stability"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:maxLines="1"
@@ -113,6 +131,7 @@
             android:progress="50"/>
 
         <TextView
+            android:id="@+id/viewholder_weapon_rate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:maxLines="1"

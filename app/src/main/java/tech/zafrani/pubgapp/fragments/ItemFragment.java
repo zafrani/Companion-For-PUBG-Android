@@ -2,7 +2,6 @@ package tech.zafrani.pubgapp.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -11,13 +10,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 import tech.zafrani.pubgapp.R;
-import tech.zafrani.pubgapp.adapters.ItemTabAdapter;
-import tech.zafrani.pubgapp.models.Category;
-import tech.zafrani.pubgapp.models.Items;
+import tech.zafrani.pubgapp.models.items.Items;
 import tech.zafrani.pubgapp.utils.FileUtil;
 
 public class ItemFragment extends BaseFragment {
@@ -37,18 +32,18 @@ public class ItemFragment extends BaseFragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        List<Category> categories = new ArrayList<>();
         try {
-            final Items itemList = FileUtil.getItems(getActivity());
-            categories = itemList.getCategories();
+            final Items categories = FileUtil.getItems(getActivity());
+            Log.e("Items", categories.toString());
         } catch (IOException e) {
             e.printStackTrace();
             Log.e(getClass().getSimpleName(), "Error: " + e.getLocalizedMessage());
         }
         final ViewPager viewPager = (ViewPager) view.findViewById(R.id.fragment_item_viewpager);
-        viewPager.setAdapter(new ItemTabAdapter(getChildFragmentManager(), categories));
-        final TabLayout tabLayout = (TabLayout) view.findViewById(R.id.fragment_item_tablayout);
-        tabLayout.setupWithViewPager(viewPager);
+        //viewPager.setAdapter(new ItemTabAdapter(getChildFragmentManager(), categories));
+       // final TabLayout tabLayout = (TabLayout) view.findViewById(R.id.fragment_item_tablayout);
+       // tabLayout.setupWithViewPager(viewPager);
+
 
 
 

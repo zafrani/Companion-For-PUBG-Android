@@ -12,10 +12,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.List;
 
-import tech.zafrani.pubgapp.models.Category;
-import tech.zafrani.pubgapp.models.Items;
+import tech.zafrani.pubgapp.models.items.Items;
 import tech.zafrani.pubgapp.models.spawns.Spawns;
 
 public class FileUtil {
@@ -28,7 +26,7 @@ public class FileUtil {
             final Gson gson = new Gson();
             final BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
 
-            return bindItems(gson.fromJson(reader, Items.class));
+            return gson.fromJson(reader, Items.class);
 
         }
         return null;
@@ -47,14 +45,6 @@ public class FileUtil {
         return null;
     }
 
-    @NonNull
-    public static Items bindItems(@NonNull final Items items) {
-        final List<Category> categories = items.getCategories();
-        for (final Category category: categories){
-            category.updateChildren();
-        }
-        return items;
-    }
 
     @Nullable
     public static byte[] getBytesForFile(@NonNull final Context context,
