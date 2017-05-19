@@ -10,7 +10,7 @@ public class Constants {
     public final static String ITEM_IMAGE_URL = "https://github.com/ZafraniTechLLC/PUBG-Companion-Images/blob/master/images/";
 
     @NonNull
-    public final static String GITHUB_APP_URL = "https://github.com/ZafraniTechLLC/PUBG-Companion";
+    public final static String GITHUB_APP_URL = "https://github.com/ZafraniTechLLC/PUBG-Companion-Android";
 
     @NonNull
     public final static String GITHUB_IMAGE_URL = "https://github.com/ZafraniTechLLC/PUBG-Companion-Images";
