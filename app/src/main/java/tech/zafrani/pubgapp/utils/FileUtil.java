@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
+import tech.zafrani.pubgapp.PUBGApplication;
 import tech.zafrani.pubgapp.models.items.Items;
 import tech.zafrani.pubgapp.models.spawns.Spawns;
 
@@ -23,7 +24,7 @@ public class FileUtil {
         final InputStream inputStream = context.getAssets().open("items.json");
 
         if (inputStream != null) {
-            final Gson gson = new Gson();
+            final Gson gson = PUBGApplication.getInstance().getGson();
             final BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
 
             return gson.fromJson(reader, Items.class);
@@ -31,12 +32,13 @@ public class FileUtil {
         }
         return null;
     }
+
     @Nullable
     public static Spawns getSpawns(@NonNull final Context context) throws IOException {
         final InputStream inputStream = context.getAssets().open("spawns.json");
 
         if (inputStream != null) {
-            final Gson gson = new Gson();
+            final Gson gson = PUBGApplication.getInstance().getGson();
             final BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
 
             return gson.fromJson(reader, Spawns.class);

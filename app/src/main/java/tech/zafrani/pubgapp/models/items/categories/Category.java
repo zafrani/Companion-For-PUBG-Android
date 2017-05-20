@@ -1,5 +1,6 @@
 package tech.zafrani.pubgapp.models.items.categories;
 
+import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.StringRes;
 
@@ -7,13 +8,12 @@ import android.support.annotation.StringRes;
 import java.io.Serializable;
 import java.util.List;
 
-import tech.zafrani.pubgapp.PUBGApplication;
 import tech.zafrani.pubgapp.R;
-import tech.zafrani.pubgapp.models.items.types.Type;
+import tech.zafrani.pubgapp.models.items.Item;
 
-public interface Category<CategoryItem extends Type> extends Serializable {
-    @NonNull
-    String getName();
+public interface Category<CategoryItem extends Item> extends Serializable {
+    @StringRes
+    int getCategoryNameRes();
 
     @NonNull
     List<CategoryItem> getItems();
@@ -33,9 +33,9 @@ public interface Category<CategoryItem extends Type> extends Serializable {
             this.stringRes = stringRes;
         }
 
-        @NonNull
-        public String getValue() {
-            return PUBGApplication.getInstance().getString(stringRes);
+        @StringRes
+        public int getStringRes() {
+            return stringRes;
         }
     }
 

@@ -20,8 +20,6 @@ public class Items implements Serializable {
         this.categories = categories;
     }
 
-
-
     @Override
     public String toString() {
         return "Items{" +

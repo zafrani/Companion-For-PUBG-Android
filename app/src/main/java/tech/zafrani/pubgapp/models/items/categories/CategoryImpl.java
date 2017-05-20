@@ -2,29 +2,15 @@ package tech.zafrani.pubgapp.models.items.categories;
 
 
 import android.support.annotation.NonNull;
+import android.support.annotation.StringRes;
 
-import tech.zafrani.pubgapp.models.items.types.Type;
+import tech.zafrani.pubgapp.models.items.Item;
 
-public abstract class CategoryImpl<CategoryItem extends Type> implements Category<CategoryItem> {
+public abstract class CategoryImpl<CategoryItem extends Item>
+        implements Category<CategoryItem> {
 
-    private final Name name;
-
-    public CategoryImpl(@NonNull final Name name) {
-        this.name = name;
-    }
-
-    @Override
-    public String toString() {
-        return "CategoryImpl{" +
-               "\nname=" + this.name +
-               '}';
-    }
-
-    @NonNull
-    @Override
-    public String getName() {
-        return name.getValue();
-    }
+    @StringRes
+    public abstract int getCategoryNameRes();
 
 
 }

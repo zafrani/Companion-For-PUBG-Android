@@ -15,7 +15,7 @@ import tech.zafrani.pubgapp.adapters.viewholders.BaseViewHolder;
 public abstract class BaseRecyclerViewAdapterImpl<Model extends Serializable, ViewHolder extends BaseViewHolder<Model>>
         extends RecyclerView.Adapter<ViewHolder>
         implements RecyclerViewAdapter<Model>,
-                   BaseViewHolder.Listener<Model>{
+                   BaseViewHolder.Listener<Model> {
 
     @NonNull
     private final List<Model> models;
@@ -47,6 +47,19 @@ public abstract class BaseRecyclerViewAdapterImpl<Model extends Serializable, Vi
             return null;
         }
         return this.models.get(position);
+    }
+
+
+
+    public void addAll(@NonNull final List<Model> models) {
+        final int startPosition = this.models.size();
+        this.models.addAll(models);
+        this.notifyItemRangeInserted(startPosition, this.models.size() - 1);
+    }
+
+    public void add(@NonNull final Model model) {
+        this.models.add(model);
+        notifyItemInserted(this.models.size() - 1);
     }
 
 

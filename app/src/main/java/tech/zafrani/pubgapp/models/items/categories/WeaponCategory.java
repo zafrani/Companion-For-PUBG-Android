@@ -2,33 +2,42 @@ package tech.zafrani.pubgapp.models.items.categories;
 
 
 import android.support.annotation.NonNull;
+import android.support.annotation.StringRes;
 
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Arrays;
 import java.util.List;
 
-import tech.zafrani.pubgapp.models.items.types.WeaponType;
+import tech.zafrani.pubgapp.models.items.WeaponItem;
 
-public class WeaponCategory extends CategoryImpl<WeaponType> {
-    @SerializedName("types")
-    private final List<WeaponType> weaponTypes;
+public class WeaponCategory extends CategoryImpl<WeaponItem> {
+    @NonNull
+    @SerializedName("weapons")
+    private final List<WeaponItem> weapons;
 
-    public WeaponCategory(@NonNull final List<WeaponType> weaponTypes) {
-        super(Name.Weapons);
-        this.weaponTypes = weaponTypes;
+    public WeaponCategory(@NonNull final List<WeaponItem> weapons) {
+        this.weapons = weapons;
+
     }
 
     @Override
     public String toString() {
         return "WeaponCategory{" +
-               "\nweaponTypes=" + Arrays.toString(this.weaponTypes.toArray()) +
+               "\nweapons=" + Arrays.toString(this.weapons.toArray()) +
                '}';
+    }
+
+    @StringRes
+    @Override
+    public int getCategoryNameRes() {
+        return Name.Weapons.getStringRes();
     }
 
     @NonNull
     @Override
-    public List<WeaponType> getItems() {
-        return this.weaponTypes;
+    public List<WeaponItem> getItems() {
+        return this.weapons;
     }
+
 }

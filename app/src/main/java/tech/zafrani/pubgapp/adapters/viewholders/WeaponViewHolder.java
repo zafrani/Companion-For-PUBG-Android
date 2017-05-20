@@ -9,13 +9,13 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import tech.zafrani.pubgapp.R;
-import tech.zafrani.pubgapp.models.Item;
+import tech.zafrani.pubgapp.models.items.WeaponItem;
 
-public class WeaponViewHolder2 extends ItemViewHolder2 {
+public class WeaponViewHolder extends BaseViewHolder<WeaponItem> {
 
-    public static WeaponViewHolder2 createViewHolder(@NonNull final ViewGroup parent,
-                                                     @NonNull final Listener<Item> listener) {
-        return new WeaponViewHolder2(LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_weapon, parent, false), listener);
+    public static WeaponViewHolder createViewHolder(@NonNull final ViewGroup parent,
+                                                    @NonNull final Listener<WeaponItem> listener) {
+        return new WeaponViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_weapon, parent, false), listener);
     }
 
     private final ImageView itemImage;
@@ -30,7 +30,7 @@ public class WeaponViewHolder2 extends ItemViewHolder2 {
     private final TextView stability;
     private final TextView rate;
 
-    public WeaponViewHolder2(@NonNull final View itemView, @NonNull final Listener<Item> listener) {
+    public WeaponViewHolder(@NonNull final View itemView, @NonNull final Listener<WeaponItem> listener) {
         super(itemView, listener);
         this.itemImage = (ImageView) itemView.findViewById(R.id.viewholder_weapon_item_image);
         this.ammoImage = (ImageView) itemView.findViewById(R.id.viewholder_weapon_ammo_image);
@@ -46,16 +46,15 @@ public class WeaponViewHolder2 extends ItemViewHolder2 {
     }
 
     @Override
-    public void bind(int position) {
-        final Item item = get(position);
+    public void bind(final int position) {
+        final WeaponItem weapon = get(position);
 
-        if (item == null) {
-            throw new IllegalStateException("invalid item position");
+        if (weapon == null) {
+            throw new IllegalStateException("invalid weapon position");
         }
-        this.name.setText(item.getName());
-        this.type.setText(item.getType());
-        this.ammo.setText(item.getAmmo());
-//        this.damage.setText(itemView.getContext().getString(R.string.label_weapon_damage, item.getDamage().getChest0()));
+
+        this.name.setText(weapon.getName());
+        this.type.setText(weapon.getWeaponType().getStringRes());
 
 
     }
