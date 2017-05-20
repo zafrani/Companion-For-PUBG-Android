@@ -1,4 +1,4 @@
-package tech.zafrani.pubgapp.fragments;
+package tech.zafrani.companionforpubg.fragments;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -16,7 +16,7 @@ import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 
 import tech.zafrani.pubgapp.R;
-import tech.zafrani.pubgapp.maps.GoogleMapControllerImpl;
+import tech.zafrani.companionforpubg.maps.GoogleMapControllerImpl;
 
 
 public class PUBGMapFragment extends BaseFragment

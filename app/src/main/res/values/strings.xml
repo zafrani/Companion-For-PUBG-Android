@@ -11,7 +11,7 @@
         See README for detailed explanation.
      -->
     <string name="maps_api_key">@string/local_maps_api_key</string>
-    <string name="app_name">PUBG Companion</string>
+    <string name="app_name">Companion for PUBG</string>
     <string name="label_map">Map</string>
     <string name="label_items">Items</string>
     <string name="label_about">About</string>
