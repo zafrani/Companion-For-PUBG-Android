@@ -20,7 +20,7 @@ import java.util.List;
 
 import tech.zafrani.companionforpubg.models.Category;
 import tech.zafrani.companionforpubg.utils.FileUtil;
-import tech.zafrani.pubgapp.R;
+import tech.zafrani.companionforpubg.R;
 import tech.zafrani.companionforpubg.adapters.ItemTabAdapter;
 import tech.zafrani.companionforpubg.models.Items;
 

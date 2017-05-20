@@ -14,7 +14,7 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-import tech.zafrani.pubgapp.R;
+import tech.zafrani.companionforpubg.R;
 import tech.zafrani.companionforpubg.adapters.ItemListAdapter;
 import tech.zafrani.companionforpubg.models.Category;
 import tech.zafrani.companionforpubg.models.Item;

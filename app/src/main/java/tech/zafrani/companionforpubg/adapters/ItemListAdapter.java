@@ -10,7 +10,7 @@ import java.util.List;
 
 import tech.zafrani.companionforpubg.adapters.viewholders.AmmunitionViewHolder;
 import tech.zafrani.companionforpubg.adapters.viewholders.VehicleViewHolder;
-import tech.zafrani.pubgapp.R;
+import tech.zafrani.companionforpubg.R;
 import tech.zafrani.companionforpubg.adapters.viewholders.AttachmentsViewHolder;
 import tech.zafrani.companionforpubg.adapters.viewholders.ConsumablesViewHolder;
 import tech.zafrani.companionforpubg.adapters.viewholders.EquipmentViewHolder;

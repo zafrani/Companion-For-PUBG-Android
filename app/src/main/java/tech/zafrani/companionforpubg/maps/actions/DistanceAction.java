@@ -13,7 +13,7 @@ import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
 
 import tech.zafrani.companionforpubg.maps.GoogleMapController;
-import tech.zafrani.pubgapp.R;
+import tech.zafrani.companionforpubg.R;
 
 public class DistanceAction extends Action
         implements

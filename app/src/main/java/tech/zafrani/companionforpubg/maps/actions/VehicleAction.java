@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import tech.zafrani.companionforpubg.maps.GoogleMapController;
-import tech.zafrani.pubgapp.R;
+import tech.zafrani.companionforpubg.R;
 import tech.zafrani.companionforpubg.models.spawns.Spawns;
 
 public class VehicleAction extends Action {

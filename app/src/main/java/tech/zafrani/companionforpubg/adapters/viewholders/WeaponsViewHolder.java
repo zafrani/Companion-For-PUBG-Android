@@ -11,7 +11,7 @@ import com.squareup.picasso.Picasso;
 import tech.zafrani.companionforpubg.models.Damage;
 import tech.zafrani.companionforpubg.models.Item;
 import tech.zafrani.companionforpubg.utils.Constants;
-import tech.zafrani.pubgapp.R;
+import tech.zafrani.companionforpubg.R;
 
 
 public class WeaponsViewHolder extends ItemViewHolder{
