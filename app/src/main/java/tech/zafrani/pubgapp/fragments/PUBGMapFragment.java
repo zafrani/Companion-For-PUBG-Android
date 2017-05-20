@@ -140,6 +140,9 @@ public class PUBGMapFragment extends BaseFragment
             return;
         }
         this.mapController.toggleRunDistance();
+        if (this.mapController.isShowingDistance()) {
+            showToastIfNeeded(); //todo make a tutorial and remove
+        }
         updateUi();
     }
 
@@ -158,7 +161,6 @@ public class PUBGMapFragment extends BaseFragment
             boatIcon.setColorFilter(ContextCompat.getColor(getActivity(), R.color.white));
         }
         if (this.mapController.isShowingDistance()) {
-            showToastIfNeeded(); //todo make a tutorial and remove
             runDistanceIcon.setColorFilter(ContextCompat.getColor(getActivity(), R.color.colorAccent));
         } else {
             runDistanceIcon.setColorFilter(ContextCompat.getColor(getActivity(), R.color.white));
