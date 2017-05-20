@@ -2,7 +2,7 @@
 ##### The unofficial PUBG Companion App.
 
 ### What is it?
-PUBG Companion is an unofficial companion Android app for PlayerUnknown's Battlegrounds. Its community 
+Companion For PUBG is an unofficial companion Android app for PlayerUnknown's Battlegrounds. Its community 
 driven to provide players with the latest and most up to date information on maps, items,
 vehicles and news.
 
