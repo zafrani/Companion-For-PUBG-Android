@@ -10,9 +10,9 @@ vehicles and news.
 Submit pull requests here. Help us review pull requests and most importantly help keep our data 
 and images up to date. **Most of our data is unfinished with placeholders. Any help updating it would be most appreciated!** We also have a (somewhat) organized list of tasks we need help with, they can be seen in the Projects tab above.
 
-Data json files can be found here: https://github.com/ZafraniTechLLC/PUBG-Companion/tree/master/app/src/main/assets
+Data json files can be found here: https://github.com/ZafraniTechLLC/Companion-For-PUBG-Android/tree/master/app/src/main/assets
 
-Images and map tiles can be found here: https://github.com/ZafraniTechLLC/PUBG-Companion-Images
+Images and map tiles can be found here: https://github.com/ZafraniTechLLC/Companion-For-PUBG-Images
 
 ### How to build
 1. Clone/Download the repository and open in Android Studio
