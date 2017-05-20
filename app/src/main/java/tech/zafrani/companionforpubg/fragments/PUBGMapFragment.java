@@ -15,7 +15,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 
-import tech.zafrani.pubgapp.R;
+import tech.zafrani.companionforpubg.R;
 import tech.zafrani.companionforpubg.maps.GoogleMapControllerImpl;
 
 

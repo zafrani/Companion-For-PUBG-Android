@@ -12,7 +12,7 @@ import java.util.List;
 
 import tech.zafrani.companionforpubg.maps.GoogleMapController;
 import tech.zafrani.companionforpubg.models.spawns.Spawns;
-import tech.zafrani.pubgapp.R;
+import tech.zafrani.companionforpubg.R;
 
 public class BoatAction extends Action {
     @NonNull

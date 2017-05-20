@@ -10,7 +10,7 @@ import android.widget.TextView;
 import com.squareup.picasso.Picasso;
 
 import tech.zafrani.companionforpubg.models.Item;
-import tech.zafrani.pubgapp.R;
+import tech.zafrani.companionforpubg.R;
 import tech.zafrani.companionforpubg.utils.Constants;
 
 public class EquipmentViewHolder extends ItemViewHolder {

@@ -17,7 +17,7 @@ import android.view.MenuItem;
 import android.widget.FrameLayout;
 
 import tech.zafrani.companionforpubg.fragments.PUBGMapFragment;
-import tech.zafrani.pubgapp.R;
+import tech.zafrani.companionforpubg.R;
 import tech.zafrani.companionforpubg.fragments.ItemFragment;
 import tech.zafrani.companionforpubg.utils.Constants;
 

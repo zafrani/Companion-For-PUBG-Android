@@ -1,4 +1,4 @@
-package tech.zafrani.pubgapp;
+package tech.zafrani.companionforpubg;
 
 import org.junit.Test;
 
