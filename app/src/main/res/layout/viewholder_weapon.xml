@@ -26,8 +26,9 @@
 
     <LinearLayout
         android:id="@+id/viewholder_weapon_name_content"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
+        android:layout_weight="2"
         android:orientation="vertical"
         android:paddingEnd="@dimen/regular_margin"
         android:paddingStart="@dimen/regular_margin">
@@ -38,7 +39,7 @@
             android:layout_height="wrap_content"
             android:text="AKM"
             android:textColor="@color/white"
-            android:textSize="4pt"/>
+            android:textSize="5pt"/>
 
         <TextView
             android:id="@+id/viewholder_weapon_type"
@@ -46,7 +47,7 @@
             android:layout_height="wrap_content"
             android:text="Assault Rifle"
             android:textColor="@color/white"
-            android:textSize="3pt"/>
+            android:textSize="4pt"/>
 
         <TextView
             android:id="@+id/viewholder_weapon_ammo"
@@ -54,15 +55,17 @@
             android:layout_height="wrap_content"
             android:text="Ammo: 7.62mm"
             android:textColor="@color/white"
-            android:textSize="3pt"/>
+            android:textSize="4pt"/>
 
         <RelativeLayout
             android:layout_width="@dimen/item_default_small_image_size"
             android:layout_height="@dimen/item_default_small_image_size">
-        <ImageView
-            android:id="@+id/viewholder_weapon_ammo_image"
-            android:layout_width="@dimen/item_default_small_image_size"
-            android:layout_height="@dimen/item_default_small_image_size"/>
+
+            <ImageView
+                android:id="@+id/viewholder_weapon_ammo_image"
+                android:layout_width="@dimen/item_default_small_image_size"
+                android:layout_height="@dimen/item_default_small_image_size"/>
+
             <ProgressBar
                 android:id="@+id/viewholder_weapon_ammo_image_progress"
                 style="?android:attr/progressBarStyleSmall"
@@ -74,8 +77,9 @@
 
     <LinearLayout
         android:id="@+id/viewholder_weapon_stats_content"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_weight="4"
         android:orientation="vertical">
 
         <TextView
@@ -85,7 +89,7 @@
             android:maxLines="1"
             android:text="Damage: 46"
             android:textColor="@color/white"
-            android:textSize="3pt"/>
+            android:textSize="4pt"/>
 
         <ProgressBar
             style="?android:attr/progressBarStyleHorizontal"
@@ -103,7 +107,7 @@
             android:maxLines="1"
             android:text="Damage: 46"
             android:textColor="@color/white"
-            android:textSize="3pt"/>
+            android:textSize="4pt"/>
 
         <ProgressBar
             style="?android:attr/progressBarStyleHorizontal"
@@ -120,7 +124,7 @@
             android:maxLines="1"
             android:text="Damage: 46"
             android:textColor="@color/white"
-            android:textSize="3pt"/>
+            android:textSize="4pt"/>
 
         <ProgressBar
             style="?android:attr/progressBarStyleHorizontal"
@@ -137,7 +141,7 @@
             android:maxLines="1"
             android:text="Damage: 46"
             android:textColor="@color/white"
-            android:textSize="3pt"/>
+            android:textSize="4pt"/>
 
         <ProgressBar
             style="?android:attr/progressBarStyleHorizontal"
