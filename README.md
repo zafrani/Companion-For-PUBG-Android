@@ -1,4 +1,4 @@
-# PUBG Companion
+# Companion For PUBG
 ##### The unofficial PUBG Companion App.
 
 ### What is it?
