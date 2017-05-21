@@ -5,9 +5,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -15,6 +13,8 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 
+import butterknife.BindView;
+import butterknife.OnClick;
 import tech.zafrani.companionforpubg.R;
 import tech.zafrani.companionforpubg.maps.GoogleMapControllerImpl;
 
@@ -29,22 +29,22 @@ public class PUBGMapFragment extends BaseFragment
     @Nullable
     private GoogleMapControllerImpl mapController = null;
 
-    private ImageView vehicleIcon;
+    @BindView(R.id.fragment_map_vehicle_icon)
+    ImageView vehicleIcon;
 
-    private ImageView boatIcon;
+    @BindView(R.id.fragment_map_boat_icon)
+    ImageView boatIcon;
 
-    private ImageView runDistanceIcon;
+    @BindView(R.id.fragment_map_distance_icon)
+    ImageView runDistanceIcon;
 
     @Nullable
     private SharedPreferences sharedPreferences = null;
 
     //region BaseFragment
-    @Nullable
     @Override
-    public View onCreateView(final LayoutInflater inflater,
-                             @Nullable final ViewGroup container,
-                             final Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_map, container, false);
+    protected int getLayoutRes() {
+        return R.layout.fragment_map;
     }
 
     @Override
@@ -52,42 +52,14 @@ public class PUBGMapFragment extends BaseFragment
                               @Nullable final Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         this.sharedPreferences = getActivity().getSharedPreferences("temp", Context.MODE_PRIVATE); //todo not this.
-        this.vehicleIcon = (ImageView) view.findViewById(R.id.fragment_map_vehicle_icon);
-        this.boatIcon = (ImageView) view.findViewById(R.id.fragment_map_boat_icon);
-        this.runDistanceIcon = (ImageView) view.findViewById(R.id.fragment_map_distance_icon);
 
         final MapFragment mapFragment = (MapFragment) getChildFragmentManager().findFragmentById(R.id.map_fragment_map);
         mapFragment.getMapAsync(this);
-
-        this.vehicleIcon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                toggleVehicles();
-            }
-        });
-        this.boatIcon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                toggleBoats();
-            }
-        });
-        this.runDistanceIcon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                toggleRunDistance();
-            }
-        });
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        if (this.vehicleIcon != null) {
-            this.vehicleIcon.setOnClickListener(null);
-        }
-        if (this.runDistanceIcon != null) {
-            this.runDistanceIcon.setOnClickListener(null);
-        }
         if (this.mapController != null) {
             this.mapController.release();
             this.mapController = null;
@@ -117,6 +89,21 @@ public class PUBGMapFragment extends BaseFragment
             Toast.makeText(getActivity(), R.string.toast_how_to_use_distance, Toast.LENGTH_LONG).show();
             this.sharedPreferences.edit().putInt(PREF_TIMES_SHOWN, timesShown + 1).apply();
         }
+    }
+
+    @OnClick(R.id.fragment_map_vehicle_icon)
+    void onVehicleClicked(){
+        toggleVehicles();
+    }
+
+    @OnClick(R.id.fragment_map_boat_icon)
+    void onBoatClicked() {
+        toggleBoats();
+    }
+
+    @OnClick(R.id.fragment_map_distance_icon)
+    void onRunClicked() {
+        toggleRunDistance();
     }
 
     private void toggleVehicles() {

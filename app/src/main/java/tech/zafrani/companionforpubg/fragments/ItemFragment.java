@@ -5,27 +5,30 @@ import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 
+import butterknife.BindView;
 import tech.zafrani.companionforpubg.PUBGApplication;
 import tech.zafrani.companionforpubg.R;
+import tech.zafrani.companionforpubg.adapters.ItemTabAdapter;
 
 public class ItemFragment extends BaseFragment {
 
     public static String TAG = ItemFragment.class.getSimpleName();
 
-    @Nullable
-    @Override
-    public View onCreateView(final LayoutInflater inflater,
-                             final ViewGroup container,
-                             final Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_item, container, false);
+    @BindView(R.id.fragment_item_viewpager)
+    ViewPager viewPager;
 
+    @BindView(R.id.fragment_item_tablayout)
+    TabLayout tabLayout;
+
+    @Override
+    protected int getLayoutRes() {
+        return R.layout.fragment_item;
     }
 
     @Override
@@ -33,9 +36,10 @@ public class ItemFragment extends BaseFragment {
                               @Nullable final Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         Log.e(getClass().getSimpleName(), PUBGApplication.getInstance().getItems().toString());
-
+        viewPager.setAdapter(new ItemTabAdapter(getChildFragmentManager()));
+        tabLayout.setupWithViewPager(viewPager);
+        showDisclaimerForFirstTime();
     }
-
 
     //todo remove this after data is updated
     private void showDisclaimerForFirstTime() {

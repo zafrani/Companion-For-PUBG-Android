@@ -16,28 +16,26 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 
+import butterknife.BindView;
 import tech.zafrani.companionforpubg.fragments.PUBGMapFragment;
 import tech.zafrani.companionforpubg.R;
 import tech.zafrani.companionforpubg.fragments.ItemFragment;
 import tech.zafrani.companionforpubg.utils.Constants;
 
-public abstract class DrawerActivity extends AppCompatActivity
+public abstract class DrawerActivity extends BaseActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    @Nullable
-    private DrawerLayout drawerLayout = null;
-    @Nullable
-    private NavigationView navigationView = null;
-    @Nullable
-    private FrameLayout contentLayout = null;
+    @BindView(R.id.activity_drawer_toolbar)
+    Toolbar toolbar;
+    @BindView(R.id.activity_drawer_drawerlayout)
+    DrawerLayout drawerLayout;
+    @BindView(R.id.activity_drawer_navigationview)
+    NavigationView navigationView;
 
     //region Activity
     @Override
     protected final void onCreate(@Nullable final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_drawer);
-
-        final Toolbar toolbar = (Toolbar) findViewById(R.id.activity_drawer_toolbar);
         setSupportActionBar(toolbar);
 
         final ActionBar actionBar = getSupportActionBar();
@@ -45,41 +43,32 @@ public abstract class DrawerActivity extends AppCompatActivity
             actionBar.setHomeAsUpIndicator(R.drawable.ic_menu_white_24dp);
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
-        this.contentLayout = (FrameLayout) findViewById(R.id.activity_drawer_content);
-        this.navigationView = (NavigationView) findViewById(R.id.activity_drawer_navigationview);
+
         this.navigationView.setNavigationItemSelectedListener(this);
-        this.drawerLayout = (DrawerLayout) findViewById(R.id.activity_drawer_drawerlayout);
         this.navigationView.setCheckedItem(R.id.drawer_map);
         mapSelected();
     }
 
     @Override
+    protected int getLayoutRes() {
+        return R.layout.activity_drawer;
+    }
+
+    @Override
     public boolean onOptionsItemSelected(final MenuItem item) {
-        if (this.drawerLayout == null) {
-            return super.onOptionsItemSelected(item);
-        }
         switch (item.getItemId()) {
             case android.R.id.home:
                 this.drawerLayout.openDrawer(GravityCompat.START);
                 return true;
         }
-        return super.onOptionsItemSelected(item);
-    }
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        this.navigationView = null;
-        this.drawerLayout = null;
+        return super.onOptionsItemSelected(item);
     }
     //endregion
 
     //region NavigationView.OnNavigationItemSelectedListener
     @Override
     public boolean onNavigationItemSelected(@NonNull final MenuItem item) {
-        if (this.drawerLayout == null) {
-            return false;
-        }
         this.drawerLayout.closeDrawers();
         switch (item.getItemId()) {
             case R.id.drawer_map:
@@ -105,9 +94,6 @@ public abstract class DrawerActivity extends AppCompatActivity
 
     //region methods
     private void mapSelected() {
-        if (this.contentLayout == null) {
-            return;
-        }
         final Fragment fragment = getFragmentManager().findFragmentByTag(PUBGMapFragment.TAG);
         if (fragment == null) {
             showFragment(new PUBGMapFragment());
@@ -117,9 +103,6 @@ public abstract class DrawerActivity extends AppCompatActivity
     }
 
     private void itemsSelected() {
-        if (this.contentLayout == null) {
-            return;
-        }
         final Fragment fragment = getFragmentManager().findFragmentByTag(ItemFragment.TAG);
         if (fragment == null) {
             showFragment(new ItemFragment());
@@ -151,5 +134,4 @@ public abstract class DrawerActivity extends AppCompatActivity
         getFragmentManager().executePendingTransactions();
     }
     //endregion
-
 }
