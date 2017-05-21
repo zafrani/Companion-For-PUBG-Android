@@ -29,4 +29,4 @@ Images and map tiles can be found here: https://github.com/ZafraniTechLLC/Compan
 7. In `local-strings.xml` replace GOOGLE_MAPS_API_KEY with the API key you created.
 
 ### Reach out
-Contact us with feedback, ideas and requests via email - support@zafrani.tech
+Contact us with feedback, ideas and requests via email - support@zafrani.tech 
