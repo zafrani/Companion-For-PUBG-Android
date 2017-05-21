@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import tech.zafrani.companionforpubg.R;
-import tech.zafrani.companionforpubg.adapters.ItemListAdapter;
+import tech.zafrani.companionforpubg.adapters.CategoryRecyclerViewAdapter;
 import tech.zafrani.companionforpubg.models.Category;
 import tech.zafrani.companionforpubg.models.Item;
 import tech.zafrani.companionforpubg.models.Type;
@@ -65,7 +65,7 @@ public class ItemTabFragment extends BaseFragment {
         }
         recyclerView = (RecyclerView) view.findViewById(R.id.fragment_itemtab_recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        final ItemListAdapter adapter =  new ItemListAdapter(items);
+        final CategoryRecyclerViewAdapter adapter =  new CategoryRecyclerViewAdapter(items);
         recyclerView.setAdapter(adapter);
     }
 }
