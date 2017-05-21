@@ -6,24 +6,22 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import tech.zafrani.companionforpubg.PUBGApplication;
 import tech.zafrani.companionforpubg.R;
 import tech.zafrani.companionforpubg.adapters.CategoryRecyclerViewAdapter;
+import tech.zafrani.companionforpubg.models.Categories;
 import tech.zafrani.companionforpubg.models.Category;
-import tech.zafrani.companionforpubg.models.Item;
-import tech.zafrani.companionforpubg.models.Type;
+import tech.zafrani.companionforpubg.models.WeaponCategory;
+import tech.zafrani.companionforpubg.models.WeaponItem;
 
 public class ItemTabFragment extends BaseFragment {
     private static final String ARG_CATEGORY = ItemTabFragment.class.getSimpleName() + ".ARG_CATEGORY";
     private RecyclerView recyclerView;
-    private Category category;
+    private Category category = null;
 
     public static ItemTabFragment newInstance(@NonNull final Category category) {
         final Bundle args = new Bundle();
@@ -57,16 +55,21 @@ public class ItemTabFragment extends BaseFragment {
     public void onViewCreated(@NonNull final View view,
                               @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        final List<Item> items = new ArrayList<>();
-        for (final Type type : category.getTypes()) {
-            Log.e(getClass()
-                    .getSimpleName(), "Items for Type " + type + ": " +  type.getItems().toString());
-            items.addAll(type.getItems());
+        if (category == null) {
+            return;
         }
+        final Categories categories = PUBGApplication.getInstance().getItems().getCategories();
+
+
         recyclerView = (RecyclerView) view.findViewById(R.id.fragment_itemtab_recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        final CategoryRecyclerViewAdapter adapter =  new CategoryRecyclerViewAdapter(items);
-        recyclerView.setAdapter(adapter);
+        recyclerView.setAdapter(new CategoryRecyclerViewAdapter<WeaponItem, WeaponCategory>(categories.getWeaponCategory()) {
+
+            @Override
+            public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+                return null;
+            }
+        });
     }
 }
 

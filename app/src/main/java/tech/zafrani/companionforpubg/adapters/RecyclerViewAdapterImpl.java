@@ -10,7 +10,7 @@ import java.util.List;
 
 import tech.zafrani.companionforpubg.adapters.viewholders.BaseViewHolder;
 
-public abstract class RecyclerViewAdapterImpl<Model extends Serializable, ViewHolder extends BaseViewHolder<Model>>
+public abstract class RecyclerViewAdapterImpl<Model extends Serializable>
         extends RecyclerView.Adapter<RecyclerView.ViewHolder>
             implements RecyclerViewAdapter<Model>,
                 BaseViewHolder.Listener<Model> {
@@ -29,7 +29,7 @@ public abstract class RecyclerViewAdapterImpl<Model extends Serializable, ViewHo
     @Override
     public void onBindViewHolder(final RecyclerView.ViewHolder holder,
                                  final int position) {
-        holder.bind(position);
+
     }
 
     @Override

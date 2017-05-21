@@ -9,20 +9,13 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-
-import tech.zafrani.companionforpubg.models.Category;
-import tech.zafrani.companionforpubg.utils.FileUtil;
+import tech.zafrani.companionforpubg.PUBGApplication;
 import tech.zafrani.companionforpubg.R;
 import tech.zafrani.companionforpubg.adapters.ItemTabAdapter;
-import tech.zafrani.companionforpubg.models.Items;
 
 public class ItemFragment extends BaseFragment {
 
@@ -41,16 +34,10 @@ public class ItemFragment extends BaseFragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        List<Category> categories = new ArrayList<>();
-        try {
-            final Items itemList = FileUtil.getItems(getActivity());
-            categories = itemList.getCategories();
-        } catch (IOException e) {
-            e.printStackTrace();
-            Log.e(getClass().getSimpleName(), "Error: " + e.getLocalizedMessage());
-        }
+
+
         final ViewPager viewPager = (ViewPager) view.findViewById(R.id.fragment_item_viewpager);
-        viewPager.setAdapter(new ItemTabAdapter(getChildFragmentManager(), categories));
+        viewPager.setAdapter(new ItemTabAdapter(getActivity(), getChildFragmentManager(), PUBGApplication.getInstance().getItems().getCategories()));
         final TabLayout tabLayout = (TabLayout) view.findViewById(R.id.fragment_item_tablayout);
         tabLayout.setupWithViewPager(viewPager);
         showDisclaimerForFirstTime();

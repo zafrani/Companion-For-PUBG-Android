@@ -1,5 +1,6 @@
 package tech.zafrani.companionforpubg.utils;
 
+
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -12,9 +13,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.List;
 
-import tech.zafrani.companionforpubg.models.Category;
+import tech.zafrani.companionforpubg.PUBGApplication;
 import tech.zafrani.companionforpubg.models.Items;
 import tech.zafrani.companionforpubg.models.spawns.Spawns;
 
@@ -25,20 +25,21 @@ public class FileUtil {
         final InputStream inputStream = context.getAssets().open("items.json");
 
         if (inputStream != null) {
-            final Gson gson = new Gson();
+            final Gson gson = PUBGApplication.getInstance().getGson();
             final BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
 
-            return bindItems(gson.fromJson(reader, Items.class));
+            return gson.fromJson(reader, Items.class);
 
         }
         return null;
     }
+
     @Nullable
     public static Spawns getSpawns(@NonNull final Context context) throws IOException {
         final InputStream inputStream = context.getAssets().open("spawns.json");
 
         if (inputStream != null) {
-            final Gson gson = new Gson();
+            final Gson gson = PUBGApplication.getInstance().getGson();
             final BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
 
             return gson.fromJson(reader, Spawns.class);
@@ -47,14 +48,6 @@ public class FileUtil {
         return null;
     }
 
-    @NonNull
-    public static Items bindItems(@NonNull final Items items) {
-        final List<Category> categories = items.getCategories();
-        for (final Category category: categories){
-            category.updateChildren();
-        }
-        return items;
-    }
 
     @Nullable
     public static byte[] getBytesForFile(@NonNull final Context context,

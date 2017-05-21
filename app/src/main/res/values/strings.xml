@@ -47,4 +47,38 @@
     <string name="vehicles">Vehicles</string>
     <string name="distance_action_label_snippet">Estimated sprinting unarmed on a flat surface</string>
     <string name="distance_action_label_title_failed">Failed to calculate</string>
+
+
+    <string name="category_weapons">Weapons</string>
+    <string name="category_ammunition">Ammunition</string>
+    <string name="category_attachments">Attachments</string>
+    <string name="category_equipment">Equipment</string>
+    <string name="category_consumables">Consumables</string>
+    <string name="category_vehicles">Vehicles</string>
+
+    <string name="weapon_type_assault">Assault Rifle</string>
+    <string name="weapon_type_smg">SMG</string>
+    <string name="weapon_type_lmg">LMG</string>
+    <string name="weapon_type_shotgun">Shotgun</string>
+    <string name="weapon_type_sniper">Sniper Rifle</string>
+    <string name="weapon_type_dmr">DMR</string>
+    <string name="weapon_type_pistol">Pistol</string>
+    <string name="weapon_type_melee">Melee</string>
+    <string name="weapon_type_grenade">Grenade</string>
+    <string name="weapon_type_crossbow">Crossbow</string>
+
+    <string name="weapon_item_AKM">AKM</string>
+    <string name="weapon_item_M16A4">M16A4</string>
+    <string name="weapon_item_M416">M416</string>
+    <string name="weapon_item_SCAR_L">SCAR-L</string>
+
+
+    <string name="label_weapon_damage">Damage: %1$d</string>
+    <string name="label_weapon_ammo">Ammo: %1$s</string>
+    <string name="label_weapon_range">Range: %1$d</string>
+    <string name="label_weapon_stability">Stability: %1$d</string>
+    <string name="label_weapon_rate">Rate: %1$d</string>
+
+
 </resources>
+

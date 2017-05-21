@@ -2,54 +2,40 @@ package tech.zafrani.companionforpubg.models;
 
 
 import android.support.annotation.NonNull;
-
-import com.google.gson.annotations.SerializedName;
+import android.support.annotation.StringRes;
 
 import java.io.Serializable;
-import java.util.Arrays;
 import java.util.List;
 
-public class Category implements Serializable{
-    @NonNull
-    @SerializedName("cat_name")
-    private final String name;
+import tech.zafrani.companionforpubg.R;
+
+public interface Category<CategoryItem extends Item> extends Serializable {
+    @StringRes
+    int getCategoryNameRes();
 
     @NonNull
-    @SerializedName("types")
-    private final List<Type> types;
+    List<CategoryItem> getItems();
 
+    enum Name {
+        Weapons(R.string.category_weapons),
+        Ammo(R.string.category_ammunition),
+        Attachments(R.string.category_attachments),
+        Equipment(R.string.category_equipment),
+        Consumables(R.string.category_consumables),
+        Vehicles(R.string.category_vehicles);
 
-    public Category(@NonNull final String cat_name,
-                    @NonNull final List<Type> types
-                   ) {
-        this.name = cat_name;
-        this.types = types;
-        updateChildren();
+        @StringRes
+        private final int stringRes;
 
-    }
+        Name(@StringRes final int stringRes) {
+            this.stringRes = stringRes;
+        }
 
-    @NonNull
-    public List<Type> getTypes() {
-        return types;
-    }
-
-    @NonNull
-    public String getName() {
-        return name;
-    }
-
-    @NonNull
-    @Override
-    public String toString() {
-        return "Category{" +
-               "name='" + name + '\'' +
-               ", types=" + Arrays.toString(types.toArray()) +
-               '}';
-    }
-
-    public void updateChildren() {
-        for (final Type type : getTypes()) {
-            type.updateChildren(getName());
+        @StringRes
+        public int getStringRes() {
+            return stringRes;
         }
     }
+
+
 }
