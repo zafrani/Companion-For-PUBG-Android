@@ -14,7 +14,6 @@
             android:id="@+id/row_item_icon"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:src="@mipmap/ic_launcher"
             android:layout_weight="0.2"/>
         <LinearLayout
             android:orientation="vertical"

@@ -118,9 +118,6 @@ public class WeaponsViewHolder extends ItemViewHolder{
     private void setItemIcon(final String itemImage,@NonNull final String category) {
         if (itemImage != null) {
             Picasso.with(itemView.getContext()).load(Constants.ITEM_IMAGE_URL + category + "/" + itemImage + ARG_RAW).into(imageImageView);
-        }else {
-            Picasso.with(itemView.getContext()).load(R.mipmap.ic_launcher).into(imageImageView);
-
         }
     }
 
