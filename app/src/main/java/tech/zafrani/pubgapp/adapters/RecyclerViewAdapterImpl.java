@@ -12,7 +12,7 @@ import java.util.List;
 import tech.zafrani.pubgapp.adapters.viewholders.BaseViewHolder;
 
 
-public abstract class BaseRecyclerViewAdapterImpl<Model extends Serializable, ViewHolder extends BaseViewHolder<Model>>
+public abstract class RecyclerViewAdapterImpl<Model extends Serializable, ViewHolder extends BaseViewHolder<Model>>
         extends RecyclerView.Adapter<ViewHolder>
         implements RecyclerViewAdapter<Model>,
                    BaseViewHolder.Listener<Model> {
@@ -21,11 +21,11 @@ public abstract class BaseRecyclerViewAdapterImpl<Model extends Serializable, Vi
     private final List<Model> models;
 
 
-    public BaseRecyclerViewAdapterImpl() {
+    public RecyclerViewAdapterImpl() {
         this(new ArrayList<Model>());
     }
 
-    public BaseRecyclerViewAdapterImpl(@NonNull final List<Model> models) {
+    public RecyclerViewAdapterImpl(@NonNull final List<Model> models) {
         this.models = models;
     }
 

@@ -10,7 +10,6 @@ import tech.zafrani.pubgapp.models.Enums;
 
 public enum WeaponType implements Enums.FromString {
 
-
     AssaultRifle(R.string.weapon_type_assault),
     SMG(R.string.weapon_type_smg),
     LMG(R.string.weapon_type_lmg),

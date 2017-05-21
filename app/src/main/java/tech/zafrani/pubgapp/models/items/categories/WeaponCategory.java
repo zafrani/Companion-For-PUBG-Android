@@ -40,4 +40,5 @@ public class WeaponCategory extends CategoryImpl<WeaponItem> {
         return this.weapons;
     }
 
+
 }
