@@ -6,6 +6,13 @@ Companion For PUBG is an unofficial companion Android app for PlayerUnknown's Ba
 driven to provide players with the latest and most up to date information on maps, items,
 vehicles and news.
 
+Current features include:
+- Interactive map.
+- Vehicle & boat spawns.
+- Duration to run between two points
+![Current Features](https://github.com/ZafraniTechLLC/Companion-For-PUBG-IMAGES/blob/master/designs/maps/current-features.png?raw=true)
+
+
 ### How to contribute
 Submit pull requests here. Help us review pull requests and most importantly help keep our data 
 and images up to date. **Most of our data is unfinished with placeholders. Any help updating it would be most appreciated!** We also have a (somewhat) organized list of tasks we need help with, they can be seen in the Projects tab above.
