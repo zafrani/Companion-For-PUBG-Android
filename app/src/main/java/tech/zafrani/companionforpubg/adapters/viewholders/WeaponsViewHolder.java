@@ -123,17 +123,6 @@ public class WeaponsViewHolder extends ItemViewHolder{
 
     @Override
     public void bind(@NonNull final Item item) {
-        setItemName(item.getName());
-        setItemType(item.getType());
-        setItemCategory(item.getCategory());
-        setItemAmmo(item.getAmmo());
-        setItemMagazine(item.getMagazine());
-        setItemCapacity(item.getCapacity());
-        setItemDamage(item.getDamage());
-        setItemRange(item.getRange());
-        setItemRate(item.getRate());
-        setItemReload(item.getReload());
-        setItemStability(item.getStability());
-        setItemIcon(item.getImageUrl(), item.getCategory());
+
     }
 }

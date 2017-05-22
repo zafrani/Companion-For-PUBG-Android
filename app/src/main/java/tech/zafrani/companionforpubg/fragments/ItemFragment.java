@@ -15,14 +15,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
-import tech.zafrani.companionforpubg.models.Category;
-import tech.zafrani.companionforpubg.utils.FileUtil;
 import tech.zafrani.companionforpubg.R;
 import tech.zafrani.companionforpubg.adapters.ItemTabAdapter;
+import tech.zafrani.companionforpubg.models.Categories;
 import tech.zafrani.companionforpubg.models.Items;
+import tech.zafrani.companionforpubg.utils.FileUtil;
 
 public class ItemFragment extends BaseFragment {
 
@@ -41,7 +39,7 @@ public class ItemFragment extends BaseFragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        List<Category> categories = new ArrayList<>();
+        Categories categories = null;
         try {
             final Items itemList = FileUtil.getItems(getActivity());
             categories = itemList.getCategories();

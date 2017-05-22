@@ -6,41 +6,27 @@ import android.support.annotation.NonNull;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
-import java.util.Arrays;
-import java.util.List;
 
 
 public class Items implements Serializable {
     @NonNull
     @SerializedName("categories")
-    private final List<Category> categories;
+    private final Categories categories;
 
 
-    public Items(@NonNull final List<Category> categories) {
+    public Items(@NonNull final Categories categories) {
         this.categories = categories;
     }
 
-
+    @NonNull
+    public Categories getCategories() {
+        return categories;
+    }
 
     @Override
     public String toString() {
         return "Items{" +
-                "categories=" + Arrays.toString(categories.toArray()) +
+                "categories=" + categories +
                 '}';
-    }
-
-    @NonNull
-    public List<Category> getCategories() {
-        return categories;
-    }
-
-    public Category getCategory(@NonNull final String name) {
-
-        for (final Category category: categories) {
-            if (category.getName().equals(name)) {
-                return category;
-            }
-        }
-        return null;
     }
 }

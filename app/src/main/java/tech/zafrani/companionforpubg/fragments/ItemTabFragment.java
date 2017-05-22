@@ -57,12 +57,7 @@ public class ItemTabFragment extends BaseFragment {
     public void onViewCreated(@NonNull final View view,
                               @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        final List<Item> items = new ArrayList<>();
-        for (final Type type : category.getTypes()) {
-            Log.e(getClass()
-                    .getSimpleName(), "Items for Type " + type + ": " +  type.getItems().toString());
-            items.addAll(type.getItems());
-        }
+
         recyclerView = (RecyclerView) view.findViewById(R.id.fragment_itemtab_recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         final ItemListAdapter adapter =  new ItemListAdapter(items);

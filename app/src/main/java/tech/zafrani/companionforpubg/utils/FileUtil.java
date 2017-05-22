@@ -12,9 +12,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.List;
 
-import tech.zafrani.companionforpubg.models.Category;
+import tech.zafrani.companionforpubg.models.Categories;
 import tech.zafrani.companionforpubg.models.Items;
 import tech.zafrani.companionforpubg.models.spawns.Spawns;
 
@@ -49,10 +48,8 @@ public class FileUtil {
 
     @NonNull
     public static Items bindItems(@NonNull final Items items) {
-        final List<Category> categories = items.getCategories();
-        for (final Category category: categories){
-            category.updateChildren();
-        }
+        final Categories categories = items.getCategories();
+
         return items;
     }
 
