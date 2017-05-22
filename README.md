@@ -30,3 +30,7 @@ Images and map tiles can be found here: https://github.com/ZafraniTechLLC/Compan
 
 ### Reach out
 Contact us with feedback, ideas and requests via email - support@zafrani.tech
+
+
+### Upcoming features:
+![Item Details](https://github.com/ZafraniTechLLC/Companion-For-PUBG-IMAGES/blob/master/designs/items/items_design.png?raw=true)
