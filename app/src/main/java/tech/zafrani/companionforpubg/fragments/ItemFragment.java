@@ -5,6 +5,8 @@ import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -12,9 +14,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import tech.zafrani.companionforpubg.R;
+import tech.zafrani.companionforpubg.adapters.ItemTabAdapter;
 
 public class ItemFragment extends BaseFragment {
-
     public static String TAG = ItemFragment.class.getSimpleName();
     private RecyclerView recyclerView;
 
@@ -30,9 +32,10 @@ public class ItemFragment extends BaseFragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-
-
+        final ViewPager viewPager = (ViewPager) view.findViewById(R.id.fragment_item_viewpager);
+        viewPager.setAdapter(new ItemTabAdapter(getActivity(), getChildFragmentManager()));
+        final TabLayout tabLayout = (TabLayout) view.findViewById(R.id.fragment_item_tablayout);
+        tabLayout.setupWithViewPager(viewPager);
 
     }
 
