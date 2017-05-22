@@ -20,9 +20,11 @@ public class ItemFragment extends BaseFragment {
 
     public static String TAG = ItemFragment.class.getSimpleName();
 
+    @Nullable
     @BindView(R.id.fragment_item_viewpager)
     ViewPager viewPager;
 
+    @Nullable
     @BindView(R.id.fragment_item_tablayout)
     TabLayout tabLayout;
 
@@ -35,8 +37,12 @@ public class ItemFragment extends BaseFragment {
     public void onViewCreated(final View view, @Nullable final Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         Log.e(getClass().getSimpleName(), PUBGApplication.getInstance().getItems().toString());
-        viewPager.setAdapter(new ItemTabAdapter(getChildFragmentManager()));
-        tabLayout.setupWithViewPager(viewPager);
+        if (viewPager != null) {
+            viewPager.setAdapter(new ItemTabAdapter(getChildFragmentManager()));
+            if(tabLayout != null) {
+                tabLayout.setupWithViewPager(viewPager);
+            }
+        }
         showDisclaimerForFirstTime();
     }
 
