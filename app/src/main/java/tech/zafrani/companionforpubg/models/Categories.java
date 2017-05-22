@@ -12,18 +12,10 @@ public class Categories {
     public Category getPosition(int position) {
         switch (position) {
             case 0:
-                break;
+                return new WeaponCategory();
             default:
-
+                return new WeaponCategory();
         }
-        return (new Category(){
-
-            @Override
-            public CharSequence getTitle() {
-                return "Test Category 1";
-            }
-
-        });
     }
 
 
