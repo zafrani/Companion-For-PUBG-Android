@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
+import tech.zafrani.companionforpubg.PUBGApplication;
 import tech.zafrani.companionforpubg.models.items.Items;
 import tech.zafrani.companionforpubg.models.spawns.Spawns;
 
@@ -24,9 +25,8 @@ public class FileUtil {
         final InputStream inputStream = context.getAssets().open(filename);
 
         if (inputStream != null) {
-            final Gson gson = new Gson();
+            final Gson gson = PUBGApplication.getInstance().getGson();
             final BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
-
             return gson.fromJson(reader, tClass);
 
         }

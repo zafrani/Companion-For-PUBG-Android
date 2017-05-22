@@ -4,24 +4,28 @@ import android.support.annotation.NonNull;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Categories {
+import java.util.HashMap;
 
-    @SerializedName("weapon_category")
-    private final WeaponCategory weaponCategory;
+public class Categories extends HashMap<String, Category> {
 
-    public Categories(@NonNull final WeaponCategory weaponCategory) {
-        this.weaponCategory = weaponCategory;
-    }
+    // @SerializedName("weapon_category")
+    //private final WeaponCategory weaponCategory;
 
-    public WeaponCategory getWeaponCategory() {
-        return this.weaponCategory;
+    public Categories() {
+
     }
 
 
     @Override
     public String toString() {
-        return "Categories{" +
-               "weaponCategory=" + this.weaponCategory.toString() +
-               '}';
+        String cat = "Categories{";
+        for (final Entry<String, Category> entry : entrySet()) {
+            if (entry == null || entry.getValue() == null) {
+                continue;
+            }
+            cat += entry.getKey() + ", " + entry.getValue().toString();
+        }
+        cat += '}';
+        return cat;
     }
 }
