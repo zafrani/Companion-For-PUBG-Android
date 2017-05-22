@@ -7,16 +7,17 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import tech.zafrani.companionforpubg.PUBGApplication;
 import tech.zafrani.companionforpubg.R;
 
 public class ItemFragment extends BaseFragment {
 
     public static String TAG = ItemFragment.class.getSimpleName();
-    private RecyclerView recyclerView;
 
     @Nullable
     @Override
@@ -28,11 +29,10 @@ public class ItemFragment extends BaseFragment {
     }
 
     @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(final View view,
+                              @Nullable final Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-
-
+        Log.e(getClass().getSimpleName(), PUBGApplication.getInstance().getItems().toString());
 
     }
 
