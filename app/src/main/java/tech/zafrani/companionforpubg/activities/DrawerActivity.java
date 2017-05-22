@@ -16,9 +16,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 
-import tech.zafrani.companionforpubg.fragments.PUBGMapFragment;
 import tech.zafrani.companionforpubg.R;
 import tech.zafrani.companionforpubg.fragments.ItemFragment;
+import tech.zafrani.companionforpubg.fragments.NewsFragment;
+import tech.zafrani.companionforpubg.fragments.PUBGMapFragment;
 import tech.zafrani.companionforpubg.utils.Constants;
 
 public abstract class DrawerActivity extends AppCompatActivity
@@ -88,6 +89,9 @@ public abstract class DrawerActivity extends AppCompatActivity
             case R.id.drawer_items:
                 itemsSelected();
                 break;
+            case R.id.drawer_news:
+                newsSelected();
+                break;
             case R.id.drawer_github:
                 githubSelected();
                 break;
@@ -123,6 +127,17 @@ public abstract class DrawerActivity extends AppCompatActivity
         final Fragment fragment = getFragmentManager().findFragmentByTag(ItemFragment.TAG);
         if (fragment == null) {
             showFragment(new ItemFragment());
+        } else {
+            showFragment(fragment);
+        }
+    }
+    private void newsSelected() {
+        if (this.contentLayout == null) {
+            return;
+        }
+        final Fragment fragment = getFragmentManager().findFragmentByTag(NewsFragment.TAG);
+        if (fragment == null) {
+            showFragment(new NewsFragment());
         } else {
             showFragment(fragment);
         }
