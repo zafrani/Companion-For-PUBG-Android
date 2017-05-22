@@ -33,4 +33,5 @@ Contact us with feedback, ideas and requests via email - support@zafrani.tech
 
 
 ### Upcoming features:
+Items and item details. 
 ![Item Details](https://github.com/ZafraniTechLLC/Companion-For-PUBG-IMAGES/blob/master/designs/items/items_design.png?raw=true)
