@@ -13,38 +13,35 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-import tech.zafrani.companionforpubg.models.Items;
+import tech.zafrani.companionforpubg.models.items.Items;
 import tech.zafrani.companionforpubg.models.spawns.Spawns;
 
 public class FileUtil {
+    @Nullable
+    public static <T> T getFile(@NonNull final Context context,
+                                @NonNull final String filename,
+                                @NonNull Class<T> tClass) throws IOException {
+        final InputStream inputStream = context.getAssets().open(filename);
+
+        if (inputStream != null) {
+            final Gson gson = new Gson();
+            final BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
+
+            return gson.fromJson(reader, tClass);
+
+        }
+        return null;
+    }
 
     @Nullable
     public static Items getItems(@NonNull final Context context) throws IOException {
-        final InputStream inputStream = context.getAssets().open("items.json");
-
-        if (inputStream != null) {
-            final Gson gson = new Gson();
-            final BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
-
-            return gson.fromJson(reader, Items.class);
-
-        }
-        return null;
+        return getFile(context, "items.json", Items.class);
     }
+
     @Nullable
     public static Spawns getSpawns(@NonNull final Context context) throws IOException {
-        final InputStream inputStream = context.getAssets().open("spawns.json");
-
-        if (inputStream != null) {
-            final Gson gson = new Gson();
-            final BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
-
-            return gson.fromJson(reader, Spawns.class);
-
-        }
-        return null;
+        return getFile(context, "spawns.json", Spawns.class);
     }
-
 
 
     @Nullable
