@@ -7,9 +7,6 @@ import android.support.annotation.Nullable;
 import com.google.gson.Gson;
 
 import org.apache.commons.io.IOUtils;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -19,8 +16,6 @@ import java.util.List;
 
 import tech.zafrani.companionforpubg.models.Category;
 import tech.zafrani.companionforpubg.models.Items;
-import tech.zafrani.companionforpubg.models.News;
-import tech.zafrani.companionforpubg.models.NewsItem;
 import tech.zafrani.companionforpubg.models.spawns.Spawns;
 
 public class FileUtil {
@@ -68,27 +63,6 @@ public class FileUtil {
     }
 
 
-    public static News getPUBGNews(@NonNull final Context context) throws IOException {
-        final News news = new News();
-        final Document document = Jsoup.connect("https://www.playbattlegrounds.com/news.pu").get();
-        for (Element row: document.select("ul#allList li")) {
 
-            final String title = row.select(".title").text();
-            final String type = row.select(".sp_sub").text();
-            final String date = row.select(".date").text();
-            final String description = row.select(".descrption").text();
-
-            final Element link = row.select("a").first();
-            final String linkSrc = link.absUrl("href");
-            final Element img = row.select(".img_wrap img").first();
-            final String imgSrc = img.absUrl("src");
-
-            System.out.println(title + " -- " + date + ", " + type + " (" + description+")");
-            System.out.println("article link: " + linkSrc + ", img link: " + imgSrc);
-
-            news.add(new NewsItem(title, type, date, description, linkSrc, imgSrc));
-        }
-        return news;
-    }
 
 }

@@ -25,6 +25,27 @@ public class NewsItem {
         this.imgSrc = imgSrc;
     }
 
+    public String getTitle() {
+        return title;
+    }
 
+    public String getType() {
+        return type;
+    }
 
+    public String getDate() {
+        return date;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public String getLinkSrc() {
+        return linkSrc;
+    }
+
+    public String getImgSrc() {
+        return imgSrc;
+    }
 }
