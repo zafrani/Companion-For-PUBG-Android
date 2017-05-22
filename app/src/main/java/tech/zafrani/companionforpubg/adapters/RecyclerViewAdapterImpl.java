@@ -32,6 +32,7 @@ public abstract class RecyclerViewAdapterImpl<Model extends Serializable>
 
     }
 
+
     @Override
     public int getItemCount() {
         return this.models.size();

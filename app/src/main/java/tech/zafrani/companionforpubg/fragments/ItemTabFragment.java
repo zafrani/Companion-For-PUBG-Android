@@ -62,7 +62,7 @@ public class ItemTabFragment extends BaseFragment {
 
 
         recyclerView = (RecyclerView) view.findViewById(R.id.fragment_itemtab_recyclerview);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
         recyclerView.setAdapter(new CategoryRecyclerViewAdapter<WeaponItem, WeaponCategory>(categories.getWeaponCategory()) {
 
             @Override
