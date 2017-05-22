@@ -32,8 +32,7 @@ public class ItemFragment extends BaseFragment {
     }
 
     @Override
-    public void onViewCreated(final View view,
-                              @Nullable final Bundle savedInstanceState) {
+    public void onViewCreated(final View view, @Nullable final Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         Log.e(getClass().getSimpleName(), PUBGApplication.getInstance().getItems().toString());
         viewPager.setAdapter(new ItemTabAdapter(getChildFragmentManager()));

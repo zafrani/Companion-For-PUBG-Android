@@ -25,12 +25,18 @@ import tech.zafrani.companionforpubg.utils.Constants;
 public abstract class DrawerActivity extends BaseActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    @Nullable
     @BindView(R.id.activity_drawer_toolbar)
     Toolbar toolbar;
+    @Nullable
     @BindView(R.id.activity_drawer_drawerlayout)
     DrawerLayout drawerLayout;
+    @Nullable
     @BindView(R.id.activity_drawer_navigationview)
     NavigationView navigationView;
+    @Nullable
+    @BindView(R.id.activity_drawer_content)
+    FrameLayout contentLayout;
 
     //region Activity
     @Override
@@ -44,9 +50,20 @@ public abstract class DrawerActivity extends BaseActivity
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
-        this.navigationView.setNavigationItemSelectedListener(this);
-        this.navigationView.setCheckedItem(R.id.drawer_map);
+        if(this.navigationView != null) {
+            this.navigationView.setNavigationItemSelectedListener(this);
+            this.navigationView.setCheckedItem(R.id.drawer_map);
+        }
         mapSelected();
+    }
+
+    @Override
+    protected void onDestroy() {
+        if(this.navigationView != null) {
+            this.navigationView.setNavigationItemSelectedListener(null);
+        }
+
+        super.onDestroy();
     }
 
     @Override
@@ -58,7 +75,9 @@ public abstract class DrawerActivity extends BaseActivity
     public boolean onOptionsItemSelected(final MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                this.drawerLayout.openDrawer(GravityCompat.START);
+                if(drawerLayout != null) {
+                    this.drawerLayout.openDrawer(GravityCompat.START);
+                }
                 return true;
         }
 
@@ -69,6 +88,10 @@ public abstract class DrawerActivity extends BaseActivity
     //region NavigationView.OnNavigationItemSelectedListener
     @Override
     public boolean onNavigationItemSelected(@NonNull final MenuItem item) {
+        if (this.drawerLayout == null) {
+            return false;
+        }
+
         this.drawerLayout.closeDrawers();
         switch (item.getItemId()) {
             case R.id.drawer_map:
@@ -94,6 +117,10 @@ public abstract class DrawerActivity extends BaseActivity
 
     //region methods
     private void mapSelected() {
+        if(contentLayout == null) {
+            return;
+        }
+
         final Fragment fragment = getFragmentManager().findFragmentByTag(PUBGMapFragment.TAG);
         if (fragment == null) {
             showFragment(new PUBGMapFragment());
@@ -103,6 +130,10 @@ public abstract class DrawerActivity extends BaseActivity
     }
 
     private void itemsSelected() {
+        if(contentLayout == null) {
+            return;
+        }
+
         final Fragment fragment = getFragmentManager().findFragmentByTag(ItemFragment.TAG);
         if (fragment == null) {
             showFragment(new ItemFragment());

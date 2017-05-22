@@ -29,12 +29,15 @@ public class PUBGMapFragment extends BaseFragment
     @Nullable
     private GoogleMapControllerImpl mapController = null;
 
+    @Nullable
     @BindView(R.id.fragment_map_vehicle_icon)
     ImageView vehicleIcon;
 
+    @Nullable
     @BindView(R.id.fragment_map_boat_icon)
     ImageView boatIcon;
 
+    @Nullable
     @BindView(R.id.fragment_map_distance_icon)
     ImageView runDistanceIcon;
 
@@ -55,11 +58,48 @@ public class PUBGMapFragment extends BaseFragment
 
         final MapFragment mapFragment = (MapFragment) getChildFragmentManager().findFragmentById(R.id.map_fragment_map);
         mapFragment.getMapAsync(this);
+
+        if(this.vehicleIcon != null) {
+            this.vehicleIcon.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    toggleVehicles();
+                }
+            });
+        }
+        if(this.boatIcon != null) {
+            this.boatIcon.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    toggleBoats();
+                }
+            });
+        }
+        if(this.runDistanceIcon != null) {
+            this.runDistanceIcon.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    toggleRunDistance();
+                }
+            });
+        }
     }
 
     @Override
     public void onDestroy() {
+        if (this.vehicleIcon != null) {
+            this.vehicleIcon.setOnClickListener(null);
+        }
+        if (this.runDistanceIcon != null) {
+            this.runDistanceIcon.setOnClickListener(null);
+        }
+
+        if (this.boatIcon != null) {
+            this.boatIcon.setOnClickListener(null);
+        }
+
         super.onDestroy();
+
         if (this.mapController != null) {
             this.mapController.release();
             this.mapController = null;
@@ -89,21 +129,6 @@ public class PUBGMapFragment extends BaseFragment
             Toast.makeText(getActivity(), R.string.toast_how_to_use_distance, Toast.LENGTH_LONG).show();
             this.sharedPreferences.edit().putInt(PREF_TIMES_SHOWN, timesShown + 1).apply();
         }
-    }
-
-    @OnClick(R.id.fragment_map_vehicle_icon)
-    void onVehicleClicked(){
-        toggleVehicles();
-    }
-
-    @OnClick(R.id.fragment_map_boat_icon)
-    void onBoatClicked() {
-        toggleBoats();
-    }
-
-    @OnClick(R.id.fragment_map_distance_icon)
-    void onRunClicked() {
-        toggleRunDistance();
     }
 
     private void toggleVehicles() {
@@ -137,22 +162,29 @@ public class PUBGMapFragment extends BaseFragment
         if (this.mapController == null) {
             return;
         }
-        if (this.mapController.isShowingVehicles()) {
-            vehicleIcon.setColorFilter(ContextCompat.getColor(getActivity(), R.color.colorAccent));
-        } else {
-            vehicleIcon.setColorFilter(ContextCompat.getColor(getActivity(), R.color.white));
-        }
-        if (this.mapController.isShowingBoats()) {
-            boatIcon.setColorFilter(ContextCompat.getColor(getActivity(), R.color.colorAccent));
-        } else {
-            boatIcon.setColorFilter(ContextCompat.getColor(getActivity(), R.color.white));
-        }
-        if (this.mapController.isShowingDistance()) {
-            runDistanceIcon.setColorFilter(ContextCompat.getColor(getActivity(), R.color.colorAccent));
-        } else {
-            runDistanceIcon.setColorFilter(ContextCompat.getColor(getActivity(), R.color.white));
+        if(vehicleIcon != null) {
+            if (this.mapController.isShowingVehicles()) {
+                vehicleIcon.setColorFilter(ContextCompat.getColor(getActivity(), R.color.colorAccent));
+            } else {
+                vehicleIcon.setColorFilter(ContextCompat.getColor(getActivity(), R.color.white));
+            }
         }
 
+        if(boatIcon != null) {
+            if (this.mapController.isShowingBoats()) {
+                boatIcon.setColorFilter(ContextCompat.getColor(getActivity(), R.color.colorAccent));
+            } else {
+                boatIcon.setColorFilter(ContextCompat.getColor(getActivity(), R.color.white));
+            }
+        }
+
+        if(runDistanceIcon != null) {
+            if (this.mapController.isShowingDistance()) {
+                runDistanceIcon.setColorFilter(ContextCompat.getColor(getActivity(), R.color.colorAccent));
+            } else {
+                runDistanceIcon.setColorFilter(ContextCompat.getColor(getActivity(), R.color.white));
+            }
+        }
     }
 
     //endregion
