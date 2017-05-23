@@ -1,13 +1,13 @@
 package tech.zafrani.companionforpubg.fragments;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 
+import butterknife.BindView;
 import tech.zafrani.companionforpubg.R;
 import tech.zafrani.companionforpubg.adapters.NewsAdapter;
 import tech.zafrani.companionforpubg.models.NewsItem;
@@ -16,28 +16,32 @@ import tech.zafrani.companionforpubg.utils.PUBGNewsFetch;
 
 public class NewsFragment extends BaseFragment implements PUBGNewsFetch.PUBGNewsListener {
     public static final String TAG = NewsFragment.class.getSimpleName();
-    @Nullable
-    private RecyclerView recyclerView;
+
+    @BindView(R.id.fragment_news_recyclerview)
+    public RecyclerView recyclerView;
+
     @Nullable
     private NewsAdapter adapter;
     @Nullable
     public PUBGNewsFetch.PUBGNewsListener delegate;
 
     // region BaseFragment
-    @Nullable
+
+
     @Override
-    public View onCreateView(final LayoutInflater inflater,
-                             final ViewGroup container,
-                             final Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_news, container,false);
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
     }
 
     @Override
-    public void onViewCreated(View view,
+    protected int getLayoutRes() {
+        return R.layout.fragment_news;
+    }
+
+    @Override
+    public void onViewCreated(@NonNull final View view,
                               @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-        recyclerView = (RecyclerView) view.findViewById(R.id.fragment_news_recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         adapter =  new NewsAdapter();
         recyclerView.setAdapter(adapter);

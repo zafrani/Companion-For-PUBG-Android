@@ -13,6 +13,8 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import tech.zafrani.companionforpubg.R;
 import tech.zafrani.companionforpubg.models.News;
 import tech.zafrani.companionforpubg.models.NewsItem;
@@ -43,20 +45,25 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsItemViewHo
 
 
     public class NewsItemViewHolder extends RecyclerView.ViewHolder {
-        private final ImageView imgImageView;
-        private final TextView titleTextView;
-        private final TextView typeTextView;
-        private final TextView dateTextView;
-        private final TextView descriptionTextView;
+        @BindView(R.id.row_item_image)
+        ImageView imgImageView;
+
+        @BindView(R.id.row_item_title)
+        TextView titleTextView;
+
+        @BindView(R.id.row_item_type)
+        TextView typeTextView;
+
+        @BindView(R.id.row_item_date)
+        TextView dateTextView;
+
+        @BindView(R.id.row_item_description)
+        TextView descriptionTextView;
+
 
         public NewsItemViewHolder(@NonNull final View itemView) {
             super(itemView);
-            imgImageView = (ImageView) itemView.findViewById(R.id.row_item_image);
-            titleTextView = (TextView) itemView.findViewById(R.id.row_item_title);
-            typeTextView = (TextView) itemView.findViewById(R.id.row_item_type);
-            dateTextView = (TextView) itemView.findViewById(R.id.row_item_date);
-            descriptionTextView = (TextView) itemView.findViewById(R.id.row_item_description);
-
+            ButterKnife.bind(this, itemView);
         }
 
 
