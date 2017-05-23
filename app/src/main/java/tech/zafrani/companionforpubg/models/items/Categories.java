@@ -4,7 +4,7 @@ import android.support.annotation.NonNull;
 
 import java.util.EnumMap;
 
-public class Categories extends EnumMap<Category.Name, Category> {
+public class Categories extends EnumMap<Category.Name, Category<Item>> {
 
     public Categories() {
         super(Category.Name.class);
@@ -13,7 +13,7 @@ public class Categories extends EnumMap<Category.Name, Category> {
     @Override
     public String toString() {
         String returnString = "Categories{";
-        for (final Entry<Category.Name, Category> entry : entrySet()) {
+        for (final Entry<Category.Name, Category<Item> > entry : entrySet()) {
             if (entry == null || entry.getValue() == null) {
                 continue;
             }
@@ -23,7 +23,7 @@ public class Categories extends EnumMap<Category.Name, Category> {
         return returnString;
     }
 
-    public Category get(@NonNull final Category.Name key) {
+    public Category<Item> get(@NonNull final Category.Name key) {
         return super.get(key);
     }
 }

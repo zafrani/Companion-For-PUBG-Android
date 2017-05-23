@@ -1,10 +1,13 @@
 package tech.zafrani.companionforpubg.models.items;
 
+
 import android.support.annotation.NonNull;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Weapon {
+import java.io.Serializable;
+
+public class Item implements Serializable {
 
     @NonNull
     @SerializedName("name")
@@ -13,10 +16,16 @@ public class Weapon {
     @SerializedName("id")
     private final int id;
 
-    public Weapon(@NonNull final String name,
-                  final int id) {
+    @NonNull
+    @SerializedName("image_url")
+    private final String imageUrl;
+
+    public Item(@NonNull final String name,
+                final int id,
+                @NonNull final String imageUrl) {
         this.name = name;
         this.id = id;
+        this.imageUrl = imageUrl;
     }
 
     @Override
@@ -33,6 +42,11 @@ public class Weapon {
     }
 
     public int getId() {
-        return id;
+        return this.id;
+    }
+
+    @NonNull
+    public String getImageUrl() {
+        return this.imageUrl;
     }
 }

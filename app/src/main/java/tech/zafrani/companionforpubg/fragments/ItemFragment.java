@@ -1,5 +1,6 @@
 package tech.zafrani.companionforpubg.fragments;
 
+import android.app.Fragment;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
@@ -14,12 +15,13 @@ import android.view.View;
 import butterknife.BindView;
 import tech.zafrani.companionforpubg.PUBGApplication;
 import tech.zafrani.companionforpubg.R;
-import tech.zafrani.companionforpubg.adapters.ItemTabAdapter;
+import tech.zafrani.companionforpubg.adapters.ViewPagerAdapter;
 import tech.zafrani.companionforpubg.models.items.Category;
 
-public class ItemFragment extends BaseFragment {
+public class ItemFragment extends BaseFragment
+        implements ViewPagerAdapter.Listener {
 
-    public static String TAG = ItemFragment.class.getSimpleName();
+    public static final String TAG = ItemFragment.class.getSimpleName();
 
     @Nullable
     @BindView(R.id.fragment_item_viewpager)
@@ -29,17 +31,71 @@ public class ItemFragment extends BaseFragment {
     @BindView(R.id.fragment_item_tablayout)
     TabLayout tabLayout;
 
+    private final int tabCount = Category.Name.values().length;
+
+    //region BaseFragment
     @Override
     protected int getLayoutRes() {
         return R.layout.fragment_item;
     }
 
     @Override
-    public void onViewCreated(final View view, @Nullable final Bundle savedInstanceState) {
+    public void onViewCreated(final View view,
+                              @Nullable final Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         Log.e(getClass().getSimpleName(), PUBGApplication.getInstance().getItems().toString());
         Log.e(getClass().getSimpleName(), PUBGApplication.getInstance().getItems().getCategories().get(Category.Name.WEAPON_CATEGORY).toString());
+        setUpTabs();
+    }
 
+    @Override
+    public void onDestroy() {
+
+        if (this.viewPager != null) {
+            this.viewPager.setAdapter(null);
+        }
+
+        if (this.tabLayout != null) {
+            this.tabLayout.removeAllTabs();
+        }
+
+        super.onDestroy();
+    }
+    //endregion
+
+    //region ViewPagerAdapter.Listener
+
+    @Override
+    public int getCount() {
+        return this.tabCount;
+    }
+
+    @Override
+    public Fragment getItem(final int position) {
+        return ItemTabFragment.newInstance(Category.Name.values()[position]);
+    }
+
+    @Override
+    public String getPageTitle(final int position) {
+        return Category.Name.values()[position].getValue();
+    }
+
+    //endregion
+
+    //region Methods
+
+    private void setUpTabs() {
+        if (this.tabLayout == null || this.viewPager == null) {
+            return;
+        }
+        for (int i = 0; i < tabCount; i++) {
+            final TabLayout.Tab tab = this.tabLayout.newTab();
+            tab.setText(Category.Name.values()[i].getValue());
+            this.tabLayout.addTab(tab);
+        }
+        this.tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
+        this.tabLayout.setupWithViewPager(this.viewPager);
+        this.viewPager.setAdapter(new ViewPagerAdapter(getChildFragmentManager(), this));
     }
 
     //todo remove this after data is updated
@@ -62,4 +118,5 @@ public class ItemFragment extends BaseFragment {
             }
         });
     }
+    //endregion
 }

@@ -12,7 +12,8 @@ import java.util.Iterator;
 import java.util.Map;
 
 import tech.zafrani.companionforpubg.models.items.Category;
-import tech.zafrani.companionforpubg.models.items.WeaponCategory;
+import tech.zafrani.companionforpubg.models.items.ammo.AmmoCategory;
+import tech.zafrani.companionforpubg.models.items.weapons.WeaponCategory;
 
 
 public class CategoryJsonAdapter
@@ -37,7 +38,7 @@ public class CategoryJsonAdapter
         if (Category.Name.WEAPON_CATEGORY.getValue().equals(categoryName)) {
             return context.deserialize(jsonObject, WeaponCategory.class);
         } else if (Category.Name.AMMO_CATEGORY.getValue().equals(categoryName)) {
-            //todo
+            return context.deserialize(jsonObject, AmmoCategory.class);
         } else if (Category.Name.ATTACHMENT_CATEGORY.getValue().equals(categoryName)) {
             //todo
         } else if (Category.Name.EQUIPMENT_CATEGORY.getValue().equals(categoryName)) {

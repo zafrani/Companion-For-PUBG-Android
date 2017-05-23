@@ -4,20 +4,34 @@ package tech.zafrani.companionforpubg.fragments;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
+import java.util.List;
+
 import butterknife.BindView;
+import tech.zafrani.companionforpubg.PUBGApplication;
 import tech.zafrani.companionforpubg.R;
+import tech.zafrani.companionforpubg.adapters.ItemRecyclerViewAdapter;
+import tech.zafrani.companionforpubg.models.items.Categories;
+import tech.zafrani.companionforpubg.models.items.Item;
+import tech.zafrani.companionforpubg.models.items.Category;
+import tech.zafrani.companionforpubg.models.items.Items;
 
 public class ItemTabFragment extends BaseFragment {
+    private static final String ARG_CATEGORY_NAME = ItemTabFragment.class + ".ARG_CATEGORY_NAME";
 
+    @Nullable
     @BindView(R.id.fragment_itemtab_recyclerview)
     RecyclerView recyclerView;
 
-    public static ItemTabFragment newInstance() {
+    public static ItemTabFragment newInstance(@NonNull final Category.Name categoryName) {
         final ItemTabFragment fragment = new ItemTabFragment();
+        final Bundle bundle = new Bundle();
+        bundle.putSerializable(ARG_CATEGORY_NAME, categoryName);
+        fragment.setArguments(bundle);
         return fragment;
     }
 
@@ -34,7 +48,22 @@ public class ItemTabFragment extends BaseFragment {
     @Override
     public void onViewCreated(@NonNull final View view, @Nullable final Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        final Bundle args = getArguments();
+        if (args == null || !args.containsKey(ARG_CATEGORY_NAME)) {
+            return;
+        }
+        final Category.Name name = (Category.Name) args.getSerializable(ARG_CATEGORY_NAME);
+        if (this.recyclerView == null || name == null) {
+            return;
+        }
+        final Category<Item> category = PUBGApplication.getInstance().getItems().getCategories().get(name);
+        if (category == null) {
+            return;
+        }
+        final DividerItemDecoration itemDecoration = new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL);
+        this.recyclerView.addItemDecoration(itemDecoration);
+        this.recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        this.recyclerView.setAdapter(new ItemRecyclerViewAdapter(category.getItems()));
     }
 
 }

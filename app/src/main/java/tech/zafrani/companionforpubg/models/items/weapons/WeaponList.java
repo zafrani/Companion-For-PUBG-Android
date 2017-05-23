@@ -1,14 +1,14 @@
-package tech.zafrani.companionforpubg.models.items;
+package tech.zafrani.companionforpubg.models.items.weapons;
 
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Weapons extends ArrayList<Weapon> {
+public class WeaponList extends ArrayList<Weapon> {
 
     @Override
     public String toString() {
-        return "Weapons{" +
+        return "WeaponList{" +
                Arrays.toString(toArray()) +
                "}";
     }

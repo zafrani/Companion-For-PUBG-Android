@@ -38,31 +38,9 @@
     </style>
 
     <style name="TabTextAppearance" parent="TextAppearance.Design.Tab">
-        <item name="android:textSize">8dp</item>
+        <item name="android:textSize">@dimen/tab_text_size</item>
         <item name="android:textColor">@color/tabText</item>
         <item name="textAllCaps">true</item>
     </style>
 
-    <style name="RowItem">
-        <item name="android:color">@color/white</item>
-    </style>
-
-
-    <style name="RowItem.Name">
-        <item name="android:textSize">@dimen/item_name_size</item>
-        <item name="android:textStyle">bold</item>
-    </style>
-    <style name="RowItem.Category">
-        <item name="android:textSize">@dimen/item_category_size</item>
-        <item name="android:textStyle">normal</item>
-    </style>
-    <style name="RowItem.Type">
-        <item name="android:textSize">@dimen/item_type_size</item>
-        <item name="android:textStyle">normal</item>
-    </style>
-
-    <style name="RowItem.Info">
-        <item name="android:textSize">@dimen/item_info_size</item>
-        <item name="android:textStyle">normal</item>
-    </style>
 </resources>
