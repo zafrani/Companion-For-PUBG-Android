@@ -79,7 +79,6 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsItemViewHo
             Picasso.with(itemView.getContext())
                     .load(newsItem.getImgSrc())
                     .fit()
-                    .centerCrop()
                     .into(imgImageView);
             titleTextView.setText(newsItem.getTitle());
             typeTextView.setText(newsItem.getType());
