@@ -3,6 +3,7 @@ package tech.zafrani.companionforpubg.adapters;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,18 +23,14 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsItemViewHo
     public NewsAdapter() {
 
     }
-    public void addNewsItem(NewsItem newsItem) {
-        if (newsItem != null) {
-            news.add(newsItem);
-        }
-    }
-    public void setNews(News news) {
-        this.news = news;
+
+    public void addNewsItem(@NonNull final NewsItem newsItem) {
+        news.add(newsItem);
     }
 
     @Override
     public NewsItemViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_item_news, parent, false);
+        final View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_item_news, parent, false);
 
 
         return new NewsItemViewHolder(view);
@@ -58,7 +55,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsItemViewHo
         private final TextView dateTextView;
         private final TextView descriptionTextView;
 
-        public NewsItemViewHolder(View itemView) {
+        public NewsItemViewHolder(@NonNull final View itemView) {
             super(itemView);
             imgImageView = (ImageView) itemView.findViewById(R.id.row_item_image);
             titleTextView = (TextView) itemView.findViewById(R.id.row_item_title);
@@ -68,11 +65,12 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsItemViewHo
 
         }
 
+
         public void bind(final NewsItem newsItem) {
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View view) {
-                    Intent browse = new Intent( Intent.ACTION_VIEW , Uri.parse( newsItem.getLinkSrc()));
+                public void onClick(@NonNull final View view) {
+                    final Intent browse = new Intent( Intent.ACTION_VIEW , Uri.parse( newsItem.getLinkSrc()));
                     view.getContext().startActivity(browse);
                 }
             });
