@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 
 import tech.zafrani.companionforpubg.PUBGApplication;
 import tech.zafrani.companionforpubg.R;
+import tech.zafrani.companionforpubg.models.items.Category;
 
 public class ItemFragment extends BaseFragment {
 
@@ -33,6 +34,7 @@ public class ItemFragment extends BaseFragment {
                               @Nullable final Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         Log.e(getClass().getSimpleName(), PUBGApplication.getInstance().getItems().toString());
+        Log.e(getClass().getSimpleName(), PUBGApplication.getInstance().getItems().getCategories().get(Category.Name.WEAPON_CATEGORY).toString());
 
     }
 

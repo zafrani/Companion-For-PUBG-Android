@@ -12,6 +12,7 @@ import java.io.IOException;
 import tech.zafrani.companionforpubg.models.items.Category;
 import tech.zafrani.companionforpubg.models.items.Items;
 import tech.zafrani.companionforpubg.utils.CategoryJsonAdapter;
+import tech.zafrani.companionforpubg.utils.Enums;
 import tech.zafrani.companionforpubg.utils.FileUtil;
 
 public class PUBGApplication extends Application {
@@ -59,6 +60,7 @@ public class PUBGApplication extends Application {
         if (this.gson == null) {
             this.gson = new GsonBuilder()
                     .registerTypeAdapter(Category.class, new CategoryJsonAdapter())
+                    .registerTypeHierarchyAdapter(Enums.FromString.class, new Enums.Serialization())
                     .create();
         }
         return this.gson;
