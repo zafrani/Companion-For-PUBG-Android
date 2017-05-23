@@ -1,6 +1,7 @@
 package tech.zafrani.companionforpubg.utils;
 
 import android.os.AsyncTask;
+import android.support.annotation.NonNull;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -14,7 +15,7 @@ import tech.zafrani.companionforpubg.models.NewsItem;
 public class PUBGNewsFetch extends AsyncTask<Void, NewsItem, Void>  {
     private final NewsAdapter adapter;
 
-    public PUBGNewsFetch(NewsAdapter adapter) {
+    public PUBGNewsFetch(@NonNull final NewsAdapter adapter) {
         this.adapter= adapter;
     }
 
@@ -36,8 +37,6 @@ public class PUBGNewsFetch extends AsyncTask<Void, NewsItem, Void>  {
                 final Element img = row.select(".img_wrap img").first();
                 final String imgSrc = img.absUrl("src");
 
-                System.out.println(title + " -- " + date + ", " + type + " (" + description + ")");
-                System.out.println("article link: " + linkSrc + ", img link: " + imgSrc);
                 publishProgress(new NewsItem(title, type, date, description, linkSrc, imgSrc));
             }
         } catch(IOException e) {
@@ -49,7 +48,7 @@ public class PUBGNewsFetch extends AsyncTask<Void, NewsItem, Void>  {
 
 
     @Override
-    protected void onProgressUpdate(final NewsItem... values) {
+    protected void onProgressUpdate(@NonNull final NewsItem... values) {
         super.onProgressUpdate(values);
         for (final NewsItem item :
                 values) {

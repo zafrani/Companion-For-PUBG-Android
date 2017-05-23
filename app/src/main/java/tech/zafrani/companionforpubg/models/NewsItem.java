@@ -55,4 +55,16 @@ public class NewsItem {
     public String getImgSrc() {
         return imgSrc;
     }
+
+    @Override
+    public String toString() {
+        return "NewsItem{" +
+                "title='" + title + '\'' +
+                ", type='" + type + '\'' +
+                ", date='" + date + '\'' +
+                ", description='" + description + '\'' +
+                ", linkSrc='" + linkSrc + '\'' +
+                ", imgSrc='" + imgSrc + '\'' +
+                '}';
+    }
 }
