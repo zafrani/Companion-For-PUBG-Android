@@ -6,18 +6,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 
 import tech.zafrani.companionforpubg.R;
 
-public class ItemDetailActivity extends AppCompatActivity {
-
+public class ItemDetailActivity extends BaseActivity {
 
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
+    public void onCreate(@Nullable final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_itemdetails);
-
         Intent intent = getIntent();
     }
 
@@ -25,5 +21,8 @@ public class ItemDetailActivity extends AppCompatActivity {
 
     }
 
-
+    @Override
+    protected int getLayoutRes() {
+        return R.layout.activity_itemdetails;
+    }
 }
