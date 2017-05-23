@@ -16,8 +16,11 @@ import tech.zafrani.companionforpubg.utils.PUBGNewsFetch;
 
 public class NewsFragment extends BaseFragment implements PUBGNewsFetch.PUBGNewsListener {
     public static final String TAG = NewsFragment.class.getSimpleName();
+    @Nullable
     private RecyclerView recyclerView;
+    @Nullable
     private NewsAdapter adapter;
+    @Nullable
     public PUBGNewsFetch.PUBGNewsListener delegate;
 
     // region BaseFragment

@@ -9,6 +9,7 @@
         android:id="@+id/row_item_image"
         android:layout_width="150dp"
         android:layout_height="100dp"
+        android:adjustViewBounds="true"
         style="@style/RowItemNews.Image"/>
     <RelativeLayout
         android:layout_width="wrap_content"

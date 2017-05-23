@@ -68,6 +68,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsItemViewHo
                     view.getContext().startActivity(browse);
                 }
             });
+
             Picasso.with(itemView.getContext())
                     .load(newsItem.getImgSrc())
                     .fit()
