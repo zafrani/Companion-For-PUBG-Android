@@ -65,4 +65,36 @@
         <item name="android:textSize">@dimen/item_info_size</item>
         <item name="android:textStyle">normal</item>
     </style>
+
+    <style name="RowItemNews">
+        <item name="android:color">@color/white</item>
+    </style>
+    <style name="RowItemNews.Container">
+        <item name="android:layout_margin">@dimen/small_margin</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:background">@color/tabBackground</item>
+    </style>
+    <style name="RowItemNews.Image">
+        <item name="android:layout_marginEnd">8dp</item>
+    </style>
+    <style name="RowItemNews.Title">
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="RowItemNews.Type">
+        <item name="android:textSize">10dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="RowItemNews.Date">
+        <item name="android:textSize">9dp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="RowItemNews.Description">
+        <item name="android:textSize">9dp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+
 </resources>
