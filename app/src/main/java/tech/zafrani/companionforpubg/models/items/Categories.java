@@ -1,27 +1,19 @@
 package tech.zafrani.companionforpubg.models.items;
 
-import android.support.annotation.NonNull;
+import java.util.HashMap;
 
-import com.google.gson.annotations.SerializedName;
-
-public class Categories {
-
-    @SerializedName("weapon_category")
-    private final WeaponCategory weaponCategory;
-
-    public Categories(@NonNull final WeaponCategory weaponCategory) {
-        this.weaponCategory = weaponCategory;
-    }
-
-    public WeaponCategory getWeaponCategory() {
-        return this.weaponCategory;
-    }
-
+public class Categories extends HashMap<String, Category> {
 
     @Override
     public String toString() {
-        return "Categories{" +
-               "weaponCategory=" + this.weaponCategory.toString() +
-               '}';
+        String returnString = "Categories{";
+        for (final Entry<String, Category> entry : entrySet()) {
+            if (entry == null || entry.getValue() == null) {
+                continue;
+            }
+            returnString += "\n" + entry.getKey() + ", " + entry.getValue().toString();
+        }
+        returnString += " \n}";
+        return returnString;
     }
 }

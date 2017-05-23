@@ -5,9 +5,8 @@ import android.support.annotation.NonNull;
 
 import com.google.gson.annotations.SerializedName;
 
-import java.util.Arrays;
 
-public class WeaponCategory extends Category {
+public class WeaponCategory implements Category {
 
     @NonNull
     @SerializedName("weapons")

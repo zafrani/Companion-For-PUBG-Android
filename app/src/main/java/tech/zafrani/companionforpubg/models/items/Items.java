@@ -24,4 +24,5 @@ public class Items {
                "categories=" + this.categories.toString() +
                '}';
     }
+
 }

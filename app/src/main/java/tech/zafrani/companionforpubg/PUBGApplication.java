@@ -4,9 +4,14 @@ import android.app.Application;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 import java.io.IOException;
 
+import tech.zafrani.companionforpubg.models.items.Category;
 import tech.zafrani.companionforpubg.models.items.Items;
+import tech.zafrani.companionforpubg.utils.CategoryJsonAdapter;
 import tech.zafrani.companionforpubg.utils.FileUtil;
 
 public class PUBGApplication extends Application {
@@ -24,6 +29,9 @@ public class PUBGApplication extends Application {
 
     @Nullable
     private Items items;
+
+    @Nullable
+    private Gson gson;
 
     @Override
     public void onCreate() {
@@ -44,5 +52,15 @@ public class PUBGApplication extends Application {
             }
         }
         return this.items;
+    }
+
+    @NonNull
+    public Gson getGson() {
+        if (this.gson == null) {
+            this.gson = new GsonBuilder()
+                    .registerTypeAdapter(Category.class, new CategoryJsonAdapter())
+                    .create();
+        }
+        return this.gson;
     }
 }
