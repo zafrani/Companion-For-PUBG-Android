@@ -14,7 +14,6 @@ public class ItemTabAdapter extends FragmentPagerAdapter {
         super(fm);
     }
 
-
     @Override
     public int getCount() {
         return 0;
