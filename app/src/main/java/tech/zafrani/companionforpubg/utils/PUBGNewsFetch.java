@@ -9,15 +9,10 @@ import org.jsoup.nodes.Element;
 
 import java.io.IOException;
 
-import tech.zafrani.companionforpubg.adapters.NewsAdapter;
 import tech.zafrani.companionforpubg.models.NewsItem;
 
 public class PUBGNewsFetch extends AsyncTask<Void, NewsItem, Void>  {
-    private final NewsAdapter adapter;
-
-    public PUBGNewsFetch(@NonNull final NewsAdapter adapter) {
-        this.adapter= adapter;
-    }
+    public PUBGNewsListener delegate = null;
 
     @Override
     protected Void doInBackground(final Void... voids) {
@@ -45,21 +40,22 @@ public class PUBGNewsFetch extends AsyncTask<Void, NewsItem, Void>  {
         return null;
     }
 
-
-
     @Override
     protected void onProgressUpdate(@NonNull final NewsItem... values) {
         super.onProgressUpdate(values);
         for (final NewsItem item :
                 values) {
-            adapter.addNewsItem(item);
+            delegate.updateNews(item);
         }
     }
 
     @Override
     protected void onPostExecute(final Void aVoid) {
         super.onPostExecute(aVoid);
-        adapter.notifyDataSetChanged();
+    }
+
+    public interface PUBGNewsListener {
+        public void updateNews(NewsItem newsItem);
     }
 }
 

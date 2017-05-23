@@ -20,10 +20,6 @@ import tech.zafrani.companionforpubg.models.NewsItem;
 public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsItemViewHolder>{
     private News news = new News();
 
-    public NewsAdapter() {
-
-    }
-
     public void addNewsItem(@NonNull final NewsItem newsItem) {
         news.add(newsItem);
     }
