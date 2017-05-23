@@ -20,27 +20,30 @@ import tech.zafrani.companionforpubg.models.News;
 import tech.zafrani.companionforpubg.models.NewsItem;
 
 public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsItemViewHolder>{
-    private News news = new News();
+    @NonNull
+    private final News news = new News();
 
     public void addNewsItem(@NonNull final NewsItem newsItem) {
         news.add(newsItem);
     }
 
     @Override
-    public NewsItemViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public NewsItemViewHolder onCreateViewHolder(@NonNull final ViewGroup parent,
+                                                 final int viewType) {
         final View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_item_news, parent, false);
         return new NewsItemViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(NewsItemViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final NewsItemViewHolder holder,
+                                 final int position) {
         final NewsItem newsItem = news.get(position);
         holder.bind(newsItem);
     }
 
     @Override
     public int getItemCount() {
-        return news == null ? 0 : news.size();
+        return news.size();
     }
 
 
