@@ -50,11 +50,11 @@ public class NewsFragment extends BaseFragment implements PUBGNewsFetch.PUBGNews
 
     @Override
     public void onDestroy() {
-        super.onDestroy();
         if (recyclerView != null) {
             recyclerView.setAdapter(null);
             adapter=null;
         }
+        super.onDestroy();
     }
 
     // endregion
