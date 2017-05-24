@@ -33,8 +33,12 @@ public class PUBGNewsFetch extends AsyncTask<Void, NewsItem, Void>  {
     @NonNull
     private final static String NEWS_IMGSRC_SELECTOR = "src";
 
+    @NonNull
+    public final PUBGNewsListener delegate;
 
-    public PUBGNewsListener delegate = null;
+    public PUBGNewsFetch(@NonNull PUBGNewsListener delegate) {
+        this.delegate = delegate;
+    }
 
     @Override
     protected Void doInBackground(final Void... voids) {
@@ -65,7 +69,7 @@ public class PUBGNewsFetch extends AsyncTask<Void, NewsItem, Void>  {
         super.onProgressUpdate(values);
         for (final NewsItem item :
                 values) {
-            delegate.updateNews(item);
+             delegate.updateNews(item);
         }
     }
 

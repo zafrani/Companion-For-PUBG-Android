@@ -22,8 +22,6 @@ public class NewsFragment extends BaseFragment implements PUBGNewsFetch.PUBGNews
 
     @Nullable
     private NewsAdapter adapter;
-    @Nullable
-    public PUBGNewsFetch.PUBGNewsListener delegate;
 
     // region BaseFragment
 
@@ -46,14 +44,17 @@ public class NewsFragment extends BaseFragment implements PUBGNewsFetch.PUBGNews
         adapter =  new NewsAdapter();
         recyclerView.setAdapter(adapter);
 
-        final PUBGNewsFetch newsFetch = new PUBGNewsFetch();
-        newsFetch.delegate = this;
+        final PUBGNewsFetch newsFetch = new PUBGNewsFetch(this);
         newsFetch.execute();
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
+        if (recyclerView != null) {
+            recyclerView.setAdapter(null);
+            adapter=null;
+        }
     }
 
     // endregion

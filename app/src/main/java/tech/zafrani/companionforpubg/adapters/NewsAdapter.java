@@ -13,8 +13,6 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import tech.zafrani.companionforpubg.R;
 import tech.zafrani.companionforpubg.models.News;
 import tech.zafrani.companionforpubg.models.NewsItem;
@@ -25,6 +23,10 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsItemViewHo
 
     public void addNewsItem(@NonNull final NewsItem newsItem) {
         news.add(newsItem);
+    }
+
+    public NewsAdapter() {
+
     }
 
     @Override
@@ -48,29 +50,27 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsItemViewHo
 
 
     public class NewsItemViewHolder extends RecyclerView.ViewHolder {
-        @BindView(R.id.row_item_image)
-        ImageView imgImageView;
-
-        @BindView(R.id.row_item_title)
-        TextView titleTextView;
-
-        @BindView(R.id.row_item_type)
-        TextView typeTextView;
-
-        @BindView(R.id.row_item_date)
-        TextView dateTextView;
-
-        @BindView(R.id.row_item_description)
-        TextView descriptionTextView;
-
+        @NonNull
+        private final ImageView imgImageView;
+        @NonNull
+        private final TextView titleTextView;
+        @NonNull
+        private final TextView typeTextView;
+        @NonNull
+        private final TextView dateTextView;
+        @NonNull
+        private final TextView descriptionTextView;
 
         public NewsItemViewHolder(@NonNull final View itemView) {
             super(itemView);
-            ButterKnife.bind(this, itemView);
+            imgImageView = (ImageView) itemView.findViewById(R.id.row_item_image);
+            titleTextView = (TextView) itemView.findViewById(R.id.row_item_title);
+            typeTextView = (TextView) itemView.findViewById(R.id.row_item_type);
+            dateTextView = (TextView) itemView.findViewById(R.id.row_item_date);
+            descriptionTextView = (TextView) itemView.findViewById(R.id.row_item_description);
         }
 
-
-        public void bind(final NewsItem newsItem) {
+        public void bind(@NonNull final NewsItem newsItem) {
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(@NonNull final View view) {
