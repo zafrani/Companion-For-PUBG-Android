@@ -18,4 +18,9 @@ public class Constants {
     @NonNull
     public final static String CONTACT_US_EMAIL = "support@zafrani.tech";
 
+    @NonNull
+    public final static String PUBG_NEWS_LINK = "https://www.playbattlegrounds.com/news.pu";
+
+
+
 }

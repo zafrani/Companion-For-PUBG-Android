@@ -12,6 +12,10 @@
                     android:id="@+id/drawer_items"
                     android:icon="@drawable/ic_backpack"
                     android:title="@string/label_items"/>
+                <item
+                    android:id="@+id/drawer_news"
+                    android:icon="@drawable/ic_backpack"
+                    android:title="@string/label_news"/>
             </group>
         </menu>
     </item>
