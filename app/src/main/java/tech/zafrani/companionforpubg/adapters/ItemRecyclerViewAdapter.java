@@ -39,8 +39,8 @@ public class ItemRecyclerViewAdapter extends RecyclerViewAdapter<Item, ItemRecyc
 
         @Override
         public void bind(int position) {
+            super.bind(position);
             final Item item = get(position);
-
             Picasso.with(this.itemView.getContext())
                    .load(Constants.ITEM_IMAGE_URL + item.getImageUrl())
                    .into(this.imageView);
