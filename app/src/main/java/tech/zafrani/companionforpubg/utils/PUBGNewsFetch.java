@@ -34,9 +34,9 @@ public class PUBGNewsFetch extends AsyncTask<Void, NewsItem, Void>  {
     private final static String NEWS_IMGSRC_SELECTOR = "src";
 
     @NonNull
-    public final PUBGNewsListener delegate;
+    public final Listener delegate;
 
-    public PUBGNewsFetch(@NonNull PUBGNewsListener delegate) {
+    public PUBGNewsFetch(@NonNull Listener delegate) {
         this.delegate = delegate;
     }
 
@@ -78,7 +78,7 @@ public class PUBGNewsFetch extends AsyncTask<Void, NewsItem, Void>  {
         super.onPostExecute(aVoid);
     }
 
-    public interface PUBGNewsListener {
+    public interface Listener {
         public void updateNews(NewsItem newsItem);
     }
 }

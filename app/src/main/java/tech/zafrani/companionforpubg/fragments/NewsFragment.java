@@ -14,7 +14,7 @@ import tech.zafrani.companionforpubg.models.NewsItem;
 import tech.zafrani.companionforpubg.utils.PUBGNewsFetch;
 
 
-public class NewsFragment extends BaseFragment implements PUBGNewsFetch.PUBGNewsListener {
+public class NewsFragment extends BaseFragment implements PUBGNewsFetch.Listener {
     public static final String TAG = NewsFragment.class.getSimpleName();
 
     @BindView(R.id.fragment_news_recyclerview)
