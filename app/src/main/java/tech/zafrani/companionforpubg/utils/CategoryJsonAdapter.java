@@ -34,17 +34,17 @@ public class CategoryJsonAdapter
             return null;
         }
         final String categoryName = entryIterator.next().getKey();
-        if (Category.WEAPON.equals(categoryName)) {
+        if (Category.Name.WEAPON_CATEGORY.getValue().equals(categoryName)) {
             return context.deserialize(jsonObject, WeaponCategory.class);
-        } else if (Category.AMMO.equals(categoryName)) {
+        } else if (Category.Name.AMMO_CATEGORY.getValue().equals(categoryName)) {
             //todo
-        } else if (Category.ATTACHMENT.equals(categoryName)) {
+        } else if (Category.Name.ATTACHMENT_CATEGORY.getValue().equals(categoryName)) {
             //todo
-        } else if (Category.EQUIPMENT.equals(categoryName)) {
+        } else if (Category.Name.EQUIPMENT_CATEGORY.getValue().equals(categoryName)) {
             //todo
-        } else if (Category.CONSUMABLE.equals(categoryName)) {
+        } else if (Category.Name.CONSUMABLE_CATEGORY.getValue().equals(categoryName)) {
             //todo
-        } else if (Category.VEHICLES.equals(categoryName)) {
+        } else if (Category.Name.VEHICLE_CATEGORY.getValue().equals(categoryName)) {
             //todo
         }
         return null;

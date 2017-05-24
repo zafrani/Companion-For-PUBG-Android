@@ -15,6 +15,7 @@ import butterknife.BindView;
 import tech.zafrani.companionforpubg.PUBGApplication;
 import tech.zafrani.companionforpubg.R;
 import tech.zafrani.companionforpubg.adapters.ItemTabAdapter;
+import tech.zafrani.companionforpubg.models.items.Category;
 
 public class ItemFragment extends BaseFragment {
 
@@ -37,13 +38,8 @@ public class ItemFragment extends BaseFragment {
     public void onViewCreated(final View view, @Nullable final Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         Log.e(getClass().getSimpleName(), PUBGApplication.getInstance().getItems().toString());
-        if (viewPager != null) {
-            viewPager.setAdapter(new ItemTabAdapter(getChildFragmentManager()));
-            if(tabLayout != null) {
-                tabLayout.setupWithViewPager(viewPager);
-            }
-        }
-        showDisclaimerForFirstTime();
+        Log.e(getClass().getSimpleName(), PUBGApplication.getInstance().getItems().getCategories().get(Category.Name.WEAPON_CATEGORY).toString());
+
     }
 
     //todo remove this after data is updated

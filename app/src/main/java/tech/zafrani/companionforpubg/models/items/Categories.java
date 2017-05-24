@@ -1,13 +1,19 @@
 package tech.zafrani.companionforpubg.models.items;
 
-import java.util.HashMap;
+import android.support.annotation.NonNull;
 
-public class Categories extends HashMap<String, Category> {
+import java.util.EnumMap;
+
+public class Categories extends EnumMap<Category.Name, Category> {
+
+    public Categories() {
+        super(Category.Name.class);
+    }
 
     @Override
     public String toString() {
         String returnString = "Categories{";
-        for (final Entry<String, Category> entry : entrySet()) {
+        for (final Entry<Category.Name, Category> entry : entrySet()) {
             if (entry == null || entry.getValue() == null) {
                 continue;
             }
@@ -15,5 +21,9 @@ public class Categories extends HashMap<String, Category> {
         }
         returnString += " \n}";
         return returnString;
+    }
+
+    public Category get(@NonNull final Category.Name key) {
+        return super.get(key);
     }
 }
