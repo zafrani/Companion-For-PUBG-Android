@@ -2,6 +2,7 @@ package tech.zafrani.companionforpubg.models.items;
 
 import android.support.annotation.NonNull;
 
+import java.io.Serializable;
 import java.util.List;
 
 import tech.zafrani.companionforpubg.utils.Enums;
@@ -9,7 +10,7 @@ import tech.zafrani.companionforpubg.utils.Enums;
 public interface Category<T extends Item> {
     List<T> getItems();
 
-    enum Name implements Enums.FromString {
+    enum Name implements Enums.FromString, Serializable {
         WEAPON_CATEGORY("weapons"),
         AMMO_CATEGORY("ammo"),
         ATTACHMENT_CATEGORY("attachment"),
