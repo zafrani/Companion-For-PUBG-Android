@@ -4,7 +4,6 @@ package tech.zafrani.companionforpubg.adapters;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,26 +13,24 @@ import android.widget.TextView;
 import com.squareup.picasso.Picasso;
 
 import tech.zafrani.companionforpubg.R;
-import tech.zafrani.companionforpubg.models.News;
+import tech.zafrani.companionforpubg.models.NewsList;
 import tech.zafrani.companionforpubg.models.NewsItem;
 
-public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsItemViewHolder>{
+public class NewsAdapter extends RecyclerViewAdapter<NewsItem, NewsAdapter.NewsItemViewHolder>{
     @NonNull
-    private final News news = new News();
+    private final NewsList news = new NewsList();
 
     public void addNewsItem(@NonNull final NewsItem newsItem) {
         news.add(newsItem);
     }
 
-    public NewsAdapter() {
 
-    }
+
 
     @Override
-    public NewsItemViewHolder onCreateViewHolder(@NonNull final ViewGroup parent,
+    public NewsAdapter.NewsItemViewHolder onCreateViewHolder(@NonNull final ViewGroup parent,
                                                  final int viewType) {
-        final View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_item_news, parent, false);
-        return new NewsItemViewHolder(view);
+        return new NewsItemViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.row_item_news, parent, false));
     }
 
     @Override
@@ -43,13 +40,9 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsItemViewHo
         holder.bind(newsItem);
     }
 
-    @Override
-    public int getItemCount() {
-        return news.size();
-    }
 
 
-    public class NewsItemViewHolder extends RecyclerView.ViewHolder {
+    public class NewsItemViewHolder extends RecyclerViewAdapter.ViewHolder {
         @NonNull
         private final ImageView imgImageView;
         @NonNull
