@@ -3,6 +3,7 @@ package tech.zafrani.companionforpubg.fragments;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -40,6 +41,8 @@ public class NewsFragment extends BaseFragment implements PUBGNewsFetch.Listener
     public void onViewCreated(@NonNull final View view,
                               @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        final DividerItemDecoration itemDecoration = new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL);
+        this.recyclerView.addItemDecoration(itemDecoration);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         adapter =  new NewsAdapter();
         recyclerView.setAdapter(adapter);

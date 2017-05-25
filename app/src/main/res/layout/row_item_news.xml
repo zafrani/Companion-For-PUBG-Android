@@ -43,4 +43,6 @@
             android:layout_height="wrap_content"
             style="@style/RowItemNews.Description"/>
     </RelativeLayout>
+
+
 </LinearLayout>
