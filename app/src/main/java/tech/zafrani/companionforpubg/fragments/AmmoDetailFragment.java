@@ -96,9 +96,7 @@ public class AmmoDetailFragment extends BaseFragment
 
     //region Methods
     private void setNameText(@Nullable final String text) {
-        if (this.nameTextView == null)
-
-        {
+        if (this.nameTextView == null) {
             return;
         }
         this.nameTextView.setText(text);
