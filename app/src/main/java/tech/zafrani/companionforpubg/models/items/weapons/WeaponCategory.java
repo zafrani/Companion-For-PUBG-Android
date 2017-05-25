@@ -33,4 +33,18 @@ public class WeaponCategory implements Category<Weapon> {
         return this.weaponList;
     }
 
+
+    @NonNull
+    public WeaponList getWeaponsUsingAmmo(final int ammoId) {
+        final WeaponList weapons = new WeaponList();
+        for (final Weapon weapon : weaponList) {
+            if (weapon instanceof ProjectileWeapon) {
+                if (((ProjectileWeapon) weapon).getAmmoId() == ammoId) {
+                    weapons.add(weapon);
+                }
+            }
+        }
+        return weapons;
+    }
+
 }

@@ -50,5 +50,10 @@
         android:layout_height="1dp"
         android:background="@color/colorAccent"/>
 
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/fragment_ammo_detail_weapons"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
 
 </LinearLayout>

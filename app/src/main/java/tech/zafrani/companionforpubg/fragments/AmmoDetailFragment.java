@@ -4,18 +4,31 @@ package tech.zafrani.companionforpubg.fragments;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.DividerItemDecoration;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
+
 import butterknife.BindView;
+import tech.zafrani.companionforpubg.PUBGApplication;
 import tech.zafrani.companionforpubg.R;
+import tech.zafrani.companionforpubg.activities.ItemDetailActivity;
+import tech.zafrani.companionforpubg.adapters.ItemRecyclerViewAdapter;
+import tech.zafrani.companionforpubg.adapters.RecyclerViewAdapter;
 import tech.zafrani.companionforpubg.models.items.ammo.Ammo;
+import tech.zafrani.companionforpubg.models.items.weapons.Weapon;
+import tech.zafrani.companionforpubg.models.items.weapons.WeaponList;
 import tech.zafrani.companionforpubg.utils.Constants;
 
-public class AmmoDetailFragment extends BaseFragment {
+public class AmmoDetailFragment extends BaseFragment
+        implements RecyclerViewAdapter.Listener<Weapon>
+
+{
 
     private static final String ARG_AMMO = AmmoDetailFragment.class.getSimpleName() + ".ARG_AMMO";
 
@@ -35,6 +48,10 @@ public class AmmoDetailFragment extends BaseFragment {
     @Nullable
     @BindView(R.id.fragment_ammo_detail_ammo_image)
     ImageView ammoImageView;
+
+    @Nullable
+    @BindView(R.id.fragment_ammo_detail_weapons)
+    RecyclerView weaponsRecycler;
 
     //region BaseFragment
     @Override
@@ -56,8 +73,24 @@ public class AmmoDetailFragment extends BaseFragment {
         }
         setNameText(ammo.getName());
         setAmmoImageView(ammo.getImageUrl());
+        if (this.weaponsRecycler != null) {
+            final WeaponList weapons = PUBGApplication.getInstance().getItems().getCategories().getWeaponCategory().getWeaponsUsingAmmo(ammo.getId());
+            ItemRecyclerViewAdapter<Weapon> adapter = new ItemRecyclerViewAdapter<>((weapons));
+            adapter.setListener(this);
+            final DividerItemDecoration itemDecoration = new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL);
+            this.weaponsRecycler.addItemDecoration(itemDecoration);
+            this.weaponsRecycler.setLayoutManager(new LinearLayoutManager(getActivity()));
+
+            this.weaponsRecycler.setAdapter(adapter);
+        }
+
     }
     //endregion
+
+    @Override
+    public void onClick(@NonNull final Weapon weapon) {
+        ItemDetailActivity.startActivity(getActivity(), weapon);
+    }
 
     //region Methods
     private void setNameText(@Nullable final String text) {
