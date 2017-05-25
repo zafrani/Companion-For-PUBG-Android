@@ -12,7 +12,7 @@ import tech.zafrani.companionforpubg.models.items.Category;
 public class AttachmentCategory implements Category<Attachment> {
 
     @NonNull
-    @SerializedName("attachment")
+    @SerializedName("attachments")
     private final AttachmentList attachmentList;
 
     public AttachmentCategory(@NonNull final AttachmentList attachmentList) {

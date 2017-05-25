@@ -8,6 +8,7 @@ import android.support.annotation.IdRes;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.widget.Toast;
 
 import tech.zafrani.companionforpubg.R;
 import tech.zafrani.companionforpubg.fragments.AmmoDetailFragment;
@@ -40,7 +41,8 @@ public class ItemDetailActivity extends BaseActivity {
         } else if (item instanceof Ammo) {
             showFragment(AmmoDetailFragment.newInstance((Ammo) item));
         } else {
-            throw new IllegalStateException("Unknown item");
+            Toast.makeText(this, "We're still working on this feature!", Toast.LENGTH_SHORT).show();
+            finish();
         }
     }
 

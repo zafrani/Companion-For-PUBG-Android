@@ -15,6 +15,10 @@ import java.util.List;
 import java.util.Map;
 
 import tech.zafrani.companionforpubg.models.items.ammo.AmmoCategory;
+import tech.zafrani.companionforpubg.models.items.attachments.AttachmentCategory;
+import tech.zafrani.companionforpubg.models.items.consumables.ConsumableCategory;
+import tech.zafrani.companionforpubg.models.items.equipment.EquipmentCategory;
+import tech.zafrani.companionforpubg.models.items.vehicles.VehicleCategory;
 import tech.zafrani.companionforpubg.models.items.weapons.WeaponCategory;
 import tech.zafrani.companionforpubg.utils.Enums;
 
@@ -24,7 +28,7 @@ public interface Category<T extends Item> {
     enum Name implements Enums.FromString, Serializable {
         WEAPON_CATEGORY("weapons"),
         AMMO_CATEGORY("ammo"),
-        ATTACHMENT_CATEGORY("attachment"),
+        ATTACHMENT_CATEGORY("attachments"),
         EQUIPMENT_CATEGORY("equipment"),
         CONSUMABLE_CATEGORY("consumables"),
         VEHICLE_CATEGORY("vehicles");
@@ -79,13 +83,13 @@ public interface Category<T extends Item> {
             } else if (Category.Name.AMMO_CATEGORY.getValue().equals(categoryName)) {
                 return context.deserialize(jsonObject, AmmoCategory.class);
             } else if (Category.Name.ATTACHMENT_CATEGORY.getValue().equals(categoryName)) {
-                //todo
+                return context.deserialize(jsonObject, AttachmentCategory.class);
             } else if (Category.Name.EQUIPMENT_CATEGORY.getValue().equals(categoryName)) {
-                //todo
+                return context.deserialize(jsonObject, EquipmentCategory.class);
             } else if (Category.Name.CONSUMABLE_CATEGORY.getValue().equals(categoryName)) {
-                //todo
+                return context.deserialize(jsonObject, ConsumableCategory.class);
             } else if (Category.Name.VEHICLE_CATEGORY.getValue().equals(categoryName)) {
-                //todo
+                return context.deserialize(jsonObject, VehicleCategory.class);
             }
             return null;
         }
