@@ -2,9 +2,13 @@ package tech.zafrani.companionforpubg.models.items;
 
 import android.support.annotation.NonNull;
 
+import java.util.List;
+
 import tech.zafrani.companionforpubg.utils.Enums;
 
-public interface Category {
+public interface Category<T extends Item> {
+    List<T> getItems();
+
     enum Name implements Enums.FromString {
         WEAPON_CATEGORY("weapons"),
         AMMO_CATEGORY("ammo"),

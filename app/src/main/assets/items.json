@@ -611,36 +611,43 @@
     "ammo_category": {
       "ammo": [
         {
+          "id": 0,
           "name": ".300 Magnum Ammo",
           "image_url": "Icon_ammo_300Magnum.png",
           "capacity": 0
         },
         {
+          "id": 1,
           "name": ".45 ACP Ammo",
           "image_url": "Icon_ammo_45ACP.png",
           "capacity": 0.4
         },
         {
+          "id": 2,
           "name": "12 Gauge Ammo",
           "image_url": "Icon_ammo_12Guage.png",
           "capacity": 1.25
         },
         {
+          "id": 3,
           "name": "5.56mm Ammo",
           "image_url": "Icon_ammo_556mm.png",
           "capacity": 0.5
         },
         {
+          "id": 4,
           "name": "7.62mm Ammo",
           "image_url": "Icon_ammo_762mm.png",
           "capacity": 0.7
         },
         {
+          "id": 5,
           "name": "9mm Ammo",
           "image_url": "Icon_ammo_9mm.png",
           "capacity": 0.375
         },
         {
+          "id": 6,
           "name": "Bolt",
           "image_url": "Icon_ammo_bolt.png",
           "capacity": 0

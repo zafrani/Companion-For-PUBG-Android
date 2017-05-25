@@ -1,0 +1,52 @@
+package tech.zafrani.companionforpubg.models.items;
+
+
+import android.support.annotation.NonNull;
+
+import com.google.gson.annotations.SerializedName;
+
+import java.io.Serializable;
+
+public class Item implements Serializable {
+
+    @NonNull
+    @SerializedName("name")
+    private final String name;
+
+    @SerializedName("id")
+    private final int id;
+
+    @NonNull
+    @SerializedName("image_url")
+    private final String imageUrl;
+
+    public Item(@NonNull final String name,
+                final int id,
+                @NonNull final String imageUrl) {
+        this.name = name;
+        this.id = id;
+        this.imageUrl = imageUrl;
+    }
+
+    @Override
+    public String toString() {
+        return "Weapon{" +
+               "name='" + name + '\'' +
+               ", id=" + id +
+               '}';
+    }
+
+    @NonNull
+    public String getName() {
+        return this.name;
+    }
+
+    public int getId() {
+        return this.id;
+    }
+
+    @NonNull
+    public String getImageUrl() {
+        return this.imageUrl;
+    }
+}

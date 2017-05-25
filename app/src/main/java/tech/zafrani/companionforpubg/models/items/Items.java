@@ -5,7 +5,9 @@ import android.support.annotation.NonNull;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Items {
+import java.io.Serializable;
+
+public class Items implements Serializable {
 
     @SerializedName("categories")
     private final Categories categories;
