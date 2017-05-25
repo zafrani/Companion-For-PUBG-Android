@@ -6,6 +6,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
@@ -13,6 +14,8 @@ import com.squareup.picasso.Picasso;
 import butterknife.BindView;
 import tech.zafrani.companionforpubg.PUBGApplication;
 import tech.zafrani.companionforpubg.R;
+import tech.zafrani.companionforpubg.activities.BaseActivity;
+import tech.zafrani.companionforpubg.activities.ItemDetailActivity;
 import tech.zafrani.companionforpubg.models.items.Category;
 import tech.zafrani.companionforpubg.models.items.ammo.Ammo;
 import tech.zafrani.companionforpubg.models.items.weapons.ProjectileWeapon;
@@ -50,6 +53,11 @@ public class WeaponDetailFragment extends BaseFragment {
     @BindView(R.id.fragment_weapon_detail_weapon_ammo_image)
     ImageView ammoImageView;
 
+    @Nullable
+    @BindView(R.id.fragment_weapon_detail_weapon_ammo_content)
+    LinearLayout ammoContent;
+
+    //region BaseFragment
 
     @Override
     protected int getLayoutRes() {
@@ -78,8 +86,15 @@ public class WeaponDetailFragment extends BaseFragment {
             }
             setAmmoImageView(ammo.getImageUrl());
             setAmmoTextView(ammo.getName());
+            setAmmoClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    ItemDetailActivity.startActivity(getActivity(), ammo);
+                }
+            });
         }
     }
+    //endregion
 
     //region Methods
     private void setNameText(@Nullable final String text) {
@@ -120,5 +135,13 @@ public class WeaponDetailFragment extends BaseFragment {
         }
         this.ammoTextView.setText(text);
     }
+
+    private void setAmmoClickListener(@Nullable final View.OnClickListener onClickListener) {
+        if (this.ammoContent == null) {
+            return;
+        }
+        this.ammoContent.setOnClickListener(onClickListener);
+    }
+
     //endregion
 }

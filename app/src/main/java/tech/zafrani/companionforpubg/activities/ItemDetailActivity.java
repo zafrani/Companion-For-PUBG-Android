@@ -10,6 +10,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
 import tech.zafrani.companionforpubg.R;
+import tech.zafrani.companionforpubg.fragments.AmmoDetailFragment;
 import tech.zafrani.companionforpubg.fragments.WeaponDetailFragment;
 import tech.zafrani.companionforpubg.models.items.Item;
 import tech.zafrani.companionforpubg.models.items.ammo.Ammo;
@@ -37,7 +38,7 @@ public class ItemDetailActivity extends BaseActivity {
         if (item instanceof Weapon) {
             showFragment(WeaponDetailFragment.newInstance((Weapon) item));
         } else if (item instanceof Ammo) {
-
+            showFragment(AmmoDetailFragment.newInstance((Ammo) item));
         } else {
             throw new IllegalStateException("Unknown item");
         }
