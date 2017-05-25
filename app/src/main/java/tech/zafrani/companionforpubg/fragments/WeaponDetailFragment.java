@@ -11,7 +11,11 @@ import android.widget.TextView;
 import com.squareup.picasso.Picasso;
 
 import butterknife.BindView;
+import tech.zafrani.companionforpubg.PUBGApplication;
 import tech.zafrani.companionforpubg.R;
+import tech.zafrani.companionforpubg.models.items.Category;
+import tech.zafrani.companionforpubg.models.items.ammo.Ammo;
+import tech.zafrani.companionforpubg.models.items.weapons.ProjectileWeapon;
 import tech.zafrani.companionforpubg.models.items.weapons.Weapon;
 import tech.zafrani.companionforpubg.utils.Constants;
 
@@ -36,7 +40,15 @@ public class WeaponDetailFragment extends BaseFragment {
 
     @Nullable
     @BindView(R.id.fragment_weapon_detail_weapon_image)
-    ImageView weaponImage;
+    ImageView weaponImageView;
+
+    @Nullable
+    @BindView(R.id.fragment_weapon_detail_weapon_ammo_text)
+    TextView ammoTextView;
+
+    @Nullable
+    @BindView(R.id.fragment_weapon_detail_weapon_ammo_image)
+    ImageView ammoImageView;
 
 
     @Override
@@ -57,8 +69,16 @@ public class WeaponDetailFragment extends BaseFragment {
             throw new IllegalStateException("Missing Weapon");
         }
         setNameText(weapon.getName());
-        setWeaponImage(weapon.getImageUrl());
+        setWeaponImageView(weapon.getImageUrl());
         setTypeText(getString(weapon.getType().getString()));
+        if (weapon instanceof ProjectileWeapon) {
+            final Ammo ammo = PUBGApplication.getInstance().getItems().getCategories().getAmmoCategory().getAmmoWithId(((ProjectileWeapon) weapon).getAmmoId());
+            if (ammo == null) {
+                return;
+            }
+            setAmmoImageView(ammo.getImageUrl());
+            setAmmoTextView(ammo.getName());
+        }
     }
 
     //region Methods
@@ -69,20 +89,36 @@ public class WeaponDetailFragment extends BaseFragment {
         this.nameTextView.setText(text);
     }
 
-    private void setWeaponImage(@Nullable final String url) {
-        if (this.weaponImage == null) {
+    private void setWeaponImageView(@Nullable final String url) {
+        if (this.weaponImageView == null) {
             return;
         }
         Picasso.with(getActivity())
                .load(Constants.ITEM_IMAGE_URL + url)
-               .into(this.weaponImage);
+               .into(this.weaponImageView);
     }
 
-    private void setTypeText(@Nullable final String type) {
+    private void setTypeText(@Nullable final String text) {
         if (this.typeTextView == null) {
             return;
         }
-        this.typeTextView.setText(type);
+        this.typeTextView.setText(text);
+    }
+
+    private void setAmmoImageView(@Nullable final String url) {
+        if (this.ammoImageView == null) {
+            return;
+        }
+        Picasso.with(getActivity())
+               .load(Constants.ITEM_IMAGE_URL + url)
+               .into(this.ammoImageView);
+    }
+
+    private void setAmmoTextView(@Nullable final String text) {
+        if (this.ammoTextView == null) {
+            return;
+        }
+        this.ammoTextView.setText(text);
     }
     //endregion
 }

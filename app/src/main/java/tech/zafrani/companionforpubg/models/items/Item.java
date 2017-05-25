@@ -20,19 +20,26 @@ public class Item implements Serializable {
     @SerializedName("image_url")
     private final String imageUrl;
 
+    @SerializedName("capacity")
+    private final int capacity;
+
     public Item(@NonNull final String name,
                 final int id,
-                @NonNull final String imageUrl) {
+                @NonNull final String imageUrl,
+                final int capacity) {
         this.name = name;
         this.id = id;
         this.imageUrl = imageUrl;
+        this.capacity = capacity;
     }
 
     @Override
     public String toString() {
-        return "Weapon{" +
+        return "Item{" +
                "name='" + name + '\'' +
                ", id=" + id +
+               ", imageUrl='" + imageUrl + '\'' +
+               ", capacity=" + capacity +
                '}';
     }
 
@@ -48,5 +55,9 @@ public class Item implements Serializable {
     @NonNull
     public String getImageUrl() {
         return this.imageUrl;
+    }
+
+    public int getCapacity() {
+        return this.capacity;
     }
 }

@@ -32,4 +32,5 @@ public class WeaponCategory implements Category<Weapon> {
     public List<Weapon> getItems() {
         return this.weaponList;
     }
+
 }

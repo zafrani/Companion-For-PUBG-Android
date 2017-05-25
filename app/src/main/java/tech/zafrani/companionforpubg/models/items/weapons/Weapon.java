@@ -3,13 +3,21 @@ package tech.zafrani.companionforpubg.models.items.weapons;
 import android.support.annotation.NonNull;
 import android.support.annotation.StringRes;
 
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
 import com.google.gson.annotations.SerializedName;
 
 import tech.zafrani.companionforpubg.R;
 import tech.zafrani.companionforpubg.models.items.Item;
 import tech.zafrani.companionforpubg.utils.Enums;
 
-public class Weapon extends Item {
+import static tech.zafrani.companionforpubg.models.items.weapons.Weapon.Type.Grenade;
+import static tech.zafrani.companionforpubg.models.items.weapons.Weapon.Type.Melee;
+
+public abstract class Weapon extends Item {
     @NonNull
     @SerializedName("type")
     private final Type type;
@@ -18,14 +26,23 @@ public class Weapon extends Item {
     public Weapon(@NonNull final String name,
                   final int id,
                   @NonNull final String imageUrl,
+                  final int capacity,
                   @NonNull final Type type) {
-        super(name, id, imageUrl);
+        super(name, id, imageUrl, capacity);
         this.type = type;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString()+
+               "Weapon{" +
+               "type=" + type +
+               '}';
     }
 
     @NonNull
     public Type getType() {
-        return type;
+        return this.type;
     }
 
     public enum Type implements Enums.FromString {
@@ -58,4 +75,31 @@ public class Weapon extends Item {
             return string;
         }
     }
+
+    public static class JsonAdapter
+            implements JsonDeserializer<Weapon> {
+        private static final String TYPE = "type";
+
+        @Override
+        public Weapon deserialize(final JsonElement json,
+                                  final java.lang.reflect.Type typeOfT,
+                                  final JsonDeserializationContext context) throws JsonParseException {
+            if (json == null) {
+                return null;
+            }
+            final JsonObject jsonObject = json.getAsJsonObject();
+            if (jsonObject == null) {
+                return null;
+            }
+            String type = jsonObject.get(TYPE).getAsString();
+            if (Melee.name().equalsIgnoreCase(type)) {
+                return context.deserialize(jsonObject, MeleeWeapon.class);
+            } else if (Grenade.name().equalsIgnoreCase(type)) {
+                return context.deserialize(jsonObject, GrenadeWeapon.class);
+            } else {
+                return context.deserialize(jsonObject, ProjectileWeapon.class);
+            }
+        }
+    }
+
 }

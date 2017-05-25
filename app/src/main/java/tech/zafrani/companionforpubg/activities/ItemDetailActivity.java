@@ -4,6 +4,8 @@ package tech.zafrani.companionforpubg.activities;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.IdRes;
+import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
@@ -41,11 +43,13 @@ public class ItemDetailActivity extends BaseActivity {
         }
     }
 
+    @LayoutRes
     @Override
     protected int getLayoutRes() {
         return R.layout.activity_itemdetails;
     }
 
+    @IdRes
     @Override
     protected int getContentView() {
         return R.id.activity_itemdetails_content;

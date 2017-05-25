@@ -79,7 +79,6 @@
           "id": 3,
           "type": "Melee",
           "image_url": "Icon_weapon_Crowbar.png",
-          "range": 0,
           "rate": 0,
           "capacity": 120,
           "damage": {
@@ -99,7 +98,6 @@
           "id": 4,
           "type": "Grenade",
           "image_url": "Icon_weapon_FragGrenade.png",
-          "range": 0,
           "capacity": 12,
           "damage": {
             "base": 0
@@ -333,7 +331,6 @@
           "id": 15,
           "type": "Melee",
           "image_url": "Icon_weapon_Pan.png",
-          "range": 0,
           "rate": 0,
           "capacity": 120,
           "damage": {
@@ -473,7 +470,6 @@
           "id": 21,
           "type": "Melee",
           "image_url": "Icon_weapon_Sickle.png",
-          "range": 0,
           "rate": 0,
           "capacity": 120,
           "damage": {
@@ -517,7 +513,6 @@
           "id": 23,
           "type": "Grenade",
           "image_url": "Icon_weapon_SmokeGrenade.png",
-          "range": 0,
           "capacity": 16,
           "damage": {
             "base": 0
@@ -528,7 +523,6 @@
           "id": 24,
           "type": "Grenade",
           "image_url": "Icon_weapon_StunGrenade.png",
-          "range": 0,
           "capacity": 14,
           "damage": {
             "base": 0
@@ -612,37 +606,37 @@
       "ammo": [
         {
           "id": 0,
-          "name": ".300 Magnum Ammo",
+          "name": ".300 Magnum",
           "image_url": "Icon_ammo_300Magnum.png",
           "capacity": 0
         },
         {
           "id": 1,
-          "name": ".45 ACP Ammo",
+          "name": ".45 ACP",
           "image_url": "Icon_ammo_45ACP.png",
           "capacity": 0.4
         },
         {
           "id": 2,
-          "name": "12 Gauge Ammo",
+          "name": "12 Gauge",
           "image_url": "Icon_ammo_12Guage.png",
           "capacity": 1.25
         },
         {
           "id": 3,
-          "name": "5.56mm Ammo",
+          "name": "5.56mm",
           "image_url": "Icon_ammo_556mm.png",
           "capacity": 0.5
         },
         {
           "id": 4,
-          "name": "7.62mm Ammo",
+          "name": "7.62mm",
           "image_url": "Icon_ammo_762mm.png",
           "capacity": 0.7
         },
         {
           "id": 5,
-          "name": "9mm Ammo",
+          "name": "9mm",
           "image_url": "Icon_ammo_9mm.png",
           "capacity": 0.375
         },
