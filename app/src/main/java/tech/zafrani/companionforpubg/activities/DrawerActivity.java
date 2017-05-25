@@ -74,6 +74,11 @@ public abstract class DrawerActivity extends BaseActivity
     }
 
     @Override
+    protected int getContentView() {
+        return R.id.activity_drawer_content;
+    }
+
+    @Override
     public boolean onOptionsItemSelected(final MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
@@ -173,12 +178,6 @@ public abstract class DrawerActivity extends BaseActivity
         startActivity(Intent.createChooser(emailIntent, getString(R.string.label_send_email)));
     }
 
-    private void showFragment(@NonNull final Fragment fragment) {
-        final FragmentTransaction fragTransaction = getFragmentManager().beginTransaction();
-        fragTransaction.replace(R.id.activity_drawer_content, fragment);
-        fragTransaction.commit();
-        getFragmentManager().executePendingTransactions();
-    }
     //endregion
 
 }

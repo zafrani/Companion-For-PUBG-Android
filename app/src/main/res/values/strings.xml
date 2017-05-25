@@ -21,6 +21,16 @@
     <string name="label_contact_us">Contact Us</string>
     <string name="label_send_email">Send Email</string>
     <string name="toast_how_to_use_distance">Tap two locations on the map. Tap a third time to restart.</string>
+    <string name="weapon_type_assault_rifle">Assault Rifle</string>
+    <string name="weapon_type_sniper_rifle">Sniper Rifle</string>
+    <string name="weapon_type_cross_bow">Crossbow</string>
+    <string name="weapon_type_melee">Melee</string>
+    <string name="weapon_type_grenade">Grenade</string>
+    <string name="weapon_type_lmg">LMG</string>
+    <string name="weapon_type_smg">SMG</string>
+    <string name="weapon_type_pistol">Pistol</string>
+    <string name="weapon_type_shotgun">Shotgun</string>
+    <string name="weapon_type_dmr">DMR</string>
 
     <string name="item_view">View: </string>
     <string name="item_view_linear_description">Linear item display.</string>

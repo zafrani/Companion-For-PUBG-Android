@@ -92,6 +92,6 @@ public abstract class RecyclerViewAdapter<Model extends Serializable, VH extends
     }
 
     public interface Listener<Model extends Serializable> {
-        void onClick(Model model);
+        void onClick(@NonNull Model model);
     }
 }
