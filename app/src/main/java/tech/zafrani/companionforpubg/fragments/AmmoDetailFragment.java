@@ -87,10 +87,12 @@ public class AmmoDetailFragment extends BaseFragment
     }
     //endregion
 
+    //region RecyclerViewAdapter.Listener<Weapon>
     @Override
     public void onClick(@NonNull final Weapon weapon) {
         ItemDetailActivity.startActivity(getActivity(), weapon);
     }
+    //endregion
 
     //region Methods
     private void setNameText(@Nullable final String text) {
