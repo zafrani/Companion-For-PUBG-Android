@@ -14,6 +14,7 @@
     <string name="app_name">Companion for PUBG</string>
     <string name="label_map">Map</string>
     <string name="label_items">Items</string>
+    <string name="label_news">News</string>
     <string name="label_about">About</string>
     <string name="label_github">Github</string>
     <string name="label_image_data">Image Data</string>
