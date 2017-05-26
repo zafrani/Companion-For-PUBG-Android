@@ -14,26 +14,39 @@
     <string name="app_name">Companion for PUBG</string>
     <string name="label_map">Map</string>
     <string name="label_items">Items</string>
+    <string name="label_news">News</string>
     <string name="label_about">About</string>
     <string name="label_github">Github</string>
     <string name="label_image_data">Image Data</string>
     <string name="label_contact_us">Contact Us</string>
     <string name="label_send_email">Send Email</string>
+    <string name="label_ammo">Ammo</string>
+
     <string name="toast_how_to_use_distance">Tap two locations on the map. Tap a third time to restart.</string>
+    <string name="weapon_type_assault_rifle">Assault Rifle</string>
+    <string name="weapon_type_sniper_rifle">Sniper Rifle</string>
+    <string name="weapon_type_cross_bow">Crossbow</string>
+    <string name="weapon_type_melee">Melee</string>
+    <string name="weapon_type_grenade">Grenade</string>
+    <string name="weapon_type_lmg">LMG</string>
+    <string name="weapon_type_smg">SMG</string>
+    <string name="weapon_type_pistol">Pistol</string>
+    <string name="weapon_type_shotgun">Shotgun</string>
+    <string name="weapon_type_dmr">DMR</string>
 
     <string name="item_view">View: </string>
     <string name="item_view_linear_description">Linear item display.</string>
     <string name="item_view_grid_description">Grid item display.</string>
 
     <string name="row_item_ammo">Ammo: %1$s</string>
-    <string name="row_item_magazine">Magazine: %1$.0f</string>
-    <string name="row_item_capacity">Capacity: %1$.1f</string>
-    <string name="row_item_range">Range: %1$.0f</string>
-    <string name="row_item_stability">Stability: %1$.0f</string>
-    <string name="row_item_rate">Rate: %1$.0f</string>
+    <string name="row_item_magazine">Magazine: %1$d</string>
+    <string name="row_item_capacity">Capacity: %1$d</string>
+    <string name="row_item_range">Range: %1$d</string>
+    <string name="row_item_stability">Stability: %1$d</string>
+    <string name="row_item_rate">Rate: %1$d</string>
     <string name="row_item_reload">Reload: %1$.1f</string>
     <string name="row_item_protection">Protection: %1$.0f</string>
-    <string name="row_item_damage">Damage: %1$.0f</string>
+    <string name="row_item_damage">Damage: %1$d</string>
     <string name="row_item_boost">Boost: %1$.0f</string>
     <string name="row_item_heal">Heal: %1$.0f</string>
     <string name="row_item_max_heal">Max Heal: %1$.0f</string>

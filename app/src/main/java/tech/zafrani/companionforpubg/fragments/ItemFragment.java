@@ -1,5 +1,6 @@
 package tech.zafrani.companionforpubg.fragments;
 
+import android.app.Fragment;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
@@ -8,57 +9,92 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-
-import tech.zafrani.companionforpubg.models.Category;
-import tech.zafrani.companionforpubg.utils.FileUtil;
+import butterknife.BindView;
+import tech.zafrani.companionforpubg.PUBGApplication;
 import tech.zafrani.companionforpubg.R;
-import tech.zafrani.companionforpubg.adapters.ItemTabAdapter;
-import tech.zafrani.companionforpubg.models.Items;
+import tech.zafrani.companionforpubg.adapters.ViewPagerAdapter;
+import tech.zafrani.companionforpubg.models.items.Category;
 
-public class ItemFragment extends BaseFragment {
+public class ItemFragment extends BaseFragment
+        implements ViewPagerAdapter.Listener {
 
-    public static String TAG = ItemFragment.class.getSimpleName();
-    private RecyclerView recyclerView;
+    public static final String TAG = ItemFragment.class.getSimpleName();
 
     @Nullable
-    @Override
-    public View onCreateView(final LayoutInflater inflater,
-                             final ViewGroup container,
-                             final Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_item, container, false);
+    @BindView(R.id.fragment_item_viewpager)
+    ViewPager viewPager;
 
+    @Nullable
+    @BindView(R.id.fragment_item_tablayout)
+    TabLayout tabLayout;
+
+    private final int tabCount = Category.Name.values().length;
+
+    //region BaseFragment
+    @Override
+    protected int getLayoutRes() {
+        return R.layout.fragment_item;
     }
 
     @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(final View view,
+                              @Nullable final Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        List<Category> categories = new ArrayList<>();
-        try {
-            final Items itemList = FileUtil.getItems(getActivity());
-            categories = itemList.getCategories();
-        } catch (IOException e) {
-            e.printStackTrace();
-            Log.e(getClass().getSimpleName(), "Error: " + e.getLocalizedMessage());
-        }
-        final ViewPager viewPager = (ViewPager) view.findViewById(R.id.fragment_item_viewpager);
-        viewPager.setAdapter(new ItemTabAdapter(getChildFragmentManager(), categories));
-        final TabLayout tabLayout = (TabLayout) view.findViewById(R.id.fragment_item_tablayout);
-        tabLayout.setupWithViewPager(viewPager);
+        setUpTabs();
         showDisclaimerForFirstTime();
-
-
-
     }
 
+    @Override
+    public void onDestroy() {
+
+        if (this.viewPager != null) {
+            this.viewPager.setAdapter(null);
+        }
+
+        if (this.tabLayout != null) {
+            this.tabLayout.removeAllTabs();
+        }
+
+        super.onDestroy();
+    }
+    //endregion
+
+    //region ViewPagerAdapter.Listener
+
+    @Override
+    public int getCount() {
+        return this.tabCount;
+    }
+
+    @Override
+    public Fragment getItem(final int position) {
+        return ItemTabFragment.newInstance(Category.Name.values()[position]);
+    }
+
+    @Override
+    public String getPageTitle(final int position) {
+        return Category.Name.values()[position].getValue();
+    }
+
+    //endregion
+
+    //region Methods
+    private void setUpTabs() {
+        if (this.tabLayout == null || this.viewPager == null) {
+            return;
+        }
+        for (int i = 0; i < tabCount; i++) {
+            final TabLayout.Tab tab = this.tabLayout.newTab();
+            tab.setText(Category.Name.values()[i].getValue());
+            this.tabLayout.addTab(tab);
+        }
+        this.tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
+        this.tabLayout.setupWithViewPager(this.viewPager);
+        this.viewPager.setAdapter(new ViewPagerAdapter(getChildFragmentManager(), this));
+    }
 
     //todo remove this after data is updated
     private void showDisclaimerForFirstTime() {
@@ -80,4 +116,5 @@ public class ItemFragment extends BaseFragment {
             }
         });
     }
+    //endregion
 }

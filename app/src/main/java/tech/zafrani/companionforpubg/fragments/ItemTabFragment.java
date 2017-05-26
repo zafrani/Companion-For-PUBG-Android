@@ -4,69 +4,76 @@ package tech.zafrani.companionforpubg.fragments;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import butterknife.BindView;
+import tech.zafrani.companionforpubg.PUBGApplication;
 import tech.zafrani.companionforpubg.R;
-import tech.zafrani.companionforpubg.adapters.ItemListAdapter;
-import tech.zafrani.companionforpubg.models.Category;
-import tech.zafrani.companionforpubg.models.Item;
-import tech.zafrani.companionforpubg.models.Type;
+import tech.zafrani.companionforpubg.activities.ItemDetailActivity;
+import tech.zafrani.companionforpubg.adapters.ItemRecyclerViewAdapter;
+import tech.zafrani.companionforpubg.models.items.Item;
+import tech.zafrani.companionforpubg.models.items.Category;
+import tech.zafrani.companionforpubg.models.items.weapons.Weapon;
 
-public class ItemTabFragment extends BaseFragment {
-    private static final String ARG_CATEGORY = ItemTabFragment.class.getSimpleName() + ".ARG_CATEGORY";
-    private RecyclerView recyclerView;
-    private Category category;
+public class ItemTabFragment extends BaseFragment
+        implements ItemRecyclerViewAdapter.Listener<Item> {
+    private static final String ARG_CATEGORY_NAME = ItemTabFragment.class + ".ARG_CATEGORY_NAME";
 
-    public static ItemTabFragment newInstance(@NonNull final Category category) {
-        final Bundle args = new Bundle();
+    @Nullable
+    @BindView(R.id.fragment_itemtab_recyclerview)
+    RecyclerView recyclerView;
+
+
+    public static ItemTabFragment newInstance(@NonNull final Category.Name categoryName) {
         final ItemTabFragment fragment = new ItemTabFragment();
-
-        args.putSerializable(ARG_CATEGORY, category);
-        fragment.setArguments(args);
-
+        final Bundle bundle = new Bundle();
+        bundle.putSerializable(ARG_CATEGORY_NAME, categoryName);
+        fragment.setArguments(bundle);
         return fragment;
     }
 
     @Override
     public void onCreate(@Nullable final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Bundle args = getArguments();
-        if (args != null && args.containsKey(ARG_CATEGORY)) {
-            this.category = (Category) args.get(ARG_CATEGORY);
-        }
-
-    }
-
-
-    @Override
-    public View onCreateView(final LayoutInflater inflater,
-                             final ViewGroup container,
-                             final Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_itemtab, container, false);
     }
 
     @Override
-    public void onViewCreated(@NonNull final View view,
-                              @Nullable Bundle savedInstanceState) {
+    protected int getLayoutRes() {
+        return R.layout.fragment_itemtab;
+    }
+
+    @Override
+    public void onViewCreated(@NonNull final View view, @Nullable final Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        final List<Item> items = new ArrayList<>();
-        for (final Type type : category.getTypes()) {
-            Log.e(getClass()
-                    .getSimpleName(), "Items for Type " + type + ": " +  type.getItems().toString());
-            items.addAll(type.getItems());
+        final Bundle args = getArguments();
+        if (args == null || !args.containsKey(ARG_CATEGORY_NAME)) {
+            return;
         }
-        recyclerView = (RecyclerView) view.findViewById(R.id.fragment_itemtab_recyclerview);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        final ItemListAdapter adapter =  new ItemListAdapter(items);
-        recyclerView.setAdapter(adapter);
+        final Category.Name categoryName = (Category.Name) args.getSerializable(ARG_CATEGORY_NAME);
+        if (this.recyclerView == null || categoryName == null) {
+            return;
+        }
+        final Category<Item> category = PUBGApplication.getInstance().getItems().getCategories().get(categoryName);
+        if (category == null) {
+            return;
+        }
+        final DividerItemDecoration itemDecoration = new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL);
+        this.recyclerView.addItemDecoration(itemDecoration);
+        this.recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        final ItemRecyclerViewAdapter<Item> adapter = new ItemRecyclerViewAdapter<>(category.getItems());
+        adapter.setListener(this);
+        this.recyclerView.setAdapter(adapter);
     }
+
+
+    //region ItemRecyclerViewAdapter
+    @Override
+    public void onClick(@NonNull final Item item) {
+        ItemDetailActivity.startActivity(getActivity(), item);
+    }
+    //endregion
 }
 

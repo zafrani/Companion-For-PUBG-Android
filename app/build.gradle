@@ -54,5 +54,8 @@ dependencies {
     compile 'commons-io:commons-io:2.4'
     compile 'com.google.android.gms:play-services-maps:10.2.4'
     compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.jakewharton:butterknife:8.6.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
+    compile 'org.jsoup:jsoup:1.10.2'
     testCompile 'junit:junit:4.12'
 }

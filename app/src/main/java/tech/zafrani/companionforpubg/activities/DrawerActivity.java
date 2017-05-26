@@ -1,7 +1,6 @@
 package tech.zafrani.companionforpubg.activities;
 
 import android.app.Fragment;
-import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -11,33 +10,37 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 
+import butterknife.BindView;
 import tech.zafrani.companionforpubg.fragments.PUBGMapFragment;
 import tech.zafrani.companionforpubg.R;
 import tech.zafrani.companionforpubg.fragments.ItemFragment;
+import tech.zafrani.companionforpubg.fragments.NewsFragment;
 import tech.zafrani.companionforpubg.utils.Constants;
 
-public abstract class DrawerActivity extends AppCompatActivity
+public abstract class DrawerActivity extends BaseActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     @Nullable
-    private DrawerLayout drawerLayout = null;
+    @BindView(R.id.activity_drawer_toolbar)
+    Toolbar toolbar;
     @Nullable
-    private NavigationView navigationView = null;
+    @BindView(R.id.activity_drawer_drawerlayout)
+    DrawerLayout drawerLayout;
     @Nullable
-    private FrameLayout contentLayout = null;
+    @BindView(R.id.activity_drawer_navigationview)
+    NavigationView navigationView;
+    @Nullable
+    @BindView(R.id.activity_drawer_content)
+    FrameLayout contentLayout;
 
     //region Activity
     @Override
     protected final void onCreate(@Nullable final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_drawer);
-
-        final Toolbar toolbar = (Toolbar) findViewById(R.id.activity_drawer_toolbar);
         setSupportActionBar(toolbar);
 
         final ActionBar actionBar = getSupportActionBar();
@@ -45,32 +48,44 @@ public abstract class DrawerActivity extends AppCompatActivity
             actionBar.setHomeAsUpIndicator(R.drawable.ic_menu_white_24dp);
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
-        this.contentLayout = (FrameLayout) findViewById(R.id.activity_drawer_content);
-        this.navigationView = (NavigationView) findViewById(R.id.activity_drawer_navigationview);
-        this.navigationView.setNavigationItemSelectedListener(this);
-        this.drawerLayout = (DrawerLayout) findViewById(R.id.activity_drawer_drawerlayout);
-        this.navigationView.setCheckedItem(R.id.drawer_map);
+
+        if(this.navigationView != null) {
+            this.navigationView.setNavigationItemSelectedListener(this);
+            this.navigationView.setCheckedItem(R.id.drawer_map);
+        }
         mapSelected();
     }
 
     @Override
-    public boolean onOptionsItemSelected(final MenuItem item) {
-        if (this.drawerLayout == null) {
-            return super.onOptionsItemSelected(item);
+    protected void onDestroy() {
+        if(this.navigationView != null) {
+            this.navigationView.setNavigationItemSelectedListener(null);
         }
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                this.drawerLayout.openDrawer(GravityCompat.START);
-                return true;
-        }
-        return super.onOptionsItemSelected(item);
+
+        super.onDestroy();
     }
 
     @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        this.navigationView = null;
-        this.drawerLayout = null;
+    protected int getLayoutRes() {
+        return R.layout.activity_drawer;
+    }
+
+    @Override
+    protected int getContentView() {
+        return R.id.activity_drawer_content;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(final MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                if(drawerLayout != null) {
+                    this.drawerLayout.openDrawer(GravityCompat.START);
+                }
+                return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
     //endregion
 
@@ -80,6 +95,7 @@ public abstract class DrawerActivity extends AppCompatActivity
         if (this.drawerLayout == null) {
             return false;
         }
+
         this.drawerLayout.closeDrawers();
         switch (item.getItemId()) {
             case R.id.drawer_map:
@@ -87,6 +103,9 @@ public abstract class DrawerActivity extends AppCompatActivity
                 break;
             case R.id.drawer_items:
                 itemsSelected();
+                break;
+            case R.id.drawer_news:
+                newsSelected();
                 break;
             case R.id.drawer_github:
                 githubSelected();
@@ -105,7 +124,7 @@ public abstract class DrawerActivity extends AppCompatActivity
 
     //region methods
     private void mapSelected() {
-        if (this.contentLayout == null) {
+        if(contentLayout == null) {
             return;
         }
         final Fragment fragment = getFragmentManager().findFragmentByTag(PUBGMapFragment.TAG);
@@ -117,12 +136,24 @@ public abstract class DrawerActivity extends AppCompatActivity
     }
 
     private void itemsSelected() {
-        if (this.contentLayout == null) {
+        if(contentLayout == null) {
             return;
         }
+
         final Fragment fragment = getFragmentManager().findFragmentByTag(ItemFragment.TAG);
         if (fragment == null) {
             showFragment(new ItemFragment());
+        } else {
+            showFragment(fragment);
+        }
+    }
+    private void newsSelected() {
+        if (this.contentLayout == null) {
+            return;
+        }
+        final Fragment fragment = getFragmentManager().findFragmentByTag(NewsFragment.TAG);
+        if (fragment == null) {
+            showFragment(new NewsFragment());
         } else {
             showFragment(fragment);
         }
@@ -144,12 +175,6 @@ public abstract class DrawerActivity extends AppCompatActivity
         startActivity(Intent.createChooser(emailIntent, getString(R.string.label_send_email)));
     }
 
-    private void showFragment(@NonNull final Fragment fragment) {
-        final FragmentTransaction fragTransaction = getFragmentManager().beginTransaction();
-        fragTransaction.replace(R.id.activity_drawer_content, fragment);
-        fragTransaction.commit();
-        getFragmentManager().executePendingTransactions();
-    }
     //endregion
 
 }
