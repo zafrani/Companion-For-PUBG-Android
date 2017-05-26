@@ -43,9 +43,8 @@ public class ItemFragment extends BaseFragment
     public void onViewCreated(final View view,
                               @Nullable final Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        Log.e(getClass().getSimpleName(), PUBGApplication.getInstance().getItems().toString());
-        Log.e(getClass().getSimpleName(), PUBGApplication.getInstance().getItems().getCategories().get(Category.Name.WEAPON_CATEGORY).toString());
         setUpTabs();
+        showDisclaimerForFirstTime();
     }
 
     @Override
