@@ -4,10 +4,13 @@ package tech.zafrani.companionforpubg.activities;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.IdRes;
+import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
 import tech.zafrani.companionforpubg.R;
+import tech.zafrani.companionforpubg.fragments.AmmoDetailFragment;
 import tech.zafrani.companionforpubg.fragments.WeaponDetailFragment;
 import tech.zafrani.companionforpubg.models.items.Item;
 import tech.zafrani.companionforpubg.models.items.ammo.Ammo;
@@ -35,17 +38,19 @@ public class ItemDetailActivity extends BaseActivity {
         if (item instanceof Weapon) {
             showFragment(WeaponDetailFragment.newInstance((Weapon) item));
         } else if (item instanceof Ammo) {
-
+            showFragment(AmmoDetailFragment.newInstance((Ammo) item));
         } else {
             throw new IllegalStateException("Unknown item");
         }
     }
 
+    @LayoutRes
     @Override
     protected int getLayoutRes() {
         return R.layout.activity_itemdetails;
     }
 
+    @IdRes
     @Override
     protected int getContentView() {
         return R.id.activity_itemdetails_content;

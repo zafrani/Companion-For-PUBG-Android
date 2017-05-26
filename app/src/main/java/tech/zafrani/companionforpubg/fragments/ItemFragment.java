@@ -83,7 +83,6 @@ public class ItemFragment extends BaseFragment
     //endregion
 
     //region Methods
-
     private void setUpTabs() {
         if (this.tabLayout == null || this.viewPager == null) {
             return;

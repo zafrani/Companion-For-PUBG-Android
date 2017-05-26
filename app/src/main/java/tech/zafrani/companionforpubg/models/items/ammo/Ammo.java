@@ -8,7 +8,8 @@ public class Ammo extends Item {
 
     public Ammo(@NonNull final String name,
                 final int id,
-                @NonNull final String imageUrl) {
-        super(name, id, imageUrl);
+                @NonNull final String imageUrl,
+                final int capacity) {
+        super(name, id, imageUrl, capacity);
     }
 }

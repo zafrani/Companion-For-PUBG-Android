@@ -8,7 +8,8 @@ public class Equipment extends Item {
 
     public Equipment(@NonNull final String name,
                      final int id,
-                     @NonNull final String imageUrl) {
-        super(name, id, imageUrl);
+                     @NonNull final String imageUrl,
+                     final int capacity) {
+        super(name, id, imageUrl, capacity);
     }
 }

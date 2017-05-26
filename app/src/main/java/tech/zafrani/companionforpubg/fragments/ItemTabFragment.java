@@ -63,7 +63,7 @@ public class ItemTabFragment extends BaseFragment
         final DividerItemDecoration itemDecoration = new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL);
         this.recyclerView.addItemDecoration(itemDecoration);
         this.recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        final ItemRecyclerViewAdapter adapter = new ItemRecyclerViewAdapter(category.getItems());
+        final ItemRecyclerViewAdapter<Item> adapter = new ItemRecyclerViewAdapter<>(category.getItems());
         adapter.setListener(this);
         this.recyclerView.setAdapter(adapter);
     }
