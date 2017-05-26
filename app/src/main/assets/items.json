@@ -651,249 +651,290 @@
     "attachment_category": {
       "attachments": [
         {
-          "type": "Muzzle",
-          "name": "Choke for S1897",
-          "image_url": "Icon_attach_Choke.png",
-          "capacity": 500
-        },
-        {
-          "type": "Muzzle",
-          "name": "Compensator for Automatic Rifle",
-          "image_url": "Icon_attach_CompensatorSMG.png",
-          "capacity": 500
-        },
-        {
-          "type": "Muzzle",
-          "name": "Compensator for Sniper Rifle",
-          "image_url": "Icon_attach_CompensatorSniperRifle.png",
-          "capacity": 500
-        },
-        {
-          "type": "Muzzle",
-          "name": "Flash Hider for Automatic Rifle",
-          "image_url": "Icon_attach_FlashHiderAR.png",
-          "capacity": 500
-        },
-        {
-          "type": "Muzzle",
-          "name": "Flash Hider for SMG",
-          "image_url": "Icon_attach_FlashHiderSMG.png",
-          "capacity": 500
-        },
-        {
-          "type": "Muzzle",
-          "name": "Flash Hider for Sniper Rifle",
-          "image_url": "Icon_attach_FlashHiderSniperRifle.png",
-          "capacity": 500
-        },
-        {
-          "type": "Muzzle",
-          "name": "Suppressor for Automatic Rifle",
-          "image_url": "Icon_attach_SuppressorAR.png",
-          "capacity": 500
-        },
-        {
-          "type": "Muzzle",
-          "name": "Suppressor for Sniper Rifle",
-          "image_url": "Icon_attach_SuppressorSniperRifle.png",
-          "capacity": 500
-        },
-        {
-          "type": "Muzzle",
-          "name": "Suppressor for Pistol",
-          "image_url": "Icon_attach_SuppressorPistol.png",
-          "capacity": 500
-        },
-        {
-          "type": "Muzzle",
-          "name": "Suppressor for SMG",
-          "image_url": "Icon_attach_SuppressorSMG.png",
-          "capacity": 500
-        },
-        {
-          "type": "Grip",
-          "name": "Angled Foregrip",
-          "image_url": "Icon_attach_AngledForeGrip.png",
-          "capacity": 500
-        },
-        {
-          "type": "Grip",
-          "name": "Verticle Foregrip",
-          "image_url": "Icon_attach_VerticalForegrip.png",
-          "capacity": 500
-        },
-        {
-          "type": "Grip",
-          "name": "Foregrip for Crossbow",
-          "image_url": "Icon_attach_ForegripCrossbow.png",
-          "capacity": 500
-        },
-        {
-          "type": "Stock",
-          "name": "Cheek Pad for Sniper Rifle",
-          "image_url": "Icon_attach_CheekPadSniperRifle.png",
-          "capacity": 500
-        },
-        {
-          "type": "Stock",
-          "name": "Composite Stock for Assault Rifle",
-          "image_url": "Icon_attach_CompositeAR.png",
-          "capacity": 500
-        },
-        {
-          "type": "Stock",
-          "name": "Stock for Micro Uzi",
-          "image_url": "Icon_attach_StockUzi.png",
-          "capacity": 500
-        },
-        {
-          "type": "Stock",
-          "name": "Tactical Stock for M416",
+          "id": 0,
+          "type": "Sights",
+          "name": "15x Scope",
           "image_url": "",
           "capacity": 500
         },
         {
-          "type": "Magazines",
-          "name": "Extended Mag Drum",
-          "image_url": "Icon_attach_ExtendedDrumMag.png",
-          "capacity": 500
-        },
-        {
-          "type": "Magazines",
-          "name": "Extended Mag for Automatic Rifle",
-          "image_url": "Icon_attach_ExtendedMagAR.png",
-          "capacity": 500
-        },
-        {
-          "type": "Magazines",
-          "name": "Extended Mag for KRISS Vector",
-          "image_url": "Icon_attach_ExtendedMagVector.png",
-          "capacity": 500
-        },
-        {
-          "type": "Magazines",
-          "name": "Extended Mag for Pistol",
-          "image_url": "Icon_attach_ExtendedMagPistol.png",
-          "capacity": 500
-        },
-        {
-          "type": "Magazines",
-          "name": "Extended Mag for SMG",
-          "image_url": "Icon_attach_ExtendedMagSMG.png",
-          "capacity": 500
-        },
-        {
-          "type": "Magazines",
-          "name": "Extended Mag for Sniper Rifle",
-          "image_url": "Icon_attach_ExtendedMagSniperRifle.png",
-          "capacity": 500
-        },
-        {
-          "type": "Magazines",
-          "name": "Quickdraw Mag for Automatic Rifle",
-          "image_url": "Icon_attach_QuickDrawAR.png",
-          "capacity": 500
-        },
-        {
-          "type": "Magazines",
-          "name": "Quickdraw Mag for Crossbow",
-          "image_url": "Icon_attach_QuickDrawCrossbow.png",
-          "capacity": 500
-        },
-        {
-          "type": "Magazines",
-          "name": "Quickdraw Mag for KRISS Vector",
-          "image_url": "Icon_attach_QuickDrawVector.png",
-          "capacity": 500
-        },
-        {
-          "type": "Magazines",
-          "name": "Quickdraw Mag for Pistol",
-          "image_url": "Icon_attach_QuickDrawPistol.png",
-          "capacity": 500
-        },
-        {
-          "type": "Magazines",
-          "name": "Quickdraw Mag for SMG",
-          "image_url": "Icon_attach_QuickDrawSMG.png",
-          "capacity": 500
-        },
-        {
-          "type": "Magazines",
-          "name": "Quickdraw Mag for Sniper Rifle",
-          "image_url": "Icon_attach_QuickDrawSniperRifle.png",
-          "capacity": 500
-        },
-        {
-          "type": "Magazines",
-          "name": "Extended Quickdraw Mag for Pistol",
-          "image_url": "Icon_attach_ExtendedQuickPistoll.png",
-          "capacity": 500
-        },
-        {
-          "type": "Magazines",
-          "name": "Extended Quickdraw Mag for SMG",
-          "image_url": "Icon_attach_ExtendedQuickSMG.png",
-          "capacity": 500
-        },
-        {
-          "type": "Magazines",
-          "name": "Extended Quickdraw Mag for Automatic Rifle",
-          "image_url": "Icon_attach_ExtendedQuickAR.png",
-          "capacity": 500
-        },
-        {
-          "type": "Magazines",
-          "name": "Extended Quickdraw Mag for Sniper Rifle",
-          "image_url": "Icon_attach_ExtendedQuickSniperRifle.png",
-          "capacity": 500
-        },
-        {
-          "type": "Bullet Loops",
-          "name": "Bullet Loops for Kar98k",
-          "image_url": "Icon_attach_SniperRifleBulletLoops.png",
-          "capacity": 500
-        },
-        {
-          "type": "Bullet Loops",
-          "name": "Bullet Loops for S1897, S686",
-          "image_url": "Icon_attach_ShotgunBulletLoops.png",
-          "capacity": 500
-        },
-        {
-          "type": "Sights",
-          "name": "Red Dot Sight",
-          "image_url": "Icon_attach_RedDot.png",
-          "capacity": 500
-        },
-        {
-          "type": "Sights",
-          "name": "Holographic Sight",
-          "image_url": "Icon_attach_Holo.png",
-          "capacity": 500
-        },
-        {
+          "id": 1,
           "type": "Sights",
           "name": "2x Scope",
           "image_url": "",
           "capacity": 500
         },
         {
+          "id": 2,
           "type": "Sights",
           "name": "4x Scope",
           "image_url": "",
           "capacity": 500
         },
         {
+          "id": 3,
           "type": "Sights",
           "name": "8x Scope",
           "image_url": "",
           "capacity": 500
         },
         {
+          "id": 4,
+          "type": "Grip",
+          "name": "Angled Foregrip",
+          "image_url": "Icon_attach_AngledForeGrip.png",
+          "capacity": 500
+        },
+        {
+          "id": 5,
+          "type": "Bullet Loops",
+          "name": "Bullet Loops for Kar98k",
+          "image_url": "Icon_attach_SniperRifleBulletLoops.png",
+          "capacity": 500
+        },
+        {
+          "id": 6,
+          "type": "Bullet Loops",
+          "name": "Bullet Loops for S1897, S686",
+          "image_url": "Icon_attach_ShotgunBulletLoops.png",
+          "capacity": 500
+        },
+        {
+          "id": 7,
+          "type": "Stock",
+          "name": "Cheek Pad for Sniper Rifle",
+          "image_url": "Icon_attach_CheekPadSniperRifle.png",
+          "capacity": 500
+        },
+        {
+          "id": 8,
+          "type": "Muzzle",
+          "name": "Choke for S1897",
+          "image_url": "Icon_attach_Choke.png",
+          "capacity": 500
+        },
+        {
+          "id": 9,
+          "type": "Muzzle",
+          "name": "Compensator for Automatic Rifle",
+          "image_url": "Icon_attach_CompensatorSMG.png",
+          "capacity": 500
+        },
+        {
+          "id": 10,
+          "type": "Muzzle",
+          "name": "Compensator for Sniper Rifle",
+          "image_url": "Icon_attach_CompensatorSniperRifle.png",
+          "capacity": 500
+        },
+        {
+          "id": 11,
+          "type": "Stock",
+          "name": "Composite Stock for Assault Rifle",
+          "image_url": "Icon_attach_CompositeAR.png",
+          "capacity": 500
+        },
+        {
+          "id": 12,
+          "type": "Magazines",
+          "name": "Extended Mag Drum",
+          "image_url": "Icon_attach_ExtendedDrumMag.png",
+          "capacity": 500
+        },
+        {
+          "id": 13,
+          "type": "Magazines",
+          "name": "Extended Mag for Automatic Rifle",
+          "image_url": "Icon_attach_ExtendedMagAR.png",
+          "capacity": 500
+        },
+        {
+          "id": 14,
+          "type": "Magazines",
+          "name": "Extended Mag for KRISS Vector",
+          "image_url": "Icon_attach_ExtendedMagVector.png",
+          "capacity": 500
+        },
+        {
+          "id": 15,
+          "type": "Magazines",
+          "name": "Extended Mag for Pistol",
+          "image_url": "Icon_attach_ExtendedMagPistol.png",
+          "capacity": 500
+        },
+        {
+          "id": 16,
+          "type": "Magazines",
+          "name": "Extended Mag for SMG",
+          "image_url": "Icon_attach_ExtendedMagSMG.png",
+          "capacity": 500
+        },
+        {
+          "id": 17,
+          "type": "Magazines",
+          "name": "Extended Mag for Sniper Rifle",
+          "image_url": "Icon_attach_ExtendedMagSniperRifle.png",
+          "capacity": 500
+        },
+        {
+          "id": 18,
+          "type": "Magazines",
+          "name": "Extended Quickdraw Mag for Automatic Rifle",
+          "image_url": "Icon_attach_ExtendedQuickAR.png",
+          "capacity": 500
+        },
+        {
+          "id": 19,
+          "type": "Magazines",
+          "name": "Extended Quickdraw Mag for Pistol",
+          "image_url": "Icon_attach_ExtendedQuickPistoll.png",
+          "capacity": 500
+        },
+        {
+          "id": 20,
+          "type": "Magazines",
+          "name": "Extended Quickdraw Mag for Sniper Rifle",
+          "image_url": "Icon_attach_ExtendedQuickSniperRifle.png",
+          "capacity": 500
+        },
+        {
+          "id": 21,
+          "type": "Magazines",
+          "name": "Extended Quickdraw Mag for SMG",
+          "image_url": "Icon_attach_ExtendedQuickSMG.png",
+          "capacity": 500
+        },
+        {
+          "id": 22,
+          "type": "Muzzle",
+          "name": "Flash Hider for Automatic Rifle",
+          "image_url": "Icon_attach_FlashHiderAR.png",
+          "capacity": 500
+        },
+        {
+          "id": 23,
+          "type": "Muzzle",
+          "name": "Flash Hider for SMG",
+          "image_url": "Icon_attach_FlashHiderSMG.png",
+          "capacity": 500
+        },
+        {
+          "id": 24,
+          "type": "Muzzle",
+          "name": "Flash Hider for Sniper Rifle",
+          "image_url": "Icon_attach_FlashHiderSniperRifle.png",
+          "capacity": 500
+        },
+        {
+          "id": 25,
+          "type": "Grip",
+          "name": "Foregrip for Crossbow",
+          "image_url": "Icon_attach_ForegripCrossbow.png",
+          "capacity": 500
+        },
+        {
+          "id": 26,
           "type": "Sights",
-          "name": "15x Scope",
+          "name": "Holographic Sight",
+          "image_url": "Icon_attach_Holo.png",
+          "capacity": 500
+        },
+        {
+          "id": 27,
+          "type": "Magazines",
+          "name": "Quickdraw Mag for Automatic Rifle",
+          "image_url": "Icon_attach_QuickDrawAR.png",
+          "capacity": 500
+        },
+        {
+          "id": 28,
+          "type": "Magazines",
+          "name": "Quickdraw Mag for Crossbow",
+          "image_url": "Icon_attach_QuickDrawCrossbow.png",
+          "capacity": 500
+        },
+        {
+          "id": 29,
+          "type": "Magazines",
+          "name": "Quickdraw Mag for KRISS Vector",
+          "image_url": "Icon_attach_QuickDrawVector.png",
+          "capacity": 500
+        },
+        {
+          "id": 30,
+          "type": "Magazines",
+          "name": "Quickdraw Mag for Pistol",
+          "image_url": "Icon_attach_QuickDrawPistol.png",
+          "capacity": 500
+        },
+        {
+          "id": 31,
+          "type": "Magazines",
+          "name": "Quickdraw Mag for SMG",
+          "image_url": "Icon_attach_QuickDrawSMG.png",
+          "capacity": 500
+        },
+        {
+          "id": 32,
+          "type": "Magazines",
+          "name": "Quickdraw Mag for Sniper Rifle",
+          "image_url": "Icon_attach_QuickDrawSniperRifle.png",
+          "capacity": 500
+        },
+        {
+          "id": 33,
+          "type": "Sights",
+          "name": "Red Dot Sight",
+          "image_url": "Icon_attach_RedDot.png",
+          "capacity": 500
+        },
+        {
+          "id": 34,
+          "type": "Stock",
+          "name": "Stock for Micro Uzi",
+          "image_url": "Icon_attach_StockUzi.png",
+          "capacity": 500
+        },
+        {
+          "id": 35,
+          "type": "Muzzle",
+          "name": "Suppressor for Automatic Rifle",
+          "image_url": "Icon_attach_SuppressorAR.png",
+          "capacity": 500
+        },
+        {
+          "id": 36,
+          "type": "Muzzle",
+          "name": "Suppressor for Pistol",
+          "image_url": "Icon_attach_SuppressorPistol.png",
+          "capacity": 500
+        },
+        {
+          "id": 37,
+          "type": "Muzzle",
+          "name": "Suppressor for SMG",
+          "image_url": "Icon_attach_SuppressorSMG.png",
+          "capacity": 500
+        },
+        {
+          "id": 38,
+          "type": "Muzzle",
+          "name": "Suppressor for Sniper Rifle",
+          "image_url": "Icon_attach_SuppressorSniperRifle.png",
+          "capacity": 500
+        },
+        {
+          "id": 39,
+          "type": "Stock",
+          "name": "Tactical Stock for M416",
           "image_url": "",
+          "capacity": 500
+        },
+        {
+          "id": 40,
+          "type": "Grip",
+          "name": "Verticle Foregrip",
+          "image_url": "Icon_attach_VerticalForegrip.png",
           "capacity": 500
         }
       ]
@@ -901,6 +942,7 @@
     "equipment_category": {
       "equipment": [
         {
+          "id": 0,
           "type": "Backpack",
           "name": "Backpack (1)",
           "image_url": "Icon_equipment_Backpack_1.png",
@@ -908,6 +950,7 @@
           "capacity": 0
         },
         {
+          "id": 1,
           "type": "Backpack",
           "name": "Backpack (2)",
           "image_url": "Icon_equipment_Backpack_2.png",
@@ -915,6 +958,7 @@
           "capacity": 0
         },
         {
+          "id": 2,
           "type": "Backpack",
           "name": "Backpack (3)",
           "image_url": "Icon_equipment_Backpack_3.png",
@@ -922,169 +966,192 @@
           "capacity": 0
         },
         {
-          "type": "Glasses",
-          "name": "Sunglasses",
-          "image_url": "Icon_equipment_Sunglasses.png",
-          "capacity": 0
-        },
-        {
-          "type": "Glasses",
-          "name": "Glasses (Punk)",
-          "image_url": "Icon_equipment_GlassesPunk.png",
-          "capacity": 0
-        },
-        {
-          "type": "Glasses",
-          "name": "Rimless Sunglasses",
-          "image_url": "Icon_equipment_RimlessSunglasses.png",
-          "capacity": 0
-        },
-        {
-          "type": "Gloves",
-          "name": "Fingerless Gloves",
-          "image_url": "Icon_equipment_gloves_1.png",
-          "capacity": 0
-        },
-        {
-          "type": "Hats",
-          "name": "Beanie Hat",
-          "image_url": "Icon_equipment_Beanie.png",
-          "capacity": 0
-        },
-        {
-          "type": "Hats",
+          "id": 3,
+          "type": "Hat",
           "name": "Ball Cap",
           "image_url": "Icon_equipment_CapRed.png",
           "capacity": 0
         },
         {
-          "type": "Helmets",
-          "name": "Motorcycle Helmet (1)",
-          "image_url": "Icon_equipment_MotorcycleHelmet1A.png",
-          "durability": 80,
-          "capacity": 0
-        },
-        {
-          "type": "Helmets",
-          "name": "Military Helmet (2)",
-          "image_url": "Icon_equipment_MilitaryHelmet2A.png",
-          "durability": 150,
-          "capacity": 0
-        },
-        {
-          "type": "Helmets",
-          "name": "Military Helmet (3)",
-          "image_url": "Icon_equipment_Helmet3.png",
-          "durability": 200,
-          "capacity": 0
-        },
-        {
-          "type_name": "Jackets",
-          "items": [
-            {
-              "name": "Padded Jacket",
-              "image_url": "Icon_equipment_JacketA.png",
-              "capacity": 0
-            },
-            {
-              "name": "Trench Coat",
-              "image_url": "Icon_equipment_trench.png",
-              "capacity": 0
-            }
-          ]
-        },
-        {
-          "type": "Masks",
+          "id": 4,
+          "type": "Mask",
           "name": "Ballistic Mask",
           "image_url": "",
           "capacity": 0
         },
         {
-          "type": "Masks",
-          "name": "Gas Mask (Full)",
-          "image_url": "Icon_equipment_GasMaskFull.png",
+          "id": 5,
+          "type": "Hat",
+          "name": "Beanie Hat",
+          "image_url": "Icon_equipment_Beanie.png",
           "capacity": 0
         },
         {
-          "type": "Masks",
-          "name": "Gas Mask (Half)",
-          "image_url": "Icon_equipment_GasMaskHalf.png",
+          "id": 6,
+          "type": "Shoe",
+          "name": "Boots",
+          "image_url": "Icon_equipment_ShoesA.png",
           "capacity": 0
         },
         {
-          "type": "One Piece Suit",
-          "name": "Ghillie Suit",
-          "image_url": "Icon_equipment_Ghillie.png",
-          "capacity": 0
-        },
-        {
-          "type": "Pants",
+          "id": 7,
+          "type": "Pant",
           "name": "Combat Pants",
           "image_url": "Icon_equipment_PantsA.png",
           "bulk": 40,
           "capacity": 0
         },
         {
-          "type": "Shoes",
-          "name": "Boots",
-          "image_url": "Icon_equipment_ShoesA.png",
-          "capacity": 0
-        },
-        {
-          "type": "Shoes",
-          "name": "Hi-Top Trainers",
-          "image_url": "Icon_equipment_ShoesB.png",
-          "capacity": 0
-        },
-        {
-          "type": "Shoes",
-          "name": "Working Boots",
-          "image_url": "",
-          "capacity": 0
-        },
-        {
-          "type": "Shirts",
+          "id": 8,
+          "type": "Shirt",
           "name": "Dirty Tank Top",
           "image_url": "Icon_equipment_ShirtTankTopA.png",
           "capacity": 0
         },
         {
-          "type": "Shirts",
-          "name": "T-Shirt",
-          "image_url": "",
+          "id": 9,
+          "type": "Glove",
+          "name": "Fingerless Gloves",
+          "image_url": "Icon_equipment_gloves_1.png",
           "capacity": 0
         },
         {
-          "type": "Shirts",
+          "id": 10,
+          "type": "Mask",
+          "name": "Gas Mask (Full)",
+          "image_url": "Icon_equipment_GasMaskFull.png",
+          "capacity": 0
+        },
+        {
+          "id": 11,
+          "type": "Mask",
+          "name": "Gas Mask (Half)",
+          "image_url": "Icon_equipment_GasMaskHalf.png",
+          "capacity": 0
+        },
+        {
+          "id": 12,
+          "type": "OnePieceSuit",
+          "name": "Ghillie Suit",
+          "image_url": "Icon_equipment_Ghillie.png",
+          "capacity": 0
+        },
+        {
+          "id": 13,
+          "type": "Glasses",
+          "name": "Glasses (Punk)",
+          "image_url": "Icon_equipment_GlassesPunk.png",
+          "capacity": 0
+        },
+        {
+          "id": 14,
+          "type": "Shoe",
+          "name": "Hi-Top Trainers",
+          "image_url": "Icon_equipment_ShoesB.png",
+          "capacity": 0
+        },
+        {
+          "id": 15,
+          "type": "Shirt",
           "name": "Long-Sleeved Shirt",
           "image_url": "Icon_equipment_LongSleeveShirtA.png",
           "capacity": 0
         },
         {
-          "type": "Shirts",
-          "name": "Shirt",
-          "image_url": "Icon_equipment_ShirtA.png",
-          "capacity": 0
-        },
-        {
-          "type": "Vests",
-          "name": "Police Vest (1)",
-          "image_url": "Icon_equipment_Armor_1.png",
+          "id": 16,
+          "type": "Helmet",
+          "name": "Military Helmet (2)",
+          "image_url": "Icon_equipment_MilitaryHelmet2A.png",
           "durability": 150,
           "capacity": 0
         },
         {
-          "type": "Vests",
+          "id": 17,
+          "type": "Helmet",
+          "name": "Military Helmet (3)",
+          "image_url": "Icon_equipment_Helmet3.png",
+          "durability": 200,
+          "capacity": 0
+        },
+        {
+          "id": 18,
+          "type": "Vest",
           "name": "Military Vest (2)",
           "image_url": "Icon_equipment_Armor_2.png",
           "durability": 200,
           "capacity": 0
         },
         {
-          "type": "Vests",
+          "id": 19,
+          "type": "Vest",
           "name": "Military Vest (3)",
           "image_url": "Icon_equipment_Armor_3.png",
           "durability": 250,
+          "capacity": 0
+        },
+        {
+          "id": 20,
+          "type": "Helmet",
+          "name": "Motorcycle Helmet (1)",
+          "image_url": "Icon_equipment_MotorcycleHelmet1A.png",
+          "durability": 80,
+          "capacity": 0
+        },
+        {
+          "id": 21,
+          "type": "Jacket",
+          "name": "Padded Jacket",
+          "image_url": "Icon_equipment_JacketA.png",
+          "capacity": 0
+        },
+        {
+          "id": 22,
+          "type": "Vest",
+          "name": "Police Vest (1)",
+          "image_url": "Icon_equipment_Armor_1.png",
+          "durability": 150,
+          "capacity": 0
+        },
+        {
+          "id": 23,
+          "type": "Glasses",
+          "name": "Rimless Sunglasses",
+          "image_url": "Icon_equipment_RimlessSunglasses.png",
+          "capacity": 0
+        },
+        {
+          "id": 24,
+          "type": "Shirt",
+          "name": "Shirt",
+          "image_url": "Icon_equipment_ShirtA.png",
+          "capacity": 0
+        },
+        {
+          "id": 25,
+          "type": "Glasses",
+          "name": "Sunglasses",
+          "image_url": "Icon_equipment_Sunglasses.png",
+          "capacity": 0
+        },
+        {
+          "id": 26,
+          "type": "Shirt",
+          "name": "T-Shirt",
+          "image_url": "",
+          "capacity": 0
+        },
+        {
+          "id": 27,
+          "type": "Jacket",
+          "name": "Trench Coat",
+          "image_url": "Icon_equipment_trench.png",
+          "capacity": 0
+        },
+        {
+          "id": 28,
+          "type": "Shoe",
+          "name": "Working Boots",
+          "image_url": "",
           "capacity": 0
         }
       ]
@@ -1092,17 +1159,16 @@
     "consumable_category": {
       "consumables": [
         {
+          "id": 0,
           "type": "Medical",
-          "name": "Med Kit",
-          "image_url": "Icon_heal_MedKit.png",
+          "name": "Adrenaline Syringe",
+          "image_url": "Icon_boost_AdrenalineSyringe.png",
           "activate_time": 0,
-          "heal": 100,
-          "max_heal": 100,
-          "boost": 0,
           "max_stack": 0,
           "capacity": 20
         },
         {
+          "id": 1,
           "type": "Medical",
           "name": "Bandages",
           "image_url": "Icon_heal_Bandage.jpg",
@@ -1114,28 +1180,7 @@
           "capacity": 2
         },
         {
-          "type": "Medical",
-          "name": "First Aid Kit",
-          "image_url": "Icon_heal_FirstAidKit.png",
-          "activate_time": 0,
-          "heal": 75,
-          "max_heal": 75,
-          "boost": 0,
-          "max_stack": 0,
-          "capacity": 10
-        },
-        {
-          "type": "Medical",
-          "name": "Painkillers",
-          "image_url": "Icon_boost_PainKiller.png",
-          "activate_time": 0,
-          "boost": 60,
-          "heal": 0,
-          "max_heal": 100,
-          "max_stack": 0,
-          "capacity": 20
-        },
-        {
+          "id": 2,
           "type": "Medical",
           "name": "Energy Drink",
           "image_url": "Icon_boost_EnergyDrink.png",
@@ -1147,18 +1192,47 @@
           "capacity": 20
         },
         {
+          "id": 3,
           "type": "Medical",
-          "name": "Adrenaline Syringe",
-          "image_url": "Icon_boost_AdrenalineSyringe.png",
+          "name": "First Aid Kit",
+          "image_url": "Icon_heal_FirstAidKit.png",
           "activate_time": 0,
+          "heal": 75,
+          "max_heal": 75,
+          "boost": 0,
           "max_stack": 0,
-          "capacity": 20
+          "capacity": 10
         },
         {
+          "id": 4,
           "type": "Miscellaneous",
           "name": "Gas Can",
           "image_url": "Icon_item_JerryCan.png",
           "activate_time": 0,
+          "capacity": 20
+        },
+        {
+          "id": 5,
+          "type": "Medical",
+          "name": "Med Kit",
+          "image_url": "Icon_heal_MedKit.png",
+          "activate_time": 0,
+          "heal": 100,
+          "max_heal": 100,
+          "boost": 0,
+          "max_stack": 0,
+          "capacity": 20
+        },
+        {
+          "id": 6,
+          "type": "Medical",
+          "name": "Painkillers",
+          "image_url": "Icon_boost_PainKiller.png",
+          "activate_time": 0,
+          "boost": 60,
+          "heal": 0,
+          "max_heal": 100,
+          "max_stack": 0,
           "capacity": 20
         }
       ]
@@ -1166,26 +1240,7 @@
     "vehicle_category": {
       "vehicles": [
         {
-          "type": "Default",
-          "name": "Motorcycle (No sidecar)",
-          "image_url": "",
-          "health": 0,
-          "max_speed": 0,
-          "acceleration": 0,
-          "seats": 1,
-          "capacity": 0
-        },
-        {
-          "type": "Default",
-          "name": "Motorcycle (w/ sidecar)",
-          "image_url": "",
-          "health": 0,
-          "max_speed": 0,
-          "acceleration": 0,
-          "seats": 3,
-          "capacity": 0
-        },
-        {
+          "id":0,
           "type": "Default",
           "name": "Buggy",
           "image_url": "",
@@ -1196,6 +1251,7 @@
           "capacity": 0
         },
         {
+          "id":1,
           "type": "Default",
           "name": "Dacia",
           "image_url": "",
@@ -1206,16 +1262,29 @@
           "capacity": 0
         },
         {
+          "id":2,
           "type": "Default",
-          "name": "UAZ",
+          "name": "Motorcycle (No sidecar)",
           "image_url": "",
           "health": 0,
           "max_speed": 0,
           "acceleration": 0,
-          "seats": 5,
+          "seats": 1,
           "capacity": 0
         },
         {
+          "id":3,
+          "type": "Default",
+          "name": "Motorcycle (w/ sidecar)",
+          "image_url": "",
+          "health": 0,
+          "max_speed": 0,
+          "acceleration": 0,
+          "seats": 3,
+          "capacity": 0
+        },
+        {
+          "id":4,
           "type": "Default",
           "name": "Speed Boat",
           "image_url": "",
@@ -1223,6 +1292,17 @@
           "max_speed": 0,
           "acceleration": 0,
           "seats": 6,
+          "capacity": 0
+        },
+        {
+          "id":5,
+          "type": "Default",
+          "name": "UAZ",
+          "image_url": "",
+          "health": 0,
+          "max_speed": 0,
+          "acceleration": 0,
+          "seats": 5,
           "capacity": 0
         }
       ]

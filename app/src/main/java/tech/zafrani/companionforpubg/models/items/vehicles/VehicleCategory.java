@@ -10,7 +10,7 @@ import tech.zafrani.companionforpubg.models.items.Category;
 
 public class VehicleCategory implements Category<Vehicle> {
     @NonNull
-    @SerializedName("vehicle")
+    @SerializedName("vehicles")
     private final VehicleList vehicleList;
 
     public VehicleCategory(@NonNull final VehicleList vehicleList) {

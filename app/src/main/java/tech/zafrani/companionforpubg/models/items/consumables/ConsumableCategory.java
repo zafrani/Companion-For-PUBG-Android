@@ -11,7 +11,7 @@ import tech.zafrani.companionforpubg.models.items.Category;
 
 public class ConsumableCategory implements Category<Consumable> {
     @NonNull
-    @SerializedName("consumable")
+    @SerializedName("consumables")
     private final ConsumableList consumableList;
 
     public ConsumableCategory(@NonNull final ConsumableList consumableList) {
