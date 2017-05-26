@@ -60,7 +60,9 @@
                     android:id="@+id/fragment_weapon_detail_weapon_ammo_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/tiny_margin"/>
+                    android:layout_marginBottom="@dimen/tiny_margin"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/subtitle_text_size"/>
 
                 <ImageView
                     android:id="@+id/fragment_weapon_detail_weapon_ammo_image"
