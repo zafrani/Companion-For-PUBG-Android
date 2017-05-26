@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/view_bar_value_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/tiny_margin"
+        android:textColor="@color/white"
+        android:textSize="@dimen/title_text_size"/>
+
+    <tech.zafrani.companionforpubg.widgets.BarView
+        android:id="@+id/view_bar_value_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bar_view_height"/>
+
+</LinearLayout>

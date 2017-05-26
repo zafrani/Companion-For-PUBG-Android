@@ -39,14 +39,14 @@
     <string name="item_view_grid_description">Grid item display.</string>
 
     <string name="row_item_ammo">Ammo: %1$s</string>
-    <string name="row_item_magazine">Magazine: %1$.0f</string>
-    <string name="row_item_capacity">Capacity: %1$.1f</string>
-    <string name="row_item_range">Range: %1$.0f</string>
-    <string name="row_item_stability">Stability: %1$.0f</string>
-    <string name="row_item_rate">Rate: %1$.0f</string>
+    <string name="row_item_magazine">Magazine: %1$d</string>
+    <string name="row_item_capacity">Capacity: %1$d</string>
+    <string name="row_item_range">Range: %1$d</string>
+    <string name="row_item_stability">Stability: %1$d</string>
+    <string name="row_item_rate">Rate: %1$d</string>
     <string name="row_item_reload">Reload: %1$.1f</string>
     <string name="row_item_protection">Protection: %1$.0f</string>
-    <string name="row_item_damage">Damage: %1$.0f</string>
+    <string name="row_item_damage">Damage: %1$d</string>
     <string name="row_item_boost">Boost: %1$.0f</string>
     <string name="row_item_heal">Heal: %1$.0f</string>
     <string name="row_item_max_heal">Max Heal: %1$.0f</string>

@@ -26,6 +26,10 @@ public class ProjectileWeapon extends Weapon {
     @SerializedName("reload")
     private final int reload;
 
+    @NonNull
+    @SerializedName("damage")
+    private final Damage damage;
+
     public ProjectileWeapon(@NonNull final String name,
                             final int id,
                             @NonNull final String imageUrl,
@@ -36,7 +40,8 @@ public class ProjectileWeapon extends Weapon {
                             final int range,
                             final int stability,
                             final int rate,
-                            final int reload) {
+                            final int reload,
+                            @NonNull final Damage damage) {
         super(name, id, imageUrl, capacity, type);
         this.magazine = magazine;
         this.ammoId = ammoId;
@@ -44,6 +49,7 @@ public class ProjectileWeapon extends Weapon {
         this.stability = stability;
         this.rate = rate;
         this.reload = reload;
+        this.damage = damage;
     }
 
     @Override
@@ -82,4 +88,8 @@ public class ProjectileWeapon extends Weapon {
         return reload;
     }
 
+    @NonNull
+    public Damage getDamage() {
+        return damage;
+    }
 }

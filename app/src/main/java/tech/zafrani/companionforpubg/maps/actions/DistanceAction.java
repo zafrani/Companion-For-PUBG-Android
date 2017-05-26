@@ -52,7 +52,7 @@ public class DistanceAction extends Action
     public DistanceAction(@NonNull final GoogleMapController mapController) {
         this.mapController = mapController;
         this.snippet = mapController.getContext().getString(R.string.distance_action_label_snippet);
-        this.colorAccent = ContextCompat.getColor(mapController.getContext(), R.color.colorAccent);
+        this.colorAccent = ContextCompat.getColor(mapController.getContext(), R.color.accent);
     }
 
     //region Actions
