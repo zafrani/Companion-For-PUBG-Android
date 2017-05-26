@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#232323</color>
-    <color name="colorPrimaryDark">#1a1a1a</color>
-    <color name="colorAccent">#e4af15</color>
+    <color name="primary">#232323</color>
+    <color name="primaryDark">#1a1a1a</color>
+    <color name="accent">#e4af15</color>
+
     <color name="white">#FFF</color>
     <color name="divider">#aaaaaa</color>
     <color name="tabText">#BBBBBB</color>
-    <color name="tabBackground">#555555</color>
+    <color name="darkGray">#555555</color>
 
 </resources>

@@ -73,6 +73,51 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/colorAccent"/>
+        android:background="@color/accent"/>
+
+    <tech.zafrani.companionforpubg.widgets.BarValueView
+        android:id="@+id/fragment_weapon_detail_weapon_damage_bar_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/standard_margin"
+        android:layout_marginStart="@dimen/standard_margin"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:visibility="gone"/>
+
+    <tech.zafrani.companionforpubg.widgets.BarValueView
+        android:id="@+id/fragment_weapon_detail_weapon_range_bar_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/standard_margin"
+        android:layout_marginStart="@dimen/standard_margin"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:visibility="gone"/>
+
+    <tech.zafrani.companionforpubg.widgets.BarValueView
+        android:id="@+id/fragment_weapon_detail_weapon_stability_bar_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/standard_margin"
+        android:layout_marginStart="@dimen/standard_margin"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:visibility="gone"/>
+
+    <tech.zafrani.companionforpubg.widgets.BarValueView
+        android:id="@+id/fragment_weapon_detail_weapon_rate_bar_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/standard_margin"
+        android:layout_marginStart="@dimen/standard_margin"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:visibility="gone"/>
+
+    <tech.zafrani.companionforpubg.widgets.BarValueView
+        android:id="@+id/fragment_weapon_detail_weapon_magazine_bar_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/standard_margin"
+        android:layout_marginStart="@dimen/standard_margin"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:visibility="gone"/>
 
 </LinearLayout>

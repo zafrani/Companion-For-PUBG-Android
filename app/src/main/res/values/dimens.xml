@@ -5,6 +5,8 @@
     <dimen name="small_margin">8dp</dimen>
     <dimen name="tiny_margin">4dp</dimen>
 
+    <dimen name="bar_view_height">30dp</dimen>
+
     <dimen name="row_item_image_size">56dp</dimen>
     <dimen name="item_detail_image_size">80dp</dimen>
     <dimen name="item_detail_ammo_image_size">48dp</dimen>
