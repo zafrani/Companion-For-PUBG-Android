@@ -33,14 +33,6 @@ public class NewsAdapter extends RecyclerViewAdapter<NewsItem, NewsAdapter.NewsI
         return new NewsItemViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.row_item_news, parent, false));
     }
 
-    @Override
-    public void onBindViewHolder(@NonNull final NewsItemViewHolder holder,
-                                 final int position) {
-        final NewsItem newsItem = news.get(position);
-        holder.bind(newsItem);
-    }
-
-
 
     public class NewsItemViewHolder extends RecyclerViewAdapter.ViewHolder {
         @NonNull
@@ -63,7 +55,10 @@ public class NewsAdapter extends RecyclerViewAdapter<NewsItem, NewsAdapter.NewsI
             descriptionTextView = (TextView) itemView.findViewById(R.id.row_item_description);
         }
 
-        public void bind(@NonNull final NewsItem newsItem) {
+        @Override
+        public void bind(int position) {
+            super.bind(position);
+            final NewsItem newsItem = get(position);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(@NonNull final View view) {
@@ -72,7 +67,7 @@ public class NewsAdapter extends RecyclerViewAdapter<NewsItem, NewsAdapter.NewsI
                 }
             });
 
-            Picasso.with(itemView.getContext())
+            Picasso.with(this.itemView.getContext())
                     .load(newsItem.getImgSrc())
                     .fit()
                     .into(imgImageView);
