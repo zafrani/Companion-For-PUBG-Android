@@ -4,16 +4,23 @@ package tech.zafrani.companionforpubg.fragments;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.annotation.StringRes;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
 import butterknife.BindView;
+import tech.zafrani.companionforpubg.PUBGApplication;
 import tech.zafrani.companionforpubg.R;
+import tech.zafrani.companionforpubg.activities.ItemDetailActivity;
+import tech.zafrani.companionforpubg.models.items.ammo.Ammo;
+import tech.zafrani.companionforpubg.models.items.weapons.ProjectileWeapon;
 import tech.zafrani.companionforpubg.models.items.weapons.Weapon;
 import tech.zafrani.companionforpubg.utils.Constants;
+import tech.zafrani.companionforpubg.widgets.BarValueView;
 
 public class WeaponDetailFragment extends BaseFragment {
     private static final String ARG_WEAPON = WeaponDetailFragment.class.getSimpleName() + ".ARG_WEAPON";
@@ -36,8 +43,41 @@ public class WeaponDetailFragment extends BaseFragment {
 
     @Nullable
     @BindView(R.id.fragment_weapon_detail_weapon_image)
-    ImageView weaponImage;
+    ImageView weaponImageView;
 
+    @Nullable
+    @BindView(R.id.fragment_weapon_detail_weapon_ammo_text)
+    TextView ammoTextView;
+
+    @Nullable
+    @BindView(R.id.fragment_weapon_detail_weapon_ammo_image)
+    ImageView ammoImageView;
+
+    @Nullable
+    @BindView(R.id.fragment_weapon_detail_weapon_ammo_content)
+    LinearLayout ammoContent;
+
+    @Nullable
+    @BindView(R.id.fragment_weapon_detail_weapon_damage_bar_value)
+    BarValueView damageBarValueView;
+
+    @Nullable
+    @BindView(R.id.fragment_weapon_detail_weapon_range_bar_value)
+    BarValueView rangeBarValueView;
+
+    @Nullable
+    @BindView(R.id.fragment_weapon_detail_weapon_stability_bar_value)
+    BarValueView stabilityBarValueView;
+
+    @Nullable
+    @BindView(R.id.fragment_weapon_detail_weapon_rate_bar_value)
+    BarValueView rateBarValueView;
+
+    @Nullable
+    @BindView(R.id.fragment_weapon_detail_weapon_magazine_bar_value)
+    BarValueView magazineBarValueView;
+
+    //region BaseFragment
 
     @Override
     protected int getLayoutRes() {
@@ -57,9 +97,30 @@ public class WeaponDetailFragment extends BaseFragment {
             throw new IllegalStateException("Missing Weapon");
         }
         setNameText(weapon.getName());
-        setWeaponImage(weapon.getImageUrl());
+        setWeaponImageView(weapon.getImageUrl());
         setTypeText(getString(weapon.getType().getString()));
+        if (weapon instanceof ProjectileWeapon) {
+            final ProjectileWeapon projectileWeapon = ((ProjectileWeapon) weapon);
+            final Ammo ammo = PUBGApplication.getInstance().getItems().getCategories().getAmmoCategory().getAmmoWithId((projectileWeapon.getAmmoId()));
+            if (ammo == null) {
+                return;
+            }
+            setAmmoImageView(ammo.getImageUrl());
+            setAmmoTextView(ammo.getName());
+            setBarValue(this.damageBarValueView, R.string.row_item_damage, projectileWeapon.getDamage().getChest0());
+            setBarValue(this.rangeBarValueView, R.string.row_item_range, projectileWeapon.getRange());
+            setBarValue(this.stabilityBarValueView, R.string.row_item_stability, projectileWeapon.getStability());
+            setBarValue(this.rateBarValueView, R.string.row_item_rate, projectileWeapon.getRate());
+            setBarValue(this.magazineBarValueView, R.string.row_item_magazine, projectileWeapon.getMagazine());
+            setAmmoClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    ItemDetailActivity.startActivity(getActivity(), ammo);
+                }
+            });
+        }
     }
+    //endregion
 
     //region Methods
     private void setNameText(@Nullable final String text) {
@@ -69,20 +130,54 @@ public class WeaponDetailFragment extends BaseFragment {
         this.nameTextView.setText(text);
     }
 
-    private void setWeaponImage(@Nullable final String url) {
-        if (this.weaponImage == null) {
+    private void setWeaponImageView(@Nullable final String url) {
+        if (this.weaponImageView == null) {
             return;
         }
         Picasso.with(getActivity())
                .load(Constants.ITEM_IMAGE_URL + url)
-               .into(this.weaponImage);
+               .into(this.weaponImageView);
     }
 
-    private void setTypeText(@Nullable final String type) {
+    private void setTypeText(@Nullable final String text) {
         if (this.typeTextView == null) {
             return;
         }
-        this.typeTextView.setText(type);
+        this.typeTextView.setText(text);
     }
+
+    private void setAmmoImageView(@Nullable final String url) {
+        if (this.ammoImageView == null) {
+            return;
+        }
+        Picasso.with(getActivity())
+               .load(Constants.ITEM_IMAGE_URL + url)
+               .into(this.ammoImageView);
+    }
+
+    private void setAmmoTextView(@Nullable final String text) {
+        if (this.ammoTextView == null) {
+            return;
+        }
+        this.ammoTextView.setText(text);
+    }
+
+    private void setAmmoClickListener(@Nullable final View.OnClickListener onClickListener) {
+        if (this.ammoContent == null) {
+            return;
+        }
+        this.ammoContent.setOnClickListener(onClickListener);
+    }
+
+    private void setBarValue(@Nullable final BarValueView barValue,
+                             @StringRes final int text,
+                             final int value) {
+        if (barValue == null) {
+            return;
+        }
+        barValue.setVisibility(View.VISIBLE);
+        barValue.setValue(text, value);
+    }
+
     //endregion
 }

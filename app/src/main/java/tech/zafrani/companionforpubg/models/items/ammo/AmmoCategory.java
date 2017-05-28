@@ -2,14 +2,13 @@ package tech.zafrani.companionforpubg.models.items.ammo;
 
 
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
 import tech.zafrani.companionforpubg.models.items.Category;
-import tech.zafrani.companionforpubg.models.items.weapons.Weapon;
-import tech.zafrani.companionforpubg.models.items.weapons.WeaponList;
 
 
 public class AmmoCategory implements Category<Ammo> {
@@ -33,5 +32,15 @@ public class AmmoCategory implements Category<Ammo> {
     @Override
     public List<Ammo> getItems() {
         return this.ammoList;
+    }
+
+    @Nullable
+    public Ammo getAmmoWithId(final int id) {
+        for (final Ammo ammo : ammoList) {
+            if (ammo.getId() == id) {
+                return ammo;
+            }
+        }
+        return null;
     }
 }

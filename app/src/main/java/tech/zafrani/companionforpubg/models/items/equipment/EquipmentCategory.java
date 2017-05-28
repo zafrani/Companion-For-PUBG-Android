@@ -28,6 +28,6 @@ public class EquipmentCategory implements Category<Equipment> {
 
     @Override
     public List<Equipment> getItems() {
-        return null;
+        return equipmentList;
     }
 }

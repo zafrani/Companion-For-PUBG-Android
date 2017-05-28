@@ -9,11 +9,9 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
-import android.util.Log;
 import android.view.View;
 
 import butterknife.BindView;
-import tech.zafrani.companionforpubg.PUBGApplication;
 import tech.zafrani.companionforpubg.R;
 import tech.zafrani.companionforpubg.adapters.ViewPagerAdapter;
 import tech.zafrani.companionforpubg.models.items.Category;
@@ -43,9 +41,8 @@ public class ItemFragment extends BaseFragment
     public void onViewCreated(final View view,
                               @Nullable final Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        Log.e(getClass().getSimpleName(), PUBGApplication.getInstance().getItems().toString());
-        Log.e(getClass().getSimpleName(), PUBGApplication.getInstance().getItems().getCategories().get(Category.Name.WEAPON_CATEGORY).toString());
         setUpTabs();
+        showDisclaimerForFirstTime();
     }
 
     @Override
@@ -83,7 +80,6 @@ public class ItemFragment extends BaseFragment
     //endregion
 
     //region Methods
-
     private void setUpTabs() {
         if (this.tabLayout == null || this.viewPager == null) {
             return;

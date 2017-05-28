@@ -7,10 +7,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="@dimen/small_margin"
-        android:paddingEnd="@dimen/standard_margin"
-        android:paddingStart="@dimen/standard_margin"
-        android:paddingTop="@dimen/small_margin">
+        android:padding="@dimen/standard_margin">
 
         <ImageView
             android:id="@+id/fragment_weapon_detail_weapon_image"
@@ -34,12 +31,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/tiny_margin"
+                android:textColor="@color/white"
                 android:textSize="@dimen/title_text_size"/>
 
             <TextView
                 android:id="@+id/fragment_weapon_detail_weapon_type"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/white"
                 android:textSize="@dimen/subtitle_text_size"/>
         </LinearLayout>
 
@@ -61,7 +60,9 @@
                     android:id="@+id/fragment_weapon_detail_weapon_ammo_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/tiny_margin"/>
+                    android:layout_marginBottom="@dimen/tiny_margin"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/subtitle_text_size"/>
 
                 <ImageView
                     android:id="@+id/fragment_weapon_detail_weapon_ammo_image"
@@ -74,6 +75,51 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/colorAccent"/>
+        android:background="@color/accent"/>
+
+    <tech.zafrani.companionforpubg.widgets.BarValueView
+        android:id="@+id/fragment_weapon_detail_weapon_damage_bar_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/standard_margin"
+        android:layout_marginStart="@dimen/standard_margin"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:visibility="gone"/>
+
+    <tech.zafrani.companionforpubg.widgets.BarValueView
+        android:id="@+id/fragment_weapon_detail_weapon_range_bar_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/standard_margin"
+        android:layout_marginStart="@dimen/standard_margin"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:visibility="gone"/>
+
+    <tech.zafrani.companionforpubg.widgets.BarValueView
+        android:id="@+id/fragment_weapon_detail_weapon_stability_bar_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/standard_margin"
+        android:layout_marginStart="@dimen/standard_margin"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:visibility="gone"/>
+
+    <tech.zafrani.companionforpubg.widgets.BarValueView
+        android:id="@+id/fragment_weapon_detail_weapon_rate_bar_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/standard_margin"
+        android:layout_marginStart="@dimen/standard_margin"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:visibility="gone"/>
+
+    <tech.zafrani.companionforpubg.widgets.BarValueView
+        android:id="@+id/fragment_weapon_detail_weapon_magazine_bar_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/standard_margin"
+        android:layout_marginStart="@dimen/standard_margin"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:visibility="gone"/>
 
 </LinearLayout>

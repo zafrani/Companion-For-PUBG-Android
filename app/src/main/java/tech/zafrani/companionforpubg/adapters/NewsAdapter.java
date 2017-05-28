@@ -13,19 +13,9 @@ import android.widget.TextView;
 import com.squareup.picasso.Picasso;
 
 import tech.zafrani.companionforpubg.R;
-import tech.zafrani.companionforpubg.models.NewsList;
 import tech.zafrani.companionforpubg.models.NewsItem;
 
 public class NewsAdapter extends RecyclerViewAdapter<NewsItem, NewsAdapter.NewsItemViewHolder>{
-    @NonNull
-    private final NewsList news = new NewsList();
-
-    public void addNewsItem(@NonNull final NewsItem newsItem) {
-        news.add(newsItem);
-    }
-
-
-
 
     @Override
     public NewsAdapter.NewsItemViewHolder onCreateViewHolder(@NonNull final ViewGroup parent,

@@ -14,9 +14,8 @@ import tech.zafrani.companionforpubg.PUBGApplication;
 import tech.zafrani.companionforpubg.R;
 import tech.zafrani.companionforpubg.activities.ItemDetailActivity;
 import tech.zafrani.companionforpubg.adapters.ItemRecyclerViewAdapter;
-import tech.zafrani.companionforpubg.models.items.Item;
 import tech.zafrani.companionforpubg.models.items.Category;
-import tech.zafrani.companionforpubg.models.items.weapons.Weapon;
+import tech.zafrani.companionforpubg.models.items.Item;
 
 public class ItemTabFragment extends BaseFragment
         implements ItemRecyclerViewAdapter.Listener<Item> {
@@ -63,7 +62,7 @@ public class ItemTabFragment extends BaseFragment
         final DividerItemDecoration itemDecoration = new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL);
         this.recyclerView.addItemDecoration(itemDecoration);
         this.recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        final ItemRecyclerViewAdapter adapter = new ItemRecyclerViewAdapter(category.getItems());
+        final ItemRecyclerViewAdapter<Item> adapter = new ItemRecyclerViewAdapter<>(category.getItems());
         adapter.setListener(this);
         this.recyclerView.setAdapter(adapter);
     }

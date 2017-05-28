@@ -9,14 +9,14 @@
         android:id="@+id/row_item_image"
         android:layout_width="0dp"
         android:layout_height="90dp"
-        android:layout_weight="0.30"
+        android:layout_weight="0.35"
         android:scaleType="fitCenter"
         android:adjustViewBounds="true"
         style="@style/RowItemNews.Image"/>
     <RelativeLayout
         android:layout_width="0dp"
         android:layout_height="fill_parent"
-        android:layout_weight="0.70"
+        android:layout_weight="0.65"
         >
         <TextView
             android:id="@+id/row_item_type"

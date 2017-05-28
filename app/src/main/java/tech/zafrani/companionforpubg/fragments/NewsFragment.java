@@ -66,7 +66,7 @@ public class NewsFragment extends BaseFragment implements PUBGNewsFetch.Listener
     @Override
     public void updateNews(NewsItem newsItem) {
         if (adapter!= null){
-            adapter.addNewsItem(newsItem);
+            adapter.add(newsItem);
             adapter.notifyDataSetChanged();
         }
     }

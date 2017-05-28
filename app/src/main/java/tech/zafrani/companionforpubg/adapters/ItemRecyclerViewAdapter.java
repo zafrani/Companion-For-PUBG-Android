@@ -16,8 +16,8 @@ import tech.zafrani.companionforpubg.R;
 import tech.zafrani.companionforpubg.models.items.Item;
 import tech.zafrani.companionforpubg.utils.Constants;
 
-public class ItemRecyclerViewAdapter extends RecyclerViewAdapter<Item, ItemRecyclerViewAdapter.ItemViewHolder> {
-    public ItemRecyclerViewAdapter(@NonNull final List<Item> items) {
+public class ItemRecyclerViewAdapter<Model extends Item> extends RecyclerViewAdapter<Model, ItemRecyclerViewAdapter.ItemViewHolder> {
+    public ItemRecyclerViewAdapter(@NonNull final List<Model> items) {
         super(items);
     }
 
@@ -40,7 +40,7 @@ public class ItemRecyclerViewAdapter extends RecyclerViewAdapter<Item, ItemRecyc
         @Override
         public void bind(int position) {
             super.bind(position);
-            final Item item = get(position);
+            final Model item = get(position);
             Picasso.with(this.itemView.getContext())
                    .load(Constants.ITEM_IMAGE_URL + item.getImageUrl())
                    .into(this.imageView);

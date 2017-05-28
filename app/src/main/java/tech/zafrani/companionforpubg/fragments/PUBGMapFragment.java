@@ -14,7 +14,6 @@ import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 
 import butterknife.BindView;
-import butterknife.OnClick;
 import tech.zafrani.companionforpubg.R;
 import tech.zafrani.companionforpubg.maps.GoogleMapControllerImpl;
 
@@ -164,7 +163,7 @@ public class PUBGMapFragment extends BaseFragment
         }
         if(vehicleIcon != null) {
             if (this.mapController.isShowingVehicles()) {
-                vehicleIcon.setColorFilter(ContextCompat.getColor(getActivity(), R.color.colorAccent));
+                vehicleIcon.setColorFilter(ContextCompat.getColor(getActivity(), R.color.accent));
             } else {
                 vehicleIcon.setColorFilter(ContextCompat.getColor(getActivity(), R.color.white));
             }
@@ -172,7 +171,7 @@ public class PUBGMapFragment extends BaseFragment
 
         if(boatIcon != null) {
             if (this.mapController.isShowingBoats()) {
-                boatIcon.setColorFilter(ContextCompat.getColor(getActivity(), R.color.colorAccent));
+                boatIcon.setColorFilter(ContextCompat.getColor(getActivity(), R.color.accent));
             } else {
                 boatIcon.setColorFilter(ContextCompat.getColor(getActivity(), R.color.white));
             }
@@ -180,7 +179,7 @@ public class PUBGMapFragment extends BaseFragment
 
         if(runDistanceIcon != null) {
             if (this.mapController.isShowingDistance()) {
-                runDistanceIcon.setColorFilter(ContextCompat.getColor(getActivity(), R.color.colorAccent));
+                runDistanceIcon.setColorFilter(ContextCompat.getColor(getActivity(), R.color.accent));
             } else {
                 runDistanceIcon.setColorFilter(ContextCompat.getColor(getActivity(), R.color.white));
             }
