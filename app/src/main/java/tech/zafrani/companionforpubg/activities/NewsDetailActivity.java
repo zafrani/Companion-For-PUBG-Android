@@ -43,11 +43,6 @@ public class NewsDetailActivity extends BaseActivity {
     }
 
     @Override
-    protected void onDestroy() {
-        super.onDestroy();
-    }
-
-    @Override
     protected int getLayoutRes() {
         return R.layout.activity_newsdetails;
     }
