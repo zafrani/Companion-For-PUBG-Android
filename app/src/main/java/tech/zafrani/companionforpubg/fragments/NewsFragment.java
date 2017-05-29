@@ -10,12 +10,15 @@ import android.view.View;
 
 import butterknife.BindView;
 import tech.zafrani.companionforpubg.R;
+import tech.zafrani.companionforpubg.activities.NewsDetailActivity;
+import tech.zafrani.companionforpubg.adapters.ItemRecyclerViewAdapter;
 import tech.zafrani.companionforpubg.adapters.NewsAdapter;
 import tech.zafrani.companionforpubg.models.NewsItem;
 import tech.zafrani.companionforpubg.utils.PUBGNewsFetch;
 
 
-public class NewsFragment extends BaseFragment implements PUBGNewsFetch.Listener {
+public class NewsFragment extends BaseFragment implements PUBGNewsFetch.Listener,
+        ItemRecyclerViewAdapter.Listener<NewsItem> {
     public static final String TAG = NewsFragment.class.getSimpleName();
 
     @BindView(R.id.fragment_news_recyclerview)
@@ -43,9 +46,10 @@ public class NewsFragment extends BaseFragment implements PUBGNewsFetch.Listener
         super.onViewCreated(view, savedInstanceState);
         final DividerItemDecoration itemDecoration = new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL);
         this.recyclerView.addItemDecoration(itemDecoration);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        adapter =  new NewsAdapter();
-        recyclerView.setAdapter(adapter);
+        this.recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        this.adapter =  new NewsAdapter();
+        adapter.setListener(this);
+        this.recyclerView.setAdapter(adapter);
 
         final PUBGNewsFetch newsFetch = new PUBGNewsFetch(this);
         newsFetch.execute();
@@ -69,5 +73,11 @@ public class NewsFragment extends BaseFragment implements PUBGNewsFetch.Listener
             adapter.add(newsItem);
             adapter.notifyDataSetChanged();
         }
+    }
+
+    @Override
+    public void onClick(@NonNull NewsItem newsItem) {
+        NewsDetailActivity.startActivity(getActivity(), newsItem);
+
     }
 }

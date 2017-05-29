@@ -1,8 +1,6 @@
 package tech.zafrani.companionforpubg.adapters;
 
 
-import android.content.Intent;
-import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -49,14 +47,6 @@ public class NewsAdapter extends RecyclerViewAdapter<NewsItem, NewsAdapter.NewsI
         public void bind(int position) {
             super.bind(position);
             final NewsItem newsItem = get(position);
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(@NonNull final View view) {
-                    final Intent browse = new Intent( Intent.ACTION_VIEW , Uri.parse( newsItem.getLinkSrc()));
-                    view.getContext().startActivity(browse);
-                }
-            });
-
             Picasso.with(this.itemView.getContext())
                     .load(newsItem.getImgSrc())
                     .fit()
