@@ -5,9 +5,7 @@ import android.support.annotation.NonNull;
 
 import java.io.Serializable;
 
-import tech.zafrani.companionforpubg.models.items.Item;
-
-public class NewsItem extends Item implements Serializable{
+public class NewsItem implements Serializable{
     @NonNull
     private final String title;
     @NonNull
@@ -27,7 +25,6 @@ public class NewsItem extends Item implements Serializable{
                     @NonNull final String description,
                     @NonNull final String linkSrc,
                     @NonNull final String imgSrc) {
-        super(title, 0, imgSrc, 0);
         this.title = title;
         this.type = type;
         this.date = date;
