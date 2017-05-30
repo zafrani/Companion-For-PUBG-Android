@@ -3,18 +3,22 @@ package tech.zafrani.companionforpubg.fragments;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import butterknife.BindView;
 import tech.zafrani.companionforpubg.R;
+import tech.zafrani.companionforpubg.activities.NewsDetailActivity;
+import tech.zafrani.companionforpubg.adapters.ItemRecyclerViewAdapter;
 import tech.zafrani.companionforpubg.adapters.NewsAdapter;
 import tech.zafrani.companionforpubg.models.NewsItem;
 import tech.zafrani.companionforpubg.utils.PUBGNewsFetch;
 
 
-public class NewsFragment extends BaseFragment implements PUBGNewsFetch.Listener {
+public class NewsFragment extends BaseFragment implements PUBGNewsFetch.Listener,
+        ItemRecyclerViewAdapter.Listener<NewsItem> {
     public static final String TAG = NewsFragment.class.getSimpleName();
 
     @BindView(R.id.fragment_news_recyclerview)
@@ -40,9 +44,12 @@ public class NewsFragment extends BaseFragment implements PUBGNewsFetch.Listener
     public void onViewCreated(@NonNull final View view,
                               @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        adapter =  new NewsAdapter();
-        recyclerView.setAdapter(adapter);
+        final DividerItemDecoration itemDecoration = new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL);
+        this.recyclerView.addItemDecoration(itemDecoration);
+        this.recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        this.adapter =  new NewsAdapter();
+        adapter.setListener(this);
+        this.recyclerView.setAdapter(adapter);
 
         final PUBGNewsFetch newsFetch = new PUBGNewsFetch(this);
         newsFetch.execute();
@@ -63,8 +70,14 @@ public class NewsFragment extends BaseFragment implements PUBGNewsFetch.Listener
     @Override
     public void updateNews(NewsItem newsItem) {
         if (adapter!= null){
-            adapter.addNewsItem(newsItem);
+            adapter.add(newsItem);
             adapter.notifyDataSetChanged();
         }
+    }
+
+    @Override
+    public void onClick(@NonNull NewsItem newsItem) {
+        NewsDetailActivity.startActivity(getActivity(), newsItem);
+
     }
 }

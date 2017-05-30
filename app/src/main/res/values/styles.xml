@@ -71,8 +71,7 @@
     </style>
     <style name="RowItemNews.Container">
         <item name="android:layout_margin">@dimen/small_margin</item>
-        <item name="android:padding">@dimen/news_item_padding_size</item>
-        <item name="android:background">@color/darkGray</item>
+        <item name="android:padding">@dimen/standard_margin</item>
     </style>
     <style name="RowItemNews.Image">
         <item name="android:layout_gravity">center_vertical</item>
