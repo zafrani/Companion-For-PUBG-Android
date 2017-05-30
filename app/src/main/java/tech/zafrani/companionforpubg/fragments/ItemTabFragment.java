@@ -14,9 +14,8 @@ import tech.zafrani.companionforpubg.PUBGApplication;
 import tech.zafrani.companionforpubg.R;
 import tech.zafrani.companionforpubg.activities.ItemDetailActivity;
 import tech.zafrani.companionforpubg.adapters.ItemRecyclerViewAdapter;
-import tech.zafrani.companionforpubg.models.items.Item;
 import tech.zafrani.companionforpubg.models.items.Category;
-import tech.zafrani.companionforpubg.models.items.weapons.Weapon;
+import tech.zafrani.companionforpubg.models.items.Item;
 
 public class ItemTabFragment extends BaseFragment
         implements ItemRecyclerViewAdapter.Listener<Item> {

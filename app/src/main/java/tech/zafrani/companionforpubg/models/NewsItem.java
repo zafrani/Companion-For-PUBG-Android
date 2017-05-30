@@ -3,7 +3,9 @@ package tech.zafrani.companionforpubg.models;
 
 import android.support.annotation.NonNull;
 
-public class NewsItem {
+import java.io.Serializable;
+
+public class NewsItem implements Serializable{
     @NonNull
     private final String title;
     @NonNull
