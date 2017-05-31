@@ -15,6 +15,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 
 import butterknife.BindView;
 import tech.zafrani.companionforpubg.R;
+import tech.zafrani.companionforpubg.activities.BaseActivity;
 import tech.zafrani.companionforpubg.maps.GoogleMapControllerImpl;
 
 
@@ -55,10 +56,16 @@ public class PUBGMapFragment extends BaseFragment
         super.onViewCreated(view, savedInstanceState);
         this.sharedPreferences = getActivity().getSharedPreferences("temp", Context.MODE_PRIVATE); //todo not this.
 
-        final MapFragment mapFragment = (MapFragment) getChildFragmentManager().findFragmentById(R.id.map_fragment_map);
-        mapFragment.getMapAsync(this);
+        final MapFragment mapFragment = (MapFragment) getActivity().getFragmentManager().findFragmentById(R.id.map_fragment_map);
+        if (mapFragment == null) {
+            final MapFragment newMapFragment = new MapFragment();
+            ((BaseActivity) getActivity()).showFragment(newMapFragment, R.id.map_fragment_map, MapFragment.class.getSimpleName());
+            newMapFragment.getMapAsync(this);
+        } else {
+            mapFragment.getMapAsync(this);
+        }
 
-        if(this.vehicleIcon != null) {
+        if (this.vehicleIcon != null) {
             this.vehicleIcon.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -66,7 +73,7 @@ public class PUBGMapFragment extends BaseFragment
                 }
             });
         }
-        if(this.boatIcon != null) {
+        if (this.boatIcon != null) {
             this.boatIcon.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -74,7 +81,7 @@ public class PUBGMapFragment extends BaseFragment
                 }
             });
         }
-        if(this.runDistanceIcon != null) {
+        if (this.runDistanceIcon != null) {
             this.runDistanceIcon.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -161,27 +168,27 @@ public class PUBGMapFragment extends BaseFragment
         if (this.mapController == null) {
             return;
         }
-        if(vehicleIcon != null) {
+        if (this.vehicleIcon != null) {
             if (this.mapController.isShowingVehicles()) {
-                vehicleIcon.setColorFilter(ContextCompat.getColor(getActivity(), R.color.accent));
+                this.vehicleIcon.setColorFilter(ContextCompat.getColor(getActivity(), R.color.accent));
             } else {
-                vehicleIcon.setColorFilter(ContextCompat.getColor(getActivity(), R.color.white));
+                this.vehicleIcon.setColorFilter(ContextCompat.getColor(getActivity(), R.color.white));
             }
         }
 
-        if(boatIcon != null) {
+        if (this.boatIcon != null) {
             if (this.mapController.isShowingBoats()) {
-                boatIcon.setColorFilter(ContextCompat.getColor(getActivity(), R.color.accent));
+                this.boatIcon.setColorFilter(ContextCompat.getColor(getActivity(), R.color.accent));
             } else {
-                boatIcon.setColorFilter(ContextCompat.getColor(getActivity(), R.color.white));
+                this.boatIcon.setColorFilter(ContextCompat.getColor(getActivity(), R.color.white));
             }
         }
 
-        if(runDistanceIcon != null) {
+        if (this.runDistanceIcon != null) {
             if (this.mapController.isShowingDistance()) {
-                runDistanceIcon.setColorFilter(ContextCompat.getColor(getActivity(), R.color.accent));
+                this.runDistanceIcon.setColorFilter(ContextCompat.getColor(getActivity(), R.color.accent));
             } else {
-                runDistanceIcon.setColorFilter(ContextCompat.getColor(getActivity(), R.color.white));
+                this.runDistanceIcon.setColorFilter(ContextCompat.getColor(getActivity(), R.color.white));
             }
         }
     }

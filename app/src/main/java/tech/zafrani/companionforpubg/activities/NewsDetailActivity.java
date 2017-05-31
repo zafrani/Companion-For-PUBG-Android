@@ -54,7 +54,7 @@ public class NewsDetailActivity extends BaseActivity {
             throw new IllegalStateException("Missing intent");
         }
         final String newsItemSrc = intent.getStringExtra(EXTRA_NEWSITEM_SRC);
-        showFragment(NewsDetailFragment.newInstance(newsItemSrc));
+        showFragment(NewsDetailFragment.newInstance(newsItemSrc), NewsDetailFragment.TAG);
 
     }
 
