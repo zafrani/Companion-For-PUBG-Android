@@ -49,7 +49,7 @@ public abstract class DrawerActivity extends BaseActivity
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
-        if(this.navigationView != null) {
+        if (this.navigationView != null) {
             this.navigationView.setNavigationItemSelectedListener(this);
             this.navigationView.setCheckedItem(R.id.drawer_map);
         }
@@ -58,7 +58,7 @@ public abstract class DrawerActivity extends BaseActivity
 
     @Override
     protected void onDestroy() {
-        if(this.navigationView != null) {
+        if (this.navigationView != null) {
             this.navigationView.setNavigationItemSelectedListener(null);
         }
 
@@ -79,7 +79,7 @@ public abstract class DrawerActivity extends BaseActivity
     public boolean onOptionsItemSelected(final MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                if(drawerLayout != null) {
+                if (drawerLayout != null) {
                     this.drawerLayout.openDrawer(GravityCompat.START);
                 }
                 return true;
@@ -124,38 +124,39 @@ public abstract class DrawerActivity extends BaseActivity
 
     //region methods
     private void mapSelected() {
-        if(contentLayout == null) {
+        if (this.contentLayout == null) {
             return;
         }
         final Fragment fragment = getFragmentManager().findFragmentByTag(PUBGMapFragment.TAG);
         if (fragment == null) {
-            showFragment(new PUBGMapFragment());
+            showFragment(new PUBGMapFragment(), PUBGMapFragment.TAG);
         } else {
-            showFragment(fragment);
+            showFragment(fragment, PUBGMapFragment.TAG);
         }
     }
 
     private void itemsSelected() {
-        if(contentLayout == null) {
+        if (this.contentLayout == null) {
             return;
         }
 
         final Fragment fragment = getFragmentManager().findFragmentByTag(ItemFragment.TAG);
         if (fragment == null) {
-            showFragment(new ItemFragment());
+            showFragment(new ItemFragment(), ItemFragment.TAG);
         } else {
-            showFragment(fragment);
+            showFragment(fragment, ItemFragment.TAG);
         }
     }
+
     private void newsSelected() {
         if (this.contentLayout == null) {
             return;
         }
         final Fragment fragment = getFragmentManager().findFragmentByTag(NewsFragment.TAG);
         if (fragment == null) {
-            showFragment(new NewsFragment());
+            showFragment(new NewsFragment(), NewsFragment.TAG);
         } else {
-            showFragment(fragment);
+            showFragment(fragment, NewsFragment.TAG);
         }
     }
 

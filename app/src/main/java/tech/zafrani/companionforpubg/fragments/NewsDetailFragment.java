@@ -7,11 +7,13 @@ import android.support.annotation.Nullable;
 import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.widget.Toast;
 
 import butterknife.BindView;
 import tech.zafrani.companionforpubg.R;
 
 public class NewsDetailFragment extends BaseFragment {
+    public static final String TAG = NewsDetailFragment.class.getSimpleName();
     public static final String ARG_NEWS_SRC = NewsDetailFragment.class.getSimpleName() + ".ARG_NEWS_SRC";
 
     @Nullable
@@ -36,18 +38,21 @@ public class NewsDetailFragment extends BaseFragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         final Bundle args = getArguments();
-        if (args==null) {
+        if (args == null) {
             throw new IllegalStateException("Missing arguments");
         }
-        if (args.getString(ARG_NEWS_SRC) == null) {
+        if (!args.containsKey(ARG_NEWS_SRC)) {
             throw new IllegalStateException("Missing key");
         }
         final String newsSrc = args.getString(ARG_NEWS_SRC);
+        if (newsSrc == null) {
+            Toast.makeText(getActivity(), "Failed to load.", Toast.LENGTH_SHORT).show();
+            getActivity().finish();
+            return;
+        }
         setWebView(newsSrc);
 
     }
-
-
 
 
     private void setWebView(@NonNull final String newsSrc) {

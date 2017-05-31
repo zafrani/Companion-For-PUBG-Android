@@ -53,9 +53,9 @@ public class ItemDetailActivity extends BaseActivity {
         }
         final Item item = (Item) intent.getSerializableExtra(EXTRA_ITEM);
         if (item instanceof Weapon) {
-            showFragment(WeaponDetailFragment.newInstance((Weapon) item));
+            showFragment(WeaponDetailFragment.newInstance((Weapon) item), WeaponDetailFragment.TAG);
         } else if (item instanceof Ammo) {
-            showFragment(AmmoDetailFragment.newInstance((Ammo) item));
+            showFragment(AmmoDetailFragment.newInstance((Ammo) item), WeaponDetailFragment.TAG);
         } else {
             Toast.makeText(this, "We're still working on this feature!", Toast.LENGTH_SHORT).show();
             finish();
