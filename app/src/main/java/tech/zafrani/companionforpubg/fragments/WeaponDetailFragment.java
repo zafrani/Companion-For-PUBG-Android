@@ -21,6 +21,7 @@ import tech.zafrani.companionforpubg.models.items.weapons.ProjectileWeapon;
 import tech.zafrani.companionforpubg.models.items.weapons.Weapon;
 import tech.zafrani.companionforpubg.utils.Constants;
 import tech.zafrani.companionforpubg.widgets.BarValueView;
+import tech.zafrani.companionforpubg.widgets.ItemPickerView;
 
 public class WeaponDetailFragment extends BaseFragment {
     private static final String ARG_WEAPON = WeaponDetailFragment.class.getSimpleName() + ".ARG_WEAPON";
@@ -77,6 +78,26 @@ public class WeaponDetailFragment extends BaseFragment {
     @BindView(R.id.fragment_weapon_detail_weapon_magazine_bar_value)
     BarValueView magazineBarValueView;
 
+    @Nullable
+    @BindView(R.id.fragment_weapon_detail_weapon_magazine_item_picker)
+    ItemPickerView magazinePickerView;
+
+    @Nullable
+    @BindView(R.id.fragment_weapon_detail_weapon_muzzle_item_picker)
+    ItemPickerView muzzlePickerView;
+
+    @Nullable
+    @BindView(R.id.fragment_weapon_detail_weapon_grip_item_picker)
+    ItemPickerView gripPickerView;
+
+    @Nullable
+    @BindView(R.id.fragment_weapon_detail_weapon_sight_item_picker)
+    ItemPickerView sightPickerView;
+
+    @Nullable
+    @BindView(R.id.fragment_weapon_detail_weapon_stock_item_picker)
+    ItemPickerView stockPickerView;
+
     //region BaseFragment
 
     @Override
@@ -111,13 +132,14 @@ public class WeaponDetailFragment extends BaseFragment {
             setBarValue(this.rangeBarValueView, R.string.row_item_range, projectileWeapon.getRange());
             setBarValue(this.stabilityBarValueView, R.string.row_item_stability, projectileWeapon.getStability());
             setBarValue(this.rateBarValueView, R.string.row_item_rate, projectileWeapon.getRate());
-            setBarValue(this.magazineBarValueView, R.string.row_item_magazine, projectileWeapon.getMagazine());
+            setBarValue(this.magazineBarValueView, R.string.row_item_magazine, projectileWeapon.getMagazineSize());
             setAmmoClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     ItemDetailActivity.startActivity(getActivity(), ammo);
                 }
             });
+
         }
     }
     //endregion
@@ -177,6 +199,13 @@ public class WeaponDetailFragment extends BaseFragment {
         }
         barValue.setVisibility(View.VISIBLE);
         barValue.setValue(text, value);
+    }
+
+    private void setMagazinePickerView(@Nullable final int[] magazineIds) {
+        if (this.magazinePickerView == null || magazineIds == null) {
+            return;
+        }
+        this.magazinePickerView.setVisibility(View.VISIBLE);
     }
 
     //endregion
