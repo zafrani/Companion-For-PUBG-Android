@@ -12,7 +12,6 @@ import android.support.v7.app.AppCompatActivity;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
-import tech.zafrani.companionforpubg.R;
 
 public abstract class BaseActivity extends AppCompatActivity {
 
@@ -35,7 +34,15 @@ public abstract class BaseActivity extends AppCompatActivity {
         unbinder.unbind();
     }
 
-    //endregion
+    @CallSuper
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        if (getTopFragment() == null) {
+            finish();
+        }
+    }
+//endregion
 
     //region Methods
     @LayoutRes
@@ -44,11 +51,30 @@ public abstract class BaseActivity extends AppCompatActivity {
     @IdRes
     protected abstract int getContentView();
 
-    protected void showFragment(@NonNull final Fragment fragment) {
+
+    protected void showFragment(@NonNull final Fragment fragment,
+                                @NonNull final String tag) {
+        showFragment(fragment, getContentView(), tag);
+
+    }
+
+    public void showFragment(@NonNull final Fragment fragment,
+                             @IdRes final int contentView,
+                             @NonNull final String tag) {
         final FragmentTransaction fragTransaction = getFragmentManager().beginTransaction();
-        fragTransaction.replace(getContentView(), fragment);
+        final Fragment topFragment = getTopFragment();
+        if (topFragment == null) {
+            fragTransaction.add(contentView, fragment, tag);
+        } else {
+            fragTransaction.replace(contentView, fragment, tag);
+        }
         fragTransaction.commit();
         getFragmentManager().executePendingTransactions();
+    }
+
+    @Nullable
+    private Fragment getTopFragment() {
+        return getFragmentManager().findFragmentById(getContentView());
     }
     //endregion
 }

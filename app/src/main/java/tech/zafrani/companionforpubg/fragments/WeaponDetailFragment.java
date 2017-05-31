@@ -23,6 +23,7 @@ import tech.zafrani.companionforpubg.utils.Constants;
 import tech.zafrani.companionforpubg.widgets.BarValueView;
 
 public class WeaponDetailFragment extends BaseFragment {
+    public static final String TAG = WeaponDetailFragment.class.getSimpleName();
     private static final String ARG_WEAPON = WeaponDetailFragment.class.getSimpleName() + ".ARG_WEAPON";
 
     public static WeaponDetailFragment newInstance(@NonNull final Weapon weapon) {
