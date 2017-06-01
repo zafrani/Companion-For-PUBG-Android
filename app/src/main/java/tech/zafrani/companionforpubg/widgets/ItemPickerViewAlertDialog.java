@@ -13,7 +13,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import java.io.Serializable;
 import java.util.List;
 
 import tech.zafrani.companionforpubg.R;
@@ -70,10 +69,12 @@ public class ItemPickerViewAlertDialog extends AlertDialog
     //endregion
 
     // region RecyclerViewAdapter.Listener
+
     @Override
     public void onClick(@NonNull final Item item) {
         this.listener.onItemSelected(item);
     }
+
     //endregion
 
     //region Methods

@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
+              android:background="?selectableItemBackground"
               android:orientation="vertical">
 
     <TextView
@@ -52,7 +53,6 @@
             android:paddingTop="@dimen/standard_margin"
             android:src="@drawable/ic_close_white_24dp"
             android:visibility="invisible"/>
-
 
     </RelativeLayout>
 </LinearLayout>
