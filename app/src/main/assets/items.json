@@ -66,7 +66,28 @@
             "head1": 229,
             "head2": 197,
             "head3": 147
-          }
+          },
+          "magazine_ids": [
+            17,
+            20,
+            32
+          ],
+          "muzzle_ids": [
+            10,
+            24,
+            38
+          ],
+          "sight_ids": [
+            0,
+            1,
+            2,
+            3,
+            26,
+            33
+          ],
+          "stock_ids": [
+            7
+          ]
         },
         {
           "name": "Crossbow",
@@ -90,7 +111,19 @@
             "head1": 184,
             "head2": 158,
             "head3": 118
-          }
+          },
+          "magazine_ids": [
+            28
+          ],
+          "grip_ids": [
+            25
+          ],
+          "sight_ids": [
+            1,
+            2,
+            26,
+            33
+          ]
         },
         {
           "name": "Crowbar",
@@ -143,7 +176,23 @@
             "head1": 126,
             "head2": 108,
             "head3": 81
-          }
+          },
+          "muzzle_ids": [
+            10,
+            24,
+            38
+          ],
+          "sight_ids": [
+            0,
+            1,
+            2,
+            3,
+            26,
+            33
+          ],
+          "stock_ids": [
+            7
+          ]
         },
         {
           "name": "M16A4",
@@ -209,7 +258,28 @@
             "head1": 147,
             "head2": 126,
             "head3": 95
-          }
+          },
+          "magazine_ids": [
+            17,
+            20,
+            32
+          ],
+          "muzzle_ids": [
+            10,
+            24,
+            38
+          ],
+          "sight_ids": [
+            0,
+            1,
+            2,
+            3,
+            26,
+            33
+          ],
+          "stock_ids": [
+            7
+          ]
         },
         {
           "name": "M249",
@@ -233,7 +303,15 @@
             "head1": 77,
             "head2": 66,
             "head3": 50
-          }
+          },
+          "sight_ids": [
+            0,
+            1,
+            2,
+            3,
+            26,
+            33
+          ]
         },
         {
           "name": "M416",
@@ -268,7 +346,7 @@
             22,
             35
           ],
-          "grip_ids":[
+          "grip_ids": [
             4,
             40
           ],
@@ -325,7 +403,19 @@
             "head1": 40,
             "head2": 35,
             "head3": 26
-          }
+          },
+          "magazine_ids": [
+            16,
+            21,
+            31
+          ],
+          "muzzle_ids": [
+            23,
+            37
+          ],
+          "stock_ids": [
+            34
+          ]
         },
         {
           "name": "Molotov Cocktail",
@@ -360,7 +450,15 @@
             "head1": 61,
             "head2": 53,
             "head3": 39
-          }
+          },
+          "magazine_ids": [
+            15,
+            19,
+            30
+          ],
+          "muzzle_ids": [
+            36
+          ]
         },
         {
           "name": "P92",
@@ -384,7 +482,15 @@
             "head1": 51,
             "head2": 44,
             "head3": 33
-          }
+          },
+          "magazine_ids": [
+            15,
+            19,
+            30
+          ],
+          "muzzle_ids": [
+            36
+          ]
         },
         {
           "name": "Pan",
@@ -427,7 +533,10 @@
             "head1": 81,
             "head2": 69,
             "head3": 52
-          }
+          },
+          "muzzle_ids": [
+            36
+          ]
         },
         {
           "name": "S12K",
@@ -451,7 +560,25 @@
             "head1": 999,
             "head2": 999,
             "head3": 999
-          }
+          },
+          "magazine_ids": [
+            13,
+            18,
+            27
+          ],
+          "muzzle_ids": [
+            9,
+            22,
+            35
+          ],
+          "sight_ids": [
+            0,
+            1,
+            2,
+            3,
+            26,
+            33
+          ]
         },
         {
           "name": "S1897",
@@ -475,7 +602,13 @@
             "head1": 999,
             "head2": 999,
             "head3": 999
-          }
+          },
+          "loop_ids": [
+            6
+          ],
+          "muzzle_ids": [
+            8
+          ]
         },
         {
           "name": "S686",
@@ -499,7 +632,13 @@
             "head1": 999,
             "head2": 999,
             "head3": 999
-          }
+          },
+          "loop_ids": [
+            6
+          ],
+          "muzzle_ids": [
+            8
+          ]
         },
         {
           "name": "SCAR-L",
@@ -534,7 +673,7 @@
             22,
             35
           ],
-          "grip_ids":[
+          "grip_ids": [
             4,
             40
           ],
@@ -588,7 +727,25 @@
             "head1": 96,
             "head2": 83,
             "head3": 62
-          }
+          },
+          "magazine_ids": [
+            17,
+            20,
+            32
+          ],
+          "muzzle_ids": [
+            10,
+            24,
+            38
+          ],
+          "sight_ids": [
+            0,
+            1,
+            2,
+            3,
+            26,
+            33
+          ]
         },
         {
           "name": "Smoke Grenade",
@@ -632,7 +789,16 @@
             "head1": 67,
             "head2": 57,
             "head3": 43
-          }
+          },
+          "magazine_ids": [
+            16,
+            21,
+            31
+          ],
+          "muzzle_ids": [
+            23,
+            37
+          ]
         },
         {
           "name": "UMP9",
@@ -656,7 +822,26 @@
             "head1": "58",
             "head2": "50",
             "head3": "37"
-          }
+          },
+          "grip_ids": [
+            4,
+            40
+          ],
+          "magazine_ids": [
+            16,
+            21,
+            31
+          ],
+          "muzzle_ids": [
+            23,
+            37
+          ],
+          "sight_ids": [
+            1,
+            2,
+            26,
+            33
+          ]
         },
         {
           "name": "Vector",
@@ -680,7 +865,26 @@
             "head1": 63,
             "head2": 54,
             "head3": 41
-          }
+          },
+          "grip_ids": [
+            4,
+            40
+          ],
+          "magazine_ids": [
+            16,
+            21,
+            31
+          ],
+          "muzzle_ids": [
+            23,
+            37
+          ],
+          "sight_ids": [
+            1,
+            2,
+            26,
+            33
+          ]
         }
       ]
     },
@@ -762,7 +966,7 @@
         },
         {
           "id": 4,
-          "type": "Grip",
+          "type": "Grips",
           "name": "Angled Foregrip",
           "image_url": "Icon_attach_AngledForeGrip.png",
           "capacity": 500
@@ -909,7 +1113,7 @@
         },
         {
           "id": 25,
-          "type": "Grip",
+          "type": "Grips",
           "name": "Foregrip for Crossbow",
           "image_url": "Icon_attach_ForegripCrossbow.png",
           "capacity": 500
@@ -1014,7 +1218,7 @@
         },
         {
           "id": 40,
-          "type": "Grip",
+          "type": "Grips",
           "name": "Vertical Foregrip",
           "image_url": "Icon_attach_VerticalForegrip.png",
           "capacity": 500

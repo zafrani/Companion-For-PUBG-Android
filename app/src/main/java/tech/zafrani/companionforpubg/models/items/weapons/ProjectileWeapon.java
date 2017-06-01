@@ -32,6 +32,10 @@ public class ProjectileWeapon extends Weapon {
     private final Damage damage;
 
     @Nullable
+    @SerializedName("loop_ids")
+    private final int[] loopIds;
+
+    @Nullable
     @SerializedName("magazine_ids")
     private final int[] magazinesIds;
 
@@ -63,6 +67,7 @@ public class ProjectileWeapon extends Weapon {
                             final int rate,
                             final int reload,
                             @NonNull final Damage damage,
+                            @Nullable final int[] loopIds,
                             @Nullable final int[] magazinesIds,
                             @Nullable final int[] muzzleIds,
                             @Nullable final int[] gripIds,
@@ -76,6 +81,7 @@ public class ProjectileWeapon extends Weapon {
         this.rate = rate;
         this.reload = reload;
         this.damage = damage;
+        this.loopIds = loopIds;
         this.magazinesIds = magazinesIds;
         this.muzzleIds = muzzleIds;
         this.gripIds = gripIds;
@@ -117,6 +123,11 @@ public class ProjectileWeapon extends Weapon {
 
     public int getReload() {
         return reload;
+    }
+
+    @Nullable
+    public int[] getLoopIds() {
+        return loopIds;
     }
 
     @Nullable

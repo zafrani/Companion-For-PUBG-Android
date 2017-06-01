@@ -131,10 +131,22 @@
 
 
         <View
+            android:id="@+id/fragment_weapon_detail_attachment_divider"
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginTop="@dimen/standard_margin"
             android:background="@color/accent"/>
+
+
+        <tech.zafrani.companionforpubg.widgets.ItemPickerView
+            android:id="@+id/fragment_weapon_detail_weapon_loops_item_picker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/standard_margin"
+            android:layout_marginStart="@dimen/standard_margin"
+            android:layout_marginTop="@dimen/standard_margin"
+            android:visibility="gone"
+            app:titleText="@string/label_loops"/>
 
         <tech.zafrani.companionforpubg.widgets.ItemPickerView
             android:id="@+id/fragment_weapon_detail_weapon_magazine_item_picker"

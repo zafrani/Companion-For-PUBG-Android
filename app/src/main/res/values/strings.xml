@@ -21,6 +21,7 @@
     <string name="label_contact_us">Contact Us</string>
     <string name="label_send_email">Send Email</string>
     <string name="label_ammo">Ammo</string>
+    <string name="label_loops">Bullet Loops</string>
     <string name="label_magazine">Magazine</string>
     <string name="label_muzzle">Muzzle</string>
     <string name="label_grip">Grip</string>

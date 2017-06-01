@@ -84,6 +84,10 @@ public class WeaponDetailFragment extends BaseFragment {
     BarValueView magazineBarValueView;
 
     @Nullable
+    @BindView(R.id.fragment_weapon_detail_weapon_loops_item_picker)
+    ItemPickerView loopsPickerView;
+
+    @Nullable
     @BindView(R.id.fragment_weapon_detail_weapon_magazine_item_picker)
     ItemPickerView magazinePickerView;
 
@@ -102,6 +106,10 @@ public class WeaponDetailFragment extends BaseFragment {
     @Nullable
     @BindView(R.id.fragment_weapon_detail_weapon_stock_item_picker)
     ItemPickerView stockPickerView;
+
+    @Nullable
+    @BindView(R.id.fragment_weapon_detail_attachment_divider)
+    View attachmentDivider;
 
     //region BaseFragment
 
@@ -144,12 +152,14 @@ public class WeaponDetailFragment extends BaseFragment {
                     ItemDetailActivity.startActivity(getActivity(), ammo);
                 }
             });
+            setLoopsPickerView(getAttachmentsFor(projectileWeapon.getLoopIds()));
             setMagazinePickerView(getAttachmentsFor(projectileWeapon.getMagazinesIds()));
             setMuzzlePickerView(getAttachmentsFor(projectileWeapon.getMuzzleIds()));
             setGripPickerView(getAttachmentsFor(projectileWeapon.getGripIds()));
             setSightPickerView(getAttachmentsFor(projectileWeapon.getSightIds()));
             setStockPickerView(getAttachmentsFor(projectileWeapon.getStockIds()));
-
+        } else {
+            setAttachmentDividerVisible(false);
         }
     }
     //endregion
@@ -211,6 +221,14 @@ public class WeaponDetailFragment extends BaseFragment {
         barValue.setValue(text, value);
     }
 
+    private void setLoopsPickerView(@Nullable final List<Attachment> loops) {
+        if (this.loopsPickerView == null || loops == null) {
+            return;
+        }
+        this.loopsPickerView.setVisibility(View.VISIBLE);
+        this.loopsPickerView.setItems(loops);
+    }
+
     private void setMagazinePickerView(@Nullable final List<Attachment> attachments) {
         if (this.magazinePickerView == null || attachments == null) {
             return;
@@ -250,6 +268,13 @@ public class WeaponDetailFragment extends BaseFragment {
         }
         this.sightPickerView.setVisibility(View.VISIBLE);
         this.sightPickerView.setItems(sights);
+    }
+
+    private void setAttachmentDividerVisible(final boolean visible) {
+        if (this.attachmentDivider == null) {
+            return;
+        }
+        this.attachmentDivider.setVisibility(visible ? View.VISIBLE : View.GONE);
     }
 
     @Nullable
