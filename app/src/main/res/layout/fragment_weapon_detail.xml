@@ -143,6 +143,7 @@
             android:layout_marginEnd="@dimen/standard_margin"
             android:layout_marginStart="@dimen/standard_margin"
             android:layout_marginTop="@dimen/standard_margin"
+            android:visibility="gone"
             app:titleText="@string/label_magazine"/>
 
         <tech.zafrani.companionforpubg.widgets.ItemPickerView
@@ -152,6 +153,7 @@
             android:layout_marginEnd="@dimen/standard_margin"
             android:layout_marginStart="@dimen/standard_margin"
             android:layout_marginTop="@dimen/standard_margin"
+            android:visibility="gone"
             app:titleText="@string/label_muzzle"/>
 
         <tech.zafrani.companionforpubg.widgets.ItemPickerView
@@ -161,6 +163,7 @@
             android:layout_marginEnd="@dimen/standard_margin"
             android:layout_marginStart="@dimen/standard_margin"
             android:layout_marginTop="@dimen/standard_margin"
+            android:visibility="gone"
             app:titleText="@string/label_grip"/>
 
         <tech.zafrani.companionforpubg.widgets.ItemPickerView
@@ -170,6 +173,7 @@
             android:layout_marginEnd="@dimen/standard_margin"
             android:layout_marginStart="@dimen/standard_margin"
             android:layout_marginTop="@dimen/standard_margin"
+            android:visibility="gone"
             app:titleText="@string/label_sight"/>
 
         <tech.zafrani.companionforpubg.widgets.ItemPickerView
@@ -179,6 +183,7 @@
             android:layout_marginEnd="@dimen/standard_margin"
             android:layout_marginStart="@dimen/standard_margin"
             android:layout_marginTop="@dimen/standard_margin"
+            android:visibility="gone"
             app:titleText="@string/label_stock"/>
     </LinearLayout>
 </ScrollView>

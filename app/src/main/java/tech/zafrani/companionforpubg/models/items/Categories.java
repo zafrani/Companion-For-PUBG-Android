@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 import java.util.EnumMap;
 
 import tech.zafrani.companionforpubg.models.items.ammo.AmmoCategory;
+import tech.zafrani.companionforpubg.models.items.attachments.AttachmentCategory;
 import tech.zafrani.companionforpubg.models.items.weapons.WeaponCategory;
 
 public class Categories extends EnumMap<Category.Name, Category<Item>> {
@@ -38,6 +39,11 @@ public class Categories extends EnumMap<Category.Name, Category<Item>> {
     @NonNull
     public AmmoCategory getAmmoCategory() {
         return ((AmmoCategory) (Category<? extends Item>) get(Category.Name.AMMO_CATEGORY));
+    }
+
+    @NonNull
+    public AttachmentCategory getAttachmentCategory() {
+        return ((AttachmentCategory) (Category<? extends Item>) get(Category.Name.ATTACHMENT_CATEGORY));
     }
 
 }

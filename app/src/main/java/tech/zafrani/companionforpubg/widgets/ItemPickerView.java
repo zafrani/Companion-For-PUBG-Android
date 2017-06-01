@@ -12,10 +12,16 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
+import java.util.List;
+
 import tech.zafrani.companionforpubg.R;
+import tech.zafrani.companionforpubg.models.items.Item;
+import tech.zafrani.companionforpubg.utils.Constants;
 
 public class ItemPickerView extends FrameLayout
-        implements View.OnClickListener {
+        implements ItemPickerViewAlertDialog.Listener {
     @NonNull
     private final TextView titleTextView;
 
@@ -23,7 +29,12 @@ public class ItemPickerView extends FrameLayout
     private final TextView valueTextView;
 
     @NonNull
-    private final ImageView imageView;
+    private final ImageView itemImageView;
+    @NonNull
+    private final ImageView clearImageView;
+
+    @NonNull
+    private final ItemPickerViewAlertDialog alertDialog;
 
     //region FrameLayout
     public ItemPickerView(@NonNull final Context context) {
@@ -42,8 +53,9 @@ public class ItemPickerView extends FrameLayout
         LayoutInflater.from(context).inflate(R.layout.view_item_picker, this, true);
         this.titleTextView = (TextView) findViewById(R.id.view_item_picker_title_text);
         this.valueTextView = (TextView) findViewById(R.id.view_item_picker_value_text);
-        this.imageView = (ImageView) findViewById(R.id.view_item_picker_image);
-
+        this.itemImageView = (ImageView) findViewById(R.id.view_item_picker_image);
+        this.clearImageView = (ImageView) findViewById(R.id.view_item_picker_clear);
+        this.alertDialog = new ItemPickerViewAlertDialog(getContext(), ItemPickerView.this, this);
         final TypedArray typedArray = context.getTheme().obtainStyledAttributes(
                 attrs,
                 R.styleable.ItemPickerView,
@@ -60,24 +72,47 @@ public class ItemPickerView extends FrameLayout
         } finally {
             typedArray.recycle();
         }
-        setOnClickListener(this);
+        setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alertDialog.show();
+            }
+        });
+        this.clearImageView.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                clear();
+            }
+        });
     }
-
     //endregion
 
-    //region OnClickListener
+    //region ItemPickerViewAlertDialog.Listener
     @Override
-    public void onClick(View v) {
-        new ItemPickerViewAlertDialog(getContext(),this).show();
+    public void onItemSelected(@NonNull final Item item) {
+        this.clearImageView.setVisibility(VISIBLE);
+        this.alertDialog.dismiss();
+        this.valueTextView.setText(item.getName());
+        Picasso.with(getContext())
+               .load(Constants.ITEM_IMAGE_URL + item.getImageUrl())
+               .into(this.itemImageView);
     }
     //endregion
 
     //region Methods
+    private void clear() {
+        this.clearImageView.setVisibility(INVISIBLE);
+        this.itemImageView.setImageDrawable(null);
+        this.valueTextView.setText(null);
+    }
 
     public void setValueTextView(@Nullable final String text) {
         this.valueTextView.setText(text);
     }
 
+    public void setItems(@NonNull final List<? extends Item> items) {
+        this.alertDialog.setItems(items);
+    }
     //endregion
 
 }

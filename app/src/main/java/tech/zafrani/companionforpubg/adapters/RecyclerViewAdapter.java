@@ -43,12 +43,17 @@ public abstract class RecyclerViewAdapter<Model extends Serializable, VH extends
     //endregion
 
     //region methods
+    public void clear() {
+        this.models.clear();
+        notifyDataSetChanged();
+    }
+
     public void add(@NonNull final Model model) {
         this.models.add(model);
         notifyItemChanged(this.models.size() - 1);
     }
 
-    public void addAll(@NonNull final List<Model> models) {
+    public void addAll(@NonNull final List<? extends Model> models) {
         final int startPosition = getItemCount();
         this.models.addAll(models);
         notifyItemRangeInserted(startPosition, models.size());

@@ -12,11 +12,16 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import butterknife.BindView;
 import tech.zafrani.companionforpubg.PUBGApplication;
 import tech.zafrani.companionforpubg.R;
 import tech.zafrani.companionforpubg.activities.ItemDetailActivity;
 import tech.zafrani.companionforpubg.models.items.ammo.Ammo;
+import tech.zafrani.companionforpubg.models.items.attachments.Attachment;
+import tech.zafrani.companionforpubg.models.items.attachments.AttachmentCategory;
 import tech.zafrani.companionforpubg.models.items.weapons.ProjectileWeapon;
 import tech.zafrani.companionforpubg.models.items.weapons.Weapon;
 import tech.zafrani.companionforpubg.utils.Constants;
@@ -139,6 +144,11 @@ public class WeaponDetailFragment extends BaseFragment {
                     ItemDetailActivity.startActivity(getActivity(), ammo);
                 }
             });
+            setMagazinePickerView(getAttachmentsFor(projectileWeapon.getMagazinesIds()));
+            setMuzzlePickerView(getAttachmentsFor(projectileWeapon.getMuzzleIds()));
+            setGripPickerView(getAttachmentsFor(projectileWeapon.getGripIds()));
+            setSightPickerView(getAttachmentsFor(projectileWeapon.getSightIds()));
+            setStockPickerView(getAttachmentsFor(projectileWeapon.getStockIds()));
 
         }
     }
@@ -201,11 +211,62 @@ public class WeaponDetailFragment extends BaseFragment {
         barValue.setValue(text, value);
     }
 
-    private void setMagazinePickerView(@Nullable final int[] magazineIds) {
-        if (this.magazinePickerView == null || magazineIds == null) {
+    private void setMagazinePickerView(@Nullable final List<Attachment> attachments) {
+        if (this.magazinePickerView == null || attachments == null) {
             return;
         }
         this.magazinePickerView.setVisibility(View.VISIBLE);
+        this.magazinePickerView.setItems(attachments);
+    }
+
+    private void setMuzzlePickerView(@Nullable final List<Attachment> muzzles) {
+        if (this.muzzlePickerView == null || muzzles == null) {
+            return;
+        }
+        this.muzzlePickerView.setVisibility(View.VISIBLE);
+        this.muzzlePickerView.setItems(muzzles);
+    }
+
+    private void setGripPickerView(@Nullable final List<Attachment> grips) {
+        if (this.gripPickerView == null || grips == null) {
+            return;
+        }
+        this.gripPickerView.setVisibility(View.VISIBLE);
+        this.gripPickerView.setItems(grips);
+    }
+
+    private void setStockPickerView(@Nullable final List<Attachment> stocks) {
+        if (this.stockPickerView == null || stocks == null) {
+            return;
+        }
+        this.stockPickerView.setVisibility(View.VISIBLE);
+        this.stockPickerView.setItems(stocks);
+    }
+
+
+    private void setSightPickerView(@Nullable final List<Attachment> sights) {
+        if (this.sightPickerView == null || sights == null) {
+            return;
+        }
+        this.sightPickerView.setVisibility(View.VISIBLE);
+        this.sightPickerView.setItems(sights);
+    }
+
+    @Nullable
+    private List<Attachment> getAttachmentsFor(@Nullable final int[] attachmentIds) {
+        if (attachmentIds == null) {
+            return null;
+        }
+        final List<Attachment> attachments = new ArrayList<>();
+        final AttachmentCategory attachmentCategory = PUBGApplication.getInstance().getItems().getCategories().getAttachmentCategory();
+
+        for (int attachmentId : attachmentIds) {
+            final Attachment attachment = attachmentCategory.getAttachmentWithId(attachmentId);
+            if (attachment != null) {
+                attachments.add(attachment);
+            }
+        }
+        return attachments;
     }
 
     //endregion
