@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import tech.zafrani.companionforpubg.R;
@@ -19,6 +20,10 @@ import tech.zafrani.companionforpubg.utils.Constants;
 public class ItemRecyclerViewAdapter<Model extends Item> extends RecyclerViewAdapter<Model, ItemRecyclerViewAdapter.ItemViewHolder> {
     public ItemRecyclerViewAdapter(@NonNull final List<Model> items) {
         super(items);
+    }
+
+    public ItemRecyclerViewAdapter() {
+        this(new ArrayList<Model>());
     }
 
     @Override
