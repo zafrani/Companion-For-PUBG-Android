@@ -13,6 +13,7 @@ import tech.zafrani.companionforpubg.R;
 
 
 public class BarValueView extends FrameLayout {
+
     @NonNull
     private final TextView textView;
 

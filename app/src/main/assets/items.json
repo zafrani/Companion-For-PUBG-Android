@@ -7,7 +7,7 @@
           "id": 0,
           "type": "AssaultRifle",
           "image_url": "Icon_weapon_AKM.png",
-          "magazine": 30,
+          "magazine_size": 30,
           "ammo_id": 4,
           "range": 60,
           "stability": 34,
@@ -24,14 +24,32 @@
             "head1": 80,
             "head2": 68,
             "head3": 51
-          }
+          },
+          "magazine_ids": [
+            13,
+            18,
+            27
+          ],
+          "muzzle_ids": [
+            9,
+            22,
+            35
+          ],
+          "sight_ids": [
+            0,
+            1,
+            2,
+            3,
+            26,
+            33
+          ]
         },
         {
           "name": "AWM",
           "id": 1,
           "type": "SniperRifle",
           "image_url": "Icon_weapon_AWM.png",
-          "magazine": 5,
+          "magazine_size": 5,
           "ammo_id": 0,
           "range": 100,
           "stability": 34,
@@ -48,14 +66,35 @@
             "head1": 229,
             "head2": 197,
             "head3": 147
-          }
+          },
+          "magazine_ids": [
+            17,
+            20,
+            32
+          ],
+          "muzzle_ids": [
+            10,
+            24,
+            38
+          ],
+          "sight_ids": [
+            0,
+            1,
+            2,
+            3,
+            26,
+            33
+          ],
+          "stock_ids": [
+            7
+          ]
         },
         {
           "name": "Crossbow",
           "id": 2,
           "type": "Crossbow",
           "image_url": "Icon_weapon_Crossbow.png",
-          "magazine": 1,
+          "magazine_size": 1,
           "ammo_id": 6,
           "range": 4,
           "reload": 0,
@@ -72,7 +111,19 @@
             "head1": 184,
             "head2": 158,
             "head3": 118
-          }
+          },
+          "magazine_ids": [
+            28
+          ],
+          "grip_ids": [
+            25
+          ],
+          "sight_ids": [
+            1,
+            2,
+            26,
+            33
+          ]
         },
         {
           "name": "Crowbar",
@@ -108,7 +159,7 @@
           "id": 5,
           "type": "SniperRifle",
           "image_url": "Icon_weapon_Kar98k.png",
-          "magazine": 5,
+          "magazine_size": 5,
           "ammo_id": 4,
           "range": 79,
           "stability": 34,
@@ -125,14 +176,30 @@
             "head1": 126,
             "head2": 108,
             "head3": 81
-          }
+          },
+          "muzzle_ids": [
+            10,
+            24,
+            38
+          ],
+          "sight_ids": [
+            0,
+            1,
+            2,
+            3,
+            26,
+            33
+          ],
+          "stock_ids": [
+            7
+          ]
         },
         {
           "name": "M16A4",
           "id": 6,
           "type": "AssaultRifle",
           "image_url": "Icon_weapon_M16A4.png",
-          "magazine": 30,
+          "magazine_size": 30,
           "ammo_id": 3,
           "range": 62,
           "stability": 28,
@@ -149,14 +216,32 @@
             "head1": 72,
             "head2": 62,
             "head3": 46
-          }
+          },
+          "magazine_ids": [
+            13,
+            18,
+            27
+          ],
+          "muzzle_ids": [
+            9,
+            22,
+            35
+          ],
+          "sight_ids": [
+            0,
+            1,
+            2,
+            3,
+            26,
+            33
+          ]
         },
         {
           "name": "M24",
           "id": 7,
           "type": "SniperRifle",
           "image_url": "Icon_weapon_M24.png",
-          "magazine": 5,
+          "magazine_size": 5,
           "ammo_id": 4,
           "range": 96,
           "stability": 32,
@@ -173,14 +258,35 @@
             "head1": 147,
             "head2": 126,
             "head3": 95
-          }
+          },
+          "magazine_ids": [
+            17,
+            20,
+            32
+          ],
+          "muzzle_ids": [
+            10,
+            24,
+            38
+          ],
+          "sight_ids": [
+            0,
+            1,
+            2,
+            3,
+            26,
+            33
+          ],
+          "stock_ids": [
+            7
+          ]
         },
         {
           "name": "M249",
           "id": 8,
           "type": "LMG",
           "image_url": "Icon_weapon_M249.png",
-          "magazine": 100,
+          "magazine_size": 100,
           "ammo_id": 3,
           "range": 71,
           "stability": 44,
@@ -197,14 +303,22 @@
             "head1": 77,
             "head2": 66,
             "head3": 50
-          }
+          },
+          "sight_ids": [
+            0,
+            1,
+            2,
+            3,
+            26,
+            33
+          ]
         },
         {
           "name": "M416",
           "id": 9,
           "type": "AssaultRifle",
           "image_url": "Icon_weapon_M416.png",
-          "magazine": 30,
+          "magazine_size": 30,
           "ammo_id": 3,
           "range": 57,
           "reload": 0,
@@ -221,7 +335,32 @@
             "head1": 72,
             "head2": 62,
             "head3": 46
-          }
+          },
+          "magazine_ids": [
+            13,
+            18,
+            27
+          ],
+          "muzzle_ids": [
+            9,
+            22,
+            35
+          ],
+          "grip_ids": [
+            4,
+            40
+          ],
+          "sight_ids": [
+            0,
+            1,
+            2,
+            3,
+            26,
+            33
+          ],
+          "stock_ids": [
+            39
+          ]
         },
         {
           "name": "Machete",
@@ -247,7 +386,7 @@
           "id": 11,
           "type": "SMG",
           "image_url": "Icon_weapon_UZI.png",
-          "magazine": 30,
+          "magazine_size": 30,
           "ammo_id": 5,
           "range": 22,
           "stability": 31,
@@ -264,7 +403,19 @@
             "head1": 40,
             "head2": 35,
             "head3": 26
-          }
+          },
+          "magazine_ids": [
+            16,
+            21,
+            31
+          ],
+          "muzzle_ids": [
+            23,
+            37
+          ],
+          "stock_ids": [
+            34
+          ]
         },
         {
           "name": "Molotov Cocktail",
@@ -282,9 +433,9 @@
           "id": 13,
           "type": "Pistol",
           "image_url": "Icon_weapon_P1911.png",
-          "magazine": 7,
+          "magazine_size": 7,
           "ammo_id": 1,
-          "range":15,
+          "range": 15,
           "stability": 25,
           "rate": 53,
           "reload": 0,
@@ -299,14 +450,22 @@
             "head1": 61,
             "head2": 53,
             "head3": 39
-          }
+          },
+          "magazine_ids": [
+            15,
+            19,
+            30
+          ],
+          "muzzle_ids": [
+            36
+          ]
         },
         {
           "name": "P92",
           "id": 14,
           "type": "Pistol",
           "image_url": "Icon_weapon_P92.png",
-          "magazine": 15,
+          "magazine_size": 15,
           "ammo_id": 5,
           "range": 15,
           "stability": 25,
@@ -323,7 +482,15 @@
             "head1": 51,
             "head2": 44,
             "head3": 33
-          }
+          },
+          "magazine_ids": [
+            15,
+            19,
+            30
+          ],
+          "muzzle_ids": [
+            36
+          ]
         },
         {
           "name": "Pan",
@@ -349,7 +516,7 @@
           "id": 16,
           "type": "Pistol",
           "image_url": "Icon_weapon_R1895.png",
-          "magazine": 5,
+          "magazine_size": 5,
           "ammo_id": 4,
           "range": 31,
           "stability": 29,
@@ -366,14 +533,17 @@
             "head1": 81,
             "head2": 69,
             "head3": 52
-          }
+          },
+          "muzzle_ids": [
+            36
+          ]
         },
         {
           "name": "S12K",
           "id": 17,
           "type": "Shotgun",
           "image_url": "Icon_weapon_S12K.png",
-          "magazine": 5,
+          "magazine_size": 5,
           "ammo_id": 2,
           "range": 9,
           "stability": 86,
@@ -390,14 +560,32 @@
             "head1": 999,
             "head2": 999,
             "head3": 999
-          }
+          },
+          "magazine_ids": [
+            13,
+            18,
+            27
+          ],
+          "muzzle_ids": [
+            9,
+            22,
+            35
+          ],
+          "sight_ids": [
+            0,
+            1,
+            2,
+            3,
+            26,
+            33
+          ]
         },
         {
           "name": "S1897",
           "id": 18,
           "type": "Shotgun",
           "image_url": "Icon_weapon_S1897.png",
-          "magazine": 2,
+          "magazine_size": 2,
           "ammo_id": 2,
           "range": 8,
           "stability": 77,
@@ -414,14 +602,20 @@
             "head1": 999,
             "head2": 999,
             "head3": 999
-          }
+          },
+          "loop_ids": [
+            6
+          ],
+          "muzzle_ids": [
+            8
+          ]
         },
         {
           "name": "S686",
           "id": 19,
           "type": "Shotgun",
           "image_url": "Icon_weapon_S686.png",
-          "magazine": 5,
+          "magazine_size": 5,
           "ammo_id": 2,
           "range": 13,
           "stability": 77,
@@ -438,14 +632,20 @@
             "head1": 999,
             "head2": 999,
             "head3": 999
-          }
+          },
+          "loop_ids": [
+            6
+          ],
+          "muzzle_ids": [
+            8
+          ]
         },
         {
           "name": "SCAR-L",
           "id": 20,
           "type": "AssaultRifle",
           "image_url": "Icon_weapon_SCAR-L.png",
-          "magazine": 30,
+          "magazine_size": 30,
           "ammo_id": 3,
           "range": 55,
           "stability": 31,
@@ -462,7 +662,29 @@
             "head1": 72,
             "head2": 62,
             "head3": 46
-          }
+          },
+          "magazine_ids": [
+            13,
+            18,
+            27
+          ],
+          "muzzle_ids": [
+            9,
+            22,
+            35
+          ],
+          "grip_ids": [
+            4,
+            40
+          ],
+          "sight_ids": [
+            0,
+            1,
+            2,
+            3,
+            26,
+            33
+          ]
         },
         {
           "name": "Sickle",
@@ -488,7 +710,7 @@
           "id": 22,
           "type": "DMR",
           "image_url": "Icon_weapon_SKS.png",
-          "magazine": 5,
+          "magazine_size": 5,
           "ammo_id": 4,
           "range": 64,
           "stability": 48,
@@ -505,7 +727,25 @@
             "head1": 96,
             "head2": 83,
             "head3": 62
-          }
+          },
+          "magazine_ids": [
+            17,
+            20,
+            32
+          ],
+          "muzzle_ids": [
+            10,
+            24,
+            38
+          ],
+          "sight_ids": [
+            0,
+            1,
+            2,
+            3,
+            26,
+            33
+          ]
         },
         {
           "name": "Smoke Grenade",
@@ -532,7 +772,7 @@
           "id": 25,
           "type": "SMG",
           "image_url": "Icon_weapon_TommyGun.png",
-          "magazine": 30,
+          "magazine_size": 30,
           "ammo_id": 1,
           "range": 46,
           "stability": 31,
@@ -549,14 +789,23 @@
             "head1": 67,
             "head2": 57,
             "head3": 43
-          }
+          },
+          "magazine_ids": [
+            16,
+            21,
+            31
+          ],
+          "muzzle_ids": [
+            23,
+            37
+          ]
         },
         {
           "name": "UMP9",
           "id": 26,
           "type": "SMG",
           "image_url": "Icon_weapon_UMP.png",
-          "magazine": 30,
+          "magazine_size": 30,
           "ammo_id": 5,
           "range": 30,
           "stability": 31,
@@ -573,14 +822,33 @@
             "head1": "58",
             "head2": "50",
             "head3": "37"
-          }
+          },
+          "grip_ids": [
+            4,
+            40
+          ],
+          "magazine_ids": [
+            16,
+            21,
+            31
+          ],
+          "muzzle_ids": [
+            23,
+            37
+          ],
+          "sight_ids": [
+            1,
+            2,
+            26,
+            33
+          ]
         },
         {
           "name": "Vector",
           "id": 27,
           "type": "SMG",
           "image_url": "Icon_weapon_Vector.png",
-          "magazine": 13,
+          "magazine_size": 13,
           "ammo_id": 1,
           "range": 65,
           "stability": 35,
@@ -597,7 +865,26 @@
             "head1": 63,
             "head2": 54,
             "head3": 41
-          }
+          },
+          "grip_ids": [
+            4,
+            40
+          ],
+          "magazine_ids": [
+            16,
+            21,
+            31
+          ],
+          "muzzle_ids": [
+            23,
+            37
+          ],
+          "sight_ids": [
+            1,
+            2,
+            26,
+            33
+          ]
         }
       ]
     },
@@ -679,7 +966,7 @@
         },
         {
           "id": 4,
-          "type": "Grip",
+          "type": "Grips",
           "name": "Angled Foregrip",
           "image_url": "Icon_attach_AngledForeGrip.png",
           "capacity": 500
@@ -700,7 +987,7 @@
         },
         {
           "id": 7,
-          "type": "Stock",
+          "type": "Stocks",
           "name": "Cheek Pad for Sniper Rifle",
           "image_url": "Icon_attach_CheekPadSniperRifle.png",
           "capacity": 500
@@ -728,7 +1015,7 @@
         },
         {
           "id": 11,
-          "type": "Stock",
+          "type": "Stocks",
           "name": "Composite Stock for Assault Rifle",
           "image_url": "Icon_attach_CompositeAR.png",
           "capacity": 500
@@ -826,7 +1113,7 @@
         },
         {
           "id": 25,
-          "type": "Grip",
+          "type": "Grips",
           "name": "Foregrip for Crossbow",
           "image_url": "Icon_attach_ForegripCrossbow.png",
           "capacity": 500
@@ -836,7 +1123,7 @@
           "type": "Sights",
           "name": "Holographic Sight",
           "image_url": "Icon_attach_Holo.png",
-          "capacity": 500
+          "capacity": 10
         },
         {
           "id": 27,
@@ -885,11 +1172,11 @@
           "type": "Sights",
           "name": "Red Dot Sight",
           "image_url": "Icon_attach_RedDot.png",
-          "capacity": 500
+          "capacity": 10
         },
         {
           "id": 34,
-          "type": "Stock",
+          "type": "Stocks",
           "name": "Stock for Micro Uzi",
           "image_url": "Icon_attach_StockUzi.png",
           "capacity": 500
@@ -924,15 +1211,15 @@
         },
         {
           "id": 39,
-          "type": "Stock",
-          "name": "Tactical Stock for M416",
+          "type": "Stocks",
+          "name": "Tactical Stock for M416, Vector",
           "image_url": "",
-          "capacity": 500
+          "capacity": 12
         },
         {
           "id": 40,
-          "type": "Grip",
-          "name": "Verticle Foregrip",
+          "type": "Grips",
+          "name": "Vertical Foregrip",
           "image_url": "Icon_attach_VerticalForegrip.png",
           "capacity": 500
         }
@@ -1239,7 +1526,7 @@
     "vehicle_category": {
       "vehicles": [
         {
-          "id":0,
+          "id": 0,
           "type": "Default",
           "name": "Buggy",
           "image_url": "",
@@ -1250,7 +1537,7 @@
           "capacity": 0
         },
         {
-          "id":1,
+          "id": 1,
           "type": "Default",
           "name": "Dacia",
           "image_url": "",
@@ -1261,7 +1548,7 @@
           "capacity": 0
         },
         {
-          "id":2,
+          "id": 2,
           "type": "Default",
           "name": "Motorcycle (No sidecar)",
           "image_url": "",
@@ -1272,7 +1559,7 @@
           "capacity": 0
         },
         {
-          "id":3,
+          "id": 3,
           "type": "Default",
           "name": "Motorcycle (w/ sidecar)",
           "image_url": "",
@@ -1283,7 +1570,7 @@
           "capacity": 0
         },
         {
-          "id":4,
+          "id": 4,
           "type": "Default",
           "name": "Speed Boat",
           "image_url": "",
@@ -1294,7 +1581,7 @@
           "capacity": 0
         },
         {
-          "id":5,
+          "id": 5,
           "type": "Default",
           "name": "UAZ",
           "image_url": "",
