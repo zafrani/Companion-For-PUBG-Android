@@ -19,6 +19,7 @@
     <string name="label_github">Github</string>
     <string name="label_image_data">Image Data</string>
     <string name="label_contact_us">Contact Us</string>
+    <string name="label_rate_app">Rate The App</string>
     <string name="label_send_email">Send Email</string>
     <string name="label_ammo">Ammo</string>
     <string name="label_loops">Bullet Loops</string>
@@ -66,4 +67,7 @@
     <string name="vehicles">Vehicles</string>
     <string name="distance_action_label_snippet">Estimated sprinting unarmed on a flat surface</string>
     <string name="distance_action_label_title_failed">Failed to calculate</string>
+
+    <string name="google_app_uri">market://details?id=%1$s</string>
+    <string name="google_app_url">https://play.google.com/store/apps/details?id=%1$s</string>
 </resources>

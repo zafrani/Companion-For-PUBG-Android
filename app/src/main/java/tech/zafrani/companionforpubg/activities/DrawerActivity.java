@@ -1,6 +1,7 @@
 package tech.zafrani.companionforpubg.activities;
 
 import android.app.Fragment;
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -141,6 +142,9 @@ public abstract class DrawerActivity extends BaseActivity
             case R.id.drawer_contact_us:
                 contactUsSelected();
                 break;
+            case R.id.drawer_rate_app:
+                rateAppSelected();
+                break;
         }
     }
 
@@ -198,6 +202,13 @@ public abstract class DrawerActivity extends BaseActivity
         startActivity(Intent.createChooser(emailIntent, getString(R.string.label_send_email)));
     }
 
+    private void rateAppSelected() {
+        String packageName = getApplication().getPackageName();
+        try {
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(String.format(getString(R.string.google_app_uri), packageName))));
+        } catch (ActivityNotFoundException e) {
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(String.format(getString(R.string.google_app_url), packageName))));
+        }
+    }
     //endregion
-
 }
