@@ -34,6 +34,10 @@
                 android:id="@+id/drawer_contact_us"
                 android:title="@string/label_contact_us"
                 android:icon="@drawable/ic_email_white_24dp"/>
+            <item
+                android:id="@+id/drawer_rate_app"
+                android:title="@string/label_rate_app"
+                android:icon="@drawable/ic_email_white_24dp"/>
         </menu>
     </item>
 </menu>
