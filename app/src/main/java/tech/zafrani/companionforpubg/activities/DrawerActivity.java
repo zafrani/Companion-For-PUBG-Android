@@ -24,6 +24,8 @@ import tech.zafrani.companionforpubg.utils.Constants;
 public abstract class DrawerActivity extends BaseActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    private static final String EXTRA_ITEM_ID = "EXTRA_ITEM_ID";
+
     @Nullable
     @BindView(R.id.activity_drawer_toolbar)
     Toolbar toolbar;
@@ -36,6 +38,8 @@ public abstract class DrawerActivity extends BaseActivity
     @Nullable
     @BindView(R.id.activity_drawer_content)
     FrameLayout contentLayout;
+
+    private int selectedMenuItem = R.id.drawer_map;
 
     //region Activity
     @Override
@@ -53,7 +57,20 @@ public abstract class DrawerActivity extends BaseActivity
             this.navigationView.setNavigationItemSelectedListener(this);
             this.navigationView.setCheckedItem(R.id.drawer_map);
         }
-        mapSelected();
+
+        if (savedInstanceState != null) {
+            if (savedInstanceState.containsKey(EXTRA_ITEM_ID)) {
+                selectedMenuItem = savedInstanceState.getInt(EXTRA_ITEM_ID);
+            }
+        }
+
+        loadFragmentWithItemId(selectedMenuItem);
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt(EXTRA_ITEM_ID, selectedMenuItem);
     }
 
     @Override
@@ -96,8 +113,16 @@ public abstract class DrawerActivity extends BaseActivity
             return false;
         }
 
+        selectedMenuItem = item.getItemId();
         this.drawerLayout.closeDrawers();
-        switch (item.getItemId()) {
+        loadFragmentWithItemId(selectedMenuItem);
+
+        return true;
+    }
+    //endregion
+
+    private void loadFragmentWithItemId(int itemId) {
+        switch (itemId) {
             case R.id.drawer_map:
                 mapSelected();
                 break;
@@ -117,10 +142,7 @@ public abstract class DrawerActivity extends BaseActivity
                 contactUsSelected();
                 break;
         }
-        return true;
     }
-    //endregion
-
 
     //region methods
     private void mapSelected() {
