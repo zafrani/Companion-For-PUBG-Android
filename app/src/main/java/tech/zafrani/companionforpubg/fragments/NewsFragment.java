@@ -7,6 +7,7 @@ import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ProgressBar;
 
 import butterknife.BindView;
 import tech.zafrani.companionforpubg.R;
@@ -23,6 +24,9 @@ public class NewsFragment extends BaseFragment implements PUBGNewsFetch.Listener
 
     @BindView(R.id.fragment_news_recyclerview)
     public RecyclerView recyclerView;
+
+    @BindView(R.id.fragment_news_progressbar)
+    public ProgressBar progressBar;
 
     @Nullable
     private NewsAdapter adapter;
@@ -70,6 +74,7 @@ public class NewsFragment extends BaseFragment implements PUBGNewsFetch.Listener
     @Override
     public void updateNews(NewsItem newsItem) {
         if (adapter!= null){
+            progressBar.setVisibility(View.GONE);
             adapter.add(newsItem);
             adapter.notifyDataSetChanged();
         }
