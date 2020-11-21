@@ -134,14 +134,14 @@
           "capacity": 120,
           "damage": {
             "base": 0,
-            "chest0": 0,
-            "chest1": 0,
-            "chest2": 0,
-            "chest3": 0,
-            "head0": 0,
-            "head1": 0,
-            "head2": 0,
-            "head3": 0
+            "chest0": 60,
+            "chest1": 42,
+            "chest2": 36,
+            "chest3": 27,
+            "head0": 90,
+            "head1": 63,
+            "head2": 54,
+            "head3": 41
           }
         },
         {
@@ -371,14 +371,14 @@
           "capacity": 120,
           "damage": {
             "base": 0,
-            "chest0": 0,
-            "chest1": 0,
-            "chest2": 0,
-            "chest3": 0,
-            "head0": 0,
-            "head1": 0,
-            "head2": 0,
-            "head3": 0
+            "chest0": 60,
+            "chest1": 42,
+            "chest2": 36,
+            "chest3": 27,
+            "head0": 150,
+            "head1": 105,
+            "head2": 90,
+            "head3": 68
           }
         },
         {
@@ -501,14 +501,14 @@
           "capacity": 120,
           "damage": {
             "base": 0,
-            "chest0": 0,
-            "chest1": 0,
-            "chest2": 0,
-            "chest3": 0,
-            "head0": 0,
-            "head1": 0,
-            "head2": 0,
-            "head3": 0
+            "chest0": 80,
+            "chest1": 56,
+            "chest2": 48,
+            "chest3": 36,
+            "head0": 200,
+            "head1": 140,
+            "head2": 120,
+            "head3": 90
           }
         },
         {
@@ -695,14 +695,14 @@
           "capacity": 120,
           "damage": {
             "base": 0,
-            "chest0": 0,
-            "chest1": 0,
-            "chest2": 0,
-            "chest3": 0,
-            "head0": 0,
-            "head1": 0,
-            "head2": 0,
-            "head3": 0
+            "chest0": 60,
+            "chest1": 42,
+            "chest2": 36,
+            "chest3": 27,
+            "head0": 150,
+            "head1": 105,
+            "head2": 90,
+            "head3": 68
           }
         },
         {
